@@ -1,0 +1,166 @@
+@font-face{font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;src:url('../fonts/GOTHIC.TTF');}
+@font-face{font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;src:url('../fonts/century-gothic-bold.ttf');}
+@font-face{font-family:"Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;src:url('../fonts/MyriadPro-Regular.otf');}
+@font-face{font-family:'PT Sans', sans-serif;src:url('../fonts/PT_Sans-Web-Regular.ttf');}
+.f-myriad{font-family:"myriad pro" !important;}
+.pt-sans{font-family:'PT Sans', sans-serif !important;}
+.texto-azul{color:#00255A !important;}
+.texto-azul-os{color:#00255A !important;}
+.texto-azul-cl{color:#1E3D85 !important;}
+.a-new{color:#001A5A !important;}
+.fuente-institucional{font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif !important;}
+.fuente-institucional-bold{font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif !important;font-weight:bold;}
+.f-negrita{font-weight:bold;}
+.f-regular{font-weight:regular;}
+.texto-amarillo{color:#FFD608 !important;}
+.texto-amarillo-oscuro{color:#9D8A22 !important;}
+.fondo-gris-c{background-color:#F2F2F2;}
+.fondo-gris-os{background-color:#E6E6E6;}
+.hover-amarillo:hover{background-color:#FFD608 !important;}
+.hover-azul:hover{background-color:#2B275B !important;}
+.hover-transparente:hover{background-color:transparent !important;}
+.hover-texto-amarillo:hover{color:#FFD608 !important;}
+.sin-texto-subrayado:hover{text-decoration:none;}
+.hover-texto-blanco:hover{color:white !important;border-color:white !important;}
+.hover-sin-borde:hover{border-color:none !important;}
+.sin-borde{border:none !important;}
+.fondo-amarillo{background-color:#F4D460;}
+.fondo-amarillo-intenso{background-color:#FFD608;}
+.sombra-iconos{font-size:35px;color:lightblue;text-shadow:3px 3px 3px #000000;color:#10447A !important;}
+.icono-blanco{color:white !important;}
+.fondo-azul{background-color:#10447A !important;}
+.fondo-azul-oscuro{background-color:#0B2851 !important;}
+.f-italica{font-style:italic;}
+.transparencia{background-image:url('../img/transparente5x5px.png');background-repeat:all;}
+.borde-azul{border-color:#00255A !important;}
+.borde-amarillo{border-color:#FFD608 !important;}
+.borde-ancho{border-width:3px !important;}
+.f-x-small{font-size:x-small;}
+.linea-footer2{border-top:1px solid #FFD608;margin-bottom:0px;}
+.circulo{width:70px;height:70px;background-color:transparent;border-style:solid;border-color:#2F0F61 !important;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;margin:0 auto;border-width:1px;}
+.carousel-control-prev,
+.carousel-control-next{}
+.navbar{padding:0rem .01rem !important;}
+.rectangulo-sesgado{height:0px;border-left:2rem solid transparent;border-right:0px solid yellow;border-bottom:2.5rem solid #E3E3E3;z-index:1030;}
+.f-size-10{font-size:10px;}
+.f-size-12{font-size:12px;}
+.f-size-14{font-size:14px;}
+.f-size-16{font-size:1.3em;}
+.f-size-18{font-size:25px;}
+.efecto-borde1{-webkit-transition:all 0.4s ease-out;-moz-transition:all 0.4s ease-out;-o-transition:all 0.4s ease-out;transition:all 0.4s ease-out;}
+.efecto-antes{-webkit-transition:all 1s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;transition:all 1s ease;}
+.efecto-despues{-webkit-transition:all 1s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;transition:all 1s ease;}
+.contenedor-zoom{width:0px;height:100px;border-top:20px solid transparent;border-left:0px solid blue;border-right:40px solid #00487B;-webkit-transition:all 500ms ease-out;-moz-transition:all 500ms ease-out;-o-transition:all 500ms ease-out;transition:all 500ms ease-out;position:fixed;right:0;top:100px;z-index:1040;}
+.contenedor-zoom:hover{width:0px;height:100px;border-top:20px solid transparent;border-left:0px solid blue;border-right:50px solid #003962;-webkit-transition:all 500ms ease;-moz-transition:all 500ms ease;-o-transition:all 500ms ease;transition:all 500ms ease;}
+.contenedor-redes{width:0px;height:160px;border-left:-50px solid red;border-right:40px solid #F4D460;border-bottom:20px solid transparent;-webkit-transition:all 300ms ease-out;-moz-transition:all 300ms ease-out;-o-transition:all 300ms ease-out;transition:all 300ms ease-out;position:fixed;right:0;top:210px;z-index:1030;}
+.contenedor-redes:hover{width:0px;height:165px;border-left:-50px solid red;border-right:50px solid #F4D460;border-bottom:20px solid transparent;-webkit-transition:all 300ms ease;-moz-transition:all 300ms ease;-o-transition:all 300ms ease;transition:all 300ms ease;}
+.tredes{writing-mode:vertical-lr;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);;transform:rotate(180deg);margin-left:-4px;color:#1B1464;position:absolute;top:20px;}
+.contenedor-ayuda{position:fixed;left:0;top:200px;z-index:1040;}
+.nav-link.active{background-color:#F0EFEF !important;}
+.hvr-underline-from-center:before, .hvr-overline-from-center:before{background:#FFD608 !important;}
+.cinta{background-image:url("../img/1px.png");background-repeat:repeat-x;background-size:contain;}
+.cinta-slider{background-image:url("../img/1px.jpg");background-repeat:repeat-x;background-size:contain;}
+.fondo-mundo{background-image:url("../img/donde-quieres-estudiar-aunar.jpg");background-size:cover;}
+.fondo-carreras{background-image:url("../img/carreras-aunar.jpg");background-size:cover;}
+.fondo-eventos{background-image:url("../img/eventos-autonoma-de-narino.jpg");background-size:cover;}
+.fondo-eventos-vicerectoria{background-image:url("../img/investigacion/eventos-invetigacion.jpg");background-size:cover;}
+.contenedor_preinscripcion{position:relative;}
+.text-block{position:absolute;bottom:20px;right:20px;color:white;padding-left:20px;padding-right:20px;}
+.hvr-underline-from-left:hover{background:#F5F5F5 !important;}
+.hvr-underline-from-left:before{background:#FFD608 !important;}
+.hexagon{background-image:url('../img/hexagono.svg');background-repeat:no-repeat;background-size:100px;height:120px;width:100px;display:block;}
+.eventos:hover>div>.hexagon{background-image:url('../img/hexagono-azul.svg');background-repeat:no-repeat;}
+.transparencia-hover:hover{-webkit-transition:all 500ms ease;-moz-transition:all 500ms ease;-o-transition:all 500ms ease;transition:all 500ms ease;background-repeat:all;background-image:url('../img/transparente5x5px.png');}
+.f-color-imecanica{color:#001A5A;}
+.b-color-imecanica{border-color:#001A5A !important;}
+.f-color-paromaticas{color:#A3BD31;}
+.b-color-paromaticas{border-color:#A3BD31 !important;border-color:!important;}
+.f-color-aempresas{color:#A01127;}
+.b-color-aempresas{border-color:#A01127 !important;}
+.f-color-cpublica-dis{color:#204B22;}
+.b-color-cpublica-dis{border-color:#204B22 !important;}
+.f-color-mdental{color:#001A5A;}
+.b-color-mdental{border-color:#001A5A !important;}
+.f-color-dmodas{color:#58167D;}
+.b-color-dmodas{border-color:#58167D !important;}
+.f-color-magropecuario{color:#3C2C17;}
+.b-color-magropecuario{border-color:#3C2C17 !important;}
+.f-color-iinformatica{color:#4A72B2;}
+.b-color-iinformatica{border-color:#4A72B2 !important;}
+.pointer:hover{cursor:pointer;}
+.tooltip-inner{color:white;font-weight:400;background-color:#0B2851;}
+.tooltip.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.bs-tooltip-right .arrow::before{border-right-color:#0B2851;}
+#myBtn{display:none;position:fixed;bottom:20px;right:20px;z-index:99;font-size:18px;border:none;outline:none;background-color:transparent !important;background-image:url('../img/flecha_arriba.png');background-size:contain;background-repeat:no-repeat;cursor:pointer;padding:20px;border-radius:4px;}
+#myBtn:hover{background-color:#0B2851;}
+.dropdown-item.active, .dropdown-item:active{text-decoration:none;background-color:#FFFFFF;}
+#cont-oferta-institucional{display:none;}
+.borde-2{border-width:2px !important;}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active{-webkit-transform:scale(1.3) !important;-moz-transform:scale(1.3) !important;-ms-transform:scale(1.3) !important;-o-transform:scale(1.3) !important;transform:scale(1.3) !important;}
+.container-img{position:relative;width:100%;background-color:#FFD800;}
+.image-hov{opacity:1;display:block;width:100%;height:auto;transition:.5s ease;backface-visibility:hidden;}
+.middle-hov{transition:.5s ease;opacity:0;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);text-align:center;}
+.container-img:hover .image-hov{opacity:0.3;}
+.container-img:hover .middle-hov{opacity:1;}
+.text-hov{color:white;font-size:20px;}
+.fondo-slider-noticias{background-color:#FFF6DC;}
+.accordion .card-header:after{content:attr(collapsed) "-";font-size:18px;float:left;cursor:pointer;}
+.accordion .card-header.collapsed:after{content:attr(collapsed) "+";font-size:18px;float:left;cursor:copy;}
+.accordion .card-header:hover{color:#FFD608 !important;}
+.accordion .card-header.collapsed:hover{color:#FFD608 !important;}
+.fuente-big{font-size:35px;}
+.content_img_virtual{background-color:#FFCD0F;position:relative;}
+.img_virtual{opacity:1;display:block;width:100%;height:auto;transition:.5s ease;backface-visibility:hidden;}
+.cont_texto_principal{transition:.5s ease;opacity:1;position:absolute;top:50%;left:50%;width:100%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);transform:translate(-50%, -50%);text-align:center;}
+.cont_texto_principal:hover{opacity:0;}
+.cont_texto_secundario{transition:.5s ease;opacity:0;position:absolute;top:50%;left:50%;width:90%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);transform:translate(-50%, -50%);text-align:center;}
+.content_img_virtual:hover .img_virtual{opacity:0.3;}
+.content_img_virtual:hover .texto_principal{opacity:0;}
+.content_img_virtual:hover .cont_texto_secundario{opacity:1;}
+.texto_secundario{font-size:16px;}
+.texto_principal{background-color:#FFCD0F;opacity:0.6;width:100%;font-size:16px;padding:16px 32px;}
+.fondo-grupos-investigacion{background-image:url("../img/investigacion/fondo-grupos-inv-aunar.jpg");background-size:cover;}
+.content_img_gruposinvestigacion{position:relative;}
+.img_gruposinvestigacion{opacity:1;display:block;width:100%;height:auto;transition:.5s ease;backface-visibility:hidden;}
+.content_img_gruposinvestigacion:hover .img_gruposinvestigacion{opacity:0.7;background-image:url('../img/transparente5x5px.png');border-radius:35px;}
+.zindex-00{z-index:1000;}
+.zindex-20{z-index:1020;}
+.zindex-30{z-index:1030;}
+.zindex-40{z-index:1040;}
+.zindex-50{z-index:1050;}
+.zindex-60{z-index:1060;}
+.zindex-70{z-index:1070;}
+@media (max-width:991px){.border-right, .border-left{border-style:none !important;}
+}
+@media (min-width:576px){}
+@media (min-width:768px){}
+@media (min-width:992px){}
+@media (min-width:1200px){.fuente-big{font-size:60px;}
+}
+.navbar-light .navbar-nav .nav-link{color:rgb(64, 64, 64);}
+.btco-hover-menu a , .navbar > li > a{text-transform:capitalize;padding:10px 15px;}
+.btco-hover-menu .active a,
+.btco-hover-menu .active a:focus,
+.btco-hover-menu .active a:hover,
+.btco-hover-menu li a:hover,
+.btco-hover-menu li a:focus ,
+.navbar>.show>a, .navbar>.show>a:focus, .navbar>.show>a:hover{color:#000;background:transparent;outline:0;}
+.dropdown-menu{padding:0px 0;margin:0 0 0;border:0px solid transition !important;border:0px solid rgba(0,0,0,.15);border-radius:0px;-webkit-box-shadow:none !important;box-shadow:none !important;}
+.btco-hover-menu .collapse ul > li:hover > a{background:#f5f5f5;}
+.btco-hover-menu .collapse ul ul > li:hover > a, .navbar .show .dropdown-menu > li > a:focus, .navbar .show .dropdown-menu > li > a:hover{background:#fff;}
+.btco-hover-menu .collapse ul ul ul > li:hover > a{background:rgb(192, 192, 192);}
+.btco-hover-menu .collapse ul ul, .btco-hover-menu .collapse ul ul.dropdown-menu{background:#e4e2e2;}
+.btco-hover-menu .collapse ul ul ul, .btco-hover-menu .collapse ul ul ul.dropdown-menu{background:#bebebe}
+.btco-hover-menu .collapse ul ul ul ul, .btco-hover-menu .collapse ul ul ul ul.dropdown-menu{background:#8b8a8a}
+.btco-hover-menu{background:none;margin:0;padding:0;min-height:20px}
+@media only screen and (max-width:991px){.btco-hover-menu .show > .dropdown-toggle::after{transform:rotate(-90deg);}
+}
+@media only screen and (min-width:991px){.btco-hover-menu .collapse ul li{position:relative;}
+.btco-hover-menu .collapse ul li:hover> ul{display:block}
+.btco-hover-menu .collapse ul ul{position:absolute;top:100%;left:0;min-width:250px;display:none}
+.btco-hover-menu .collapse ul ul li{position:relative}
+.btco-hover-menu .collapse ul ul li:hover> ul{display:block}
+.btco-hover-menu .collapse ul ul ul{position:absolute;top:0;left:100%;min-width:250px;display:none}
+.btco-hover-menu .collapse ul ul ul li{position:relative}
+.btco-hover-menu .collapse ul ul ul li:hover ul{display:block}
+.btco-hover-menu .collapse ul ul ul ul{position:absolute;top:0;left:-100%;min-width:250px;display:none;z-index:1}
+}

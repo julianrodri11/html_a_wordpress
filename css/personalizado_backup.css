@@ -1,0 +1,1061 @@
+
+
+/*importacion de fuente Century Gothic*/
+@font-face{   
+   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+   src: url('../fonts/GOTHIC.TTF');
+
+} 
+
+/*importacion de fuente Century Gothic bold*/
+@font-face{   
+   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+   src: url('../fonts/century-gothic-bold.ttf');
+
+} 
+
+/*IMPROTACIÓN MYRIAD PRO*/
+@font-face{   
+   font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   src: url('../fonts/MyriadPro-Regular.otf');
+
+} 
+/*fuente pt-sans*/
+@font-face{   
+   font-family: 'PT Sans', sans-serif;
+   src: url('../fonts/PT_Sans-Web-Regular.ttf');
+
+} 
+
+/*fuente myriad pro*/
+.f-myriad
+{
+	font-family: "myriad pro" !important ;
+	
+}
+/*fuetne pt-sans*/
+.pt-sans
+{
+	font-family: 'PT Sans', sans-serif !important;
+
+}
+
+/*Fuente color azul de acuerdo institucional*/
+.texto-azul
+{			
+	color: #00255A !important;
+}
+.texto-azul-os
+{		
+	color: #00255A !important;
+
+}
+.texto-azul-cl
+{		
+	color: #1E3D85 !important;
+
+}
+/*fuente azul oscura para los enlaces*/
+.a-new
+{
+	color: #001A5A !important;
+
+}
+
+/*fuente personalizada institucional*/
+.fuente-institucional
+{	
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif !important;	
+}
+
+.fuente-institucional-bold
+{	
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif !important;	
+	font-weight: bold;
+}
+/*fuente negrita*/
+.f-negrita
+{
+font-weight: bold;
+}
+/*fuente regular*/
+.f-regular
+{
+	font-weight: regular;
+}
+
+/*fuente color amarillo institucional*/
+.texto-amarillo
+{
+	color: #FFD608 !important;
+}
+
+/*fuente amrariilo oscuro para ofertas*/
+.texto-amarillo-oscuro
+{
+	color: #9D8A22 !important;
+}
+/*color de fondo redondo del logo */
+.fondo-gris-c
+{
+	background-color: #F2F2F2;
+}
+
+/*color de fondo 2 redondo del logo*/
+.fondo-gris-os
+{
+	background-color: #E6E6E6;
+}
+/*fondo amarillo cuando se coloque el mouse sobre le menu principal*/
+.hover-amarillo:hover
+{
+	background-color: #FFD608 !important;
+
+
+}
+.hover-azul:hover
+{
+	background-color: #2B275B !important;
+}
+/*fondo transparente*/
+.hover-transparente:hover
+{
+	background-color: transparent !important;
+}
+
+/*hover letra amarilla sobre el menu 2 */
+.hover-texto-amarillo:hover
+{
+	color: #FFD608 !important;
+}
+/*subrayado para el menu 1*/
+.sin-texto-subrayado:hover
+{
+	text-decoration: none;
+}
+
+/*hover letra blanca sobre el boton leer mas de noticias */
+.hover-texto-blanco:hover
+{
+	color: white !important;	
+	border-color: white !important;
+}
+/*quitar borde de un elemento-usado en leer más en portal noticias-index*/
+.hover-sin-borde:hover
+{
+	border-color: none !important;
+}
+/*quitar borde de acordion*/
+.sin-borde
+{	
+	border: none !important;	
+}
+
+/*fondo amarillo para los menus y zonas que lo requieran*/
+.fondo-amarillo
+{
+	/*background-color: #FFD608;*/
+	background-color: #F4D460;
+}
+.fondo-amarillo-intenso
+{
+	background-color: #FFD608;
+	/*background-color: #F4D460;*/
+}
+/*sombra bajo los iconos*/
+.sombra-iconos
+{
+	font-size:35px;
+	color:lightblue;
+	text-shadow:3px 3px 3px #000000;
+	color: #10447A !important;
+}
+.icono-blanco
+{
+	color:white !important;
+}
+/*fondo azul para el footer*/
+.fondo-azul
+{
+	background-color: #10447A !important;
+}
+/*fondo azul oscuro para el footer 2*/
+.fondo-azul-oscuro
+{
+	background-color: #0B2851 !important;
+}
+/*fuente italica para tituloz*/
+.f-italica
+{
+	font-style: italic;
+}
+/*transparencia en la seccion de noticias*/
+.transparencia
+{
+	background-image: url('../img/transparente5x5px.png');
+	background-repeat: all;	
+}
+/*borde color azul*/
+.borde-azul
+{
+	border-color: #00255A !important;
+}
+/*borde color amarillo*/
+.borde-amarillo
+{
+	border-color: #FFD608 !important;		
+}
+.borde-ancho
+{
+	border-width: 3px !important; 
+}
+/*fuente bold para el footer*/
+.f-x-small
+{
+	font-size: x-small;
+	/*font-weight: bold !important;*/
+}
+
+/*linea footer 2*/
+.linea-footer2 
+{    
+    border-top: 1px solid #FFD608;
+    margin-bottom: 0px;    
+}
+/*circulo blanco para colocar los iconos adentro*/
+.circulo
+{
+	width: 70px;
+	height: 70px;
+	background-color: transparent;
+	border-style: solid;
+	border-color: #2F0F61 !important;
+	-moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+     margin: 0 auto;
+     border-width: 1px;
+}
+
+/*editando el estilo original de bootstrap
+ para bajar la flecha del slider*/
+
+.carousel-control-prev,
+.carousel-control-next {
+  /*position: absolute;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: flex-end;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 20%;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+  padding: 30px;*/
+  /*background-color: red;*/
+  /*bottom: 50px;*/
+  /*top: 4;*/
+}
+
+.navbar
+{
+	padding: 0rem .01rem !important;
+}
+
+/*rectangulo gris oscuro sesgado del menu1*/
+.rectangulo-sesgado
+{
+	
+    height: 0px;    
+    border-left: 2rem solid transparent;
+    border-right: 0px solid yellow;
+    border-bottom: 2.5rem solid #E3E3E3;
+    /* border-bottom: 2.5rem solid #F4D460; */
+    z-index: 1030;
+}
+
+/*tamaño de fuente para el menu 1*/
+
+.f-size-10
+{
+	font-size: 10px;
+}
+.f-size-12
+{
+	font-size: 12px;
+}
+.f-size-14
+{
+	font-size: 14px;
+}
+.f-size-16
+{
+	font-size: 1.3em;
+}
+.f-size-18
+{
+	font-size: 25px;
+}
+
+
+/* redes sociales */
+
+/*efectos radios sobre el logo */
+ .efecto-borde1
+{		
+	-webkit-transition:all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
+
+/*FIN efectos radios sobre el logo */
+
+
+/*ecfecto hacer mas pequeño el logo cuando se desplace el scroll hacia abajo*/
+.efecto-antes
+{
+	-webkit-transition:all 1s ease;
+    -moz-transition:all 1s ease;
+    -o-transition:all 1s ease;
+    transition:all 1s ease;
+
+}
+.efecto-despues
+{
+	-webkit-transition:all 1s ease;
+    -moz-transition:all 1s ease;
+    -o-transition:all 1s ease;
+    transition:all 1s ease;
+
+}
+
+.contenedor-zoom
+{
+	/*Figura sesgada azul para el zoom
+	 *para ampliar y redicor la pantalla
+	 */
+    width: 0px;
+    height: 100px;    
+    border-top: 20px solid transparent;
+    border-left: 0px solid blue;
+    border-right: 40px solid #00487B;  /*ancho de la figura*/
+
+    /*animacion para todos los navegadores*/
+    /*transicion al final de medio segundo*/
+	  -webkit-transition: all 500ms ease-out;
+    -moz-transition: all  500ms ease-out;
+    -o-transition: all  500ms ease-out;
+    transition: all  500ms ease-out;
+
+
+	/*posicionamiento fijo a la derecha y un poco abajo*/
+	position: fixed;	
+	right: 0;	/*alinear a la deracha*/
+	top:100px;
+	z-index: 1040;
+
+    
+}
+
+/*Efecto cuando se coloca el mouse encima de social media*/
+.contenedor-zoom:hover
+{	            
+    width: 0px;
+    height: 100px;    
+    border-top: 20px solid transparent;
+    border-left: 0px solid blue;
+    border-right: 50px solid #003962;  /*ancho de la figura*/
+
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all  500ms ease;
+    -o-transition: all  500ms ease;
+    transition: all  500ms ease;	
+}
+
+/*iconos de redes sociales*/
+.contenedor-redes
+{
+	/*forma del cuadrado menos un borde*/
+	width: 0px;
+    height: 160px;    
+    border-left: -50px solid red;
+    border-right: 40px solid #F4D460;
+    border-bottom: 20px solid transparent;
+	
+	/*transicion al final de medio segundo*/
+	-webkit-transition: all 300ms ease-out;
+    -moz-transition: all  300ms ease-out;
+    -o-transition: all  300ms ease-out;
+    transition: all  300ms ease-out;
+
+	/*posicionamiento fijo a la derecha y un poco abajo*/
+	position: fixed;	
+	right: 0;	/*alinear a la deracha*/
+	top:210px;
+	z-index: 1030;
+	
+}
+
+/*Efecto cuando se coloca el mouse encima de social media*/
+.contenedor-redes:hover
+{	            
+    width: 0px;
+    height: 165px;    
+    border-left: -50px solid red;
+    border-right: 50px solid #F4D460;
+    border-bottom: 20px solid transparent;
+
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all  300ms ease;
+    -o-transition: all  300ms ease;
+    transition: all  300ms ease;	
+}
+/*texto vertical de redes sociales*/
+.tredes
+{
+	  writing-mode: vertical-lr;
+	  -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+    -o-transform:rotate(180deg);;
+    transform: rotate(180deg);
+    margin-left:-4px;
+    color: #1B1464;
+    /*background-image: url('../img/transparente5x5px.png');
+    background-repeat: all;
+    border-radius: 0px 10px 10px 0px;*/
+    position: absolute;
+    top: 20px;
+    /*font-size: 16px;*/
+
+    /*text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);*/
+}
+
+/*cuadro necesitas ayuda fijo*/
+
+.contenedor-ayuda
+{	
+	/*posicionamiento fijo a la derecha y un poco abajo*/
+	position: fixed;	
+	left: 0;	/*alinear a la deracha*/
+	top: 200px;	
+	z-index: 1040;
+	
+	
+	
+}
+
+/*cambiar el color de los nav-bill*/
+
+.nav-link.active
+{
+	background-color: #F0EFEF !important;
+}
+
+
+/*color de la raya cuando se coloca el mouse sobre el menú 1*/
+.hvr-underline-from-center:before, .hvr-overline-from-center:before
+{
+	/*background: #F4D460 !important;*/
+	/*background: #FFD608 !important;*/
+	background: #FFD608 !important;
+}
+/*imagen de 1px para el fondo del footer de la página pricnipal*/
+.cinta
+{		
+	background-image: url("../img/1px.png");	
+	background-repeat: repeat-x;	
+	background-size: contain;
+}
+.cinta-slider
+{		
+	background-image: url("../img/1px.jpg");	
+	background-repeat: repeat-x;	
+	background-size: contain;
+}
+.fondo-mundo
+{
+	background-image: url("../img/donde-quieres-estudiar-aunar.jpg");
+	background-size: cover;/*necesario para que se mire en todas las pantallas*/
+
+}
+/*fondo de pupitres en cada carrera del texto 
+  Deseas Preinscribirse en este programa*/
+.fondo-carreras
+{
+	background-image: url("../img/carreras-aunar.jpg");
+	background-size: cover;/*necesario para que se mire en todas las pantallas*/
+
+}
+
+.fondo-eventos
+{
+	background-image: url("../img/eventos-autonoma-de-narino.jpg");
+	background-size: cover;/*necesario para que se mire en todas las pantallas*/
+
+}
+
+/*fondo de la página de vicerectoria académica en la seccion de eventos*/
+.fondo-eventos-vicerectoria
+{
+  background-image: url("../img/investigacion/eventos-invetigacion.jpg");
+  background-size: cover;/*necesario para que se mire en todas las pantallas*/
+
+}
+/* CLASE PARA COLOCAR TEXTO SOBRE UNA IMAGEN*/
+.contenedor_preinscripcion
+{
+	position: relative;
+}
+/* alinear el texto sobre la imágen  Bottom right text */
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    /*background-color: black;*/
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*para desplegar o mostrar el menú1 y 2 cuando el mouse se pase por encima de la opción*/
+
+/*.dropdown:hover>.dropdown-menu
+{
+	display: block !important;
+}*/
+
+/*.dropdown > .dropdown-toggle:active {
+    Without this, clicking will make it sticky
+    pointer-events: none;
+}*/
+
+.hvr-underline-from-left:hover
+{
+	background: #F5F5F5 !important;
+}
+
+.hvr-underline-from-left:before
+{
+	background: #FFD608 !important;
+}
+
+.hexagon
+{
+	background-image: url('../img/hexagono.svg');
+	background-repeat: no-repeat;
+    background-size: 100px; 
+    height: 120px;
+    width: 100px;
+    display: block;
+    
+}
+
+
+.eventos:hover>div>.hexagon
+{	
+	background-image: url('../img/hexagono-azul.svg');
+	background-repeat: no-repeat;
+   
+
+}
+
+.transparencia-hover:hover
+{
+ 	-webkit-transition: all 500ms ease;
+    -moz-transition: all  500ms ease;
+    -o-transition: all  500ms ease;
+    transition: all  500ms ease;
+	background-repeat: all;	
+	background-image: url('../img/transparente5x5px.png');
+}
+
+
+
+
+
+
+/*COLORES DE CARRERAS*/
+
+/*azul oscuro*/
+.f-color-imecanica
+{
+	color: #001A5A;
+}
+/*color de borde para */
+.b-color-imecanica
+{
+	border-color: #001A5A !important;	
+}
+/*verde limon*/
+.f-color-paromaticas
+{
+	color: #A3BD31;
+}
+/*color de borde para */
+.b-color-paromaticas
+{
+	border-color: #A3BD31 !important;	
+	border-color:  !important;	
+}
+/*admon empresas*/
+.f-color-aempresas
+{
+	color: #A01127;
+}
+/*color de borde para */
+.b-color-aempresas
+{
+	border-color: #A01127  !important;	
+}
+/*contaduria publica a distancia*/
+.f-color-cpublica-dis
+{
+	color: #204B22;
+}
+/*color de borde para */
+.b-color-cpublica-dis
+{
+	border-color: #204B22 !important;	
+}
+/*mecanica dental*/
+.f-color-mdental
+{
+	color: #001A5A;
+}
+/*color de borde para */
+.b-color-mdental
+{
+	border-color:#001A5A  !important;	
+}
+/*diseño de modas*/
+.f-color-dmodas
+{
+	color: #58167D;
+}
+/*color de borde para */
+.b-color-dmodas
+{
+	border-color:#58167D !important;	
+}
+/*mercadeo agropecuario*/
+.f-color-magropecuario
+{
+	color:#3C2C17;
+}
+/*color de borde para */
+.b-color-magropecuario
+{
+	border-color: #3C2C17 !important;	
+}
+/*ingenieria informática*/
+.f-color-iinformatica
+{
+	color:#4A72B2;
+}
+/*color de borde para */
+.b-color-iinformatica
+{
+	border-color:#4A72B2  !important;	
+}
+
+
+/*cursor pointer en el hover de un elemento*/
+.pointer:hover
+{
+	cursor: pointer;
+}
+
+
+/*cambiar el color del tooltip*/
+.tooltip-inner{ color:white; font-weight:400;  background-color:#0B2851;}
+.tooltip.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.bs-tooltip-right .arrow::before { border-right-color: #0B2851;}
+
+/*boton ir al inicio*/
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: transparent !important;
+  background-image: url('../img/flecha_arriba.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*color: white;*/
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 4px;
+}
+/*fondo azul cuanco se coloque el mouse sobre el boton subir*/
+#myBtn:hover {
+  background-color: #0B2851;
+}
+
+/*quitar color azul del menu dropdown item active*/
+.dropdown-item.active, .dropdown-item:active {
+    /*color: #F10000;*/
+    text-decoration: none;
+    background-color: #FFFFFF;
+}
+/*oculta el menu de la oferta académica en menu 2*/
+#cont-oferta-institucional
+{
+	display: none;
+}
+/*borde ancho para menu 1 y 2*/
+.borde-2
+{
+	border-width: 2px !important;
+}
+
+/*efecto para los iconos del menú 3*/
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.3) !important;
+  -moz-transform:scale(1.3) !important;
+  -ms-transform: scale(1.3) !important;  
+  -o-transform: scale(1.3) !important;
+  transform: scale(1.3) !important;
+}
+
+/*
+[class^='imghvr-'],
+[class*=' imghvr-'] {
+  background-color: #F4D460 !important;
+  opacity: 0.9;
+}*/
+
+
+/*hover amarillo sobre imagenes en noticias*/
+
+.container-img {
+    position: relative;
+    width: 100%;
+    background-color: #FFD800;
+}
+
+.image-hov {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle-hov {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container-img:hover .image-hov {
+  opacity: 0.3;
+}
+
+.container-img:hover .middle-hov {
+  opacity: 1;
+}
+
+.text-hov {
+  /*background-color: #0B2851;*/
+  color: white;
+  font-size: 20px;
+  /*padding: 16px 32px;*/
+}
+
+/*FONDO AMARILLO CLARO ESLIDER NOTICIAS*/
+
+.fondo-slider-noticias
+{
+	background-color: #FFF6DC;
+}
+
+/*colocar el sigono más y menos en el acordeon de docentes de cada programa*/
+.accordion .card-header:after {
+    
+    content: attr(collapsed) "-";
+    font-size: 18px;    
+    float: left; 
+    cursor: pointer;
+	
+}
+.accordion .card-header.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: attr(collapsed) "+";
+    font-size: 18px;    
+    float: left; 
+    cursor: copy;
+
+}
+/*coloca en amarillo cuando se pase el mouse sobre el + o menos del acordeon*/
+.accordion .card-header:hover {
+	color: #FFD608 !important;
+}
+.accordion .card-header.collapsed:hover {
+	color: #FFD608 !important;   
+}
+
+/*tamaño de fuente en aunar estero*/
+.fuente-big
+{
+	font-size: 35px;
+}
+
+
+
+
+
+
+
+
+/*EFECTO EN GALERIA DE AUNAR VIRTUAL */
+.content_img_virtual {
+	background-color: #FFCD0F;
+    position: relative;
+    
+}
+
+.img_virtual {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.cont_texto_principal {
+  transition: .5s ease;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;  
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.cont_texto_principal:hover 
+{
+	opacity:0;
+}
+.cont_texto_secundario {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content_img_virtual:hover .img_virtual {
+  opacity: 0.3;
+}
+
+.content_img_virtual:hover .texto_principal {
+  opacity: 0;
+}
+
+.content_img_virtual:hover .cont_texto_secundario {
+  opacity: 1;
+}
+
+.texto_secundario {
+  /*background-color: #4CAF50;*/
+  /*color: #29235C;*/
+  font-size: 16px;
+  /*padding: 16px 32px;*/
+}
+
+.texto_principal {
+  background-color: #FFCD0F;
+  opacity: 0.6;
+  /*color: red;*/
+  width: 100%;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+/*FIN EFECTO EN GALERIA DE AUNAR VIRTUAL */
+
+
+/*Fondo de grupos de investigación - CIDAE */
+.fondo-grupos-investigacion
+{
+	background-image: url("../img/investigacion/fondo-grupos-inv-aunar.jpg");
+	background-size: cover;/*necesario para que se mire en todas las pantallas*/
+
+}
+
+
+/*Efecto cuando se coloca el mouse sobre la galería de grupos de investigación*/
+
+.content_img_gruposinvestigacion {
+	position: relative;
+    
+}
+
+.img_gruposinvestigacion {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.content_img_gruposinvestigacion:hover .img_gruposinvestigacion {
+  opacity: 0.7;
+  background-image: url('../img/transparente5x5px.png');
+  border-radius: 35px;
+}
+
+/*capas para mostrar adelante o atras */
+.zindex-00{z-index: 1000;}
+.zindex-20{z-index: 1020;}
+.zindex-30{z-index: 1030;}
+.zindex-40{z-index: 1040;}
+.zindex-50{z-index: 1050;}
+.zindex-60{z-index: 1060;}
+.zindex-70{z-index: 1070;}
+
+
+
+/*VALIDACIONES PARA DIFERENTES PANTALLAS */
+
+ /*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 991px) { 
+   /*quita el borde derecho o izquierdo en pantallas menores a lg  */
+  .border-right, .border-left
+   {
+    border-style: none !important;
+   }
+  
+}
+
+ /*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+  
+}
+
+ /*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+
+ }
+
+ /*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+
+
+ }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+
+/*tamaño de fuente en aunar estero*/
+  .fuente-big
+  {
+    font-size: 60px;
+  }
+
+ }
+
+
+ /*ESTILOS PARA FUNCIONALIDAD DEL MENU 1 Y 2*/
+ 
+/*=-====Bootstrapthemes.co btco-hover-menu=====*/
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(64, 64, 64);
+}
+.btco-hover-menu a ,  .navbar > li > a {
+    text-transform: capitalize;
+    padding: 10px 15px;
+}
+.btco-hover-menu .active a,
+.btco-hover-menu .active a:focus,
+.btco-hover-menu .active a:hover,
+.btco-hover-menu li a:hover,
+.btco-hover-menu li a:focus ,
+.navbar>.show>a,  .navbar>.show>a:focus,  .navbar>.show>a:hover{
+    color: #000;
+    background: transparent;
+    outline: 0;
+}
+
+
+
+/*submenu style start from here*/
+
+
+.dropdown-menu {
+    padding: 0px 0; 
+    margin: 0 0 0; 
+    border: 0px solid transition !important;
+    border: 0px solid rgba(0,0,0,.15);  
+    border-radius: 0px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+
+}
+
+/*first level*/
+.btco-hover-menu .collapse ul > li:hover > a{background: #f5f5f5;}
+.btco-hover-menu .collapse ul ul > li:hover > a, .navbar .show .dropdown-menu > li > a:focus, .navbar .show .dropdown-menu > li > a:hover{background: #fff;}
+/*second level*/
+.btco-hover-menu .collapse ul ul ul > li:hover > a{background: rgb(192, 192, 192);}
+
+/*third level*/
+.btco-hover-menu .collapse ul ul, .btco-hover-menu .collapse ul ul.dropdown-menu{background:#e4e2e2;}
+.btco-hover-menu .collapse ul ul ul, .btco-hover-menu .collapse ul ul ul.dropdown-menu{background:#bebebe}
+.btco-hover-menu .collapse ul ul ul ul, .btco-hover-menu .collapse ul ul ul ul.dropdown-menu{background:#8b8a8a}
+
+/*Drop-down menu work on hover*/
+.btco-hover-menu{background: none;margin: 0;padding: 0;min-height:20px}
+
+@media only screen and (max-width: 991px) {
+    .btco-hover-menu .show > .dropdown-toggle::after{
+        transform: rotate(-90deg);
+    }
+}
+@media only screen and (min-width: 991px) {
+
+    .btco-hover-menu .collapse ul li{position:relative;}
+    .btco-hover-menu .collapse ul li:hover> ul{display:block}
+    .btco-hover-menu .collapse ul ul{position:absolute;top:100%;left:0;min-width:250px;display:none}
+    /*******/
+    .btco-hover-menu .collapse ul ul li{position:relative}
+    .btco-hover-menu .collapse ul ul li:hover> ul{display:block}
+    .btco-hover-menu .collapse ul ul ul{position:absolute;top:0;left:100%;min-width:250px;display:none}
+    /*******/
+    .btco-hover-menu .collapse ul ul ul li{position:relative}
+    .btco-hover-menu .collapse ul ul ul li:hover ul{display:block}
+    .btco-hover-menu .collapse ul ul ul ul{position:absolute;top:0;left:-100%;min-width:250px;display:none;z-index:1}
+
+}
+

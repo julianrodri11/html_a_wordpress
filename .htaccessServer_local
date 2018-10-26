@@ -1,0 +1,27 @@
+#Permite bloquear directorios
+#Options -Indexes
+
+
+<IfModule mod_rewrite.c>
+# Activar RewriteEngine
+RewriteEngine on
+RewriteBase /portal.aunar.edu.co/
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+RewriteRule ^(.*)$ $1.php
+</IfModule>
+
+#<IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /html/(.*).html\ HTTP/
+#   RewriteRule .* http://localhost/portal.aunar.edu.co/%1 [R=301,L]
+
+#  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /portal.aunar.edu.co/(.*)\ HTTP/
+#   RewriteRule .* %1.html [L]
+#</IfModule>
+
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
