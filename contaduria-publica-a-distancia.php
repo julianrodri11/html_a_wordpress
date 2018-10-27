@@ -1,3 +1,4 @@
+<?php /* Template Name: Plantilla Cont Pública a Distancia */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>

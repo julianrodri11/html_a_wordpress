@@ -1,3 +1,4 @@
+<?php /* Template Name: Plantilla Proyección Institucional */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>

@@ -1,3 +1,4 @@
+<?php /* Template Name: Plantilla Trabajos de grado */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>

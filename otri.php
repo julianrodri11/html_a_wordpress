@@ -1,3 +1,4 @@
+<?php /* Template Name: Plantilla OTRI */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>

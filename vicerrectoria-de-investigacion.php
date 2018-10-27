@@ -1,3 +1,4 @@
+<?php /* Template Name: Plantilla Vicerrectoría de Investigación */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>

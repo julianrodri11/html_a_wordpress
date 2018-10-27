@@ -1,8 +1,4 @@
-<?php 
-
-	/*
-		Template Name: Plantilla Convocatorias
-	 */
+<?php /* Template Name: Plantilla Convocatorias */
 ?>
 
 <!DOCTYPE html>

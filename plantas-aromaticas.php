@@ -1,3 +1,4 @@
+<?php /* Template Name: Plantilla Plantas Aromáticas */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>

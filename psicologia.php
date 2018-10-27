@@ -1,3 +1,4 @@
+<?php /* Template Name: Plantilla Psicología */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>

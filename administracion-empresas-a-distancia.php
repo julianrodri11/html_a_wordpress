@@ -1,3 +1,4 @@
+<?php /* Template Name: Plantilla Adm Empresas a Distancia */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>

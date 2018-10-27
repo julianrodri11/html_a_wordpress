@@ -1,3 +1,4 @@
+<?php /* Template Name: Plantilla Inclusión Social */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>

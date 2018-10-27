@@ -1,3 +1,4 @@
+<?php /* Template Name: Plantilla Vicerrectoría Académica */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>

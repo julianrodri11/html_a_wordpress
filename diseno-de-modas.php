@@ -1,3 +1,4 @@
+<?php /* Template Name: Plantilla Diseño de modas */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>

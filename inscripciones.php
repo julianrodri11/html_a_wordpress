@@ -1,10 +1,4 @@
-<?php 
-
-	/*
-		Template Name: Plantilla Inscripciones
-	 */
-?>
-
+<?php   /*  Template Name: Plantilla Inscripciones */ ?>
 <!DOCTYPE html>
 <html lang="es-CO">
     <head>

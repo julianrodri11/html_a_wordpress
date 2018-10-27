@@ -1,3 +1,4 @@
+<?php /* Template Name: Plantilla Mercadeo Agropecuario */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>

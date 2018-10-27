@@ -1,3 +1,4 @@
+<?php /* Template Name: Plantilla Ing. Electrónica */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>
