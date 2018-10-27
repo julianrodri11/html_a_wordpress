@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS*/  get_header();   ?>
 		<title>INGENIERÍA INFORMÁTICA - AUTÓNOMA DE NARIÑO</title>
@@ -14,7 +14,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/carreras/ingenieria-informatica-aunar.jpg" alt="Ingenieria informática autónoma de nariño" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/carreras/ingenieria-informatica-aunar.jpg" alt="Ingenieria informática autónoma de nariño" />
 				</div>
 			</div>
 		</div>
@@ -305,7 +306,7 @@
 		<!-- malla curricular -->
 		<?php
 			include_once('secciones/malla_curricular/informatica.php');
-			include_once('secciones/footer-principal.php');
+			 get_footer(); ;
 		?>
 	</body>
 </html>

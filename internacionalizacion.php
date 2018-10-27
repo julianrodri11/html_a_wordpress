@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
@@ -16,7 +16,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/proyeccion_institucional/internacionalizacion_aunar.jpg"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/proyeccion_institucional/internacionalizacion_aunar.jpg"/>
 				</div>
 			</div>
 		</div>
@@ -172,7 +173,8 @@
 						<div class="col-12 col-sm-6 col-lg-5 p-3 d-flex justify-content-center align-items-center">
 							<div class="col-12 p-2">
 								<!-- imagen -->
-								<img src="img/proyeccion_institucional/sofia_vallejos.png" class="align-self-center mr-3 rounded-circle" width="100%" >
+								<img src="<?php bloginfo('template_url')?>/img
+/proyeccion_institucional/sofia_vallejos.png" class="align-self-center mr-3 rounded-circle" width="100%" >
 							</div>
 						</div>
 						<div class="col-12 col-sm-6 col-lg-5 p-3 d-flex align-items-center mx-auto">
@@ -191,7 +193,8 @@
 								<div class="col-12 col-sm-6 col-lg-5 p-3 d-flex justify-content-center align-items-center">
 									<div class="col-12 p-2">
 										<!-- imagen -->
-										<img src="img/proyeccion_institucional/1.png" class="align-self-center mr-3 rounded-circle" width="100%" >
+										<img src="<?php bloginfo('template_url')?>/img
+/proyeccion_institucional/1.png" class="align-self-center mr-3 rounded-circle" width="100%" >
 									</div>
 								</div>
 								<div class="col-12 col-sm-6 col-lg-5 p-3 d-flex align-items-center mx-auto">
@@ -211,7 +214,8 @@
 										<div class="col-12 col-sm-6 col-lg-5 p-3 d-flex justify-content-center align-items-center">
 											<div class="col-12 p-2">
 												<!-- imagen -->
-												<img src="img/proyeccion_institucional/4.png" class="align-self-center mr-3 rounded-circle" width="100%" >
+												<img src="<?php bloginfo('template_url')?>/img
+/proyeccion_institucional/4.png" class="align-self-center mr-3 rounded-circle" width="100%" >
 											</div>
 										</div>
 										<div class="col-12 col-sm-6 col-lg-5 p-3 d-flex align-items-center mx-auto">
@@ -231,7 +235,8 @@
 												<div class="col-12 col-sm-6 col-lg-5 p-3 d-flex justify-content-center align-items-center">
 													<div class="col-12 p-2">
 														<!-- imagen -->
-														<img src="img/proyeccion_institucional/2.png" class="align-self-center mr-3 rounded-circle" width="100%" >
+														<img src="<?php bloginfo('template_url')?>/img
+/proyeccion_institucional/2.png" class="align-self-center mr-3 rounded-circle" width="100%" >
 													</div>
 												</div>
 												<div class="col-12 col-sm-6 col-lg-5 p-3 d-flex align-items-center mx-auto">
@@ -252,7 +257,8 @@
 														<div class="col-12 col-sm-6 col-lg-5 p-3 d-flex justify-content-center align-items-center">
 															<div class="col-12 p-2">
 																<!-- imagen -->
-																<img src="img/proyeccion_institucional/5.png" class="align-self-center mr-3 rounded-circle" width="100%" >
+																<img src="<?php bloginfo('template_url')?>/img
+/proyeccion_institucional/5.png" class="align-self-center mr-3 rounded-circle" width="100%" >
 															</div>
 														</div>
 														<div class="col-12 col-sm-6 col-lg-5 p-3 d-flex align-items-center mx-auto">
@@ -272,7 +278,8 @@
 																<div class="col-12 col-sm-6 col-lg-5 p-3 d-flex justify-content-center align-items-center">
 																	<div class="col-12 p-2">
 																		<!-- imagen -->
-																		<img src="img/proyeccion_institucional/3.png" class="align-self-center mr-3 rounded-circle" width="100%" >
+																		<img src="<?php bloginfo('template_url')?>/img
+/proyeccion_institucional/3.png" class="align-self-center mr-3 rounded-circle" width="100%" >
 																	</div>
 																</div>
 																<div class="col-12 col-sm-6 col-lg-5 p-3 d-flex align-items-center mx-auto">
@@ -289,7 +296,7 @@
 															</div>
 														</div>
 														<!-- footer -->
-														<?php include_once('secciones/footer-principal.php');?>
+														<?php  get_footer(); ;?>
 														
 													</body>
 												</html>

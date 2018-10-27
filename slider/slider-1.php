@@ -8,28 +8,32 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <a href="inscripciones.php"> 
-        <img class="d-block w-100" src="img/slider1.jpg" alt="Oferta académica 20018 II"></a>
+        <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img
+/slider1.jpg" alt="Oferta académica 20018 II"></a>
       <!--div class="carousel-caption">
         <h3></h3>
         <p></p>
       </div-->
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/congreso-autonoma-de-narino-2018.jpg" alt="Congreso Autonoma de Nariño">
+      <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img
+/congreso-autonoma-de-narino-2018.jpg" alt="Congreso Autonoma de Nariño">
       <!--div class="carousel-caption">
         <h3>Lorem Fuga, nesciunt </h3>
         <p>voluptatibus consectetur, consequuntur nemo necessitatibus.</p>
       </div-->
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/slider2.jpg" alt="Inscribete en nuestro programas">
+      <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img
+/slider2.jpg" alt="Inscribete en nuestro programas">
       <!--div class="carousel-caption">
         <h3>Lorem ipsum.</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
       </div-->
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/slider3.jpg" alt="Estudia con nosotros">
+      <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img
+/slider3.jpg" alt="Estudia con nosotros">
       <!--div class="carousel-caption">
         <h3>Lorem.</h3>
         <p>Lorem ipsum dolor sit.</p>

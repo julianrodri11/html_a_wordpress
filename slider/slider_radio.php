@@ -9,28 +9,32 @@
   </ol>
   <div class="carousel-inner ">
     <div class="carousel-item active">
-              <img class="d-block w-100" src="img/radio/slider-aunar-stereo.jpg" alt="First slide">      
+              <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img
+/radio/slider-aunar-stereo.jpg" alt="First slide">      
       <!--div class="carousel-caption">
         <h3></h3>
         <p></p>
       </div-->
     </div>
     <div class="carousel-item">
-            <img class="d-block w-100" src="img/radio/slider-aunar-stereo.jpg" alt="First slide">    
+            <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img
+/radio/slider-aunar-stereo.jpg" alt="First slide">    
       <!--div class="carousel-caption">
         <h3>Lorem Fuga, nesciunt </h3>
         <p>voluptatibus consectetur, consequuntur nemo necessitatibus.</p>
       </div-->
     </div>
     <div class="carousel-item">
-            <img class="d-block w-100" src="img/radio/slider-aunar-stereo.jpg" alt="First slide">    
+            <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img
+/radio/slider-aunar-stereo.jpg" alt="First slide">    
       <!--div class="carousel-caption">
         <h3>Lorem ipsum.</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
       </div-->
     </div>
     <div class="carousel-item">
-            <img class="d-block w-100" src="img/radio/slider-aunar-stereo.jpg" alt="First slide">    
+            <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img
+/radio/slider-aunar-stereo.jpg" alt="First slide">    
       <!--div class="carousel-caption">
         <h3>Lorem.</h3>
         <p>Lorem ipsum dolor sit.</p>

@@ -1,3 +1,10 @@
+<?php 
+
+	/*
+		Template Name: Plantilla Inscripciones
+	 */
+?>
+
 <!DOCTYPE html>
 <html lang="es-CO">
     <head>
@@ -14,7 +21,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 p-0">
-                    <img class="img-fluid" width="100%" src="img/inscripciones/sistema-inscripciones-en-linea.jpg"/>
+                    <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/inscripciones/sistema-inscripciones-en-linea.jpg"/>
                 </div>
             </div>
         </div>
@@ -58,7 +66,8 @@
         </div>
         <!-- PREINSCRIPCIÓN -->
         <div class=" contenedor_preinscripcion">
-            <img src="img/inscripciones/admisiones-autonoma-de-narino.jpg" alt="Norway" style="width:100%;">
+            <img src="<?php bloginfo('template_url')?>/img
+/inscripciones/admisiones-autonoma-de-narino.jpg" alt="Norway" style="width:100%;">
             <div class="text-block">
                 <div class=" text-center">
                     <div class="col-12 text-center"><h1 class=" f-negrita fuente-institucional texto-azul">Inscripción</h1> </div>
@@ -128,6 +137,6 @@
             </div>
         </div>
         <br>
-        <?php include_once('secciones/footer-principal.php'); ?>
+        <?php  get_footer(); ; ?>
     </body>
 </html>

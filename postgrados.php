@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
@@ -15,7 +15,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/investigacion/postgrados.jpg" alt="POSTGRADOS - Autónoma de Nariño"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/postgrados.jpg" alt="POSTGRADOS - Autónoma de Nariño"/>
 				</div>
 			</div>
 		</div>
@@ -91,7 +92,8 @@
 					<div class="row col-12 ">
 						<div class="col-12 py-3 text-center text-lg-right mx-auto ">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<img src="img/investigacion/docente-postgrados.png" alt="Pedro Pablo Burbano" width="50%">
+							<img src="<?php bloginfo('template_url')?>/img
+/investigacion/docente-postgrados.png" alt="Pedro Pablo Burbano" width="50%">
 						</div>
 					</div>
 				</div>
@@ -115,6 +117,6 @@
 			</div>
 		</div>
 		<!-- Fin personal encargado -->
-		<?php include_once('secciones/footer-principal.php');?>
+		<?php  get_footer(); ;?>
 	</body>
 </html>

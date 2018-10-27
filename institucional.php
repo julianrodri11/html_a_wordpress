@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
@@ -15,7 +15,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/institucional/portada-institucional-aunar.jpg"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/institucional/portada-institucional-aunar.jpg"/>
 				</div>
 			</div>
 		</div>
@@ -181,7 +182,8 @@
 							<div class="col-12 p-2 px-md-5 text-center">
 								<span class="pt-sans"> <strong><h3 class="f-negrita">ORGANIGRAMA AUNAR</h3></strong></span>
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="img/institucional/organigrama-aunar.jpg" alt="organigrama autónoma de nariño - aunar">
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/institucional/organigrama-aunar.jpg" alt="organigrama autónoma de nariño - aunar">
 							</div>
 						</div>
 						<!-- pestaña 7-->
@@ -307,6 +309,6 @@
 				</div>
 			</div>
 		</div>
-		<?php include_once('secciones/footer-principal.php');?>
+		<?php  get_footer(); ;?>
 	</body>
 </html>

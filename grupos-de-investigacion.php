@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
@@ -16,7 +16,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/investigacion/grupos-de-investigacion.jpg" alt="grupos de investigación AUNAR" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/grupos-de-investigacion.jpg" alt="grupos de investigación AUNAR" />
 				</div>
 			</div>
 		</div>
@@ -28,42 +29,50 @@
 			<div class="row fondo-grupos-investigacion p-5">
 				<div class="col-12 col-md-6 p-2 content_img_gruposinvestigacion">
 					<a href="grupos-de-investigacion#grupo1">
-						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="img/investigacion/inmecnar.png" alt="Grupo de Investigacion INMECNAR">
+						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/inmecnar.png" alt="Grupo de Investigacion INMECNAR">
 					</a>
 				</div>
 				<div class="col-12 col-md-6 p-2 content_img_gruposinvestigacion">
 					<a href="grupos-de-investigacion#grupo6">
-						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="img/investigacion/irop.png" alt="IROP Mecánica Dental">
+						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/irop.png" alt="IROP Mecánica Dental">
 					</a>
 				</div>
 				<div class="col-12 col-md-6 p-2 content_img_gruposinvestigacion">
 					<a href="grupos-de-investigacion#grupo5">
-						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="img/investigacion/ciac.png" alt="CIAC Ciencias Administrativas y Contables">
+						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/ciac.png" alt="CIAC Ciencias Administrativas y Contables">
 					</a>
 				</div>
 				<div class="col-12 col-md-6 p-2 content_img_gruposinvestigacion">
 					<a href="grupos-de-investigacion#grupo3">
-						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="img/investigacion/zed-matec.png" alt="ZED MATEC Sistemas Expertos, Desarrollo de Software, Matemáticas Aplicadas t TECnología">
+						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/zed-matec.png" alt="ZED MATEC Sistemas Expertos, Desarrollo de Software, Matemáticas Aplicadas t TECnología">
 					</a>
 				</div>
 				<div class="col-12 col-md-6 p-2 content_img_gruposinvestigacion">
 					<a href="grupos-de-investigacion#grupo7">
-						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="img/investigacion/egresados-aunar.png" alt="Egresados AUNAR">
+						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/egresados-aunar.png" alt="Egresados AUNAR">
 					</a>
 				</div>
 				<div class="col-12 col-md-6 p-2 content_img_gruposinvestigacion">
 					<a href="grupos-de-investigacion#grupo4">
-						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="img/investigacion/moda-+-cultura.png" alt="MODA-+-CULTURA">
+						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/moda-+-cultura.png" alt="MODA-+-CULTURA">
 					</a>
 				</div>
 				<div class="col-12 col-md-6 p-2 content_img_gruposinvestigacion">
 					<a href="grupos-de-investigacion#grupo2">
-						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="img/investigacion/metanola.png" alt="METANOLA">
+						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/metanola.png" alt="METANOLA">
 					</a>
 				</div>
 				<div class="col-12 col-md-6 p-2 content_img_gruposinvestigacion">
 					<a href="grupos-de-investigacion#grupo8">
-						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="img/investigacion/gidsma.png" alt="GIDSMA">
+						<img class="img-fluid pointer img_gruposinvestigacion" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/gidsma.png" alt="GIDSMA">
 					</a>
 				</div>
 			</div>
@@ -73,7 +82,8 @@
 		<div class="container-fluid py-5" id="grupo1">
 			<div class="row d-flex justify-content-center">
 				<div class="col-8 col-md-4 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/investigacion/inmecnar-logo.png" alt="grupos de investigación AUNAR" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/inmecnar-logo.png" alt="grupos de investigación AUNAR" />
 				</div>
 			</div>
 		</div>
@@ -150,7 +160,8 @@
 		<div class="container-fluid py-5" id="grupo2">
 			<div class="row d-flex justify-content-center">
 				<div class="col-8 col-md-7 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/investigacion/metanola.png" alt="grupos de investigación metanola AUNAR" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/metanola.png" alt="grupos de investigación metanola AUNAR" />
 				</div>
 			</div>
 		</div>
@@ -229,7 +240,8 @@
 		<div class="container-fluid py-5" id="grupo3">
 			<div class="row d-flex justify-content-center">
 				<div class="col-8 col-md-8 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/investigacion/zed-matec.png" alt="grupos de investigación zed matec AUNAR" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/zed-matec.png" alt="grupos de investigación zed matec AUNAR" />
 				</div>
 			</div>
 		</div>
@@ -346,7 +358,8 @@
 		<div class="container-fluid py-5" id="grupo4">
 			<div class="row d-flex justify-content-center">
 				<div class="col-8 col-md-7 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/investigacion/moda-+-cultura.png" alt="grupos de investigación Moda más Cultura AUNAR" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/moda-+-cultura.png" alt="grupos de investigación Moda más Cultura AUNAR" />
 				</div>
 			</div>
 		</div>
@@ -426,7 +439,8 @@
 		<div class="container-fluid py-5" id="grupo5">
 			<div class="row d-flex justify-content-center">
 				<div class="col-8 col-md-7 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/investigacion/ciac.png" alt="grupos de investigación CIAC AUNAR" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/ciac.png" alt="grupos de investigación CIAC AUNAR" />
 				</div>
 			</div>
 		</div>
@@ -504,7 +518,8 @@
 		<div class="container-fluid py-5" id="grupo6">
 			<div class="row d-flex justify-content-center">
 				<div class="col-8 col-md-7 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/investigacion/irop.png" alt="grupos de investigación IROP AUNAR" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/irop.png" alt="grupos de investigación IROP AUNAR" />
 				</div>
 			</div>
 		</div>
@@ -589,7 +604,8 @@
 		<div class="container-fluid py-5" id="grupo7">
 			<div class="row d-flex justify-content-center">
 				<div class="col-8 col-md-7 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/investigacion/egresados-aunar.png" alt="grupos de investigación EGRESADOS AUNAR" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/egresados-aunar.png" alt="grupos de investigación EGRESADOS AUNAR" />
 				</div>
 			</div>
 		</div>
@@ -668,7 +684,8 @@
 		<div class="container-fluid py-5" id="grupo8">
 			<div class="row d-flex justify-content-center">
 				<div class="col-8 col-md-7 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/investigacion/gidsma.png" alt="grupos de investigación GIDSMA AUNAR" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/gidsma.png" alt="grupos de investigación GIDSMA AUNAR" />
 				</div>
 			</div>
 		</div>
@@ -752,7 +769,7 @@
 			</div>
 		</div>
 		<!-- footer -->
-		<?php include_once('secciones/footer-principal.php');?>
+		<?php  get_footer(); ;?>
 		
 	</body>
 </html>

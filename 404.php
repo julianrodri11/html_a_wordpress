@@ -8,8 +8,8 @@
 </head>
 <body>
 
-<center><h1>Error <br>Página no encontrada</h1>
-<a href="index">Ir al Inicio</a>
+<center><h1>Error 404 <br>Página no encontrada</h1>
+<a href="<?php echo home_url(); ?>">Ir al Inicio</a>
 </center>
     
 </body>

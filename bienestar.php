@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
@@ -18,7 +18,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/bienestar/bienestar_universitario_aunar.jpg" alt="Bienestar Institucional" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/bienestar/bienestar_universitario_aunar.jpg" alt="Bienestar Institucional" />
 				</div>
 			</div>
 		</div>
@@ -162,7 +163,8 @@
 						<div class="media-body ">
 							<div class="row">
 								<div class="col-12 col-md-6 text-center">
-									<img src="img/bienestar/jaime_colunge.png" class="align-self-center mr-3 rounded-circle img-fluid" >
+									<img src="<?php bloginfo('template_url')?>/img
+/bienestar/jaime_colunge.png" class="align-self-center mr-3 rounded-circle img-fluid" >
 								</div>
 								<div class="col-12 col-md-6 text-center text-md-left">
 									<h4 class="fuente-institucional texto-amarillo f-negrita">PROFESIONAL ENCARGADO</h4>
@@ -187,7 +189,8 @@
 					<div class="media-body">
 						<div class="row">
 							<div class="col-12 col-md-6 text-center">
-								<img src="img/bienestar/maria_ruiz.png" class="align-self-center mr-3 rounded-circle img-fluid" >
+								<img src="<?php bloginfo('template_url')?>/img
+/bienestar/maria_ruiz.png" class="align-self-center mr-3 rounded-circle img-fluid" >
 							</div>
 							<div class="col-12 col-md-6 text-center text-md-left">
 								<h4 class="fuente-institucional texto-amarillo f-negrita">ASISTENTE</h4>
@@ -203,6 +206,6 @@
 			</div>
 		</div>
 	</div>
-	<?php include_once('secciones/footer-principal.php');?>
+	<?php  get_footer(); ;?>
 </body>
 </html>

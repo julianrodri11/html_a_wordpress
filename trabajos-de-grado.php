@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
@@ -16,7 +16,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/investigacion/trabajos-de-grado.jpg" alt="TRABAJOS DE GRADO - Autónoma de Nariño"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/trabajos-de-grado.jpg" alt="TRABAJOS DE GRADO - Autónoma de Nariño"/>
 				</div>
 			</div>
 		</div>
@@ -45,7 +46,8 @@
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p>En cada etapa el estudiante cuenta con el acompañamiento de un docente asesor. En programas virtuales se asesorará con recursos y herramientas presentadas en la plataforma MOODLE. </p>
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="img/investigacion/trabajos-de-grado-aunar.png" alt="Trabajos de grado AUNAR"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/trabajos-de-grado-aunar.png" alt="Trabajos de grado AUNAR"></div>
 						</div>
 						
 						<!-- Pestaña 2-->
@@ -71,7 +73,7 @@
 		
 		
 		
-		<?php include_once('secciones/footer-principal.php');?>
+		<?php  get_footer(); ;?>
 		
 		
 	</body>

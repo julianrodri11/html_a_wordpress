@@ -1,5 +1,6 @@
+<?php /* Template Name: Plantilla Ayudas y Becas */ ?>
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
@@ -15,7 +16,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/ayudas-y-becas-aunar.jpg" alt="AYUDAS Y BECAS - AUNAR"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/ayudas-y-becas-aunar.jpg" alt="AYUDAS Y BECAS - AUNAR"/>
 				</div>
 			</div>
 		</div>
@@ -191,6 +193,6 @@
 			</div>
 		</div>
 		<!-- footer -->
-		<?php include_once('secciones/footer-principal.php');?>
+		<?php  get_footer(); ;?>
 	</body>
 </html>

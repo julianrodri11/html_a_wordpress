@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
@@ -16,7 +16,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/proyeccion_institucional/proyeccion_social_aunar.jpg"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/proyeccion_institucional/proyeccion_social_aunar.jpg"/>
 				</div>
 			</div>
 		</div>
@@ -238,7 +239,8 @@
 						</div>
 						<div class="tab-pane fade pt-sans texto-azul-os text-justify" id="pills-44" role="tabpanel" aria-labelledby="pills-4-tab">
 							<div class="col-12">Con la grata intervención de la Secretaria de Equidad de Género e Inclusión Social, Secretaría de TIC Innovación y Gobierno Abierto, Centro de Innovación Social de Nariño (CISNA) por parte de la Gobernación de Nariño y Subsecretaría de Desarrollo Comunitario y Secretaría de Desarrollo Económico por parte de la Alcaldía de Pasto :) A todos ustedes muchas gracias por compartir sus experiencias con nosotros y a todos los estudiantes, docentes y administrativos que nos acompañaron en este foro, gracias también por su activa participación <strong>#AunarPasto</strong> <strong>#AunarProyecciónSocial</strong> :D Comprometidos con nuestra comunidad</div>
-							<div class="col-12"><br><img class="img-fluid" src="img/proyeccion_institucional/foro_proyeccion_social.png" width="100%" alt="Foro proyección social"></div>
+							<div class="col-12"><br><img class="img-fluid" src="<?php bloginfo('template_url')?>/img
+/proyeccion_institucional/foro_proyeccion_social.png" width="100%" alt="Foro proyección social"></div>
 						</div>
 					</div>
 					
@@ -257,7 +259,8 @@
 							
 							<div class="row">
 								<div class="col-12 col-md-4 text-center">
-									<img src="img/proyeccion_institucional/gabriela_sthefanny_vargas.png" class="align-self-center mr-3 rounded-circle img-fluid" >
+									<img src="<?php bloginfo('template_url')?>/img
+/proyeccion_institucional/gabriela_sthefanny_vargas.png" class="align-self-center mr-3 rounded-circle img-fluid" >
 								</div>
 								<div class="col-12 col-md-8 text-center text-md-left">
 									<h4 class="fuente-institucional texto-amarillo f-negrita">PROFESIONAL ENCARGADO</h4>
@@ -279,7 +282,7 @@
 			</div>
 		</div>
 	</div>
-	<?php include_once('secciones/footer-principal.php');?>
+	<?php  get_footer(); ;?>
 	
 </body>
 </html>

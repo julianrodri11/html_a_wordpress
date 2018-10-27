@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
@@ -16,7 +16,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/institucional/vicerrectoria_administrativa_y_financiera_portada.jpg" alt="VICERRECTORÍA ADMINISTRATIVA FINANCIERA"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/institucional/vicerrectoria_administrativa_y_financiera_portada.jpg" alt="VICERRECTORÍA ADMINISTRATIVA FINANCIERA"/>
 				</div>
 			</div>
 		</div>
@@ -129,7 +130,8 @@
 					<div class="row col-12 ">
 						<div class="col-12 py-3 text-center text-lg-right mx-auto ">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<img src="img/institucional/analeonor_zambrano_rosero.png" alt="ANALEONOR ZAMBRANO ROSERO" width="35%">
+							<img src="<?php bloginfo('template_url')?>/img
+/institucional/analeonor_zambrano_rosero.png" alt="ANALEONOR ZAMBRANO ROSERO" width="35%">
 						</div>
 					</div>
 				</div>
@@ -178,7 +180,8 @@
 					<div class="row col-12 ">
 						<div class="col-12 py-3 text-center text-lg-right mx-auto">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<img src="img/institucional/juan_sebastian_jurado_burbano.png" alt="Secretaria vicerrectoria administrativa financiera" width="35%">
+							<img src="<?php bloginfo('template_url')?>/img
+/institucional/juan_sebastian_jurado_burbano.png" alt="Secretaria vicerrectoria administrativa financiera" width="35%">
 						</div>
 					</div>
 				</div>
@@ -204,7 +207,7 @@
 		<!-- fin personal encargado -->
 		
 		
-		<?php include_once('secciones/footer-principal.php');?>
+		<?php  get_footer(); ;?>
 		
 		
 	</body>

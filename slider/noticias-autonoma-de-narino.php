@@ -18,7 +18,8 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="img/noticias/noticia1.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img
+/noticias/noticia1.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
                       <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
                     </div>
@@ -35,7 +36,8 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="img/noticias/noticia2.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img
+/noticias/noticia2.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
                       <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
                     </div>
@@ -52,7 +54,8 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="img/noticias/noticia3.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img
+/noticias/noticia3.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
                       <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
                     </div>
@@ -73,7 +76,8 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="img/noticias/noticia3.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img
+/noticias/noticia3.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
                       <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
                     </div>
@@ -90,7 +94,8 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="img/noticias/noticia1.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img
+/noticias/noticia1.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
                       <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
                     </div>
@@ -107,7 +112,8 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="img/noticias/noticia2.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img
+/noticias/noticia2.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
                       <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
                     </div>
@@ -128,7 +134,8 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="img/noticias/noticia1.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img
+/noticias/noticia1.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
                       <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
                     </div>
@@ -145,7 +152,8 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="img/noticias/noticia2.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img
+/noticias/noticia2.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
                       <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
                     </div>
@@ -162,7 +170,8 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="img/noticias/noticia3.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img
+/noticias/noticia3.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
                       <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
                     </div>

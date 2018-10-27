@@ -111,19 +111,19 @@
                     <div class=" f-italica f-negrita f-size-14  m-0 p-0">
                         <div class=" ">
                             <a class="px-0 px-sm-1" data-toggle="tooltip" data-placement="auto" title="Facebook" target="_blank_facebook" href="https://www.facebook.com/aunarpasto/">
-                                <img src="img/ico_redes/facebook_aunar.png" width="25" alt="facebook">
+                                <img src="<?php bloginfo('template_url')?>/img/ico_redes/facebook_aunar.png" width="25" alt="facebook">
                             </a>
                             <a class="px-0 px-sm-1" data-toggle="tooltip" data-placement="auto" title="Twitter" target="_blank_twitter" href="https://twitter.com/aunarpasto?lang=es">
-                                <img src="img/ico_redes/twitter_aunar.png" width="25" alt="twitter">
+                                <img src="<?php bloginfo('template_url')?>/img/ico_redes/twitter_aunar.png" width="25" alt="twitter">
                             </a>
                             <a class="px-0 px-sm-1" data-toggle="tooltip" data-placement="auto" title="Instagram" target="_blank_instagram" href="https://www.instagram.com/autonomadenarino/">
-                                <img src="img/ico_redes/instagram_aunar.png" width="25" alt="instagram">
+                                <img src="<?php bloginfo('template_url')?>/img/ico_redes/instagram_aunar.png" width="25" alt="instagram">
                             </a>
                             <a class="px-0 px-sm-1" data-toggle="tooltip" data-placement="auto" title="Youtube" target="_blank_youtube" href="https://www.youtube.com/channel/UC8MaEtIvAAZzrYLFX1AazIA">
-                                <img src="img/ico_redes/youtube_aunar.png" width="25" alt="youtube">
+                                <img src="<?php bloginfo('template_url')?>/img/ico_redes/youtube_aunar.png" width="25" alt="youtube">
                             </a>
                             <a class="px-0 px-sm-1" data-toggle="tooltip" data-placement="auto" title="Flickr" target="_blank_flickr" href="https://www.flickr.com/photos/147246490@N05/albums">
-                                <img src="img/ico_redes/flickr_aunar.png" width="25" alt="flickr">
+                                <img src="<?php bloginfo('template_url')?>/img/ico_redes/flickr_aunar.png" width="25" alt="flickr">
                             </a>
                         </div>
                     </div>

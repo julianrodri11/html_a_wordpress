@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
@@ -16,7 +16,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/bienestar/primeros_auxilios.jpg"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/bienestar/primeros_auxilios.jpg"/>
 				</div>
 			</div>
 		</div>
@@ -43,7 +44,8 @@
 								<p>Se entiende por primeros auxilios, la atención inmediata y temporal que se brinda a víctimas de accidentes o de afecciones de salud que se presentan repentinamente y que ponen en riesgo el bienestar de la persona. Este servicio se presta sin costo, a cualquier persona que se encuentre en el campus universitario y que requiera de dicha atención.</p>
 								<p>Cuando se requiere este servicio, por favor acérquese a la Oficina de Primeros Auxilios ubicada en el primer piso de Institución.</p>
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="img/bienestar/aunar_primeros_auxilios.jpg"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/bienestar/aunar_primeros_auxilios.jpg"></div>
 						</div>
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
 							<div class="col-12 p-2 px-md-5 text-justify">
@@ -59,7 +61,8 @@
 								- Tomar la medicación aconsejada por tu médico</p>
 								<p>Cuando se requiere este servicio, por favor acérquese a la Oficina de Primeros Auxilios ubicada en el primer piso de Institución.</p>
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="img/bienestar/tension_arterial.jpg"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/bienestar/tension_arterial.jpg"></div>
 						</div>
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
 							<div class="col-12 p-2 px-md-5 text-justify">
@@ -69,19 +72,22 @@
 									- Autoexamen de mamas
 								</p>
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="img/bienestar/asesorias_educacion_sexual.jpg"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/bienestar/asesorias_educacion_sexual.jpg"></div>
 						</div>
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
 							<div class="col-12 p-2 px-md-5 text-justify">
 								Es un programa que informa y educa a la comunidad universitaria sobre la importancia que tiene el respeto consigo mismo, con el auto cuidado y el aprendizaje significativo de estilos de vida que favorezcan la salud física y mental.
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="img/bienestar/promocion_y_prevencion.jpg"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/bienestar/promocion_y_prevencion.jpg"></div>
 						</div>
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-act-deportivas" role="tabpanel" aria-labelledby="v-pills-act-deportivas-tab">
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p>Durante la realización de cualquier actividad deportiva y cultural AUNAR, se tiene acompañamiento de personal experto en cada área y que garantice las condiciones óptimas en cada evento.</p>
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="img/bienestar/acompanamiento_actividades_deportivas.jpg"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/bienestar/acompanamiento_actividades_deportivas.jpg"></div>
 						</div>
 					</div>
 				</div>
@@ -97,7 +103,8 @@
 							
 							<div class="row">
 								<div class="col-12 col-md-6 text-center">
-									<img src="img/bienestar/Vanessa_Constanza.png" class="align-self-center mr-3 rounded-circle img-fluid" >
+									<img src="<?php bloginfo('template_url')?>/img
+/bienestar/Vanessa_Constanza.png" class="align-self-center mr-3 rounded-circle img-fluid" >
 								</div>
 								<div class="col-12 col-md-6 text-center text-md-left">
 									<h4 class="fuente-institucional texto-amarillo f-negrita">PROFESIONAL ENCARGADO</h4>
@@ -117,7 +124,7 @@
 				</div>
 			</div>
 		</div>
-		<?php include_once('secciones/footer-principal.php');?>
+		<?php  get_footer(); ;?>
 		
 		
 	</body>

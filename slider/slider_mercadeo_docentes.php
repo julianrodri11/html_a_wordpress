@@ -9,14 +9,16 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <a href="inscripciones.php"> 
-        <img class="d-block w-100" src="img/carreras/slider_mercadeo.jpg" alt="Director Mercadeo Agropecuario Aunar"></a>
+        <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img
+/carreras/slider_mercadeo.jpg" alt="Director Mercadeo Agropecuario Aunar"></a>
       <!--div class="carousel-caption">
         <h3></h3>
         <p></p>
       </div-->
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/carreras/slider_mercadeo_director.jpg" alt="Director Mercadeo Agropecuario Aunar">
+      <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img
+/carreras/slider_mercadeo_director.jpg" alt="Director Mercadeo Agropecuario Aunar">
       <!--div class="carousel-caption">
         <h3>Lorem Fuga, nesciunt </h3>
         <p>voluptatibus consectetur, consequuntur nemo necessitatibus.</p>

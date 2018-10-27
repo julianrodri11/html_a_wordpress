@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
@@ -16,7 +16,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/investigacion/vicerrectoria-de-investigacion-aunar.jpg" alt="vicerrectoría de investigación" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/vicerrectoria-de-investigacion-aunar.jpg" alt="vicerrectoría de investigación" />
 				</div>
 			</div>
 		</div>
@@ -220,7 +221,8 @@
 						</div>
 					</div>
 					<div class="col-md-6 p-2 hvr-grow-shadow izquierda_derecha d-flex align-items-center" >
-						<div class="col p-2 text-center "><a href="radio-aunar-stereo"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="img/aunar-stereo.png"/></a></div>
+						<div class="col p-2 text-center "><a href="radio-aunar-stereo"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img
+/aunar-stereo.png"/></a></div>
 						<!-- <div class=" texto-azul text-center ">
 										<div class="row">
 														<div class="col-12 mb-0 p-0 fuente-institucional ">AUNAR STEREO</div>
@@ -243,7 +245,8 @@
 				<div class="row col-12 ">
 					<div class="col-12 py-3 text-center text-lg-right mx-auto ">
 						<!-- aqui va todo lo que se quiera centrar -->
-						<img src="img/investigacion/pedro-pablo-burbano.png.png" alt="Pedro Pablo Burbano" width="35%">
+						<img src="<?php bloginfo('template_url')?>/img
+/investigacion/pedro-pablo-burbano.png.png" alt="Pedro Pablo Burbano" width="35%">
 					</div>
 				</div>
 			</div>
@@ -285,7 +288,8 @@
 				<div class="row col-12 ">
 					<div class="col-12 py-3 text-center text-lg-right mx-auto">
 						<!-- aqui va todo lo que se quiera centrar -->
-						<img src="img/investigacion/Francy-Yasmir-Vallejo-Otaya.png" alt="Francy Yasmir Vallejo Otaya" width="35%">
+						<img src="<?php bloginfo('template_url')?>/img
+/investigacion/Francy-Yasmir-Vallejo-Otaya.png" alt="Francy Yasmir Vallejo Otaya" width="35%">
 					</div>
 				</div>
 			</div>
@@ -311,7 +315,7 @@
 	<!-- fin personal encargado -->
 	
 	
-	<?php include_once('secciones/footer-principal.php');?>
+	<?php  get_footer(); ;?>
 	
 	
 </body>

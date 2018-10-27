@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
   <head>
     <?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
     <!--TÍTULO DE LA PÁGINA Y SEO-->
     <title>.::AUNAR::. - .::CORPORACIÓN UNIVERSITARIA AUTÓNOMA DE NARIÑO::.</title>
     <meta name="description" content="Es una institución de Educación Superior comprometida con la Cultura, la Ciencia, la Investigación; la excelencia en la formación de profesionales íntegros y el liderazgo en el desarrollo social.">
     <meta name="keywords" content="Corporación Universitaria Autónoma de Nariño, AUNAR">
-    <meta property="og:image" <?php echo 'content=http://'.$servidor.'/img/logo-autonoma-de-narino.png'?>/>
+    <meta property="og:image" content="<?php bloginfo('template_url')?>/img/logo-autonoma-de-narino.png"/>
     
   </head>
   <body>
@@ -47,7 +47,8 @@
           <div class="row ">
             <div class="col-12 ">
               <a class="hvr-underline-from-center pb-2" href="docs/derechos_pecuniarios2018.pdf"  data-toggle="tooltip" data-placement="bottom" title="Click aquí" target="_blank">
-              <img  class=" img-fluid" alt="Derechos pecuniarios autonoma de nariño" src="img/derechos.png"></a>
+              <img  class=" img-fluid" alt="Derechos pecuniarios autonoma de nariño" src="<?php bloginfo('template_url')?>/img
+/derechos.png"></a>
             </div>
             <div class="col-12 p-5 texto-azul fuente-institucional">Los siguientes son los montos de los derechos pecuniarios por servicios académicos y administrativos para el año 2018, debidamente aprobados por el Consejo Directivo de la Corporación Universitaria Autónoma de Nariño</div>
           </div>
@@ -75,10 +76,8 @@
           </div>
           <div class="col-12 col-lg-6 col-xl-5 p-2 izquierda_derecha">
             <div class="row  d-flex justify-content-end mr-lg-2">
-              <div class="row col-12 col-lg-8 p-2 m-1">
-                
-                <form class="col-12">
-                  
+              <div class="row col-12 col-lg-8 p-2 m-1">                
+                <form class="col-12">                  
                   <div class="form-group pt-sans">
                     <select class="form-control" id="exampleSelect1">
                       <option>Seleccione Sede</option>
@@ -123,12 +122,10 @@
                       <option value=""> Tecnología en Producción Gráfica  </option>
                       <option value=""> Tecnología en Transformación de Plantas Aromáticas  </option>
                     </select>
-                  </div>
-                  
+                  </div>                  
                   <button type="button" class="btn btn-primary fondo-amarillo float-right f-negrita pt-sans hvr-forward">Buscar</button>
                 </form>
-              </div>
-              
+              </div>              
             </div>
           </div>
         </div>
@@ -193,7 +190,8 @@
       <div class="col-lg-12  ">
         <div class="row p-3 ">
           <div class="col-md-6 p-2 hvr-grow-shadow izquierda_derecha d-flex align-items-center" >
-            <div class="col p-2 text-center "><a href="radio-aunar-stereo"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="img/aunar-stereo.png"/></a></div>
+            <div class="col p-2 text-center "><a href="radio-aunar-stereo"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img
+/aunar-stereo.png"/></a></div>
             <!-- <div class=" texto-azul text-center ">
               <div class="row">
                 <div class="col-12 mb-0 p-0 fuente-institucional ">AUNAR STEREO</div>
@@ -270,7 +268,7 @@
   <?php include_once('secciones/enlaces-externos-aunar.php') ?>
   <!-- -----------------FIN ENLACES DE EXTERNOS------------------------- -->
   <!-- ----------------PIE DE PÁGINA---------------------------- -->
-  <?php include_once('secciones/footer-principal.php') ?>
+  <?php  get_footer();  ?>
   <!-- -------------------FIN PIE DE PÁGINA--------------------- -->
 </body>
 </html>

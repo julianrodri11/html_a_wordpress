@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
@@ -16,7 +16,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/virtual/aunar-virtual.png" alt="AUNAR VIRTUAL" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/virtual/aunar-virtual.png" alt="AUNAR VIRTUAL" />
 				</div>
 			</div>
 		</div>
@@ -50,7 +51,8 @@
 								<strong class="pt-sans"> VISIÓN</strong>
 								<p>AUNAR VIRTUAL, como unidad de desarrollo académico y administrativo, evoluciona hacia el liderazgo en la educación superior en ambientes virtuales que posibiliten la excelencia académica, la cultura investigativa y la responsabilidad social, para contribuir al desarrollo integral y sostenible a nivel regional, nacional e internacional.</p>
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="img/virtual/organigrama-aunar-virtual.png"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/virtual/organigrama-aunar-virtual.png"></div>
 						</div>
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
 							<div class="col-12 p-2 px-md-5 text-justify texto-azul-os">
@@ -100,13 +102,15 @@
 							<div class="col-12 p-2 px-md-5 text-justify">
 								Es un programa que informa y educa a la comunidad universitaria sobre la importancia que tiene el respeto consigo mismo, con el auto cuidado y el aprendizaje significativo de estilos de vida que favorezcan la salud física y mental.
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="img/bienestar/promocion_y_prevencion.jpg"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/bienestar/promocion_y_prevencion.jpg"></div>
 						</div>
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-act-deportivas" role="tabpanel" aria-labelledby="v-pills-act-deportivas-tab">
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p>Durante la realización de cualquier actividad deportiva y cultural AUNAR, se tiene acompañamiento de personal experto en cada área y que garantice las condiciones óptimas en cada evento.</p>
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="img/bienestar/acompanamiento_actividades_deportivas.jpg"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/bienestar/acompanamiento_actividades_deportivas.jpg"></div>
 						</div>
 					</div>
 				</div>
@@ -121,7 +125,8 @@
 					
 					<div class="col-12 p-0 content_img_virtual">
 						<a href="plantas-aromaticas.php" target="plantas-aromaticas">
-							<img class="mx-auto img-fluid img_virtual" width="100%" src="img/virtual/1.jpg" >
+							<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img
+/virtual/1.jpg" >
 							<div class="cont_texto_principal">
 								<div class="texto_principal fuente-institucional f-negrita texto-azul-os">Transformación de Plantas Aromáticas
 								</div>
@@ -160,7 +165,8 @@
 					
 					<div class="col-12 p-0 content_img_virtual">
 						<a href="mercadeo-agropecuario.php" target="mercadeo-agropecuario">
-							<img class="mx-auto img-fluid img_virtual" width="100%" src="img/virtual/2.jpg" >
+							<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img
+/virtual/2.jpg" >
 							<div class="cont_texto_principal">
 								<div class="texto_principal fuente-institucional f-negrita texto-azul-os">Mercadeo Agropecuario
 								</div>
@@ -198,7 +204,8 @@
 				<div class="col-12 col-sm-6 col-md-4 col-lg-2 pb-5">
 					
 					<div class="col-12 p-0 content_img_virtual"> <a href="administracion-empresas-a-distancia.php" target="administracion-empresas">
-						<img class="mx-auto img-fluid img_virtual" width="100%" src="img/virtual/3.jpg" >
+						<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img
+/virtual/3.jpg" >
 						<div class="cont_texto_principal">
 							<div class="texto_principal fuente-institucional f-negrita texto-azul-os">Administración de Empresas
 							</div>
@@ -237,7 +244,8 @@
 				
 				<div class="col-12 p-0 content_img_virtual">
 					<a href="contaduria-publica-a-distancia.php" target="contaduria-publica">
-						<img class="mx-auto img-fluid img_virtual" width="100%" src="img/virtual/4.jpg" >
+						<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img
+/virtual/4.jpg" >
 						<div class="cont_texto_principal">
 							<div class="texto_principal fuente-institucional f-negrita texto-azul-os">Contaduría Pública
 							</div>
@@ -276,7 +284,8 @@
 				
 				<div class="col-12 p-0 content_img_virtual">
 					<a href="ingenieria-informatica.php" target="ingenieria-informatica">
-						<img class="mx-auto img-fluid img_virtual" width="100%" src="img/virtual/5.jpg" >
+						<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img
+/virtual/5.jpg" >
 						<div class="cont_texto_principal">
 							<div class="texto_principal fuente-institucional f-negrita texto-azul-os">Ingeniería Informática
 							</div>
@@ -315,7 +324,7 @@
 	</div>
 	<!-- galeria de programas virtuales -->
 	
-	<?php include_once('secciones/footer-principal.php');?>
+	<?php  get_footer(); ;?>
 	
 	
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
@@ -16,7 +16,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/cidae/cidae-aunar.jpg" alt="Centro de Investigaciones AUNAR"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/cidae/cidae-aunar.jpg" alt="Centro de Investigaciones AUNAR"/>
 				</div>
 			</div>
 		</div>
@@ -194,7 +195,8 @@
 							<div class="col-12 p-2 px-md-5 text-center">
 								<h3 class=" f-negrita fuente-institucional texto-azul">Organigrama CIDAE AUNAR</h3>
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="img/investigacion/organigrama-cidae-aunar.jpg" alt="organigrama cida aunar"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/investigacion/organigrama-cidae-aunar.jpg" alt="organigrama cida aunar"></div>
 						</div>
 						<!-- pestaña 8-->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-act-8" role="tabpanel" aria-labelledby="v-pills-act-8-tab">
@@ -232,7 +234,8 @@
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
 							<!-- aqui va todo lo que se quiera centrar -->
 							<a href="grupos-de-investigacion" target="gin">
-								<img class="img-fluid img_virtual"  src="img/cidae/grupos-de-investigacion-cidae.jpg" alt="Grupos de investigación AUNAR" width="100%">
+								<img class="img-fluid img_virtual"  src="<?php bloginfo('template_url')?>/img
+/cidae/grupos-de-investigacion-cidae.jpg" alt="Grupos de investigación AUNAR" width="100%">
 							</a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
@@ -290,7 +293,8 @@
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual ">
 							<!-- aqui va todo lo que se quiera centrar -->
 							<a href="semilleros" target="semilleros">
-								<img class="img-fluid img_virtual" src="img/cidae/semilleros-de-investigacion-cidae.jpg" alt="Semilleros de investigación AUNAR" width="100%">
+								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
+/cidae/semilleros-de-investigacion-cidae.jpg" alt="Semilleros de investigación AUNAR" width="100%">
 							</a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
@@ -313,7 +317,8 @@
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
 							<!-- aqui va todo lo que se quiera centrar -->
 							<a href="trabajos-de-grado" target="trab_grado">
-								<img class="img-fluid img_virtual" src="img/cidae/trabajo-de-grado-cidae.jpg" alt="Trabajo de grado CIDAE - AUNAR" width="100%">
+								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
+/cidae/trabajo-de-grado-cidae.jpg" alt="Trabajo de grado CIDAE - AUNAR" width="100%">
 							</a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
@@ -349,7 +354,7 @@
 		</div>
 		
 		<!-- footer -->
-		<?php include_once('secciones/footer-principal.php');?>
+		<?php  get_footer(); ;?>
 		
 		
 	</body>

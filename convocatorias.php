@@ -1,5 +1,12 @@
+<?php 
+
+	/*
+		Template Name: Plantilla Convocatorias
+	 */
+?>
+
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS*/  get_header();   ?>
 		<title>CONVOCATORIAS AUTÓNOMA DE NARIÑO</title>
@@ -14,7 +21,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">					
-					<img class="mx-auto img-fluid" width="100%" src="img/convocatorias/convocatorias-aunar.jpg"/>					
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/convocatorias/convocatorias-aunar.jpg"/>					
 				</div>
 			</div>
 		</div>
@@ -61,7 +69,8 @@
 												<div id="collapseOne" class="collapse" data-parent="#accordion" >
 													<div class="card-body p-4 text-justify fondo-gris-c">
 														<div class="row text-center">
-															<div class="col-12"><a href="docs/Resultados_convocatoria_para_xyz.pdf" target="convocatoria_1"> <img src="img/convocatorias/resultados.png"></a></div>
+															<div class="col-12"><a href="docs/Resultados_convocatoria_para_xyz.pdf" target="convocatoria_1"> <img src="<?php bloginfo('template_url')?>/img
+/convocatorias/resultados.png"></a></div>
 															<div class="col-12"><h3 class="pt-sans">Resultados</h3> </div>
 															<div class="col-12"><a class="texto-azul-os" href="docs/Resultados_convocatoria_para_xyz.pdf" target="convocatoria_1"> Descargar términos de la Convocatoria </a></div>
 														</div>
@@ -77,7 +86,8 @@
 												<div id="collapseTwo" class="collapse" data-parent="#accordion" >
 													<div class="card-body p-4 text-justify fondo-gris-c">
 														<div class="row text-center">
-															<div class="col-12"><a href="docs/Resultados_convocatoria_para_xyz.pdf" target="convocatoria_2"> <img src="img/convocatorias/resultados.png"></a></div>
+															<div class="col-12"><a href="docs/Resultados_convocatoria_para_xyz.pdf" target="convocatoria_2"> <img src="<?php bloginfo('template_url')?>/img
+/convocatorias/resultados.png"></a></div>
 															<div class="col-12"><h3 class="pt-sans">Resultados</h3> </div>
 															<div class="col-12"><a class="texto-azul-os" href="docs/Resultados_convocatoria_para_xyz.pdf" target="convocatoria_2"> Descargar términos de la Convocatoria </a></div>
 														</div>
@@ -111,7 +121,8 @@
 												<div id="collapse3" class="collapse" data-parent="#accordion2" >
 													<div class="card-body p-4 text-justify fondo-gris-c">
 														<div class="row text-center">
-															<div class="col-12"><a href="docs/Resultados_convocatoria_para_xyz.pdf" target="convocatoria_1"> <img src="img/convocatorias/resultados.png"></a></div>
+															<div class="col-12"><a href="docs/Resultados_convocatoria_para_xyz.pdf" target="convocatoria_1"> <img src="<?php bloginfo('template_url')?>/img
+/convocatorias/resultados.png"></a></div>
 															<div class="col-12"><h3 class="pt-sans">Resultados</h3> </div>
 															<div class="col-12"><a class="texto-azul-os" href="docs/Resultados_convocatoria_para_xyz.pdf" target="convocatoria_1"> Descargar términos de la Convocatoria </a></div>
 														</div>
@@ -127,7 +138,8 @@
 												<div id="collapse4" class="collapse" data-parent="#accordion2" >
 													<div class="card-body p-4 text-justify fondo-gris-c">
 														<div class="row text-center">
-															<div class="col-12"><a href="docs/Resultados_convocatoria_para_xyz.pdf" target="convocatoria_2"> <img src="img/convocatorias/resultados.png"></a></div>
+															<div class="col-12"><a href="docs/Resultados_convocatoria_para_xyz.pdf" target="convocatoria_2"> <img src="<?php bloginfo('template_url')?>/img
+/convocatorias/resultados.png"></a></div>
 															<div class="col-12"><h3 class="pt-sans">Resultados</h3> </div>
 															<div class="col-12"><a class="texto-azul-os" href="docs/Resultados_convocatoria_para_xyz.pdf" target="convocatoria_2"> Descargar términos de la Convocatoria </a></div>
 														</div>
@@ -146,6 +158,6 @@
 				</div>
 			</div>
 			<br>
-			<?php include_once('secciones/footer-principal.php'); ?>			
+			<?php  get_footer(); ; ?>			
 		</body>
 	</html>

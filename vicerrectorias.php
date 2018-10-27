@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
@@ -16,7 +16,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/institucional/vicerrectoria_aunar.jpg" alt="VICERRECTORÍAS - Autónoma de Nariño - AUNAR"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/institucional/vicerrectoria_aunar.jpg" alt="VICERRECTORÍAS - Autónoma de Nariño - AUNAR"/>
 				</div>
 			</div>
 		</div>
@@ -35,7 +36,8 @@
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
 							<!-- aqui va todo lo que se quiera centrar -->
 							<a href="vicerrectoria_academica" target="v-academica">
-								<img class="img-fluid img_virtual" src="img/institucional/vicerrectoria_academica_aunar.jpg" alt="vicerrectoría académica AUNAR" width="100%">
+								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
+/institucional/vicerrectoria_academica_aunar.jpg" alt="vicerrectoría académica AUNAR" width="100%">
 							</a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
@@ -96,7 +98,8 @@
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
 							<!-- aqui va todo lo que se quiera centrar -->
 							<a href="vicerrectoria_administrativa-financiera" target="v-adm-finan">
-								<img class="img-fluid img_virtual" src="img/institucional/vicerrectoria_administrativa_y_financiera_aunar.jpg" alt="vicerrectoria administrativa y financiera AUNAR" width="100%">
+								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
+/institucional/vicerrectoria_administrativa_y_financiera_aunar.jpg" alt="vicerrectoria administrativa y financiera AUNAR" width="100%">
 							</a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
@@ -118,7 +121,8 @@
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
 							<!-- aqui va todo lo que se quiera centrar -->
 							<a href="vicerrectoria-de-investigacion" target="v-investigacion">
-								<img class="img-fluid img_virtual" src="img/institucional/vicerrectoria_de_investigacion_aunar.jpg" alt="vicerrectoría de investigación AUNAR" width="100%">
+								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
+/institucional/vicerrectoria_de_investigacion_aunar.jpg" alt="vicerrectoría de investigación AUNAR" width="100%">
 							</a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
@@ -178,7 +182,8 @@
 					<div class="row col-12 p-0">
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<img class="img-fluid img_virtual" src="img/institucional/vicerrectoria_de_talento_humano_aunar.jpg" alt="vicerrectoria de talento humano AUNAR" width="100%">
+							<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
+/institucional/vicerrectoria_de_talento_humano_aunar.jpg" alt="vicerrectoria de talento humano AUNAR" width="100%">
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
 									<!-- aqui se puede colocar un boton para una acción -->
@@ -199,7 +204,8 @@
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
 							<!-- aqui va todo lo que se quiera centrar -->
 							<a href="bienestar" target="v-bienestar">
-								<img class="img-fluid img_virtual" src="img/institucional/vicerrectoria_bienestar_institucional_aunar.jpg" alt="vicerrectoría de bienestar institucional AUNAR" width="100%">
+								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
+/institucional/vicerrectoria_bienestar_institucional_aunar.jpg" alt="vicerrectoría de bienestar institucional AUNAR" width="100%">
 							</a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
@@ -238,7 +244,7 @@
 		
 		
 		
-		<?php include_once('secciones/footer-principal.php');?>
+		<?php  get_footer(); ;?>
 		
 		
 	</body>

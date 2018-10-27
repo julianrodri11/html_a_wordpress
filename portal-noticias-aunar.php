@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS*/  get_header();   ?>
 		<title>PORTAL DE NOTICIAS - AUTÓNOMA DE NARIÑO</title>
@@ -19,7 +19,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="img/noticias/portal-de-noticias-aunar.jpg"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/noticias/portal-de-noticias-aunar.jpg"/>
 				</div>
 			</div>
 		</div>
@@ -52,7 +53,8 @@
 						<div class="col-8 pt-sans f-italica p-lg-4"><p>Leidy Mera, estudiante de la Corporación Universitaria Autónoma de Nariño, sede Ipiales, ha ganado importantes reconocimientos a nivel mundial debido a su pasión y dedicación por el ciclo montañismo ¡Conozcamos esta desafiante historia!</p></div>
 						
 						<div class="col-8">
-							<img class="mx-auto img-fluid" width="100%" src="img/noticias/slider-portal-de-noticias.jpg"/>
+							<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
+/noticias/slider-portal-de-noticias.jpg"/>
 						</div>
 						<div class="col-8 text-justify pt-3">
 							<h5 class="text-center">¿Quién eres?</h5>
@@ -76,7 +78,7 @@
 		<!-- selider de noticias -->
 		<?php
 			include_once('slider/noticias-autonoma-de-narino.php');
-		include_once('secciones/footer-principal.php'); ?>
+		 get_footer(); ; ?>
 		<!-- fin selider de noticias -->
 		
 	</body>
