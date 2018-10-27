@@ -26,8 +26,7 @@
     <?php include_once('slider/slider-1.php');?>
     <!-- -----------------FIN SLIDER------------------------------ -->
     <!-- ----------------MENÚ INSTITUCIONAL----------------------- -->
-    <?php include_once('secciones/menu2.php');?>
-    <?php //include_once('secciones/menu2_pruebas.php');?>
+    <?php include_once('secciones/menu2.php');?>    
     <!-- ----------------FIN MENÚ INSTITUCIONAL------------------- -->
     <!-- ----------------MENÚ INSTITUCIONAL----------------------- -->
     <?php include_once('modal/modal-contactenos.php');?>

@@ -24,10 +24,8 @@
                             Admisiones
                         </a>
                         <ul class="dropdown-menu f-size-12" aria-labelledby="navbarDropdownMenuAdmisiones">
-                            <li><a class="dropdown-item f-negrita texto-azul hvr-underline-from-center" href="inscripciones"
-                            target="_blanck_admin">Admisiones</a></li>
-                            <li><a class="dropdown-item f-negrita texto-azul hvr-underline-from-center" href="ayudas-y-becas"
-                            target="_ayudas-y-becas">Ayudas y Becas</a></li>
+                            <li><a class="dropdown-item f-negrita texto-azul hvr-underline-from-center" href="inscripciones">Admisiones</a></li>
+                            <li><a class="dropdown-item f-negrita texto-azul hvr-underline-from-center" href="ayudas-y-becas">Ayudas y Becas</a></li>
                             <li><a class="dropdown-item f-negrita texto-azul hvr-underline-from-center dropdown-toggle"
                             href="#">Calendarios</a>
                             <ul class="dropdown-menu f-size-12">
@@ -73,7 +71,7 @@
                 </li>
                 <li class="nav-item active py-2">
                     <a class="nav-link texto-azul pl-4 pl-sm-2 border-left borde-azul hvr-underline-from-center"
-                        href="convocatorias" target="_blanck_convocatorias">Convocatorias<span class="sr-only">(current)</span></a>
+                        href="convocatorias">Convocatorias<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown py-2">
                         <a class="nav-link dropdown-toggle texto-azul pl-4 pl-sm-2 border-left borde-azul hvr-underline-from-center"
