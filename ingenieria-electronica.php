@@ -6,7 +6,7 @@
 		<title>INGENIERÍA ELECTRÓNICA - AUTÓNOMA DE NARIÑO</title>
 		<meta name="description" content="El ingeniero(a) será capaz de desempeñarse en el sector industrial, en el diseño, investigación, desarrollo, innovación, consultoría, gestión, supervisión, implementación y mantenimiento de sistemas electrónicos">
 		<meta name="keywords" content="Ingeniería Electrónica - AUNAR">
-		<meta property="og:image" <?php echo 'content=http://'.$servidor.'/img/carreras/ingenieria-electronica-aunar.jpg'?>>
+		<meta property="og:image" content="<?php bloginfo('template_url')?>/img/carreras/ingenieria-electronica-aunar.jpg">
 	</head>
 	<body>
 		

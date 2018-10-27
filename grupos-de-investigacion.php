@@ -1,4 +1,4 @@
-<?php /* Template Name: Plantilla g. investigación*/ ?>
+<?php /* Template Name: Plantilla Gs. investigación*/ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>

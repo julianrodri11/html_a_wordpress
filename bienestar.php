@@ -7,7 +7,7 @@
 		<title>BIENESTAR INSTITUCIONAL - AUTÓNOMA DE NARIÑO</title>
 		<meta name="description" content="Objetivo general - Velar por el cumplimiento de las distintas actividades que se desarrollan dentro y fuera de cada uno de los componentes, programas e instancias que integran la institución.">
 		<meta name="keywords" content="Bienestar Institucional - AUNAR">
-		<meta property="og:image" <?php echo 'content=http://'.$servidor.'/img/bienestar/bienestar_universitario_aunar.jpg'?>>
+		<meta property="og:image" content="<?php bloginfo('template_url')?>/img/bienestar/bienestar_universitario_aunar.jpg">
 	</head>
 	<body>
 		<?php
@@ -19,8 +19,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/bienestar/bienestar_universitario_aunar.jpg" alt="Bienestar Institucional" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/bienestar/bienestar_universitario_aunar.jpg" alt="Bienestar Institucional" />
 				</div>
 			</div>
 		</div>

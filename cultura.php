@@ -1,4 +1,4 @@
-<?php /* Template Name: Plantilla cultura */ ?>
+<?php /* Template Name: Plantilla Cultura */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>

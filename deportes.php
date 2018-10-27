@@ -1,4 +1,4 @@
-<?php /* Template Name: Plantilla deportes */ ?>
+<?php /* Template Name: Plantilla Deportes */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>

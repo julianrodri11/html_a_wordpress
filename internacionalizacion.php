@@ -1,4 +1,4 @@
-<?php /* Template Name: Plantilla Internacionalizacion */ ?>
+<?php /* Template Name: Plantilla Internacionalización */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>
