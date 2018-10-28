@@ -3,6 +3,14 @@
 if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support( 'post-thumbnails' ); }
 
+// remove width & height attributes from images
+// elimina el ancho y alto para que tome el width 100% y class img-fluid de bootstrap
+function remove_img_attr ($html)
+{
+    return preg_replace('/(width|height)="\d+"\s/', "", $html);
+}
+ 
+add_filter( 'post_thumbnail_html', 'remove_img_attr' );
 // función que sirve para agregar el sidebar widget
 add_action( 'widgets_init', 'my_register_sidebars' );
 function my_register_sidebars() {
@@ -21,14 +29,7 @@ function my_register_sidebars() {
     /* Repeat register_sidebar() code for additional sidebars. */
 }
 
-// remove width & height attributes from images
-//
-function remove_img_attr ($html)
-{
-    return preg_replace('/(width|height)="\d+"\s/', "", $html);
-}
- 
-add_filter( 'post_thumbnail_html', 'remove_img_attr' );
+
 
 ?>
 

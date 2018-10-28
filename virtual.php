@@ -29,7 +29,8 @@
 		<div class="container-fluid m-0 py-5 border-bottom borde-azul">
 		<?php 
 		//$args = array( 'category_name=noticias' => 4 );
-		$my_query=new WP_Query(array('category_name=noticias','posts_per_page' => 2));
+		
+		$my_query=new WP_Query(array('category_name' => 'noticias','posts_per_page' => 2));
 		 if ( $my_query -> have_posts() ) : 
 			$contador = 0;
 			while ($my_query -> have_posts() ) : $my_query->the_post();
