@@ -50,11 +50,16 @@
 								<?php the_excerpt(); ?>
 							</p>
 						</div>
-						<div class="col-12 col-md-8 d-flex justify-content-center">
-							<?php // check if the post or page has a Featured Image assigned to it.
-							if ( has_post_thumbnail() ) {
-								the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid', 'width' => '100%']);
-							} ?>
+						<div class="col-12 col-md-8">
+							<div class="row d-flex justify-content-center">
+								<!-- imagen -->
+								<div class="col-12">          							
+									<?php // check if the post or page has a Featured Image assigned to it.
+									if ( has_post_thumbnail() ) {
+										the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid ', 'width' => '100%']);
+									} ?>									
+								</div>
+							</div>
 						</div>
 						<div class="col-12 col-md-8">
 							<!-- <img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/noticias/slider-portal-de-noticias.jpg"/> -->
@@ -80,7 +85,7 @@
 			<div class="row">
 				<!-- <div class="col-12 fuente-institucional texto-azul f-negrita pt-3">COMPARTE ESTE CONTENIDO</div>
 				<div class="col-12 fuente-institucional texto-azul f-negrita pt-3">INCONOS DE REDES SOCIALES</div> .-->
-				<a href="https://www.facebook.com/sharer/sharer.php?u=http://190.14.239.67/portal-noticias-aunar.php" target="_blank"><img src="https://lh3.googleusercontent.com/-H8xMuAxM-bE/UefWwJr2vwI/AAAAAAAAEdY/N5I41q19KMk/s32-no/facebook.png"></a>
+				<!-- <a href="https://www.facebook.com/sharer/sharer.php?u=http://190.14.239.67/portal-noticias-aunar.php" target="_blank"><img src="https://lh3.googleusercontent.com/-H8xMuAxM-bE/UefWwJr2vwI/AAAAAAAAEdY/N5I41q19KMk/s32-no/facebook.png"></a> -->
 			</div>
 		</div>
 		<!-- selider de noticias -->
