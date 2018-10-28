@@ -11,10 +11,8 @@
 		
 	</div>
 	<!-- slider de cada carrera -->
-	<div class="row">
-		
-		<?php  include_once('slider/slider_mecanica_docentes.php')?>
-		
+	<div class="row">		
+		<?php  include_once('slider/slider_mecanica_docentes.php')?>		
 	</div>
 	<!-- fin slider de cada carrera -->
 	
