@@ -32,7 +32,7 @@
         <div class="col-12">
           <p class="texto-azul pt-sans text-justify"><?php the_excerpt() ?></p>
         </div>
-        <div class="col-12 col-sm-10 sin-texto-subrayado texto-azul-os pt-sans"><?php echo get_the_date() ?> / <?php the_category(' / ') ?> / <?php the_author() ?></div>
+        <div class="col-12 col-sm-10 sin-texto-subrayado texto-azul-os pt-sans"><?php echo get_the_date() ?> / <?php the_category(' , ') ?> / <?php the_author() ?></div>
         <div class="col-12 col-sm-2">
           <a href="<?php the_permalink() ?>" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco float-right texto-azul sin-texto-subrayado fuente-institucional">Leer Más</a>
         </div>
@@ -84,7 +84,7 @@
         <div class="col-12">
           <p class="texto-azul pt-sans text-justify"><?php the_excerpt() ?></p>
         </div>
-        <div class="col-12 col-sm-10 sin-texto-subrayado"><?php echo get_the_date() ?> / <?php the_category(' / ') ?> / <?php the_author() ?></div>
+        <div class="col-12 col-sm-10 sin-texto-subrayado"><?php echo get_the_date() ?> / <?php the_category(' , ') ?> / <?php the_author() ?></div>
         <div class="col-12 col-sm-2">
           <a href="<?php the_permalink() ?>" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco texto-azul sin-texto-subrayado fuente-institucional">Leer Más</a>
         </div>

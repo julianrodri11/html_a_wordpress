@@ -62,7 +62,7 @@
 						<div class="col-12 col-md-8 text-justify pt-3">
 							<?php the_content(); ?>
 						</div>
-						<div class="col-12 col-md-8 texto-azul-os pt-sans py-4">Publicado por: <?php the_author() ?> / Fecha: <?php echo get_the_date() ?> / Categoría (s): <?php the_category(' / ') ?> 
+						<div class="col-12 col-md-8 texto-azul-os pt-sans py-4">Publicado por: <?php the_author() ?> / Fecha: <?php echo get_the_date() ?> / Categoría (s): <?php the_category(' , ') ?> 
 						</div>												
 
 						<?php
