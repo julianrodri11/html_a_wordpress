@@ -17,8 +17,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/virtual/aunar-virtual.png" alt="AUNAR VIRTUAL" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/virtual/aunar-virtual.png" alt="AUNAR VIRTUAL" />
 				</div>
 			</div>
 		</div>
@@ -27,7 +26,104 @@
 		<?php include_once('secciones/menu_aunar_virtual.php');?>
 		
 		<!-- ----------------SECCIÓN NOTICIAS------------------------- -->
-		<?php include_once('noticias/noticia-1.php');?>
+		<div class="container-fluid m-0 py-5 border-bottom borde-azul">
+		<?php 
+		//$args = array( 'category_name=noticias' => 4 );
+		$my_query=new WP_Query(array('category_name=noticias','posts_per_page' => 2));
+		 if ( $my_query -> have_posts() ) : 
+			$contador = 0;
+			while ($my_query -> have_posts() ) : $my_query->the_post();
+				
+			/*******************************************************************************/
+			//contenido de las noticias
+			if( ++$contador % 2 == 0){
+				//echo "PAR".$contador;
+				?>
+				<!-- noticia 1 -->
+				<div class="row m-0">
+				  <div class=" p-0 col-12 col-lg-6 mt-3 mt-lg-0 d-flex justify-content-center align-items-center">
+					<div class="row col-12 ">
+					  <!-- texto -->
+					  <div class="col-12 ">
+						<label class=""><a class="texto-amarillo f-negrita f-size-18 fuente-institucional" href="<?php the_permalink() ?>"><?php the_title() ?> </a></label> 
+						<!-- <label class="texto-azul fuente-institucional f-size-14">IX MUESTRA DE PROYECTOS DE INGENIERÍA</label> -->
+					  </div>
+					  <div class="col-12">
+						<p class="texto-azul pt-sans text-justify"><?php the_excerpt() ?></p>
+					  </div>
+					  <div class="col-12 col-sm-10 sin-texto-subrayado texto-azul-os pt-sans"><?php echo get_the_date() ?> / <?php the_category(' / ') ?> / <?php the_author() ?></div>
+					  <div class="col-12 col-sm-2">
+						<a href="<?php the_permalink() ?>" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco float-right texto-azul sin-texto-subrayado fuente-institucional">Leer Más</a>
+					  </div>
+					</div>
+				  </div>
+				  <div class="m-0 p-0 col-12 col-lg-6 mt-3 mt-lg-0" >
+					<div class="row">
+					  <!-- imagen -->
+					  <div class="col-12">
+						<a class="p-0" href="<?php the_permalink() ?>">
+						  <?php // check if the post or page has a Featured Image assigned to it.
+						  if ( has_post_thumbnail() ) {
+							the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid', 'width' => '100%']);
+						  } ?>
+						</a>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<!-- fin noticia 1 -->
+				<?php
+				} else {
+				//echo "IMPAR".$contador;
+				//insira o seu código para quando o post for ímpar
+				?>
+				<!-- noticia 2 -->
+				<div class="row m-0">
+				  <div class="m-0 p-0 col-12 col-lg-6 mt-3 mt-lg-0 order-2 order-lg-1">
+					<div class="row">
+					  <!-- imagen -->
+					  <div class="col-12">
+						<a class="p-0" href="<?php the_permalink() ?>">
+						  <?php // check if the post or page has a Featured Image assigned to it.
+						  if ( has_post_thumbnail() ) {						
+							 the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid', 'width' => '100%']);
+						  } ?>
+						</a>
+					  </div>
+					</div>
+				  </div>
+				  
+				  <div class="p-0 col-12 col-lg-6 d-flex justify-content-center align-items-center order-1 order-lg-2">
+					<div class="row col-12 pr-lg-4 ">
+					  <!-- texto -->
+					  <div class="col-12">
+						<label class=""><a class="texto-amarillo f-negrita f-size-18 fuente-institucional" href="<?php the_permalink() ?>"><?php the_title() ?> </a></label> 
+						<!-- <label class="texto-azul fuente-institucional f-size-14">IX MUESTRA DE PROYECTOS DE INGENIERÍA</label> -->
+					  </div>
+					  <div class="col-12">
+						<p class="texto-azul pt-sans text-justify"><?php the_excerpt() ?></p>
+					  </div>
+					  <div class="col-12 col-sm-10 sin-texto-subrayado"><?php echo get_the_date() ?> / <?php the_category(' / ') ?> / <?php the_author() ?></div>
+					  <div class="col-12 col-sm-2">
+						<a href="<?php the_permalink() ?>" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco texto-azul sin-texto-subrayado fuente-institucional">Leer Más</a>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<!-- fin noticia 2 -->
+				<?php
+				}
+				
+			/*******************************************************************************/
+
+			endwhile;
+			wp_reset_postdata();
+			else :
+				_e('<div class="col-12 mx-auto pt-sans texto-azul-os bg-warning text-center f-size-18"> No hay publicaciones, gracias por su visita </div> ');
+			endif;
+			
+		?>
+		</div>
 		<!-- ----------------FIN SECCIÓN NOTICIAS--------------------- -->
 		<!-- ----------------SECCIÓN NOTICIAS------------------------- -->
 		<?php include_once('slider/noticias-autonoma-de-narino.php');?>
@@ -52,8 +148,7 @@
 								<strong class="pt-sans"> VISIÓN</strong>
 								<p>AUNAR VIRTUAL, como unidad de desarrollo académico y administrativo, evoluciona hacia el liderazgo en la educación superior en ambientes virtuales que posibiliten la excelencia académica, la cultura investigativa y la responsabilidad social, para contribuir al desarrollo integral y sostenible a nivel regional, nacional e internacional.</p>
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/virtual/organigrama-aunar-virtual.png"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/virtual/organigrama-aunar-virtual.png"></div>
 						</div>
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
 							<div class="col-12 p-2 px-md-5 text-justify texto-azul-os">
@@ -103,15 +198,13 @@
 							<div class="col-12 p-2 px-md-5 text-justify">
 								Es un programa que informa y educa a la comunidad universitaria sobre la importancia que tiene el respeto consigo mismo, con el auto cuidado y el aprendizaje significativo de estilos de vida que favorezcan la salud física y mental.
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/bienestar/promocion_y_prevencion.jpg"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/bienestar/promocion_y_prevencion.jpg"></div>
 						</div>
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-act-deportivas" role="tabpanel" aria-labelledby="v-pills-act-deportivas-tab">
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p>Durante la realización de cualquier actividad deportiva y cultural AUNAR, se tiene acompañamiento de personal experto en cada área y que garantice las condiciones óptimas en cada evento.</p>
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/bienestar/acompanamiento_actividades_deportivas.jpg"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/bienestar/acompanamiento_actividades_deportivas.jpg"></div>
 						</div>
 					</div>
 				</div>
@@ -126,8 +219,7 @@
 					
 					<div class="col-12 p-0 content_img_virtual">
 						<a href="plantas-aromaticas.php" target="plantas-aromaticas">
-							<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img
-/virtual/1.jpg" >
+							<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img/virtual/1.jpg" >
 							<div class="cont_texto_principal">
 								<div class="texto_principal fuente-institucional f-negrita texto-azul-os">Transformación de Plantas Aromáticas
 								</div>
@@ -166,8 +258,7 @@
 					
 					<div class="col-12 p-0 content_img_virtual">
 						<a href="mercadeo-agropecuario.php" target="mercadeo-agropecuario">
-							<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img
-/virtual/2.jpg" >
+							<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img/virtual/2.jpg" >
 							<div class="cont_texto_principal">
 								<div class="texto_principal fuente-institucional f-negrita texto-azul-os">Mercadeo Agropecuario
 								</div>
@@ -205,8 +296,7 @@
 				<div class="col-12 col-sm-6 col-md-4 col-lg-2 pb-5">
 					
 					<div class="col-12 p-0 content_img_virtual"> <a href="administracion-empresas-a-distancia.php" target="administracion-empresas">
-						<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img
-/virtual/3.jpg" >
+						<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img/virtual/3.jpg" >
 						<div class="cont_texto_principal">
 							<div class="texto_principal fuente-institucional f-negrita texto-azul-os">Administración de Empresas
 							</div>
@@ -245,8 +335,7 @@
 				
 				<div class="col-12 p-0 content_img_virtual">
 					<a href="contaduria-publica-a-distancia.php" target="contaduria-publica">
-						<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img
-/virtual/4.jpg" >
+						<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img/virtual/4.jpg" >
 						<div class="cont_texto_principal">
 							<div class="texto_principal fuente-institucional f-negrita texto-azul-os">Contaduría Pública
 							</div>
@@ -285,8 +374,7 @@
 				
 				<div class="col-12 p-0 content_img_virtual">
 					<a href="ingenieria-informatica.php" target="ingenieria-informatica">
-						<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img
-/virtual/5.jpg" >
+						<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img/virtual/5.jpg" >
 						<div class="cont_texto_principal">
 							<div class="texto_principal fuente-institucional f-negrita texto-azul-os">Ingeniería Informática
 							</div>

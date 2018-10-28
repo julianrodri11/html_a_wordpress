@@ -46,8 +46,7 @@
           <div class="row ">
             <div class="col-12 ">
               <a class="hvr-underline-from-center pb-2" href="docs/derechos_pecuniarios2018.pdf"  data-toggle="tooltip" data-placement="bottom" title="Click aquí" target="_blank">
-              <img  class=" img-fluid" alt="Derechos pecuniarios autonoma de nariño" src="<?php bloginfo('template_url')?>/img
-/derechos.png"></a>
+              <img  class=" img-fluid" alt="Derechos pecuniarios autonoma de nariño" src="<?php bloginfo('template_url')?>/img/derechos.png"></a>
             </div>
             <div class="col-12 p-5 texto-azul fuente-institucional">Los siguientes son los montos de los derechos pecuniarios por servicios académicos y administrativos para el año 2018, debidamente aprobados por el Consejo Directivo de la Corporación Universitaria Autónoma de Nariño</div>
           </div>
@@ -189,8 +188,7 @@
       <div class="col-lg-12  ">
         <div class="row p-3 ">
           <div class="col-md-6 p-2 hvr-grow-shadow izquierda_derecha d-flex align-items-center" >
-            <div class="col p-2 text-center "><a href="radio-aunar-stereo"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img
-/aunar-stereo.png"/></a></div>
+            <div class="col p-2 text-center "><a href="radio-aunar-stereo"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img/aunar-stereo.png"/></a></div>
             <!-- <div class=" texto-azul text-center ">
               <div class="row">
                 <div class="col-12 mb-0 p-0 fuente-institucional ">AUNAR STEREO</div>

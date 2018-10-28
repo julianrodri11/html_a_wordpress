@@ -45,7 +45,7 @@
           <a class="p-0" href="<?php the_permalink() ?>">
             <?php // check if the post or page has a Featured Image assigned to it.
             if ( has_post_thumbnail() ) {
-            the_post_thumbnail( 'post-thumbnail', array( 'class' => 'img-fluid' ) );
+              the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid', 'width' => '100%']);
             } ?>
           </a>
         </div>
@@ -67,7 +67,7 @@
           <a class="p-0" href="<?php the_permalink() ?>">
             <?php // check if the post or page has a Featured Image assigned to it.
             if ( has_post_thumbnail() ) {
-            the_post_thumbnail( 'post-thumbnail', array( 'class' => 'img-fluid' ) );
+              the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid', 'width' => '100%']);
             } ?>
           </a>
         </div>
@@ -96,5 +96,8 @@
   }
   ?>
   
-  <?php endwhile; endif; ?>
+  <?php endwhile;
+  else :
+    _e('<div class="col-12 mx-auto pt-sans texto-azul-os bg-warning text-center f-size-18"> No hay publicaciones, gracias por su visita </div> ');
+  endif; ?>
 </div>
