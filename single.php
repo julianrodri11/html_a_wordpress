@@ -1,8 +1,4 @@
-<?php
-	/*
-		Template Name: Plantilla Noticias
-	*/
-?>
+<?php	/*	Template Name: Plantilla Noticias  */ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>
@@ -24,17 +20,38 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-					/noticias/portal-de-noticias-aunar.jpg"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/noticias/portal-de-noticias-aunar.jpg"/>
 				</div>
 			</div>
 		</div>
 		<?php include_once('secciones/menu2.php'); ?>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-12 col-md-3 p-2 fondo-azul text-white">
-
-					<?php get_sidebar() ?>					
+				<div class="col-12 col-md-3 fondo-azul text-white">
+					<?php /*sidebar creado en functions para habilitar widget*/ ///get_sidebar() ?>
+					<div class="col-12 text-center my-5 ">
+						<label class="fuente-institucional texto-amarillo f-size-16 f-negrita">Noticias Recientes</label>
+					</div>
+					<?php
+						$args = array( 'numberposts' => '5','category' => 0, );
+						$recent_posts = wp_get_recent_posts( $args );
+													foreach( $recent_posts as $recent ){
+					?>
+					<div class="row my-3 hvr-underline-from-center transparencia-hover border-warning border-bottom m-1 d-flex align-items-center">
+						<!-- <div class="col-4 p-0 "><img class="img-fluid rounded p-1" src="<?php bloginfo('template_url')?>/img/noticias/noticia1.jpg" alt="Noticias" width="100%"></div> -->
+						<div class="col-4 p-0 py-1">
+							<!-- <img class="img-fluid rounded p-1" src="<?php bloginfo('template_url')?>/img/noticias/noticia1.jpg" alt="Noticias" width="100%"> -->
+							<?php
+							if ( has_post_thumbnail( $recent["ID"]) ) {
+																		echo  get_the_post_thumbnail($recent["ID"],'post-thumbnail',['class' => 'img-fluid z-index-20', 'width' => '95%']);
+							}
+							?>
+						</div>
+						<div class="col-8 p-0 m-0 "><?php echo '<a class="pt-sans texto-amarillo sin-texto-subrayado" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> '; ?></div>
+					</div>	<?php
+					}
+					wp_reset_query();
+					?>
 					
 				</div>
 				<div class="col-12 col-md-9 p-lg-5 fondo-gris-c">
@@ -53,11 +70,11 @@
 						<div class="col-12 col-md-8">
 							<div class="row d-flex justify-content-center">
 								<!-- imagen -->
-								<div class="col-12">          							
+								<div class="col-12">
 									<?php // check if the post or page has a Featured Image assigned to it.
 									if ( has_post_thumbnail() ) {
 										the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid ', 'width' => '100%']);
-									} ?>									
+									} ?>
 								</div>
 							</div>
 						</div>
@@ -67,11 +84,11 @@
 						<div class="col-12 col-md-8 text-justify pt-3">
 							<?php the_content(); ?>
 						</div>
-						<div class="col-12 col-md-8 texto-azul-os pt-sans py-4">Publicado por: <?php the_author() ?> / Fecha: <?php echo get_the_date() ?> / Categoría (s): <?php the_category(' , ') ?> 
-						</div>												
-
+						<div class="col-12 col-md-8 texto-azul-os pt-sans py-4">Publicado por: <?php the_author() ?> / Fecha: <?php echo get_the_date() ?> / Categoría (s): <?php the_category(' , ') ?>
+						</div>
 						<?php
 							endwhile;
+							wp_reset_postdata();
 							else :
 								_e('<div class="col-12 mx-auto pt-sans texto-azul-os bg-warning text-center f-size-18"> No hay publicaciones, gracias por su visita </div> ');
 							endif;

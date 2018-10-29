@@ -97,6 +97,7 @@
   ?>
   
   <?php endwhile;
+  wp_reset_postdata();
   else :
     _e('<div class="col-12 mx-auto pt-sans texto-azul-os bg-warning text-center f-size-18"> No hay publicaciones, gracias por su visita </div> ');
   endif; ?>
