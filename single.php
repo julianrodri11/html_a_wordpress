@@ -33,9 +33,9 @@
 						<label class="fuente-institucional texto-amarillo f-size-16 f-negrita">Noticias Recientes</label>
 					</div>
 					<?php
-						$args = array( 'numberposts' => '5','category' => 0, );
+						$args = array( 'numberposts' => '10','category' => 0, );
 						$recent_posts = wp_get_recent_posts( $args );
-													foreach( $recent_posts as $recent ){
+						foreach( $recent_posts as $recent ){
 					?>
 					<div class="row my-3 hvr-underline-from-center transparencia-hover border-warning border-bottom m-1 d-flex align-items-center">
 						<!-- <div class="col-4 p-0 "><img class="img-fluid rounded p-1" src="<?php bloginfo('template_url')?>/img/noticias/noticia1.jpg" alt="Noticias" width="100%"></div> -->
@@ -43,13 +43,14 @@
 							<!-- <img class="img-fluid rounded p-1" src="<?php bloginfo('template_url')?>/img/noticias/noticia1.jpg" alt="Noticias" width="100%"> -->
 							<?php
 							if ( has_post_thumbnail( $recent["ID"]) ) {
-																		echo  get_the_post_thumbnail($recent["ID"],'post-thumbnail',['class' => 'img-fluid z-index-20', 'width' => '95%']);
+								echo  get_the_post_thumbnail($recent["ID"],'post-thumbnail',['class' => 'img-fluid z-index-20', 'width' => '95%']);
 							}
 							?>
 						</div>
 						<div class="col-8 p-0 m-0 "><?php echo '<a class="pt-sans texto-amarillo sin-texto-subrayado" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> '; ?></div>
 					</div>	<?php
 					}
+					//fin for each
 					wp_reset_query();
 					?>
 					
