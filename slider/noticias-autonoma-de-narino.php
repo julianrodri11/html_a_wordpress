@@ -18,14 +18,13 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="<?php bloginfo('template_url')?>/img
-/noticias/noticia1.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img/noticias/noticia1.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
-                      <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
+                      <div class="text-hov fuente-institucional f-negrita ">Lorem ipsum dolor sit amet consectetur.</div>
                     </div>
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title f-negrita fuente-institucional">MAQUINARTE 1</h5>
+                    <h5 class="card-title f-negrita fuente-institucional">LOREM IPSUM DOLOR SIT AMET.</h5>
                     <p class="card-text pt-sans text-justify texto-azui">La sub Red de facultades de Ingenierías de Nariño, invita a todos los investigadores de #AunarIngenierías para que participen de este importante eventoMAQUINARTE: IX MUESTRA DE PROYECTOS DE INGENIERíA</p>
                     <a href="#" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco texto-azul sin-texto-subrayado">Leer Más</a>
                   </div>
@@ -36,14 +35,13 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="<?php bloginfo('template_url')?>/img
-/noticias/noticia2.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img/noticias/noticia2.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
-                      <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
+                      <div class="text-hov fuente-institucional f-negrita ">Lorem ipsum dolor sit amet consectetur.</div>
                     </div>
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title f-negrita fuente-institucional">MAQUINARTE 1</h5>
+                    <h5 class="card-title f-negrita fuente-institucional">LOREM IPSUM DOLOR SIT AMET.</h5>
                     <p class="card-text pt-sans text-justify texto-azui">La sub Red de facultades de Ingenierías de Nariño, invita a todos los investigadores de #AunarIngenierías para que participen de este importante eventoMAQUINARTE: IX MUESTRA DE PROYECTOS DE INGENIERíA</p>
                     <a href="#" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco texto-azul sin-texto-subrayado">Leer Más</a>
                   </div>
@@ -54,14 +52,13 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="<?php bloginfo('template_url')?>/img
-/noticias/noticia3.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img/noticias/noticia3.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
-                      <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
+                      <div class="text-hov fuente-institucional f-negrita ">Lorem ipsum dolor sit amet consectetur.</div>
                     </div>
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title f-negrita fuente-institucional">MAQUINARTE 1</h5>
+                    <h5 class="card-title f-negrita fuente-institucional">LOREM IPSUM DOLOR SIT AMET.</h5>
                     <p class="card-text pt-sans text-justify texto-azui">La sub Red de facultades de Ingenierías de Nariño, invita a todos los investigadores de #AunarIngenierías para que participen de este importante eventoMAQUINARTE: IX MUESTRA DE PROYECTOS DE INGENIERíA</p>
                     <a href="#" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco texto-azul sin-texto-subrayado">Leer Más</a>
                   </div>
@@ -76,14 +73,13 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="<?php bloginfo('template_url')?>/img
-/noticias/noticia3.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img/noticias/noticia3.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
-                      <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
+                      <div class="text-hov fuente-institucional f-negrita ">Lorem ipsum dolor sit amet consectetur.</div>
                     </div>
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title f-negrita fuente-institucional">MAQUINARTE 2</h5>
+                    <h5 class="card-title f-negrita fuente-institucional">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 2</h5>
                     <p class="card-text pt-sans text-justify texto-azui">La sub Red de facultades de Ingenierías de Nariño, invita a todos los investigadores de #AunarIngenierías para que participen de este importante eventoMAQUINARTE: IX MUESTRA DE PROYECTOS DE INGENIERíA</p>
                     <a href="#" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco texto-azul sin-texto-subrayado sin-texto-subrayado">Leer Más</a>
                   </div>
@@ -94,14 +90,13 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="<?php bloginfo('template_url')?>/img
-/noticias/noticia1.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img/noticias/noticia1.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
-                      <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
+                      <div class="text-hov fuente-institucional f-negrita ">Lorem ipsum dolor sit amet consectetur.</div>
                     </div>
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title f-negrita fuente-institucional">MAQUINARTE 2</h5>
+                    <h5 class="card-title f-negrita fuente-institucional">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 2</h5>
                     <p class="card-text pt-sans text-justify texto-azui">La sub Red de facultades de Ingenierías de Nariño, invita a todos los investigadores de #AunarIngenierías para que participen de este importante eventoMAQUINARTE: IX MUESTRA DE PROYECTOS DE INGENIERíA</p>
                     <a href="#" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco texto-azul sin-texto-subrayado">Leer Más</a>
                   </div>
@@ -112,14 +107,13 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="<?php bloginfo('template_url')?>/img
-/noticias/noticia2.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img/noticias/noticia2.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
-                      <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
+                      <div class="text-hov fuente-institucional f-negrita ">Lorem ipsum dolor sit amet consectetur.</div>
                     </div>
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title f-negrita fuente-institucional">MAQUINARTE 2</h5>
+                    <h5 class="card-title f-negrita fuente-institucional">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 2</h5>
                     <p class="card-text pt-sans text-justify texto-azui">La sub Red de facultades de Ingenierías de Nariño, invita a todos los investigadores de #AunarIngenierías para que participen de este importante eventoMAQUINARTE: IX MUESTRA DE PROYECTOS DE INGENIERíA</p>
                     <a href="#" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco texto-azul sin-texto-subrayado sin-texto-subrayado">Leer Más</a>
                   </div>
@@ -134,14 +128,13 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="<?php bloginfo('template_url')?>/img
-/noticias/noticia1.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img/noticias/noticia1.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
-                      <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
+                      <div class="text-hov fuente-institucional f-negrita ">Lorem ipsum dolor sit amet consectetur.</div>
                     </div>
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title f-negrita fuente-institucional">MAQUINARTE 3</h5>
+                    <h5 class="card-title f-negrita fuente-institucional">LOREM IPSUM DOLOR SIT AMET. 3</h5>
                     <p class="card-text pt-sans text-justify texto-azui">La sub Red de facultades de Ingenierías de Nariño, invita a todos los investigadores de #AunarIngenierías para que participen de este importante eventoMAQUINARTE: IX MUESTRA DE PROYECTOS DE INGENIERíA</p>
                     <a href="#" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco texto-azul sin-texto-subrayado">Leer Más</a>
                   </div>
@@ -152,14 +145,13 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="<?php bloginfo('template_url')?>/img
-/noticias/noticia2.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img/noticias/noticia2.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
-                      <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
+                      <div class="text-hov fuente-institucional f-negrita ">Lorem ipsum dolor sit amet consectetur.</div>
                     </div>
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title f-negrita fuente-institucional">MAQUINARTE 3</h5>
+                    <h5 class="card-title f-negrita fuente-institucional">LOREM IPSUM DOLOR SIT AMET. 3</h5>
                     <p class="card-text pt-sans text-justify texto-azui">La sub Red de facultades de Ingenierías de Nariño, invita a todos los investigadores de #AunarIngenierías para que participen de este importante eventoMAQUINARTE: IX MUESTRA DE PROYECTOS DE INGENIERíA</p>
                     <a href="#" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco texto-azul sin-texto-subrayado">Leer Más</a>
                   </div>
@@ -170,14 +162,13 @@
                 <!-- noticia -->
                 <div class="card ">
                   <div class="container-img">
-                    <img src="<?php bloginfo('template_url')?>/img
-/noticias/noticia3.png" alt="Avatar" class="image-hov" style="width:100%">
+                    <img src="<?php bloginfo('template_url')?>/img/noticias/noticia3.png" alt="Avatar" class="image-hov" style="width:100%">
                     <div class="middle-hov">
-                      <div class="text-hov fuente-institucional f-negrita ">MAQUINARTE:</div>
+                      <div class="text-hov fuente-institucional f-negrita ">Lorem ipsum dolor sit amet consectetur.</div>
                     </div>
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title f-negrita fuente-institucional">MAQUINARTE 3</h5>
+                    <h5 class="card-title f-negrita fuente-institucional">LOREM IPSUM DOLOR SIT AMET. 3</h5>
                     <p class="card-text pt-sans text-justify texto-azui">La sub Red de facultades de Ingenierías de Nariño, invita a todos los investigadores de #AunarIngenierías para que participen de este importante eventoMAQUINARTE: IX MUESTRA DE PROYECTOS DE INGENIERíA</p>
                     <a href="#" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco texto-azul sin-texto-subrayado">Leer Más</a>
                   </div>
