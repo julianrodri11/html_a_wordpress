@@ -26,13 +26,14 @@
       <div class="row col-12 ">
         <!-- texto -->
         <div class="col-12 ">
-          <label class=""><a class="texto-amarillo f-negrita f-size-18 fuente-institucional" href="<?php the_permalink() ?>"><?php the_title() ?> </a></label> 
+          <label class=""><a class="texto-amarillo f-negrita f-size-18 fuente-institucional sin-texto-subrayado" href="<?php the_permalink() ?>"><?php the_title() ?> </a></label> 
           <!-- <label class="texto-azul fuente-institucional f-size-14">IX MUESTRA DE PROYECTOS DE INGENIERÍA</label> -->
         </div>
         <div class="col-12">
-          <p class="texto-azul pt-sans text-justify"><?php the_excerpt() ?></p>
+          <!-- <p class="texto-azul pt-sans text-justify"><?php the_excerpt() ?></p> -->
+          <?php  echo '<p class="texto-azul pt-sans text-justify ">' . get_the_excerpt() . '</p>'; ?>
         </div>
-        <div class="col-12 col-sm-10 sin-texto-subrayado texto-azul-os pt-sans"><?php echo get_the_date() ?> / <?php the_category(' , ') ?> / <?php the_author() ?></div>
+        <div class="col-12 col-sm-10 sin-texto-subrayado texto-azul-os pt-sans"><?php echo get_the_date() ?> / <?php  the_category(' , ') ?> / <?php the_author() ?></div>
         <div class="col-12 col-sm-2">
           <a href="<?php the_permalink() ?>" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco float-right texto-azul sin-texto-subrayado fuente-institucional">Leer Más</a>
         </div>
@@ -78,13 +79,13 @@
       <div class="row col-12 pr-lg-4 ">
         <!-- texto -->
         <div class="col-12">
-          <label class=""><a class="texto-amarillo f-negrita f-size-18 fuente-institucional" href="<?php the_permalink() ?>"><?php the_title() ?> </a></label> 
+          <label class=""><a class="texto-amarillo f-negrita f-size-18 fuente-institucional sin-texto-subrayado" href="<?php the_permalink() ?>"><?php the_title() ?> </a></label> 
           <!-- <label class="texto-azul fuente-institucional f-size-14">IX MUESTRA DE PROYECTOS DE INGENIERÍA</label> -->
         </div>
         <div class="col-12">
-          <p class="texto-azul pt-sans text-justify"><?php the_excerpt() ?></p>
+          <?php  echo '<p class="texto-azul pt-sans text-justify ">' . get_the_excerpt() . '</p>'; ?>
         </div>
-        <div class="col-12 col-sm-10 sin-texto-subrayado"><?php echo get_the_date() ?> / <?php the_category(' , ') ?> / <?php the_author() ?></div>
+        <div class="col-12 col-sm-10 sin-texto-subrayado"><?php echo get_the_date() ?> / <?php  the_category(' , ') ?> / <?php the_author() ?></div>
         <div class="col-12 col-sm-2">
           <a href="<?php the_permalink() ?>" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco texto-azul sin-texto-subrayado fuente-institucional">Leer Más</a>
         </div>

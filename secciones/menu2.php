@@ -104,7 +104,7 @@
 </ul> -->
 </li>
 <li class="nav-item dropdown py-0 border-right borde-azul text-center">
-    <a class="nav-link dropdown-toggle texto-azul-os px-lg-3  hvr-underline-from-center" data-toggle="tooltip" data-placement="auto" title="Centro de Idiomas AUNAR" href="#" id="navbarDropdownMenu_cian" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="nav-link dropdown-toggle texto-azul-os px-lg-3  hvr-underline-from-center" href="#" id="navbarDropdownMenu_cian" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         CIAN
     </a>
     <ul class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdownMenu_cian">

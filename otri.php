@@ -16,8 +16,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/investigacion/otri.jpg" alt="OTRI - Autónoma de Nariño"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/investigacion/otri.jpg" alt="OTRI - Autónoma de Nariño"/>
 				</div>
 			</div>
 		</div>
@@ -92,8 +91,7 @@
 					<div class="row col-12 ">
 						<div class="col-12 py-3 text-center text-lg-right mx-auto ">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<img src="<?php bloginfo('template_url')?>/img
-/investigacion/docente-otri.png" alt="Pedro Pablo Burbano" width="35%">
+							<img src="<?php bloginfo('template_url')?>/img/investigacion/docente-otri.png" alt="Pedro Pablo Burbano" width="35%">
 						</div>
 					</div>
 				</div>
@@ -118,5 +116,5 @@
 			</div>
 		</div>		
 		<?php  get_footer(); ;?>
-	</body>
+	</body>	
 </html>
