@@ -16,8 +16,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/institucional/rectoria-aunar.jpg" alt="Rectoría Autónoma de Nariño - AUNAR"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/institucional/rectoria-aunar.jpg" alt="Rectoría Autónoma de Nariño - AUNAR"/>
 				</div>
 			</div>
 		</div>
@@ -92,8 +91,7 @@
 					<div class="row col-12 ">
 						<div class="col-12 py-3 text-center text-lg-right mx-auto ">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<img src="<?php bloginfo('template_url')?>/img
-/institucional/INGRID_ELIZABETH_COLUNGE_ORDONEZ.png" alt="INGRID ELIZABETH COLUNGE ORDÓÑEZ - RECTOR AUNAR" width="65%">
+							<img src="<?php bloginfo('template_url')?>/img/institucional/INGRID_ELIZABETH_COLUNGE_ORDONEZ.png" alt="INGRID ELIZABETH COLUNGE ORDÓÑEZ - RECTOR AUNAR" width="65%">
 						</div>
 					</div>
 				</div>
@@ -102,8 +100,7 @@
 				<div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
 					<div class="row col-12 ">
 						<div class="col-12 py-3 mx-auto text-left texto-azul-os ">
-							<!-- aqui va todo lo que se quiera centrar --><br><br>
-							<h4 class="texto-amarillo fuente-institucional f-negrita p-0">PROFESIONAL ENCARGADO</h4>
+							<!-- aqui va todo lo que se quiera centrar --><br><br>							
 							<h4 class="texto-amarillo fuente-institucional f-negrita p-0">RECTOR (A)</h4>
 							<div class="pt-sans">
 								<label class="f-negrita">INGRID ELIZABETH COLUNGE ORDÓÑEZ</label>
@@ -143,8 +140,7 @@
 										<div class="row col-12 ">
 											<div class="col-12 text-center text-lg-right mx-auto p-0">
 												<!-- aqui va todo lo que se quiera centrar -->
-												<img src="<?php bloginfo('template_url')?>/img
-/institucional/rocio-ibarra-ceron.png" alt="Rocio Ibarra Ceron" width="70%">
+												<img src="<?php bloginfo('template_url')?>/img/institucional/rocio-ibarra-ceron.png" alt="Rocio Ibarra Ceron" width="70%">
 											</div>
 										</div>
 									</div>
@@ -192,8 +188,7 @@
 										<div class="row col-12 ">
 											<div class="col-12 text-center text-md-right mx-auto p-0">
 												<!-- aqui va todo lo que se quiera centrar -->
-												<img src="<?php bloginfo('template_url')?>/img
-/institucional/OLGA_SILENE_ERASO.png" alt="OLGA SILENE ERASO" width="70%">
+												<img src="<?php bloginfo('template_url')?>/img/institucional/OLGA_SILENE_ERASO.png" alt="OLGA SILENE ERASO" width="70%">
 											</div>
 										</div>
 									</div>

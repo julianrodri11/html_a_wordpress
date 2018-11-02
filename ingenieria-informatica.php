@@ -307,7 +307,7 @@
 		
 	<div class="row  fuente-institucional texto-azul">
 		<div class="col-4 p-4  hover-texto-blanco text-center fondo-amarillo-intenso f-negrita pointer">
-			<a class="texto-azul-os sin-texto-subrayado" target="_blanck" href="docs/malla_curricular/ingenieria_informatica.pdf" data-toggle="tooltip" data-placement="auto" title="Abrir malla">Malla Curricular</a>
+			<a class="texto-azul-os sin-texto-subrayado" target="_blanck" href="<?php bloginfo('template_url')?>/docs/malla_curricular/ingenieria_informatica.pdf" data-toggle="tooltip" data-placement="auto" title="Abrir malla">Malla Curricular</a>
 		</div>
 		<div class="col-4"></div>
 		<div class="col-4 p-4  hover-texto-blanco text-center fondo-amarillo-intenso f-negrita">

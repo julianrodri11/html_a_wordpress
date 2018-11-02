@@ -17,8 +17,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/institucional/vicerrectoria_administrativa_y_financiera_portada.jpg" alt="VICERRECTORÍA ADMINISTRATIVA FINANCIERA"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/institucional/vicerrectoria_administrativa_y_financiera_portada.jpg" alt="VICERRECTORÍA ADMINISTRATIVA FINANCIERA"/>
 				</div>
 			</div>
 		</div>
@@ -131,8 +130,7 @@
 					<div class="row col-12 ">
 						<div class="col-12 py-3 text-center text-lg-right mx-auto ">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<img src="<?php bloginfo('template_url')?>/img
-/institucional/analeonor_zambrano_rosero.png" alt="ANALEONOR ZAMBRANO ROSERO" width="35%">
+							<img src="<?php bloginfo('template_url')?>/img/institucional/analeonor_zambrano_rosero.png" alt="ANALEONOR ZAMBRANO ROSERO" width="35%">
 						</div>
 					</div>
 				</div>
@@ -142,7 +140,7 @@
 					<div class="row col-12 ">
 						<div class="col-12 py-3 mx-auto text-center text-lg-left texto-azul-os ">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<h4 class="texto-amarillo fuente-institucional f-negrita p-0">PROFESIONAL ENCARGADO</h4>
+							
 							<h4 class="texto-amarillo fuente-institucional f-negrita p-0">VICERECTOR (A)</h4>
 							<div class="pt-sans text-justify">
 								<label class="f-negrita">ANALEONOR ZAMBRANO ROSERO</label>
@@ -181,8 +179,7 @@
 					<div class="row col-12 ">
 						<div class="col-12 py-3 text-center text-lg-right mx-auto">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<img src="<?php bloginfo('template_url')?>/img
-/institucional/juan_sebastian_jurado_burbano.png" alt="Secretaria vicerrectoria administrativa financiera" width="35%">
+							<img src="<?php bloginfo('template_url')?>/img/institucional/juan_sebastian_jurado_burbano.png" alt="Secretaria vicerrectoria administrativa financiera" width="35%">
 						</div>
 					</div>
 				</div>

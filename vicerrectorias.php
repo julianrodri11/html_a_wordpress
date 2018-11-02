@@ -17,8 +17,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/institucional/vicerrectoria_aunar.jpg" alt="VICERRECTORÍAS - Autónoma de Nariño - AUNAR"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/institucional/vicerrectoria_aunar.jpg" alt="VICERRECTORÍAS - Autónoma de Nariño - AUNAR"/>
 				</div>
 			</div>
 		</div>
@@ -37,8 +36,7 @@
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
 							<!-- aqui va todo lo que se quiera centrar -->
 							<a href="vicerrectoria_academica" target="v-academica">
-								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
-/institucional/vicerrectoria_academica_aunar.jpg" alt="vicerrectoría académica AUNAR" width="100%">
+								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img/institucional/vicerrectoria_academica_aunar.jpg" alt="vicerrectoría académica AUNAR" width="100%">
 							</a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
@@ -99,8 +97,7 @@
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
 							<!-- aqui va todo lo que se quiera centrar -->
 							<a href="vicerrectoria_administrativa-financiera" target="v-adm-finan">
-								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
-/institucional/vicerrectoria_administrativa_y_financiera_aunar.jpg" alt="vicerrectoria administrativa y financiera AUNAR" width="100%">
+								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img/institucional/vicerrectoria_administrativa_y_financiera_aunar.jpg" alt="vicerrectoria administrativa y financiera AUNAR" width="100%">
 							</a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
@@ -122,8 +119,7 @@
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
 							<!-- aqui va todo lo que se quiera centrar -->
 							<a href="vicerrectoria-de-investigacion" target="v-investigacion">
-								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
-/institucional/vicerrectoria_de_investigacion_aunar.jpg" alt="vicerrectoría de investigación AUNAR" width="100%">
+								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img/institucional/vicerrectoria_de_investigacion_aunar.jpg" alt="vicerrectoría de investigación AUNAR" width="100%">
 							</a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
@@ -166,14 +162,15 @@
 							<!-- aqui va todo lo que se quiera centrar -->
 							<div class="text-center pr-lg-5">
 								<h1 class="texto-amarillo fuente-institucional fuente-18 p-0">Vicerrectoría de</h1>
-								<h1 class="texto-amarillo fuente-institucional fuente-big p-0"><strong>TALENTO HUMANO</strong></h1>
+								<h1 class="texto-amarillo fuente-institucional fuente-big p-0"><strong>BIENESTAR INSTITUCIONAL</strong></h1>
 							</div>
 							<div class="pt-sans text-justify pr-lg-5">
-								La Vicerrectoría Administrativa y Financiera es un departamento que se
-								encuentra bajo la dirección del al Rectoría. Forma parte del ...
+								La vicerrectoría de Investigaciones y posgrados de la AUNAR fomenta, realiza y
+								prospecta diferentes actividades articuladoras de Investigación, Desarrollo e
+								Innovación, I+D+I ...
 							</div>
 							<div class="pt-sans text-justify pr-lg-5 py-lg-5">
-								<a href="#" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco float-right texto-azul sin-texto-subrayado fuente-institucional">Leer Más</a>
+								<a href="bienestar" class="p-2 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco float-right texto-azul sin-texto-subrayado fuente-institucional">Leer Más</a>
 							</div>
 						</div>
 					</div>
@@ -183,8 +180,9 @@
 					<div class="row col-12 p-0">
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
-/institucional/vicerrectoria_de_talento_humano_aunar.jpg" alt="vicerrectoria de talento humano AUNAR" width="100%">
+							<a href="bienestar">
+								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img/institucional/vicerrectoria_bienestar_institucional_aunar.jpg" alt="vicerrectoría de bienestar institucional AUNAR" width="100%">
+							</a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
 									<!-- aqui se puede colocar un boton para una acción -->
@@ -198,30 +196,24 @@
 			</div>
 			<!-- fin publicación 4 -->
 			<!-- publicación 5 -->
-			<div class="row py-5 py-md-0">
-				<!-- imagen de publicación -->
+
+			<!-- <div class="row py-5 py-md-0">
 				<div class="col-12 col-lg-6 d-flex justify-content-center align-items-center fondo-gris-os p-0">
 					<div class="row col-12 p-0">
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
-							<!-- aqui va todo lo que se quiera centrar -->
 							<a href="bienestar" target="v-bienestar">
-								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
-/institucional/vicerrectoria_bienestar_institucional_aunar.jpg" alt="vicerrectoría de bienestar institucional AUNAR" width="100%">
+								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img/institucional/vicerrectoria_bienestar_institucional_aunar.jpg" alt="vicerrectoría de bienestar institucional AUNAR" width="100%">
 							</a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
-									<!-- aqui se puede colocar un boton para una acción -->
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- fin imagen de publicación -->
-				<!-- información personal -->
 				<div class="col-12 col-lg-6 d-flex justify-content-center align-items-center p-0">
 					<div class="row col-12 ">
 						<div class="col-12 p-0 py-md-3 mx-auto texto-azul-os ">
-							<!-- aqui va todo lo que se quiera centrar -->
 							<div class="text-center pr-lg-5">
 								<h1 class="texto-amarillo fuente-institucional fuente-18 p-0">Vicerrectoría</h1>
 								<h1 class="texto-amarillo fuente-institucional fuente-big p-0"><strong>BIENESTAR INSTITUCIONAL</strong></h1>
@@ -238,15 +230,12 @@
 					</div>
 				</div>
 				
-			</div> <br><br>
-			<!-- fin publicación 5 -->
-			
+			</div>  -->
+
+			<br><br>
+			<!-- fin publicación 5 -->			
 		</div>
-		
-		
-		
 		<?php  get_footer(); ;?>
-		
 		
 	</body>
 </html>

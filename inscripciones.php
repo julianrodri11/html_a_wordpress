@@ -15,8 +15,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 p-0">
-                    <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/inscripciones/sistema-inscripciones-en-linea.jpg"/>
+                    <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/inscripciones/sistema-inscripciones-en-linea.jpg"/>
                 </div>
             </div>
         </div>
@@ -54,14 +53,13 @@
                     <div class="col-0 col-lg-4 ">
                         <div class=""></div>
                     </div>
-                    <div class="col-12 col-lg-8"><div class="col-9 mx-auto fuente-institucional text-center p-2 fondo-azul-oscuro text-white">Por favor revise las pestañas Requisitos y Admitidos para obtener mayor información</div></div>
+                    <div class="col-12 col-lg-8"><div class="col-9 mx-auto fuente-institucional text-center p-2 fondo-azul-oscuro text-white">Por favor revise en la parte inferior la sección requisitos y admitidos para obtener mayor información.</div></div>
                 </div>
             </div>
         </div>
         <!-- PREINSCRIPCIÓN -->
         <div class=" contenedor_preinscripcion">
-            <img src="<?php bloginfo('template_url')?>/img
-/inscripciones/admisiones-autonoma-de-narino.jpg" alt="Norway" style="width:100%;">
+            <img src="<?php bloginfo('template_url')?>/img/inscripciones/admisiones-autonoma-de-narino.jpg" alt="Norway" style="width:100%;">
             <div class="text-block">
                 <div class=" text-center">
                     <div class="col-12 text-center"><h1 class=" f-negrita fuente-institucional texto-azul">Inscripción</h1> </div>

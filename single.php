@@ -41,11 +41,13 @@
 						<!-- <div class="col-4 p-0 "><img class="img-fluid rounded p-1" src="<?php bloginfo('template_url')?>/img/noticias/noticia1.jpg" alt="Noticias" width="100%"></div> -->
 						<div class="col-4 p-0 py-1">
 							<!-- <img class="img-fluid rounded p-1" src="<?php bloginfo('template_url')?>/img/noticias/noticia1.jpg" alt="Noticias" width="100%"> -->
-							<?php
-							if ( has_post_thumbnail( $recent["ID"]) ) {
-								echo  get_the_post_thumbnail($recent["ID"],'post-thumbnail',['class' => 'img-fluid z-index-20', 'width' => '95%']);
-							}
-							?>
+							<a class="p-0" href="<?php the_permalink() ?>">
+								<?php
+								if ( has_post_thumbnail( $recent["ID"]) ) {
+									echo  get_the_post_thumbnail($recent["ID"],'post-thumbnail',['class' => 'img-fluid z-index-20', 'width' => '95%']);
+								}
+								?>
+							</a>
 						</div>
 						<div class="col-8 p-0 m-0 "><?php echo '<a class="pt-sans texto-amarillo sin-texto-subrayado" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> '; ?>
 						<!-- <?php $excerpt = wp_trim_excerpt( $recent['post_excerpt']); // $excerpt contains the excerpt of the concerned post

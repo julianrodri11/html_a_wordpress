@@ -16,8 +16,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/investigacion/crean.jpg" alt="CREAN - Autónoma de Nariño"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/investigacion/crean.jpg" alt="CREAN - Autónoma de Nariño"/>
 				</div>
 			</div>
 		</div>
@@ -104,8 +103,7 @@
 					<div class="row col-12 ">
 						<div class="col-12 py-3 text-center text-lg-right mx-auto ">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<img src="<?php bloginfo('template_url')?>/img
-/investigacion/docente-crean.png" alt="IRINA MARGARITA JURADO PAZ" width="35%">
+							<img src="<?php bloginfo('template_url')?>/img/investigacion/docente-crean.png" alt="IRINA MARGARITA JURADO PAZ" width="35%">
 						</div>
 					</div>
 				</div>
@@ -114,8 +112,7 @@
 				<div class="col-12 col-lg-5 d-flex justify-content-center align-items-center">
 					<div class="row col-12 ">
 						<div class="col-12 py-3 mx-auto text-left texto-azul-os ">
-							<!-- aqui va todo lo que se quiera centrar -->
-							<h4 class="texto-amarillo fuente-institucional f-negrita p-0">PROFESIONAL ENCARGADO</h4>
+							<!-- aqui va todo lo que se quiera centrar -->							
 							<h4 class="texto-amarillo fuente-institucional f-negrita p-0">DIRECTOR</h4>
 							<div class="pt-sans text-justify pr-lg-5">
 								<label class="f-negrita">IRINA MARGARITA JURADO PAZ</label>
@@ -140,8 +137,7 @@
 					<div class="row col-12 ">
 						<div class="col-12 py-3 text-center text-lg-right mx-auto ">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<img src="<?php bloginfo('template_url')?>/img
-/investigacion/practicante-crean.png" alt="" width="35%">
+							<img src="<?php bloginfo('template_url')?>/img/investigacion/practicante-crean.png" alt="" width="35%">
 						</div>
 					</div>
 				</div>

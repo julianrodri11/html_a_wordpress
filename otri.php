@@ -100,8 +100,7 @@
 				<div class="col-12 col-lg-5 d-flex justify-content-center align-items-center">
 					<div class="row col-12 ">
 						<div class="col-12 py-3 mx-auto text-left texto-azul-os ">
-							<!-- aqui va todo lo que se quiera centrar -->
-							<h4 class="texto-amarillo fuente-institucional f-negrita p-0">PROFESIONAL ENCARGADO</h4>
+							<!-- aqui va todo lo que se quiera centrar -->							
 							<h4 class="texto-amarillo fuente-institucional f-negrita p-0">DIRECTOR</h4>
 							<div class="pt-sans text-justify pr-lg-5">
 								<label class="f-negrita">CARLOS ANDRÉS SALAZAR</label>

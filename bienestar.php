@@ -163,11 +163,9 @@
 						<div class="media-body ">
 							<div class="row">
 								<div class="col-12 col-md-6 text-center">
-									<img src="<?php bloginfo('template_url')?>/img
-/bienestar/jaime_colunge.png" class="align-self-center mr-3 rounded-circle img-fluid" >
+									<img src="<?php bloginfo('template_url')?>/img/bienestar/jaime_colunge.png" class="align-self-center mr-3 rounded-circle img-fluid" >
 								</div>
-								<div class="col-12 col-md-6 text-center text-md-left">
-									<h4 class="fuente-institucional texto-amarillo f-negrita">PROFESIONAL ENCARGADO</h4>
+								<div class="col-12 col-md-6 text-center text-md-left">									
 									<h4 class="fuente-institucional texto-amarillo f-negrita">VICERECTOR (A)</h4>
 									<div class="pt-sans">
 										<label class="f-negrita">JAIME DAVID COLUNGE ORDOÑEZ </label><br>
@@ -189,8 +187,7 @@
 					<div class="media-body">
 						<div class="row">
 							<div class="col-12 col-md-6 text-center">
-								<img src="<?php bloginfo('template_url')?>/img
-/bienestar/maria_ruiz.png" class="align-self-center mr-3 rounded-circle img-fluid" >
+								<img src="<?php bloginfo('template_url')?>/img/bienestar/maria_ruiz.png" class="align-self-center mr-3 rounded-circle img-fluid" >
 							</div>
 							<div class="col-12 col-md-6 text-center text-md-left">
 								<h4 class="fuente-institucional texto-amarillo f-negrita">ASISTENTE</h4>

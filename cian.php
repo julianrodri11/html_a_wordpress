@@ -32,16 +32,31 @@
 		</div>
 		<div class="container-fluid m-0">
 			<div class="row m-0 d-flex justify-content-center">
-				<div class="col-4 col-md-2 text-center"><a class="sin-texto-subrayado texto-azul-os" target="_blanck1" href="https://goo.gl/forms/on4uljowlKOOF5Ua2"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/cian/Club_Conversacional.png" alt="club conversacional aunar"><br>Club Conversacional</a></div>
-				<div class="col-4 col-md-2 text-center"><a class="sin-texto-subrayado texto-azul-os" target="_blanck2" href="https://docs.google.com/forms/d/e/1FAIpQLSet-HfLJwxcBGJWPYB31ZJrbge8heywPB99fEjbNijji_NZKQ/viewform"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/cian/cursos_de_idiomas.png" alt="cursos de idiomas aunar"> <br>Cursos de Idiomas:</a></div>
-				<div class="col-4 col-md-2 text-center border-left borde-azul"><a class="sin-texto-subrayado texto-azul-os" target="_blanck3" href="http://learnenglishteens.britishcouncil.org/skills"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/cian/British_Counsil.png" alt="British Counsil aunar"><br>British Counsil</a></div>
-				<div class="col-4 col-md-2 text-center"><a class="sin-texto-subrayado texto-azul-os" target="_blanck4" href="https://thewritepractice.com/writing-practice/"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/cian/The_Write_Practice.png" alt="The Write Practice aunar"> <br>The Write Practice</a></div>
-				<div class="col-4 col-md-2 text-center"><a class="sin-texto-subrayado texto-azul-os" target="_blanck5" href="https://www.examenglish.com/CEFR/cefr.php"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/cian/Exam_English.png" alt="Exam English aunar"> <br>Exam English</a></div>
+				<div class="col-4 col-md-2 text-center">
+					<a class="sin-texto-subrayado texto-azul-os" target="_blanck1" href="https://goo.gl/forms/on4uljowlKOOF5Ua2">
+						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/Club_Conversacional.png" alt="club conversacional aunar"><br>Club Conversacional
+					</a>
+				</div>
+				<div class="col-4 col-md-2 text-center">
+					<a class="sin-texto-subrayado texto-azul-os" target="_blanck2" href="https://docs.google.com/forms/d/e/1FAIpQLSet-HfLJwxcBGJWPYB31ZJrbge8heywPB99fEjbNijji_NZKQ/viewform">
+						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/cursos_de_idiomas.png" alt="cursos de idiomas aunar"> <br>Cursos de Idiomas:
+					</a>
+				</div>
+				<div class="col-4 col-md-2 text-center border-left borde-azul">
+					<a class="sin-texto-subrayado texto-azul-os" target="_blanck3" href="http://learnenglishteens.britishcouncil.org/skills">
+						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/British_Counsil.png" alt="British Counsil aunar"><br>British Counsil
+					</a>
+				</div>
+				<div class="col-4 col-md-2 text-center">
+					<a class="sin-texto-subrayado texto-azul-os" target="_blanck4" href="https://thewritepractice.com/writing-practice/">
+						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/The_Write_Practice.png" alt="The Write Practice aunar"> <br>The Write Practice
+					</a>
+				</div>
+				<div class="col-4 col-md-2 text-center">
+					<a class="sin-texto-subrayado texto-azul-os" target="_blanck5" href="https://www.examenglish.com/CEFR/cefr.php">
+						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/Exam_English.png" alt="Exam English aunar"> <br>Exam English
+					</a>
+				</div>
 			</div>
 		</div>
 		<!-- fin enlaces externos -->
@@ -417,11 +432,10 @@
 								
 								<div class="row">
 									<div class="col-12 col-md-2 text-center">
-										<img src="<?php bloginfo('template_url')?>/img
-/cian/paola_vallejo.png" class="align-self-center mr-3 rounded-circle img-fluid" >
+										<img src="<?php bloginfo('template_url')?>/img/cian/paola_vallejo.png" class="align-self-center mr-3 rounded-circle img-fluid" >
 									</div>
 									<div class="col-12 col-md-10 text-center text-md-left">
-										<h4 class="fuente-institucional texto-amarillo f-negrita">PROFESIONAL ENCARGADO</h4>
+										<h4 class="fuente-institucional texto-amarillo f-negrita">DIRECTOR</h4>
 										<div class="pt-sans text-justify">
 											<label class="f-negrita">PAOLA ANDREA VALLEJO CHAMORRO </label><br>
 											<p>Magíster en gestión de la tecnología educativa, Especialista en administración de la tecnología educativa, licenciada en educación básica, humanidades con énfasis en lengua castellana e inglés Vinculación como docente del centro de idiomas de la universidad de Nariño, docente tiempo completo de la institución agropecuaria San Martín de Porres en Samaniego (N), coordinadora Regional Pasto- Tumaco del programa Bachillerato Pacicultor convenio entre la universidad de Nariño y el consejo noruego para refugiados, Parte del grupo de logística del programa computadores para educar. Investigador líder gupo de investigación CIAN - AUNAR <br>Correo electrónico: ingles@aunar.edu.co <br> Celular 3175741861 </p>
@@ -443,8 +457,7 @@
 								
 								<div class="row">
 									<div class="col-12 col-md-4 text-center">
-										<img src="<?php bloginfo('template_url')?>/img
-/cian/leidy_ortega_calpa.png" class="align-self-center mr-3 rounded-circle img-fluid" >
+										<img src="<?php bloginfo('template_url')?>/img/cian/leidy_ortega_calpa.png" class="align-self-center mr-3 rounded-circle img-fluid" >
 									</div>
 									<div class="col-12 col-md-6 text-center text-md-left">
 										<div class="pt-sans">
@@ -469,8 +482,7 @@
 								
 								<div class="row">
 									<div class="col-12 col-md-4 text-center">
-										<img src="<?php bloginfo('template_url')?>/img
-/cian/leidy_riascos.png" class="align-self-center mr-3 rounded-circle img-fluid" >
+										<img src="<?php bloginfo('template_url')?>/img/cian/leidy_riascos.png" class="align-self-center mr-3 rounded-circle img-fluid" >
 									</div>
 									<div class="col-12 col-md-6 text-center text-md-left">
 										<div class="pt-sans">
@@ -497,11 +509,10 @@
 								
 								<div class="row">
 									<div class="col-12 col-md-4 text-center">
-										<img src="<?php bloginfo('template_url')?>/img
-/cian/magda_mireya_salazar.png" class="align-self-center mr-3 rounded-circle img-fluid" >
+										<img src="<?php bloginfo('template_url')?>/img/cian/magda_mireya_salazar.png" class="align-self-center mr-3 rounded-circle img-fluid" >
 									</div>
 									<div class="col-12 col-md-6 text-center text-md-left">
-										<div class="pt-sans">
+										<div class="pt-sans">											
 											<label class="f-negrita">MAGDA MIREYA SALAZAR </label><br>
 											Ingeniera de sistemas <br>
 											Especialista en gerencia informática <br>
