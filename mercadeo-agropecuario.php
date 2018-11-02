@@ -144,7 +144,7 @@
 				<div class="col-12 text-center"><h1 class="pt-sans texto-azul-os f-negrita py-5">Plan de Estudios</h1></div>
 			</div>
 			<div class="row d-flex bd-highlight justify-content-center p-3">
-				<div class="col-12 col-sm-6 col-md-5 col-lg-4 borde-amarillo flex-fill bd-highlight borde-1 border">
+				<div class="col-12 col-sm-5 borde-amarillo flex-fill bd-highlight borde-1 border">
 					<div class="row pt-sans texto-azul-os p-2 p-lg-3">
 						<div class="col-12 text-center d-flex justify-content-center fondo-gris-c mt-5">
 							<div class="row p-2 ">	<div class="col-12  "><strong>I Semestre</strong></div> </div>
@@ -158,7 +158,7 @@
 						<div class="col-12">-Desarrollo de Habilidades Comunicativas a través de la Virtualidad.</div>
 					</div>
 				</div>
-				<div class="col-12 col-sm-6 col-md-5 col-lg-4 borde-amarillo flex-fill bd-highlight borde-1 border">
+				<div class="col-12 col-sm-5 borde-amarillo flex-fill bd-highlight borde-1 border">
 					<div class="row pt-sans texto-azul-os p-2 p-lg-3">
 						<div class="col-12 text-center d-flex justify-content-center fondo-gris-c mt-5">
 							<div class="row p-2 ">	<div class="col-12  "><strong>II Semestre</strong></div> </div>
@@ -171,7 +171,7 @@
 						<div class="col-12">-Habilidades Básicas en el Idioma Inglés.</div>
 					</div>
 				</div>
-				<div class="col-12 col-sm-6 col-md-5 col-lg-4 borde-amarillo flex-fill bd-highlight borde-1 border">
+				<div class="col-12 col-sm-5 borde-amarillo flex-fill bd-highlight borde-1 border">
 					<div class="row pt-sans texto-azul-os p-2 p-lg-3">
 						<div class="col-12 text-center d-flex justify-content-center fondo-gris-c mt-5">
 							<div class="row p-2 ">	<div class="col-12  "><strong>III Semestre</strong></div> </div>
@@ -184,7 +184,7 @@
 						<div class="col-12">-Métodos y Técnicas de Investigación.</div>
 					</div>
 				</div>
-				<div class="col-12 col-sm-6 col-md-5 col-lg-4 borde-amarillo flex-fill bd-highlight borde-1 border">
+				<div class="col-12 col-sm-5 borde-amarillo flex-fill bd-highlight borde-1 border">
 					<div class="row pt-sans texto-azul-os p-2 p-lg-3">
 						<div class="col-12 text-center d-flex justify-content-center fondo-gris-c mt-5">
 							<div class="row p-2 ">	<div class="col-12  "><strong>IV Semestre</strong></div> </div>
@@ -196,7 +196,7 @@
 						<div class="col-12">-Procesos de Promoción y Publicidad de Productos Agropecuarios.</div>
 					</div>
 				</div>
-				<div class="col-12 col-sm-6 col-md-5 col-lg-4 borde-amarillo flex-fill bd-highlight borde-1 border">
+				<div class="col-12 col-sm-5 borde-amarillo flex-fill bd-highlight borde-1 border">
 					<div class="row pt-sans texto-azul-os p-2 p-lg-3">
 						<div class="col-12 text-center d-flex justify-content-center fondo-gris-c mt-5">
 							<div class="row p-2 ">	<div class="col-12  "><strong>V Semestre</strong></div> </div>
@@ -208,7 +208,7 @@
 						<div class="col-12">-Proyecto de Investigación Aplicando los Conocimientos del Mercadeo Agropecuario.</div>
 					</div>
 				</div>
-				<div class="col-12 col-sm-6 col-md-5 col-lg-4 borde-amarillo flex-fill bd-highlight borde-1 border">
+				<div class="col-12 col-sm-5 borde-amarillo flex-fill bd-highlight borde-1 border">
 					<div class="row pt-sans texto-azul-os p-2 p-lg-3">
 						<div class="col-12 text-center d-flex justify-content-center fondo-gris-c mt-5">
 							<div class="row p-2 ">	<div class="col-12  "><strong>VI Semestre</strong></div> </div>
