@@ -33,6 +33,7 @@
 						<label class="fuente-institucional texto-amarillo f-size-16 f-negrita">Noticias Recientes</label>
 					</div>
 					<?php
+						// numberpost para mostrar hasta 10 post o noticias
 						$args = array( 'numberposts' => '10');
 						$recent_posts = wp_get_recent_posts( $args );
 						foreach( $recent_posts as $recent ){
@@ -49,11 +50,13 @@
 								?>
 							</a>
 						</div>
-						<div class="col-8 p-0 m-0 "><?php echo '<a class="pt-sans texto-amarillo sin-texto-subrayado" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> '; ?>
+						<div class="col-8 p-0 m-0 "><?php echo '<a class="pt-sans texto-amarillo sin-texto-subrayado" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> '; ?><br>Fecha: <?php echo date( 'd - m - Y', strtotime( $recent['post_date'] ) ); ?>
+						
 						<!-- <?php $excerpt = wp_trim_excerpt( $recent['post_excerpt']); // $excerpt contains the excerpt of the concerned post
 							  echo $excerpt; 
 						?> -->
-						</div>
+
+						</div>						
 					</div>	<?php
 					}
 					//fin for each
