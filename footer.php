@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="col-12 py-2 text-center text-white fuente-institucional small">
-        <a class="texto-amarillo f-negrita" data-toggle="tooltip" data-placement="auto" title="Ver políticas" target="politicas" href="<?php bloginfo('template_url')?>/">
+        <a class="texto-amarillo f-negrita" data-toggle="tooltip" data-placement="auto" title="Ver políticas" target="politicas" href="#">
           POLÍTICAS DE PROTECCIÓN DE DATOS PERSONALES
         </a>
       </div>
@@ -98,7 +98,7 @@
       <div class="col-lg-6 col-sm-12 mt-3 text-light text-lg-left text-center small fuente-institucional">
         <div class="">
           <div>
-            <a href="<?php bloginfo('template_url')?>/https://goo.gl/CkZ9AW" target="_google_maps_aunar" class="hvr-icon-pulse">
+            <a href="https://goo.gl/CkZ9AW" target="_google_maps_aunar" class="hvr-icon-pulse">
               <img src="<?php bloginfo('template_url')?>/img/ubicacion-aunar.png" width="8px" alt="ubicación aunar">
             </a> Corporación Universitaria Autónoma de Nariño </div>
             <div>&nbsp;&nbsp;&nbsp;NIT: 891224762-9</div>
