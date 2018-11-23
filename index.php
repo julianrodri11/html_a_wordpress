@@ -60,76 +60,9 @@
       </div>
     </div>
     <!-- --------------------FIN DOCUMENTOS----------------------- -->
-    <!-- ----------------DONDE QUIERES ESTUDIAR------------------- -->
-    <div class="container-fluid mb-5">
-      <div class="row fondo-mundo">
-        <div class="row col-12">
-          <div class="row col-12 col-lg-6 col-xl-7 p-2  d-flex align-content-center justify-content-center izquierda_derecha">
-            <div class="col-11 col-lg-10 fondo-amarillo mt-2 hvr-wobble-horizontal">
-              <h1 class="f-negrita fuente-institucional text-center">¿Donde quieres estudiar?</h1>
-            </div>
-            <div class="col-12 col-lg-10 text-center text-light fuente-institucional p-3">
-              <strong>AUNAR</strong> te permite elegir tu programa de interés para que estudies en cualquier sede del país
-            </div>
-          </div>
-          <div class="col-12 col-lg-6 col-xl-5 p-2 izquierda_derecha">
-            <div class="row  d-flex justify-content-end mr-lg-2">
-              <div class="row col-12 col-lg-8 p-2 m-1">                
-                <form class="col-12">                  
-                  <div class="form-group pt-sans">
-                    <select class="form-control" id="exampleSelect1">
-                      <option>Seleccione Sede</option>
-                      <option value="CALI">CALI</option>
-                      <option value="CARTAGENA">CARTAGENA</option>
-                      <option value="IPIALES">IPIALES</option>
-                      <option value="PASTO">PASTO</option>
-                      <option value="PUTUMAYO">PUTUMAYO</option>
-                      <option value="VILLAVICENCIO">VILLAVICENCIO</option>
-                    </select>
-                  </div>
-                  <div class="form-group pt-sans">
-                    <select class="form-control" id="exampleSelect3">
-                      <option>Seleccione Modalidad</option>
-                      <option value="">Distancia</option>
-                      <option value="">Presencial</option>
-                      <option value="">Virtual</option>
-                    </select>
-                  </div>
-                  <div class="form-group pt-sans">
-                    <select class="form-control" id="exampleSelect2">
-                      <option>Seleccione Programa</option>
-                      <option value=""> Administración de Empresas  </option>
-                      <option value=""> Contaduría Publica  </option>
-                      <option value=""> Decoración de Interiores  </option>
-                      <option value=""> Ingeniería Electrónica  </option>
-                      <option value=""> Ingeniería Informática  </option>
-                      <option value=""> Ingeniería Mecánica </option>
-                      <option value=""> Seguridad y Salud en el Trabajo </option>
-                      <option value=""> Técnico Laboral Asistente en Comercio Exterior  </option>
-                      <option value=""> Técnico Laboral Auxiliar Contable y Financiero  </option>
-                      <option value=""> Técnico Laboral Auxiliar en Diseño Gráfico  </option>
-                      <option value=""> Técnico Laboral Auxiliar en Sistemas Informáticos </option>
-                      <option value=""> Técnico Laboral en Cocina </option>
-                      <option value=""> Técnico Laboral por Competencias en Diseño y Confección de Modas  </option>
-                      <option value=""> Técnico Profesional en procesos Administrativos </option>
-                      <option value=""> Tecnología en Control de Procesos Electrónicos  </option>
-                      <option value=""> Tecnología en Gestión Empresarial </option>
-                      <option value=""> Tecnología en Gestión en Salud Ocupacional  </option>
-                      <option value=""> Tecnología en Mecánica Dental </option>
-                      <option value=""> Tecnología en Mercadeo Agropecuario </option>
-                      <option value=""> Tecnología en Producción Gráfica  </option>
-                      <option value=""> Tecnología en Transformación de Plantas Aromáticas  </option>
-                    </select>
-                  </div>                  
-                  <button type="button" class="btn btn-primary fondo-amarillo float-right f-negrita pt-sans hvr-forward">Buscar</button>
-                </form>
-              </div>              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- ---------------- FIN DONDE QUIERES ESTUDIAR-------------- -->
+    <!-- ------------DONDE QUIERES ESTUDIAR BUSCADOR-------------- -->
+    <?php include_once('secciones/buscador_oferta.php');?>
+    <!-- ----------- FIN DONDE QUIERES ESTUDIAR BUSCADOR---------- -->
     <!-- ----------------SECCIÓN NOTICIAS------------------------- -->
     <?php include_once('noticias/noticia-1.php');?>
     <!-- ----------------FIN SECCIÓN NOTICIAS--------------------- -->
