@@ -233,7 +233,7 @@
 		</div>
 		<div class="col-4"></div>
 		<div class="col-4 p-4  hover-texto-blanco text-center fondo-amarillo-intenso f-negrita">
-			<a class="texto-azul-os sin-texto-subrayado" target="_ma" href="grupos-de-investigacion#grupo8" data-toggle="tooltip" data-placement="auto" title="Ver grupo">Grupos de Investigacón</a>
+			<a class="texto-azul-os sin-texto-subrayado" target="_meragr" href="grupos-de-investigacion/#grupo8" data-toggle="tooltip" data-placement="auto" title="Ver grupo">Grupos de Investigacón</a>
 		</div>
 		
 	</div>

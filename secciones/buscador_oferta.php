@@ -13,8 +13,8 @@
             <div class="row  d-flex justify-content-end mr-lg-2">
               <div class="row col-12 col-lg-8 p-2 m-1">                
                 <form class="col-12" name="formulario1" action="#">                  
-                  <div class="form-group pt-sans">
-                    <!-- <select class="form-control" id="exampleSelect1"> -->
+                  <!-- SELECT DE SEDES -->
+                  <div class="form-group pt-sans">                  
                     <select name="sede" class="form-control" onchange="cambia()">
                     <option value="0">Seleccione Sede				</option>
                     <option value="1">PASTO				            </option>
@@ -25,6 +25,7 @@
                     <option value="6">VILLAVICENCIO				    </option>
                     </select>
                   </div>
+                  <!-- SELECT DE MODALIDAD -->
                   <div class="form-group pt-sans">
                     <select class="form-control" name="mod" onchange="cambiaModalidades()">
                     <option value="-">Seleccione Modalidad</option>			
@@ -33,10 +34,10 @@
                     <option value="3">VIRTUAL             </option>
                     </select>
                   </div>
+                  <!-- SELECT DE RESULTADOS DE BUSQUEDA -->
                   <div class="form-group pt-sans">                
-                    <select class="form-control" name="opt" onchange="location = this.value">
-                        <!-- <option value="http://google.com">Prueba URL</option> -->
-                        <option value="-">Seleccione oferta</option>
+                    <select class="form-control" name="opt" onchange="window.open(this.value, '_blank')" >                        
+                        <option value="-">Seleccione oferta</option>                        
                     </select>                    
                   </div>                  
                   <!-- <button type="button" class="btn btn-primary fondo-amarillo float-right f-negrita pt-sans hvr-forward">Buscar</button> -->
@@ -98,7 +99,9 @@
 					document.formulario1.opt.length = num_opts;
 					//para cada opt del array, la pongo en el select
 					for(i=0; i<num_opts; i++){
-						str=mis_opts[i];
+
+                        str=mis_opts[i];
+                      //  parto los elementos del array que tengan /// el link lo agrego al vale y el nombre del programa lo muestro en el text
 						res=str.split("///");
 						// document.formulario1.opt.options[i].value=mis_opts[i];
 						document.formulario1.opt.options[i].value=res[1];
