@@ -58,25 +58,25 @@
 			var sed_1_mod_2 = new Array("PASTO - Presencial", "Ingeniería Electrónica /// http://190.14.239.67/ingenieria-electronica", "Ingeniería Mecánica /// http://190.14.239.67/ingenieria-mecanica","Administración de Empresas /// http://190.14.239.67/administracion-empresas","Contaduría Publica /// http://190.14.239.67/contaduria-publica","Técnico Laboral por Competencias en Diseño y Confección de Modas /// http://190.14.239.67/diseno-de-modas");
 			var sed_1_mod_3 = new Array("PASTO - Virtual", "Tecnología en Mercadeo Agropecuario /// http://190.14.239.67/mercadeo-agropecuario","Tecnología en Transformación de Plantas Aromáticas /// http://190.14.239.67/plantas-aromaticas");
 
-			var sed_2_mod_1 = new Array("CALI - Distancia", "No se encontraron programas ofertados");
+			var sed_2_mod_1 = new Array("CALI - Distancia", "No se encontraron programas ofertados /// #");
 			var sed_2_mod_2 = new Array("CALI - Presencial", "Administración de Empresas /// http://aunarcali.edu.co/ext/programa/Administraci_n_de_Empresas", "Contaduría Pública /// http://aunarcali.edu.co/ext/programa/Contadur_a_P_blica", "Ingeniería Informática /// http://aunarcali.edu.co/ext/programa/Ingenier_a_Inform_tica", "Tecnología en Control de Procesos Electrónicos /// http://aunarcali.edu.co/ext/programa/Tecnolog_a_en_Control_de_Procesos_Electr_nicos", "Tecnología en Gestión Empresarial /// http://aunarcali.edu.co/ext/programa/Tecnolog_a_en_Gesti_n_Empresarial","Tecnología en Producción Gráfica /// http://aunarcali.edu.co/ext/programa/Tecnolog_a_en_Producci_n_Gr_fica","Técnico Profesional en procesos Administrativos /// http://aunarcali.edu.co/ext/programa/T_cnico_profesional_en_Procesos_Administrativos", "Técnico Laboral Asistente en Comercio Exterior /// http://aunarcali.edu.co/ext/programa/Asistente_en_Comercio_Exterior_", "Técnico Laboral Auxiliar Contable y Financiero /// http://aunarcali.edu.co/ext/programa/Auxiliar_Contable_y_Financiero", "Técnico Laboral Auxiliar en Diseño Gráfico /// http://aunarcali.edu.co/ext/programa/Auxiliar_en_Dise_o_Gr_fico", "Técnico Laboral Auxiliar en Sistemas Informáticos /// http://aunarcali.edu.co/ext/programa/Auxiliar_en_Sistemas_Inform_ticos");
-			var sed_2_mod_3 = new Array("CALI - Virtual", "No se encontraron programas ofertados");
+			var sed_2_mod_3 = new Array("CALI - Virtual", "No se encontraron programas ofertados /// #");
 
 			var sed_3_mod_1 = new Array("CARTAGENA - Distancia", "Contaduría Pública /// https://aunarcartagena.edu.co/contaduria-publica/", "Ingeniería Informática /// https://aunarcartagena.edu.co/ingenieria-informatica/");
 			var sed_3_mod_2 = new Array("CARTAGENA - Presencial", "Técnico Laboral en Cocina /// https://aunarcartagena.edu.co/cocina-nacional-e-internacional/", "Decoración de Interiores  /// https://aunarcartagena.edu.co/decoracion-de-interiores/", "");
-			var sed_3_mod_3 = new Array("CARTAGENA - Virtual", "No se encontraron programas ofertados");
+			var sed_3_mod_3 = new Array("CARTAGENA - Virtual", "No se encontraron programas ofertados /// #");
 
-			var sed_4_mod_1 = new Array("IPIALES - Distancia", "No se encontraron programas ofertados");
-			var sed_4_mod_2 = new Array("IPIALES - Presencial", "No se encontraron programas ofertados");
-			var sed_4_mod_3 = new Array("IPIALES - Virtual", "No se encontraron programas ofertados");
+			var sed_4_mod_1 = new Array("IPIALES - Distancia", "No se encontraron programas ofertados /// #");
+			var sed_4_mod_2 = new Array("IPIALES - Presencial", "No se encontraron programas ofertados /// #");
+			var sed_4_mod_3 = new Array("IPIALES - Virtual", "No se encontraron programas ofertados /// #");
 
-			var sed_5_mod_1 = new Array("PUTUMAYO - Distancia", "No se encontraron programas ofertados");
-			var sed_5_mod_2 = new Array("PUTUMAYO - Presencial", "No se encontraron programas ofertados");
-			var sed_5_mod_3 = new Array("PUTUMAYO - Virtual", "No se encontraron programas ofertados");
+			var sed_5_mod_1 = new Array("PUTUMAYO - Distancia", "No se encontraron programas ofertados /// #");
+			var sed_5_mod_2 = new Array("PUTUMAYO - Presencial", "No se encontraron programas ofertados /// #");
+			var sed_5_mod_3 = new Array("PUTUMAYO - Virtual", "No se encontraron programas ofertados /// #");
 
 			var sed_6_mod_1 = new Array("VILLAVICENCIO - Distancia", "Administración de Empresas /// http://www.aunarvillavicencio.edu.co/index.php?option=com_content&view=article&id=121&Itemid=652","Contaduría Publica /// http://www.aunarvillavicencio.edu.co/index.php?option=com_content&view=article&id=93&Itemid=653", "Ingeniería Informática /// http://www.aunarvillavicencio.edu.co/ingenieria-informatica/");
 			var sed_6_mod_2 = new Array("VILLAVICENCIO - Presencial", "Seguridad y Salud en el Trabajo /// http://www.aunarvillavicencio.edu.co/index.php?option=com_content&view=article&id=424&Itemid=733","Tecnología en Gestión en Salud Ocupacional /// http://www.aunarvillavicencio.edu.co/gestion-en-salud-ocupacional/","Tecnología en Mecánica Dental /// http://www.aunarvillavicencio.edu.co/mecanica-dental/");
-			var sed_6_mod_3 = new Array("VILLAVICENCIO - Virtual", "No se encontraron programas ofertados");
+			var sed_6_mod_3 = new Array("VILLAVICENCIO - Virtual", "No se encontraron programas ofertados /// #");
 
 			
 			
