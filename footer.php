@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="col-12 py-2 text-center text-white fuente-institucional small">
-        <a class="texto-amarillo f-negrita" data-toggle="tooltip" data-placement="auto" title="Ver políticas" target="politicas" href="#">
+        <a class="texto-amarillo f-negrita" data-toggle="tooltip" data-placement="auto" title="Ver políticas" href="politicas-de-proteccion-de-datos">
           POLÍTICAS DE PROTECCIÓN DE DATOS PERSONALES
         </a>
       </div>
