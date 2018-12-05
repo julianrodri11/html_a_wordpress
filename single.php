@@ -34,7 +34,7 @@
 					</div>
 					<?php
 						// numberpost para mostrar hasta 10 post o noticias
-						$args = array( 'numberposts' => '10');
+						$args = array( 'numberposts' => '10', 'post_status' => 'publish');
 						$recent_posts = wp_get_recent_posts( $args );
 						foreach( $recent_posts as $recent ){
 					?>

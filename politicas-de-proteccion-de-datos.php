@@ -175,7 +175,7 @@
 					<div class="row col-12 p-0">
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual ">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<a href="#" target="semilleros">
+							<a href="#" target="sem}illeros">
 								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img/politicas/autorizacion-y-tratamiento-2.jpg" alt="" width="100%">
 							</a>
 							<div class="cont_texto_secundario">
