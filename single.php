@@ -67,7 +67,7 @@
 				<div class="col-12 col-md-9 p-lg-5 fondo-gris-c">
 					<div class="row d-flex justify-content-center fuente-institucional">
 						<?php
-							if ( have_posts() ) : while ( have_posts() ) : the_post();
+							if ( have_posts() && have_posts(array('post_status' => 'publish'))) : while ( have_posts() ) : the_post();
 						?>
 						<div class="col-12 col-md-8 text-center f-negrita texto-azul border-bottom borde-azul py-4 f-size-18">
 							<?php the_title(); ?>
