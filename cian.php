@@ -5,7 +5,7 @@
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
 		<title>CIAN DEPARTAMENTO DE INGLES - AUTÓNOMA DE NARIÑO</title>
-		
+
 	</head>
 	<body>
 		<?php
@@ -17,51 +17,14 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/cian/cian.jpg"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/cian.jpg"/>
 				</div>
 			</div>
 		</div>
 		<?php  include_once('secciones/menu2.php') ?>
-		<!-- enlaces externos -->
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-12 pt-lg-2 mb-lg-5 mt-lg-4"><h3 class="fuente-institucional f-negrita texto-azul-os text-center mx-auto">ENLACES EXTERNOS</h3></div>
-				<!-- <div class="col-12  "><p class="pt-sans f-negrita texto-azul-os text-center mx-auto">NIVELES DE FORMACIÓN</p></div> -->
-			</div>
-		</div>
-		<div class="container-fluid m-0">
-			<div class="row m-0 d-flex justify-content-center">
-				<div class="col-4 col-md-2 text-center">
-					<a class="sin-texto-subrayado texto-azul-os" target="_blanck1" href="https://goo.gl/forms/on4uljowlKOOF5Ua2">
-						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/Club_Conversacional.png" alt="club conversacional aunar"><br>Club Conversacional
-					</a>
-				</div>
-				<div class="col-4 col-md-2 text-center">
-					<a class="sin-texto-subrayado texto-azul-os" target="_blanck2" href="https://docs.google.com/forms/d/e/1FAIpQLSet-HfLJwxcBGJWPYB31ZJrbge8heywPB99fEjbNijji_NZKQ/viewform">
-						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/cursos_de_idiomas.png" alt="cursos de idiomas aunar"> <br>Cursos de Idiomas:
-					</a>
-				</div>
-				<div class="col-4 col-md-2 text-center border-left borde-azul">
-					<a class="sin-texto-subrayado texto-azul-os" target="_blanck3" href="http://learnenglishteens.britishcouncil.org/skills">
-						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/British_Counsil.png" alt="British Counsil aunar"><br>British Counsil
-					</a>
-				</div>
-				<div class="col-4 col-md-2 text-center">
-					<a class="sin-texto-subrayado texto-azul-os" target="_blanck4" href="https://thewritepractice.com/writing-practice/">
-						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/The_Write_Practice.png" alt="The Write Practice aunar"> <br>The Write Practice
-					</a>
-				</div>
-				<div class="col-4 col-md-2 text-center">
-					<a class="sin-texto-subrayado texto-azul-os" target="_blanck5" href="https://www.examenglish.com/CEFR/cefr.php">
-						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/Exam_English.png" alt="Exam English aunar"> <br>Exam English
-					</a>
-				</div>
-			</div>
-		</div>
-		<!-- fin enlaces externos -->
-		
-		<div class="container-fluid texto-azul-os py-5">
+
+		<!-- noticias -->
+		<div class="container-fluid texto-azul-os py-2">
 			<div class="row">
 				<!-- slider bienestar -->
 				<div class="col-12 col-md-5">
@@ -104,6 +67,46 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- fin noticias -->
+		<!-- enlaces externos -->
+		<div class="container-fluid py-2">
+			<div class="row">
+				<div class="col-12 pt-lg-2 mb-lg-5 mt-lg-4"><h3 class="fuente-institucional f-negrita texto-azul-os text-center mx-auto">ENLACES EXTERNOS</h3></div>
+				<!-- <div class="col-12  "><p class="pt-sans f-negrita texto-azul-os text-center mx-auto">NIVELES DE FORMACIÓN</p></div> -->
+			</div>
+		</div>
+		<div class="container-fluid m-0 pb-5">
+			<div class="row m-0 d-flex justify-content-center">
+				<div class="col-4 col-md-2 text-center">
+					<a class="sin-texto-subrayado texto-azul-os" target="_blanck1" href="https://goo.gl/forms/on4uljowlKOOF5Ua2">
+						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/Club_Conversacional.png" alt="club conversacional aunar"><br>Club Conversacional
+					</a>
+				</div>
+				<div class="col-4 col-md-2 text-center">
+					<a class="sin-texto-subrayado texto-azul-os" target="_blanck2" href="https://docs.google.com/forms/d/e/1FAIpQLSet-HfLJwxcBGJWPYB31ZJrbge8heywPB99fEjbNijji_NZKQ/viewform">
+						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/cursos_de_idiomas.png" alt="cursos de idiomas aunar"> <br>Cursos de Idiomas:
+					</a>
+				</div>
+				<div class="col-4 col-md-2 text-center border-left borde-azul">
+					<a class="sin-texto-subrayado texto-azul-os" target="_blanck3" href="http://learnenglishteens.britishcouncil.org/skills">
+						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/British_Counsil.png" alt="British Counsil aunar"><br>British Counsil
+					</a>
+				</div>
+				<div class="col-4 col-md-2 text-center">
+					<a class="sin-texto-subrayado texto-azul-os" target="_blanck4" href="https://thewritepractice.com/writing-practice/">
+						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/The_Write_Practice.png" alt="The Write Practice aunar"> <br>The Write Practice
+					</a>
+				</div>
+				<div class="col-4 col-md-2 text-center">
+					<a class="sin-texto-subrayado texto-azul-os" target="_blanck5" href="https://www.examenglish.com/CEFR/cefr.php">
+						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/Exam_English.png" alt="Exam English aunar"> <br>Exam English
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- fin enlaces externos -->
+
 		<div class="container-fluid texto-azul-os">
 			<div class="row fondo-gris-c d-flex justify-content-center">
 				<!-- misión -->
@@ -125,10 +128,10 @@
 							<div class="col-12 pt-5"><h3 class="fuente-institucional f-negrita"> Visión</h3></div>
 							<div class="col-12 text-justify pt-sans">Lograr que la comunidad educativa desarrolle  un nivel de competencia comunicativa en el idioma inglés como un valor agregado en su proceso de formación profesional integral que los define como un recurso humano altamente idóneo para impulsar el desarrollo de la comunidad. </div>
 							<!-- quitar -->
-							
+
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 			<div class="container-fluid my-5">
@@ -156,11 +159,11 @@
 				<div class="row d-flex justify-content-center">
 					<div class="col-12 col-md-11">
 						<div class="tab-content" id="pills-tabContent">
-							
+
 							<div class="tab-pane fade pt-sans texto-azul-os text-justify show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-								
+
 								<div class="col-12">
-									
+
 									<!-- informacion nivel de ingles -->
 									<div class="container-fluid">
 										<div class="row ">
@@ -168,12 +171,12 @@
 												<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 													<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita active" id="v-pills-formas-tab" data-toggle="pill" href="#v-pills-formas" role="tab" aria-controls="v-pills-formas" aria-selected="true">Nivel 1 </a>
 													<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="false">Nivel 2 </a>
-													
+
 												</div>
 											</div>
 											<div class="col-12 col-md-9">
 												<div class="tab-content pt-sans texto-azul-os" id="v-pills-tabContent">
-													
+
 													<div class="tab-pane fade p-3 fondo-gris-os show active" id="v-pills-formas" role="tabpanel" aria-labelledby="v-pills-formas-tab">
 														<div class="col-12 p-2 px-md-5 text-justify pt-sans">
 															<div class="col-12"><h3 class="fuente-institucional f-negrita text-center"> Nivel 1 - Básico </h3></div>
@@ -203,7 +206,7 @@
 																	</div> -->
 																</div>
 															</div>
-															
+
 														</div>
 													</div>
 													<div class="tab-pane fade p-3 fondo-gris-os show" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
@@ -234,7 +237,7 @@
 																				<br>•	Past simple vs present perfect
 																				<br>•	Present continuous
 																				<br>•	Questions with and without auxiliaries
-																		
+
 																	</div> -->
 																</div>
 															</div>
@@ -246,10 +249,10 @@
 									</div>
 									<!-- fin informacion nivel de ingles -->
 								</div>
-								
+
 							</div>
 							<div class="tab-pane fade pt-sans texto-azul-os text-justify" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-								
+
 								<div class="col-12">
 									<!-- informacion nivel de ingles -->
 									<div class="container-fluid">
@@ -258,12 +261,12 @@
 												<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 													<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita active" id="v-pills-formas2-tab" data-toggle="pill" href="#v-pills-formas2" role="tab" aria-controls="v-pills-formas" aria-selected="true">Nivel 1 </a>
 													<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os " id="v-pills-home2-tab" data-toggle="pill" href="#v-pills-home2" role="tab" aria-controls="v-pills-home" aria-selected="false">Nivel 2 </a>
-													
+
 												</div>
 											</div>
 											<div class="col-12 col-md-9">
 												<div class="tab-content pt-sans texto-azul-os" id="v-pills-tabContent">
-													
+
 													<div class="tab-pane fade p-3 fondo-gris-os show active" id="v-pills-formas2" role="tabpanel" aria-labelledby="v-pills-formas2-tab">
 														<div class="col-12 p-2 px-md-5 text-justify pt-sans">
 															<div class="col-12"><h3 class="fuente-institucional f-negrita text-center"> Nivel 2 - Elemental</h3></div>
@@ -288,7 +291,7 @@
 																				<br>•	Will, won't for predictions
 																				<br>•	Will vs going to
 																				<br>•	Used to
-																		
+
 																	</div> -->
 																</div>
 															</div>
@@ -317,20 +320,20 @@
 																					<br>•	Present perfect
 																					<br>•	Past simple vs present perfect
 																					<br>•	Present continuous
-																		
+
 																	</div> -->
 																</div>
 															</div>
 														</div>
 													</div>
-													
+
 												</div>
 											</div>
 										</div>
 									</div>
 									<!-- fin informacion nivel de ingles -->
 								</div>
-								
+
 							</div>
 							<div class="tab-pane fade pt-sans texto-azul-os text-justify" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
 								<div class="col-12">
@@ -341,12 +344,12 @@
 												<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 													<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita active" id="v-pills-formas3-tab" data-toggle="pill" href="#v-pills-formas3" role="tab" aria-controls="v-pills-formas" aria-selected="true">Nivel 1 </a>
 													<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os " id="v-pills-home3-tab" data-toggle="pill" href="#v-pills-home3" role="tab" aria-controls="v-pills-home" aria-selected="false">Nivel 2 </a>
-													
+
 												</div>
 											</div>
 											<div class="col-12 col-md-9">
 												<div class="tab-content pt-sans texto-azul-os" id="v-pills-tabContent">
-													
+
 													<div class="tab-pane fade p-3 fondo-gris-os show active" id="v-pills-formas3" role="tabpanel" aria-labelledby="v-pills-formas3-tab">
 														<div class="col-12 p-2 px-md-5 text-justify pt-sans">
 															<div class="col-12"><h3 class="fuente-institucional f-negrita text-center"> Nivel 1 - Independiente</h3></div>
@@ -371,7 +374,7 @@
 																					<br>•	Multi-word Verbs
 																					<br>•	Cleft Sentences
 																					<br>•	Active Vs Passive Voice
-																		
+
 																	</div> -->
 																</div>
 															</div>										</div>
@@ -400,8 +403,8 @@
 																		</p>
 																	</div>
 																	<!-- <div class="col-12"><h4 class="fuente-institucional f-negrita text-center"> Temáticas por nivel:</h4>
-																				
-																		
+
+
 																	</div> -->
 																</div>
 															</div>
@@ -413,15 +416,15 @@
 									</div>
 									<!-- fin informacion nivel de ingles -->
 								</div>
-								
+
 							</div>
 							<div class="col-12 "></div><!--linea amarilla -->
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
-			
+
 			<!-- personal encargado -->
 			<div class="container-fluid p-2 p-lg-5 ">
 				<div class="row m-3 fuente-institucional texto-azul-os d-flex justify-content-center">
@@ -429,7 +432,7 @@
 						<!-- Personal -->
 						<div class="media pt-3 border-top border-bottom  pb-3 borde-amarillo borde-2 ">
 							<div class="media-body ">
-								
+
 								<div class="row">
 									<div class="col-12 col-md-2 text-center">
 										<img src="<?php bloginfo('template_url')?>/img/cian/paola_vallejo.png" class="align-self-center mr-3 rounded-circle img-fluid" >
@@ -439,22 +442,22 @@
 										<div class="pt-sans text-justify">
 											<label class="f-negrita">PAOLA ANDREA VALLEJO CHAMORRO </label><br>
 											<p>Magíster en gestión de la tecnología educativa, Especialista en administración de la tecnología educativa, licenciada en educación básica, humanidades con énfasis en lengua castellana e inglés Vinculación como docente del centro de idiomas de la universidad de Nariño, docente tiempo completo de la institución agropecuaria San Martín de Porres en Samaniego (N), coordinadora Regional Pasto- Tumaco del programa Bachillerato Pacicultor convenio entre la universidad de Nariño y el consejo noruego para refugiados, Parte del grupo de logística del programa computadores para educar. Investigador líder gupo de investigación CIAN - AUNAR <br>Correo electrónico: ingles@aunar.edu.co <br> Celular 3175741861 </p>
-											
+
 										</div>
 									</div>
 								</div>
-								
-								
+
+
 							</div>
 						</div>
 					</div>
-					
+
 					<div class="col-12 text-center py-4 my-4"><h4 class="fuente-institucional texto-amarillo f-negrita">EQUIPO DOCENTE</h4></div>
 					<div class="col-12 col-lg-6 ">
 						<!-- Personal -->
 						<div class="media ">
 							<div class="media-body ">
-								
+
 								<div class="row">
 									<div class="col-12 col-md-4 text-center">
 										<img src="<?php bloginfo('template_url')?>/img/cian/leidy_ortega_calpa.png" class="align-self-center mr-3 rounded-circle img-fluid" >
@@ -470,8 +473,8 @@
 										</div>
 									</div>
 								</div>
-								
-								
+
+
 							</div>
 						</div>
 					</div>
@@ -479,7 +482,7 @@
 						<!-- Personal -->
 						<div class="media ">
 							<div class="media-body ">
-								
+
 								<div class="row">
 									<div class="col-12 col-md-4 text-center">
 										<img src="<?php bloginfo('template_url')?>/img/cian/leidy_riascos.png" class="align-self-center mr-3 rounded-circle img-fluid" >
@@ -497,8 +500,8 @@
 										</div>
 									</div>
 								</div>
-								
-								
+
+
 							</div>
 						</div>
 					</div>
@@ -506,13 +509,13 @@
 						<!-- Personal -->
 						<div class="media ">
 							<div class="media-body ">
-								
+
 								<div class="row">
 									<div class="col-12 col-md-4 text-center">
 										<img src="<?php bloginfo('template_url')?>/img/cian/magda_mireya_salazar.png" class="align-self-center mr-3 rounded-circle img-fluid" >
 									</div>
 									<div class="col-12 col-md-6 text-center text-md-left">
-										<div class="pt-sans">											
+										<div class="pt-sans">
 											<label class="f-negrita">MAGDA MIREYA SALAZAR </label><br>
 											Ingeniera de sistemas <br>
 											Especialista en gerencia informática <br>
@@ -521,14 +524,14 @@
 										</div>
 									</div>
 								</div>
-								
-								
+
+
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<?php  get_footer(); ;?>
-			
+
 		</body>
 	</html>
