@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white texto-azul-os fuente-institucional zindex-20 btco-hover-menu m-4">    
+<nav class="navbar navbar-expand-lg navbar-light bg-white texto-azul-os fuente-institucional zindex-20 btco-hover-menu m-4">
     <!-- <a class="navbar-brand" href="#">Menú</a> -->
     <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown_principal" aria-controls="navbarNavDropdown_principal" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>MENÚ
@@ -13,6 +13,7 @@
                 <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os" href="institucional">Información Institucional</a></li>
                 <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os" href="rectoria">Rectoría</a>  </li>
                 <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os" href="vicerrectorias">Vicerrectorías</a>  </li>
+                <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os" href="sitio_en_construccion">Planeación</a>  </li>
             </ul>
         </li>
         <li class="nav-item dropdown py-0 border-right borde-azul text-center">
@@ -88,21 +89,25 @@
                 <li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os" href="internacionalizacion">Internacionalización</a></li>
             </ul>
         </li>
+        <li class="nav-item py-0 text-center border-right borde-azul">
+            <a class=" nav-link texto-azul-os px-lg1 hvr-underline-from-center pointer " href="talento_humano">Talento Humano</a>
+        </li>
+        <!--
         <li class="nav-item dropdown py-0 border-right borde-azul text-center">
             <a class="nav-link dropdown-toggle texto-azul-os px-lg-3  hvr-underline-from-center" href="#" id="navbarDropdownMenu_th" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Talento Humano
             </a>
-<!-- <ul class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdownMenu_th">
-<li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">Información Oficina<br> Talento Humano</a>     </li>
-<li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">circulares, permisos<br> y licencias</a>       </li>
-<li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">Reporte de salidas</a>     </li>
-<li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">seguridad y salud en<br> el trabajo</a></li>
-<li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">psicología</a>     </li>
-<li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">Deporte</a></li>
-<li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">Cultura</a></li>
-<li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">reglamentos</a></li>
-</ul> -->
-</li>
+            <ul class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdownMenu_th">
+            <li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">Información Oficina<br> Talento Humano</a>     </li>
+            <li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">circulares, permisos<br> y licencias</a>       </li>
+            <li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">Reporte de salidas</a>     </li>
+            <li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">seguridad y salud en<br> el trabajo</a></li>
+            <li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">psicología</a>     </li>
+            <li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">Deporte</a></li>
+            <li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">Cultura</a></li>
+            <li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">reglamentos</a></li>
+            </ul>
+            </li> -->
 <li class="nav-item dropdown py-0 border-right borde-azul text-center">
     <a class="nav-link dropdown-toggle texto-azul-os px-lg-3  hvr-underline-from-center" href="#" id="navbarDropdownMenu_cian" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         CIAN

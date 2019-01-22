@@ -86,9 +86,9 @@
                             target="_blanck_12">Villavicencio</a> </li>
                             <li><a class=" dropdown-item texto-azul f-negrita hvr-underline-from-center" href="https://aunarcartagena.edu.co/"
                             target="_blanck_13">Cartagena</a> </li>
-                            <li><a class=" dropdown-item texto-azul f-negrita hvr-underline-from-center" href="#"
+                            <li><a class=" dropdown-item texto-azul f-negrita hvr-underline-from-center" href="sitio_en_construccion"
                             target="_blanck_14">Ipiales</a> </li>
-                            <li><a class=" dropdown-item texto-azul f-negrita hvr-underline-from-center" href="#"
+                            <li><a class=" dropdown-item texto-azul f-negrita hvr-underline-from-center" href="sitio_en_construccion"
                             target="_blanck_15">Putumayo</a> </li>
                         </ul>
                     </li>
