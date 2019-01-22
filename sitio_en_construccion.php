@@ -17,7 +17,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/sitioenconstruccion_aunar.png" alt="sitio en construcción - AUNAR"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/sitioenconstruccion_aunar.jpg" alt="sitio en construcción - AUNAR"/>
 				</div>
 			</div>
 		</div>
