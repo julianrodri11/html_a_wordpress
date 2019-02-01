@@ -43,6 +43,16 @@ function noticia()
 
 
 
+
+
+          <?php
+              //$args = array( 'category_name=noticias' => 4 );
+              //$args = array('category_name' => 'noticias' );
+              
+              $my_query=new WP_Query(array('offset' => 3,'posts_per_page' => 9));
+              if ( $my_query -> have_posts() ) :
+                ?>
+
 <!-- slider de noticias -->
 <div class="container py-5">
   <div class="row d-flex justify-content-center align-items-center">
@@ -58,12 +68,8 @@ function noticia()
         <!-- The slideshow -->
         <div class="carousel-inner ">
 
-          <?php
-              //$args = array( 'category_name=noticias' => 4 );
-              //$args = array('category_name' => 'noticias' );
-              
-              $my_query=new WP_Query(array('offset' => 3,'posts_per_page' => 9));
-              if ( $my_query -> have_posts() ) :
+
+                <?php
                 $contador = 0;
                         while ($my_query -> have_posts() ) : $my_query->the_post();
 
@@ -99,13 +105,9 @@ function noticia()
             
                   endwhile;
                   wp_reset_postdata();
-                  else :
-                    _e('<div class="col-12 mx-auto pt-sans texto-azul-os bg-warning text-center f-size-18"> No hay publicaciones, gracias por su visita </div> ');
-                  endif;
+                  ?>
                   
-            ?>
-            <!-- ******************************** para abajo no tocar -->
-          </div></div></div>
+                  </div></div></div>
           <!-- Left and right controls -->
           <a class="carousel-control-prev" href="#myCarousel2" data-slide="prev">
             <span class="fondo-azul-oscuro p-2 " aria-hidden="true">
@@ -122,3 +124,12 @@ function noticia()
       </div>
     </div>
   </div>
+                  <?php
+                  else :
+
+                    _e('<div class="col-12 mx-auto pt-sans texto-azul-os bg-warning text-center f-size-18"> No hay publicaciones, gracias por su visita </div> ');
+                  endif;
+                  
+            ?>
+            <!-- ******************************** para abajo no tocar -->
+          

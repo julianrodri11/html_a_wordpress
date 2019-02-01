@@ -91,14 +91,16 @@
         </div>
       </div>
     </div>
-  </div>z
+  </div>
   <!-- fin noticia 2 -->
   <?php
   }
   ?>
   
   <?php endwhile;
-  wp_reset_postdata();
+  //
+   wp_reset_postdata();
+  //wp_reset_query()
   else :
     _e('<div class="col-12 mx-auto pt-sans texto-azul-os bg-warning text-center f-size-18"> No hay publicaciones, gracias por su visita </div> ');
   endif; ?>

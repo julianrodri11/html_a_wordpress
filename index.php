@@ -36,10 +36,10 @@
       <div class="row ">
         <div class="col-lg-3 pt-5 pb-4 col-md-3 col-sm-12 d-flex justify-content-center align-items-center">
           <div class="row p-3 fondo-azul text-whited-flex justify-content-center">
-            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>docs/CALENDARIO_ACADEMICO_2018_II.pdf" target="_blank">Calendario Académico 2018-2</a></div>
-            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>docs/CALENDARIO_ACADEMICO_2018_1.pdf" target="_blank">Calendario Académico 2018-1</a></div>
-            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>docs/CALENDARIO_ACADEMICO_2017_2.pdf" target="_blank">Calendario Académico 2017-2</a></div>
-            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>docs/CALENDARIO_ACADEMICO_2017_1.pdf" target="_blank">Calendario Académico 2017-1</a></div>
+            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2018_II.pdf" target="_blank">Calendario Académico 2018-2</a></div>
+            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2018_1.pdf" target="_blank">Calendario Académico 2018-1</a></div>
+            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2017_2.pdf" target="_blank">Calendario Académico 2017-2</a></div>
+            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2017_1.pdf" target="_blank">Calendario Académico 2017-1</a></div>
           </div>
         </div>
         <div class="col-lg-7 pt-5 pb-4 col-md-6 col-sm-12 text-center ">
@@ -63,11 +63,14 @@
     <!-- ------------DONDE QUIERES ESTUDIAR BUSCADOR-------------- -->
     <?php include_once('secciones/buscador_oferta.php');?>
     <!-- ----------- FIN DONDE QUIERES ESTUDIAR BUSCADOR---------- -->
-    <!-- ----------------SECCIÓN NOTICIAS------------------------- -->
+    <!-- ----------------SECCIÓN NOTICIAS PRINCIPALES------------------------- -->
     <?php include_once('noticias/noticia-1.php');?>
-    <!-- ----------------FIN SECCIÓN NOTICIAS--------------------- -->
+    <!-- ----------------FIN SECCIÓN NOTICIAS PRINCIPALES--------------------- -->
     <!-- ----------------SECCIÓN NOTICIAS------------------------- -->
+    <!-- slider de noticias mas recientes en la pagina inicials -->
     <?php include_once('slider/noticias-autonoma-de-narino.php');?>
+    <!--  fin slider de noticias mas recientes en la pagina inicials -->
+
     <div class="container-fluid p-0 m-0">
       <div class="row d-flex justify-content-center p-0 m-0">
         <div class="col-12 col-lg-12 p-2 fondo-azul-oscuro">
