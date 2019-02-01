@@ -91,7 +91,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>z
   <!-- fin noticia 2 -->
   <?php
   }

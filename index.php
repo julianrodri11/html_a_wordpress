@@ -36,16 +36,16 @@
       <div class="row ">
         <div class="col-lg-3 pt-5 pb-4 col-md-3 col-sm-12 d-flex justify-content-center align-items-center">
           <div class="row p-3 fondo-azul text-whited-flex justify-content-center">
-            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="docs/CALENDARIO_ACADEMICO_2018_II.pdf" target="_blank">Calendario Académico 2018-2</a></div>
-            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="docs/CALENDARIO_ACADEMICO_2018_1.pdf" target="_blank">Calendario Académico 2018-1</a></div>
-            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="docs/CALENDARIO_ACADEMICO_2017_2.pdf" target="_blank">Calendario Académico 2017-2</a></div>
-            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="docs/CALENDARIO_ACADEMICO_2017_1.pdf" target="_blank">Calendario Académico 2017-1</a></div>
+            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>docs/CALENDARIO_ACADEMICO_2018_II.pdf" target="_blank">Calendario Académico 2018-2</a></div>
+            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>docs/CALENDARIO_ACADEMICO_2018_1.pdf" target="_blank">Calendario Académico 2018-1</a></div>
+            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>docs/CALENDARIO_ACADEMICO_2017_2.pdf" target="_blank">Calendario Académico 2017-2</a></div>
+            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>docs/CALENDARIO_ACADEMICO_2017_1.pdf" target="_blank">Calendario Académico 2017-1</a></div>
           </div>
         </div>
         <div class="col-lg-7 pt-5 pb-4 col-md-6 col-sm-12 text-center ">
           <div class="row ">
             <div class="col-12 ">
-              <a class="hvr-underline-from-center pb-2" href="docs/derechos_pecuniarios2018.pdf"  data-toggle="tooltip" data-placement="bottom" title="Click aquí" target="_blank">
+              <a class="hvr-underline-from-center pb-2" href="<?php bloginfo('template_url')?>/docs/derechos_pecuniarios2018.pdf"  data-toggle="tooltip" data-placement="bottom" title="Click aquí" target="_blank">
               <img  class=" img-fluid" alt="Derechos pecuniarios autonoma de nariño" src="<?php bloginfo('template_url')?>/img/derechos.png"></a>
             </div>
             <div class="col-12 p-5 texto-azul fuente-institucional">Los siguientes son los montos de los derechos pecuniarios por servicios académicos y administrativos para el año 2018, debidamente aprobados por el Consejo Directivo de la Corporación Universitaria Autónoma de Nariño</div>
@@ -54,7 +54,7 @@
         <div class="col-lg-2 col-md-3 col-sm-12 d-flex justify-content-center align-items-center">
           <div class="pl-1 pt-5 pb-4 text-center  border-left borde-azul">
             <h3 class=" mt-0 pt-0 fuente-institucional-bold texto-azul f-negrita hvr-underline-from-center pointer">
-            <a class="texto-azul-os sin-texto-subrayado" href="docs/plan_inversion.pdf" data-toggle="tooltip" data-placement="auto" title="Abrir" target="_blanckhva">Plan de Inversión</a></h3>
+            <a class="texto-azul-os sin-texto-subrayado" href="<?php bloginfo('template_url')?>/docs/plan_inversion.pdf" data-toggle="tooltip" data-placement="auto" title="Abrir" target="_blanckhva">Plan de Inversión</a></h3>
           </div>
         </div>
       </div>
