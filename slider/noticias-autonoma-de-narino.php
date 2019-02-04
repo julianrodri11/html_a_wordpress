@@ -109,12 +109,12 @@ function noticia()
                   
                   </div></div></div>
           <!-- Left and right controls -->
-          <a class="carousel-control-prev" href="#myCarousel2" data-slide="prev">
+          <a class="carousel-control-prev bg-danger" href="#myCarousel2" data-slide="prev">
             <span class="fondo-azul-oscuro p-2 " aria-hidden="true">
               <span class="carousel-control-prev-icon"></span>
             </span>
           </a>
-          <a class="carousel-control-next" href="#myCarousel2" data-slide="next">
+          <a class="carousel-control-next bg-danger" href="#myCarousel2" data-slide="next">
             <span class="fondo-azul-oscuro p-2 " aria-hidden="true">
               <span class="carousel-control-next-icon"></span>
             </span>
