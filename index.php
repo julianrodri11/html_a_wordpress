@@ -110,7 +110,7 @@
     <?php include_once('modal/modal-video-institucional.php');?>
     <!-- fin video institucional -->
     <!-- -----------------EVENTOS--------------------------------- -->
-    <div class="container-fluid fondo-amarillo fondo-eventos">
+    <div class="container-fluid fondo-amarillo fondo-eventos p-0">
       <div class="row">
         <div class="col-lg-12 p-2 d-flex align-items-center justify-content-center justify-content-sm-center justify-content-md-center e_arriba_abajo">
           
@@ -195,7 +195,7 @@
         </div>
       </div>
     </div>
-  </div>
+  
   <!-- ----------------FIN EVENTOS------------------------------ -->
   <!-- -----------------IMAGENES ENLACES DE EXTERNOS----------------------------- -->
   <?php include_once('secciones/enlaces-externos-aunar.php') ?>

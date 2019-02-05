@@ -2,8 +2,7 @@
 <!-- ------------------BOTON FIJO AYUDA------------------------- -->
 <div class="contenedor-ayuda p-0 m-0">  
   <div class="sombra-iconos icono-blanco p-0 m-0 py-0 " data-toggle="modal"   data-target="#myModalContactenos">
-    <img src="<?php bloginfo('template_url')?>/img
-/mensaje.png" width="45" data-toggle="tooltip" data-placement="right" title="¿Necesitas ayuda?, haz click" alt=".">
+    <img src="<?php bloginfo('template_url')?>/img/mensaje.png" width="45" data-toggle="tooltip" data-placement="right" title="¿Necesitas ayuda?, haz click" alt=".">
   </div>
 </div>
 <!-- ------------------FIN BOTON FIJO AYUDA--------------------- -->
@@ -21,8 +20,7 @@
           <div class="row">            
             <div class="col-12 p-2 m-1 ">
               <div class="row">
-                <div class="col-12 p-2 text-center"><img class="img-fluid rounded-circle " src="<?php bloginfo('template_url')?>/img
-/aunar.jpg" width="30%" alt="logo AUNAR"></div>
+                <div class="col-12 p-2 text-center"><img class="img-fluid rounded-circle " src="<?php bloginfo('template_url')?>/img/aunar.jpg" width="30%" alt="logo AUNAR"></div>
                 <div class="col-12 p-2 text-justify pt-sans texto-azul">Si deseas hacer parte de nuestra Institución, escríbenos un comentario:</div>
               </div>
             </div>            
