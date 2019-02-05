@@ -10,7 +10,7 @@
   </div>
 </div>
 <!-- -- Fin título noticias -------- -->
-<div class="container-fluid m-0 py-5 border-bottom borde-azul">
+<div class="container-fluid m-0 p-0 py-5 border-bottom borde-azul ">
   
   <?php
   
