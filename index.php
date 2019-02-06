@@ -194,9 +194,25 @@
           </div>
         </div>
       </div>
-    </div>
-  
+    </div>  
   <!-- ----------------FIN EVENTOS------------------------------ -->
+<!-- ----------------FIN SECCIÓN MÁS EVENTOS--------------------- -->          
+          <div class="container-fluid p-0 m-0">
+          <div class="row d-flex justify-content-center p-0 m-0">
+          <div class="col-12 col-lg-12 p-2 fondo-azul-oscuro">
+          <div class="row p-0 m-0">
+            <div class="col-12 col-sm-6 text-center text-sm-right pr-sm-4 p-0 m-0 ">
+              <h4 class="texto-amarillo f-negrita fuente-institucional my-1 ">Portal Eventos</h4>
+            </div>
+            <div class="col-12 col-sm-6 text-center text-sm-left pl-sm-4 p-0 m-0 ">
+              <a href="single-eventos" class="my-1 p-2 border borde-azul badge badge-pill bg-white hover-amarillo texto-azul sin-texto-subrayado hover-sin-borde">Más Eventos</a>
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          <!-- ----------------FIN SECCIÓN MÁS EVENTOS--------------------- -->
+
   <!-- -----------------IMAGENES ENLACES DE EXTERNOS----------------------------- -->
   <?php include_once('secciones/enlaces-externos-aunar.php') ?>
   <!-- -----------------FIN ENLACES DE EXTERNOS------------------------- -->
