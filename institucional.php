@@ -26,49 +26,19 @@
 		<div class="container-fluid texto-azul-os py-4">
 			<div class="row">
 				<!-- slider bienestar -->
-				<div class="col-12 col-md-5">
+				<div class="col-12 col-md-6">
 					<?php include_once('slider/slider-1.php');?>
 				</div>
 				<!-- ultimas noticias -->
 					
-				<div class="col-12 col-md-7 py-5 py-sm-0">
+				<div class="col-12 col-md-6 py-5 py-sm-0">
 					<div class="row">
-						
-						<div class="col-12 col-md-10">
-							<div class="row">
-								<div class="col-8 p-2 fondo-azul-oscuro text-white pl-4"><h3>Últimas Noticias</h3></div>
-								<div class="col-4 p-2 fondo-azul-oscuro texto-amarillo">Conoce más</div>
-							</div>
-						</div>
-							<?php
-						// numberpost para mostrar hasta 10 post o noticias
-						$args = array('post_type' => 'eventos', 'numberposts' => '4', 'post_status' => 'publish');
-						$recent_posts = wp_get_recent_posts( $args );
-						foreach( $recent_posts as $recent ){
-					?>
-						<div class="col-12 col-md-10 fondo-gris-os">
-							<div class="row">
-								<!-- <div class="col-12 col-lg-4 p-2 f-negrita">Fiestas AUNAR:</div> -->
-								<div class="col-12 col-lg-4 p-2">								
-								
-									<a class="p-0" href="<?php the_permalink($recent["ID"]) ?>">
-										<?php
-										if ( has_post_thumbnail( $recent["ID"]) ) {
-											echo  get_the_post_thumbnail($recent["ID"],'post-thumbnail',['class' => 'img-fluid z-index-20', 'width' => '95%']);
-										}
-										?>
-									</a>
-								
-								</div>
-								<div class="col-12 col-lg-8 p-2 f-negrita"><?php echo '<a class="pt-sans texto-azul sin-texto-subrayado" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> '; ?><br>Fecha: <?php echo date( 'd - m - Y', strtotime( $recent['post_date'] ) ); ?></div>
-								<!-- <div class="col-12 col-lg-8 p-2">Recuerda que hoy celebramos el día del contador en #AunarPasto... </div> -->
-							</div>
-						</div>
-								<?php
-					}
-					//fin for each
-					wp_reset_query();
-					?>
+						<?php						
+						//***************************************** */
+						//Se importa los eventos 
+						include_once('eventos/eventos.php');
+						//***************************************** */
+						?>
 					</div>
 				</div>
 
@@ -192,8 +162,7 @@
 							<div class="col-12 p-2 px-md-5 text-center">
 								<span class="pt-sans"> <strong><h3 class="f-negrita">ORGANIGRAMA AUNAR</h3></strong></span>
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/institucional/organigrama-aunar.jpg" alt="organigrama autónoma de nariño - aunar">
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/institucional/organigrama-aunar.jpg" alt="organigrama autónoma de nariño - aunar">
 							</div>
 						</div>
 						<!-- pestaña 7-->
@@ -222,27 +191,27 @@
 							<div class="col-12 p-2 px-md-5 text-justify">
 								
 								<div class="mb-1">
-									<a class="text-azul fuente-institucional" data-toggle="tooltip" data-placement="auto" title="Ver" target="f1" href="docs/footer/Estatuto_General.pdf">
+									<a class="text-azul fuente-institucional" data-toggle="tooltip" data-placement="auto" title="Ver" target="f1" href="<?php bloginfo('template_url')?>/docs/footer/Estatuto_General.pdf">
 										Estatuto general
 									</a>
 								</div>
 								<div class="mb-1">
-									<a class="text-azul fuente-institucional" data-toggle="tooltip" data-placement="auto" title="Ver" target="f2" href="docs/footer/Reglamento_Administrativos.pdf">
+									<a class="text-azul fuente-institucional" data-toggle="tooltip" data-placement="auto" title="Ver" target="f2" href="<?php bloginfo('template_url')?>/docs/footer/Reglamento_Administrativos.pdf">
 										Reglamento Administrativos
 									</a>
 								</div>
 								<div class="mb-1">
-									<a class="text-azul fuente-institucional" data-toggle="tooltip" data-placement="auto" title="Ver" target="f3" href="docs/footer/Reglamento_Docentes.pdf">
+									<a class="text-azul fuente-institucional" data-toggle="tooltip" data-placement="auto" title="Ver" target="f3" href="<?php bloginfo('template_url')?>/docs/footer/Reglamento_Docentes.pdf">
 										Reglamento Docentes
 									</a>
 								</div>
 								<div class="mb-1">
-									<a class="text-azul fuente-institucional" data-toggle="tooltip" data-placement="auto" title="Ver" target="f4" href="docs/footer/Reglamento_Estudiantil.pdf">
+									<a class="text-azul fuente-institucional" data-toggle="tooltip" data-placement="auto" title="Ver" target="f4" href="<?php bloginfo('template_url')?>/docs/footer/Reglamento_Estudiantil.pdf">
 										Reglamento Estudiantil
 									</a>
 								</div>
 								<div class="mb-1">
-									<a class="text-azul fuente-institucional" data-toggle="tooltip" data-placement="auto" title="Ver" target="fg" href="docs/trabajos_de_grado/reglamentos-trabajo-grado.pdf">
+									<a class="text-azul fuente-institucional" data-toggle="tooltip" data-placement="auto" title="Ver" target="fg" href="<?php bloginfo('template_url')?>/docs/trabajos_de_grado/reglamentos-trabajo-grado.pdf">
 										Reglamento trabajos de grado
 									</a>
 								</div>
