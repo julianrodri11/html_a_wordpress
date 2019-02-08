@@ -39,10 +39,8 @@
 						$recent_posts = wp_get_recent_posts( $args );
 						foreach( $recent_posts as $recent ){
 					?>
-					<div class="row my-3 hvr-underline-from-center transparencia-hover border-warning border-bottom m-1 d-flex align-items-center">
-						<!-- <div class="col-4 p-0 "><img class="img-fluid rounded p-1" src="<?php bloginfo('template_url')?>/img/noticias/noticia1.jpg" alt="Noticias" width="100%"></div> -->
-						<div class="col-4 p-0 py-1">
-							<!-- <img class="img-fluid rounded p-1" src="<?php bloginfo('template_url')?>/img/noticias/noticia1.jpg" alt="Noticias" width="100%"> -->
+					<div class="row my-3 hvr-underline-from-center transparencia-hover border-warning border-bottom m-1 d-flex align-items-center">						
+						<div class="col-4 p-0 py-1">							
 							<a class="p-0" href="<?php the_permalink($recent["ID"]) ?>">
 								<?php
 								if ( has_post_thumbnail( $recent["ID"]) ) {

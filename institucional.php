@@ -16,8 +16,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/institucional/portada-institucional-aunar.jpg"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/institucional/portada-institucional-aunar.jpg"/>
 				</div>
 			</div>
 		</div>
@@ -31,43 +30,53 @@
 					<?php include_once('slider/slider-1.php');?>
 				</div>
 				<!-- ultimas noticias -->
+					
 				<div class="col-12 col-md-7 py-5 py-sm-0">
 					<div class="row">
+						
 						<div class="col-12 col-md-10">
 							<div class="row">
 								<div class="col-8 p-2 fondo-azul-oscuro text-white pl-4"><h3>Últimas Noticias</h3></div>
 								<div class="col-4 p-2 fondo-azul-oscuro texto-amarillo">Conoce más</div>
 							</div>
 						</div>
-						<div class="col-12 col-md-10">
-							<div class="row">
-								<div class="col-12 col-lg-4 p-2 f-negrita">Día del Contador:</div>
-								<div class="col-12 col-lg-8 p-2">Recuerda que hoy celebramos el día del contador en #AunarPasto... </div>
-							</div>
-						</div>
+							<?php
+						// numberpost para mostrar hasta 10 post o noticias
+						$args = array('post_type' => 'eventos', 'numberposts' => '4', 'post_status' => 'publish');
+						$recent_posts = wp_get_recent_posts( $args );
+						foreach( $recent_posts as $recent ){
+					?>
 						<div class="col-12 col-md-10 fondo-gris-os">
 							<div class="row">
-								<div class="col-12 col-lg-4 p-2 f-negrita">Día del Padre:</div>
-								<div class="col-12 col-lg-8 p-2">Recuerda que hoy celebramos el día del contador en #AunarPasto... </div>
+								<!-- <div class="col-12 col-lg-4 p-2 f-negrita">Fiestas AUNAR:</div> -->
+								<div class="col-12 col-lg-4 p-2">								
+								
+									<a class="p-0" href="<?php the_permalink($recent["ID"]) ?>">
+										<?php
+										if ( has_post_thumbnail( $recent["ID"]) ) {
+											echo  get_the_post_thumbnail($recent["ID"],'post-thumbnail',['class' => 'img-fluid z-index-20', 'width' => '95%']);
+										}
+										?>
+									</a>
+								
+								</div>
+								<div class="col-12 col-lg-8 p-2 f-negrita"><?php echo '<a class="pt-sans texto-azul sin-texto-subrayado" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> '; ?><br>Fecha: <?php echo date( 'd - m - Y', strtotime( $recent['post_date'] ) ); ?></div>
+								<!-- <div class="col-12 col-lg-8 p-2">Recuerda que hoy celebramos el día del contador en #AunarPasto... </div> -->
 							</div>
 						</div>
-						<div class="col-12 col-md-10">
-							<div class="row">
-								<div class="col-12 col-lg-4 p-2 f-negrita">El Parche AUNAR:</div>
-								<div class="col-12 col-lg-8 p-2">Recuerda que hoy celebramos el día del contador en #AunarPasto... </div>
-							</div>
-						</div>
-						<div class="col-12 col-md-10 fondo-gris-os">
-							<div class="row">
-								<div class="col-12 col-lg-4 p-2 f-negrita">Fiestas AUNAR:</div>
-								<div class="col-12 col-lg-8 p-2">Recuerda que hoy celebramos el día del contador en #AunarPasto... </div>
-							</div>
-						</div>
+								<?php
+					}
+					//fin for each
+					wp_reset_query();
+					?>
 					</div>
 				</div>
+
+
 			</div>
 		</div>
 		<!-- Fin slider-->
+
 		<!-- informacion de institcional -->
 		
 		<div class="container-fluid">
