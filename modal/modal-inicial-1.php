@@ -34,7 +34,7 @@
           </div-->
         </div>
         <!-- <div class="carousel-item">
-          <a href="inscripciones.php">
+          <a href="inscripciones">
             <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/Pendones-inscripciones-2018-2.jpg" alt="Noticias aunar">
           </a>
           <div class="carousel-caption">

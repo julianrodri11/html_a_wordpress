@@ -9,7 +9,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <a href="inscripciones.php"> 
+      <a href="inscripciones"> 
         <img class="d-block w-100" src="http://imgholder.ru/600x300" alt="First slide"></a>
       <!--div class="carousel-caption">
         <h3></h3>

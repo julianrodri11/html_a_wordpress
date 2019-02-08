@@ -8,7 +8,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <a href="inscripciones.php"> 
+      <a href="inscripciones"> 
         <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img
 /carreras/slider_dental.jpg" alt="Director Mecánica Dental Aunar"></a>
       <!--div class="carousel-caption">
