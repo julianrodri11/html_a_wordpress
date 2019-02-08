@@ -27,44 +27,22 @@
 		<div class="container-fluid texto-azul-os py-4">
 			<div class="row">
 				<!-- slider bienestar -->
-				<div class="col-12 col-md-5">
+				<div class="col-12 col-md-6">
 					<?php include_once('slider/proyeccion_social.php');?>
 				</div>
 				<!-- ultimas noticias -->
-				<div class="col-12 col-md-7">
+				<div class="col-12 col-md-6 py-5 py-sm-0">
 					<div class="row">
-						<div class="col-12 col-lg-10 ">
-							<div class="row">
-								<div class="col-8 p-2 fondo-azul-oscuro text-white pl-4"><h3>Últimas Noticias</h3></div>
-								<div class="col-4 p-2 fondo-azul-oscuro texto-amarillo">Conoce más</div>
-							</div>
-						</div>
-						<div class="col-12 col-lg-10 ">
-							<div class="row">
-								<div class="col-12 col-lg-4 p-2 f-negrita">Día del Contador:</div>
-								<div class="col-12 col-lg-8 p-2">Recuerda que hoy celebramos el día del contador en <strong>#AunarPasto</strong>... </div>
-							</div>
-						</div>
-						<div class="col-12 col-lg-10  fondo-gris-os">
-							<div class="row">
-								<div class="col-12 col-lg-4 p-2 f-negrita">Día del Padre:</div>
-								<div class="col-12 col-lg-8 p-2">Recuerda que hoy celebramos el día del contador en <strong>#AunarPasto</strong>... </div>
-							</div>
-						</div>
-						<div class="col-12 col-lg-10 ">
-							<div class="row">
-								<div class="col-12 col-lg-4 p-2 f-negrita">El Parche AUNAR:</div>
-								<div class="col-12 col-lg-8 p-2">Recuerda que hoy celebramos el día del contador en <strong>#AunarPasto</strong>... </div>
-							</div>
-						</div>
-						<div class="col-12 col-lg-10  fondo-gris-os">
-							<div class="row">
-								<div class="col-12 col-lg-4 p-2 f-negrita">Fiestas AUNAR:</div>
-								<div class="col-12 col-lg-8 p-2">Recuerda que hoy celebramos el día del contador en <strong>#AunarPasto</strong>... </div>
-							</div>
-						</div>
+						<?php						
+						//***************************************** */
+						//Se importa los eventos 
+						include_once('eventos/eventos.php');
+						//***************************************** */
+						?>
 					</div>
 				</div>
+
+
 			</div>
 		</div>
 		<div class="container-fluid texto-azul-os">
