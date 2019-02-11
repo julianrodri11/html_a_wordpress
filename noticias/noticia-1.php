@@ -23,7 +23,7 @@
   <!-- noticia 1 -->
   <div class="row m-0">
     <div class=" p-0 col-12 col-lg-6 mt-3 mt-lg-0 d-flex justify-content-center align-items-center">
-      <div class="row col-12 ">
+      <div class="row m-0 p-0 ">
         <!-- texto -->
         <div class="col-12 ">
           <label class=""><a class="texto-amarillo f-negrita f-size-18 fuente-institucional sin-texto-subrayado" href="<?php the_permalink() ?>"><?php the_title() ?> </a></label> 
@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="m-0 p-0 col-12 col-lg-6 mt-3 mt-lg-0" >
-      <div class="row">
+      <div class="row m-0 p-0">
         <!-- imagen -->
         <div class="col-12">
           <a class="p-0" href="<?php the_permalink() ?>">

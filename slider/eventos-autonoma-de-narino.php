@@ -93,7 +93,7 @@ if ( $my_query -> have_posts() ) :
 
                   ?>
                   
-                  
+                  </div>
                   <!-- Left and right controls -->
                  <a class="carousel-control-prev" href="#mas_eventos" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>

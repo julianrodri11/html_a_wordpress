@@ -111,7 +111,7 @@
     <!-- fin video institucional -->
     <!-- -----------------EVENTOS--------------------------------- -->
     <div class="container-fluid fondo-amarillo fondo-eventos p-0">
-      <div class="row">
+      <div class="row m-0">
         <div class="col-lg-12 p-2 d-flex align-items-center justify-content-center justify-content-sm-center justify-content-md-center e_arriba_abajo">
           
           <div class="p-1 mt-5 mt-sm-5 bd-highlight text-center pr-3">
@@ -122,7 +122,7 @@
         <div class="p-1 bg-white bd-highlight">Flex item 3</div> -->
       </div>
       <div class="col-lg-12  ">
-        <div class="row p-3 ">
+        <div class="row m-0 p-3 ">
           <div class="col-md-6 p-2 hvr-grow-shadow izquierda_derecha d-flex align-items-center" >
             <div class="col p-2 text-center "><a href="radio-aunar-stereo"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img/aunar-stereo.png"/></a></div>
             <!-- <div class=" texto-azul text-center ">
