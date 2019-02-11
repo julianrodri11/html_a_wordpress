@@ -138,60 +138,7 @@
 						<div class="col-12 p-lg-4 mb-3">
 							
 							<!-- seccion de eventos  -->
-							<!-- evento 1 -->
-							<div class="row p-1 hover-texto-blanco eventos transparencia-hover hover-borde-blanco d-flex align-items-center texto-azul">
-								<div class="col-12 col-sm-4 d-flex justify-content-center justify-content-sm-start">
-									<div class=" hexagon p-3">
-										<div class="row pt-2 text-center ">
-											<span class="col-12 fuente-institucional f-negrita f-size-16">20</span>
-											<span class="col-12 fuente-institucional f-negrita f-size-16">Junio</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-12 col-sm-8 d-flex justify-content-center justify-content-sm-start">
-									<div class="row texto-azul pt-sans">
-										<div class="col-lg-12 text-center text-lg-left text-md-left f-negrita f-size-16"><label class="border-bottom borde-azul">II Encuentro de Bibliotecas.</label></div>
-										<div class="col-lg-12 text-center text-lg-left text-md-left">RED UREL</div>
-										<div class="col-lg-12 text-center text-lg-left text-md-left">Hora: 8:00 am</div>
-									</div>
-								</div>
-							</div>
-							<!-- evetnos 2 -->
-							<div class="row p-1 pl-sm-5 hover-texto-blanco eventos transparencia-hover hover-borde-blanco d-flex align-items-center texto-azul">
-								<div class="col-12 col-sm-5 d-flex justify-content-center justify-content-sm-start">
-									<div class=" hexagon p-3">
-										<div class="row pt-2 text-center ">
-											<span class="col-12 fuente-institucional f-negrita f-size-16">17</span>
-											<span class="col-12 fuente-institucional f-negrita f-size-16">Julio</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-12 col-sm-7 d-flex justify-content-center justify-content-sm-start">
-									<div class="row texto-azul pt-sans">
-										<div class="col-lg-12 text-center text-lg-left text-md-left f-negrita f-size-16"><label class="border-bottom borde-azul">II Encuentro de Bibliotecas.</label></div>
-										<div class="col-lg-12 text-center text-lg-left text-md-left">RED UREL</div>
-										<div class="col-lg-12 text-center text-lg-left text-md-left">Hora: 8:00 am</div>
-									</div>
-								</div>
-							</div>
-							<!-- evento 3 -->
-							<div class="row p-1 hover-texto-blanco eventos transparencia-hover hover-borde-blanco d-flex align-items-center texto-azul">
-								<div class="col-12 col-sm-4 d-flex justify-content-center justify-content-sm-start">
-									<div class=" hexagon p-3">
-										<div class="row pt-2 text-center ">
-											<span class="col-12 fuente-institucional f-negrita f-size-16">30</span>
-											<span class="col-12 fuente-institucional f-negrita f-size-16">Agosto</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-12 col-sm-8 d-flex justify-content-center justify-content-sm-start">
-									<div class="row texto-azul pt-sans">
-										<div class="col-lg-12 text-center text-lg-left text-md-left f-negrita f-size-16"><label class="border-bottom borde-azul">II Encuentro de Bibliotecas.</label></div>
-										<div class="col-lg-12 text-center text-lg-left text-md-left">RED UREL</div>
-										<div class="col-lg-12 text-center text-lg-left text-md-left">Hora: 8:00 am</div>
-									</div>
-								</div>
-							</div>
+							<?php include_once('slider\eventos-autonoma-de-narino.php'); ?>							
 							<!-- fin sección eventos -->
 						</div>
 					</div>
