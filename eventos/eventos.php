@@ -1,4 +1,12 @@
-
+<?php /* 
+				CODIGO PARA MOSTRAR EVENTOS EN LAS SECCIONES DE 
+				vicerrectoria
+				Bienestar
+				proyeccion institucional 
+				internacionalizacion
+				cian
+		 */
+ ?>
 			<div class="col-12 col-md-10">
 				<div class="row">
 					<div class="col-8 p-2 fondo-azul-oscuro text-white pl-4"><h3>Últimas Eventos</h3></div>
