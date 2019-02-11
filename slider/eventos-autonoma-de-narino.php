@@ -15,7 +15,7 @@ function evento($columna1,$columna2)
           <div class="col-12 <?php echo $columna2; ?> d-flex justify-content-center justify-content-sm-start">
             <div class="row texto-azul pt-sans">
               <div class="col-lg-12 text-center text-lg-left text-md-left f-negrita f-size-16"><label class="border-bottom borde-azul">
-                <a class="p-0 sin-texto-subrayado texto-azul-os hover-texto-blanco" href="<?php the_permalink() ?>"><?php echo the_title(); ?></a>
+                <a class="p-0 sin-texto-subrayado texto-azul-os hover-texto-blanco" data-toggle="tooltip" data-placement="auto" title="Ver Evento" href="<?php the_permalink() ?>"><?php echo the_title(); ?></a>
               </label></div>
               <div class="col-lg-12 text-center text-lg-left text-md-left">
                   LUGAR:
@@ -62,7 +62,7 @@ if ( $my_query -> have_posts() ) :
                                
                           ?>
                           <div class="carousel-item p-1 p-sm-4 <?php echo$active;?> ">
-                            <!-- <div class="row p-2 m-1 m-sm-5 "> -->
+                            
                               <?php
                               }
                                if($contador%2==0)
@@ -93,7 +93,7 @@ if ( $my_query -> have_posts() ) :
 
                   ?>
                   
-                  </div>
+                  
                   <!-- Left and right controls -->
                  <a class="carousel-control-prev" href="#mas_eventos" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
@@ -103,7 +103,7 @@ if ( $my_query -> have_posts() ) :
                     <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
-                <!-- </div> -->
+                </div>
                 <!-- fin slider -->
               </div>
         
