@@ -7,7 +7,7 @@
 				cian
 		 */
  ?>
-			<div class="col-12 col-md-10">
+			<div class="col-12 col-md-11">
 				<div class="row">
 					<div class="col-8 p-2 fondo-azul-oscuro text-white pl-4"><h3>Últimas Eventos</h3></div>
 					<div class="col-4 fondo-azul-oscuro texto-amarillo d-flex justify-content-center align-items-center">
@@ -19,9 +19,17 @@
 			// numberpost para mostrar hasta 10 post o noticias
 			$args = array('post_type' => 'eventos', 'numberposts' => '4', 'post_status' => 'publish');
 			$recent_posts = wp_get_recent_posts( $args );
+			$contador=0;
 			foreach( $recent_posts as $recent ){
+				// se valida si es para colocar el color 
+				if ($contador%2==0) {
+					$fondo="fondo-gris-os";
+				} else {
+					$fondo="";
+				}
+				
 		?>
-			<div class="col-12 col-md-10 fondo-gris-os hvr-underline-from-center">
+			<div class="col-12 col-md-11 <?php echo $fondo; ?> hvr-underline-from-center">
 				<div class="row">
 					<!-- <div class="col-12 col-lg-4 p-2 f-negrita">Fiestas AUNAR:</div> -->
 					<div class="col-12 col-lg-4 p-2 d-flex align-items-center">								
@@ -43,6 +51,7 @@
 				</div>
 			</div>
 					<?php
+					++$contador;
 		}
 		//fin for each
 		wp_reset_query();

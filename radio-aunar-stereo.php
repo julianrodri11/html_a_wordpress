@@ -17,8 +17,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/radio/aunar-estereo.jpg"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/radio/aunar-estereo.jpg"/>
 				</div>
 			</div>
 		</div>
@@ -28,44 +27,15 @@
 		<div class="container-fluid texto-azul-os py-4">
 			<div class="row">
 				<!-- slider bienestar -->
-				<div class="col-12 col-md-5">
+				<div class="col-12 col-md-6">
 					<?php include_once('slider/slider_radio.php');?>
 				</div>
 				<!-- ultimas noticias -->
-				<div class="col-12 col-md-7">
-					<div class="row">
-						<div class="col-12 col-lg-10 ">
-							<div class="row">
-								<div class="col-8 p-2 fondo-azul-oscuro text-white pl-4"><h3>Últimas Noticias</h3></div>
-								<div class="col-4 p-2 fondo-azul-oscuro texto-amarillo">Conoce más</div>
-							</div>
-						</div>
-						<div class="col-12 col-lg-10 ">
-							<div class="row">
-								<div class="col-12 col-lg-4 p-2 f-negrita">Día del Contador:</div>
-								<div class="col-12 col-lg-8 p-2">Recuerda que hoy celebramos el día del contador en <strong>#AunarPasto</strong>... </div>
-							</div>
-						</div>
-						<div class="col-12 col-lg-10  fondo-gris-os">
-							<div class="row">
-								<div class="col-12 col-lg-4 p-2 f-negrita">Día del Padre:</div>
-								<div class="col-12 col-lg-8 p-2">Recuerda que hoy celebramos el día del contador en <strong>#AunarPasto</strong>... </div>
-							</div>
-						</div>
-						<div class="col-12 col-lg-10 ">
-							<div class="row">
-								<div class="col-12 col-lg-4 p-2 f-negrita">El Parche AUNAR:</div>
-								<div class="col-12 col-lg-8 p-2">Recuerda que hoy celebramos el día del contador en <strong>#AunarPasto</strong>... </div>
-							</div>
-						</div>
-						<div class="col-12 col-lg-10  fondo-gris-os">
-							<div class="row">
-								<div class="col-12 col-lg-4 p-2 f-negrita">Fiestas AUNAR:</div>
-								<div class="col-12 col-lg-8 p-2">Recuerda que hoy celebramos el día del contador en <strong>#AunarPasto</strong>... </div>
-							</div>
-						</div>
-					</div>
+				<div class="col-12 col-md-6">
+					<?php include_once('eventos/eventos.php');?>
 				</div>
+
+				
 			</div>
 		</div>
 		<div class="container-fluid texto-azul-os fondo-gris-c">
@@ -77,16 +47,14 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/radio/galeria.png"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/radio/galeria.png"/>
 				</div>
 			</div>
 		</div>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12">
-					<img class="mx-auto img-fluid py-5" width="100%" src="<?php bloginfo('template_url')?>/img
-/radio/chat-online-aunar.jpg"/>
+					<img class="mx-auto img-fluid py-5" width="100%" src="<?php bloginfo('template_url')?>/img/radio/chat-online-aunar.jpg"/>
 				</div>
 			</div>
 		</div>
@@ -112,8 +80,7 @@
 		<div class="container-fluid pb-md-5">
 			<div class="row">
 				<div class="col-12">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/radio/podcast-aunar.jpg"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/radio/podcast-aunar.jpg"/>
 				</div>
 			</div>
 		</div>
@@ -158,8 +125,7 @@
 				</div>
 				<!-- slider bienestar -->
 				<div class="col-12 col-md-5">
-					<img class="img-fluid" src="<?php bloginfo('template_url')?>/img
-/radio/play-radio.jpg" width="100%">
+					<img class="img-fluid" src="<?php bloginfo('template_url')?>/img/radio/play-radio.jpg" width="100%">
 				</div>
 			</div>
 		</div>
@@ -236,8 +202,7 @@
 							
 							<div class="row">
 								<div class="col-12 col-md-4 text-center">
-									<img src="<?php bloginfo('template_url')?>/img
-/radio/docente1.jpg" class="align-self-center mr-3 rounded-circle img-fluid" >
+									<img src="<?php bloginfo('template_url')?>/img/radio/docente1.jpg" class="align-self-center mr-3 rounded-circle img-fluid" >
 								</div>
 								<div class="col-12 col-md-8 text-center text-md-left">
 									
@@ -260,8 +225,7 @@
 							
 							<div class="row">
 								<div class="col-12 col-md-4 text-center">
-									<img src="<?php bloginfo('template_url')?>/img
-/radio/docente2.jpg" class="align-self-center mr-3 rounded-circle img-fluid" >
+									<img src="<?php bloginfo('template_url')?>/img/radio/docente2.jpg" class="align-self-center mr-3 rounded-circle img-fluid" >
 								</div>
 								<div class="col-12 col-md-8 text-center text-md-left">
 									
