@@ -4,8 +4,7 @@
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
-		<title>VICERRECTORÍA DE INVESTIGACIÓN - AUTÓNOMA DE NARIÑO</title>
-		
+		<title>VICERRECTORÍA DE INVESTIGACIÓN - AUTÓNOMA DE NARIÑO</title>		
 	</head>
 	<body>
 		<?php
@@ -35,7 +34,7 @@
 				<!-- ultimas noticias -->
 				<div class="col-12 col-md-6 py-5 py-sm-0">
 					<div class="row">
-						<?php
+						<?php						
 						//***************************************** */
 						//Se importa los eventos 
 						include_once('eventos/eventos.php');
@@ -122,29 +121,35 @@
 		
 		<!-- -----------------EVENTOS--------------------------------- -->
 		<div class="container-fluid fondo-amarillo fondo-eventos-vicerectoria">
-			<div class="row m-0 p-0">
-				<div class="col-12 p-2 d-flex align-items-center justify-content-center justify-content-sm-center justify-content-md-center e_arriba_abajo">
+			<div class="row">
+				<div class="col-lg-12 p-2 d-flex align-items-center justify-content-center justify-content-sm-center justify-content-md-center e_arriba_abajo">
 					
 					<div class="p-1 mt-5 mt-sm-5 bd-highlight text-center pr-3">
 						<h1 class="my-1 fuente-institucional text-white f-negrita">Eventos</h1>
 						<label class="  fuente-institucional text-white f-size-18">¡Entérate nuestras novedades!</label>
 					</div>
-				
+				<!-- div class="p-1 bg-primary bd-highlight">Flex item 2</div>
+				<div class="p-1 bg-white bd-highlight">Flex item 3</div> -->
 			</div>
-			<div class="col-12  ">
-				<div class="row m-0 p-0">
+			<div class="col-lg-12  ">
+				<div class="row p-3 ">
 					
-					<div class="col-lg-6 p-3 derecha_izquierda d-flex align-items-center">
+					<div class="col-md-6 p-3 derecha_izquierda d-flex align-items-center">
 						<div class="col-12 p-lg-4 mb-3">
 							
 							<!-- seccion de eventos  -->
-							<!-- evento 1 -->
-							<?php include_once('slider/eventos-autonoma-de-narino.php'); ?>	
+							<?php include_once('slider/eventos-autonoma-de-narino.php'); ?>			
 							<!-- fin sección eventos -->
 						</div>
 					</div>
-					<div class="col-lg-6 p-2 hvr-grow-shadow izquierda_derecha d-flex align-items-center" >
-						<div class="col-12 p-2 text-center "><a href="radio-aunar-stereo"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img/aunar-stereo.png"/></a></div>
+					<div class="col-md-6 p-2 hvr-grow-shadow izquierda_derecha d-flex align-items-center" >
+						<div class="col p-2 text-center "><a href="radio-aunar-stereo"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img/aunar-stereo.png"/></a></div>
+						<!-- <div class=" texto-azul text-center ">
+										<div class="row">
+														<div class="col-12 mb-0 p-0 fuente-institucional ">AUNAR STEREO</div>
+														<div class="col-12 "><label class="f-size-14">¡Tú también puedes ser un creador de espacios de diálogo!</label></div>
+										</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -227,7 +232,10 @@
 		
 	</div>
 	<!-- fin personal encargado -->
+	
+	
 	<?php  get_footer(); ?>
+	
 	
 </body>
 </html>
