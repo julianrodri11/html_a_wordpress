@@ -103,7 +103,7 @@ if ( $my_query -> have_posts() ) :
                     <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
-                </div>
+                
                 <!-- fin slider -->
               </div>
         

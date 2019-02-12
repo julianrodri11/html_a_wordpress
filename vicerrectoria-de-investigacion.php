@@ -4,7 +4,8 @@
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
-		<title>VICERRECTORÍA DE INVESTIGACIÓN - AUTÓNOMA DE NARIÑO</title>		
+		<title>VICERRECTORÍA DE INVESTIGACIÓN - AUTÓNOMA DE NARIÑO</title>
+		
 	</head>
 	<body>
 		<?php
@@ -34,7 +35,7 @@
 				<!-- ultimas noticias -->
 				<div class="col-12 col-md-6 py-5 py-sm-0">
 					<div class="row">
-						<?php						
+						<?php
 						//***************************************** */
 						//Se importa los eventos 
 						include_once('eventos/eventos.php');
@@ -138,7 +139,8 @@
 						<div class="col-12 p-lg-4 mb-3">
 							
 							<!-- seccion de eventos  -->
-							<?php include_once('slider/eventos-autonoma-de-narino.php'); ?>			
+							<!-- evento 1 -->
+							<?php include_once('slider/eventos-autonoma-de-narino.php'); ?>	
 							<!-- fin sección eventos -->
 						</div>
 					</div>
@@ -232,10 +234,7 @@
 		
 	</div>
 	<!-- fin personal encargado -->
-	
-	
-	<?php  get_footer(); ;?>
-	
+	<?php  get_footer(); ?>
 	
 </body>
 </html>
