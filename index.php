@@ -135,7 +135,7 @@
           <div class="col-md-6 p-3 izquierda_derecha d-flex align-items-center">
             <div class="col-12 p-lg-4 mb-3">              
               <!-- seccion de eventos  -->
-                <?php include_once('slider/eventos-autonoma-de-narino.php'); ?>
+                <?php //include_once('slider/eventos-autonoma-de-narino.php'); ?>
               <!-- fin sección eventos -->
             </div>
           </div>
