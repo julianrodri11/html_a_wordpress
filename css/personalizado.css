@@ -185,6 +185,35 @@
   background-repeat: all;
 }
 
+/* OPCIONES DE MENU CON IMAGEN Y HOVER */
+#menu_vicerrectoria:hover>div>div>#mn_vicerrectoria {
+  content: url("../img/iconos/ico_vicerrecotias_h.png") !important;
+
+}
+
+#menu_vicerrectoria:hover>div>div:nth-child(2)>#mn_vicerrectoria_t {
+  color: #e9c727 !important;
+}
+
+#menu_rectoria:hover>div>div>#mn_rectoria {
+  content: url("../img/iconos/ico_rectoria_h.png") !important;
+
+}
+
+#menu_rectoria:hover>div>div:nth-child(2)>#mn_rectoria_t {
+  color: #e9c727 !important;
+}
+
+#menu_infoinstitucional:hover>div>div>#mn_infoinstitucional {
+  content: url("../img/iconos/ico_infoinstitucional_h.png") !important;
+
+}
+
+#menu_infoinstitucional:hover>div>div:nth-child(2)>#mn_infoinstitucional_t {
+  color: #e9c727 !important;
+}
+
+
 /*borde color azul*/
 .borde-azul {
   border-color: #00255A !important;
@@ -830,6 +859,7 @@
   -webkit-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0);
 }
+
 /* FIN SLIDER EFECTO VERTIAL */
 
 
