@@ -186,6 +186,7 @@
 }
 
 /* OPCIONES DE MENU CON IMAGEN Y HOVER */
+/* MENU RECTORIA */
 #menu_vicerrectoria:hover>div>div>#mn_vicerrectoria {
   content: url("../img/iconos/ico_vicerrecotias_h.png") !important;
 
@@ -212,6 +213,19 @@
 #menu_infoinstitucional:hover>div>div:nth-child(2)>#mn_infoinstitucional_t {
   color: #e9c727 !important;
 }
+
+/* FIN MENU RECTORIA */
+/* MENU VICERRECTORÍA DE INVESTIGACIÓN */
+#menu_vice_investigacion:hover>div>div>#mn_vice_investigacion {
+  content: url("../img/iconos/ico_vice_investifacion_h.png") !important;
+
+}
+
+#menu_vice_investigacion:hover>div>div:nth-child(2)>#mn_vice_investigacion_t {
+  color: #e9c727 !important;
+}
+
+/* FIN MENU VICERRECTORÍA DE INVESTIGACIÓN */
 
 
 /*borde color azul*/

@@ -15,7 +15,7 @@
 						<img width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_infoinstitucional.png">
 					</a>
 				</div>
-				<div class="col-12  d-flex mx-auto justify-content-center"">
+				<div class="col-12  d-flex mx-auto justify-content-center">
 						<a href=" institucional" id="mn_infoinstitucional_t"
 				 class="nav-link hvr-curl-top-right f-negrita fuente-institucional texto-azul ">
 					Información <br> Institucional <span class="sr-only">(current)</span>
