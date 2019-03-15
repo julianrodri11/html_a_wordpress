@@ -10,19 +10,17 @@
 		<li class="nav-item hvr-underline-from-center" id="menu_infoinstitucional">
 			<div>
 				<div class="col-12">
-					<a href="institucional" id="mn_infoinstitucional" class="nav-link hvr-curl-top-right f-negrita fuente-institucional texto-azul text-center"
-					 role="button" aria-haspopup="true" aria-expanded="false">
+					<a href="institucional" id="mn_infoinstitucional" class="nav-link hvr-curl-top-right f-negrita fuente-institucional texto-azul text-center" role="button" aria-haspopup="true" aria-expanded="false">
 						<img width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_infoinstitucional.png">
 					</a>
 				</div>
 				<div class="col-12  d-flex mx-auto justify-content-center">
-						<a href=" institucional" id="mn_infoinstitucional_t"
-				 class="nav-link hvr-curl-top-right f-negrita fuente-institucional texto-azul ">
+					<a href=" institucional" id="mn_infoinstitucional_t" class="nav-link hvr-curl-top-right f-negrita fuente-institucional texto-azul ">
 					Información <br> Institucional <span class="sr-only">(current)</span>
 					</a>
 				</div>
 			</div>
-			</a>
+			
 		</li>
 
 		<li class="nav-item hvr-underline-from-center" id="menu_rectoria">
