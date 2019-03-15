@@ -657,7 +657,7 @@
 /*color de borde para */
 .b-color-paromaticas {
   border-color: #A3BD31 !important;
-  border-color:  !important;
+  /* border-color:  !important; */
 }
 
 /*admon empresas*/
