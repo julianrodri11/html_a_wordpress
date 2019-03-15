@@ -9,12 +9,12 @@
     <li class="nav-item hvr-underline-from-center" id="menu_internacionalizacion">
       <div>
         <div class="col-12">
-            <a href="internacionalizacion" id="mn_internacionalizacion" class="nav-link hvr-curl-top-right fuente-institucional texto-azul f-negrita text-center"  id="" role="button" aria-haspopup="true" aria-expanded="false">
+            <a href="internacionalizacion" id="mn_internacionalizacion" class="nav-link hvr-curl-top-right fuente-institucional texto-azul f-negrita text-center" role="button" aria-haspopup="true" aria-expanded="false">
               <img width="140" src="<?php bloginfo('template_url')?>/img/iconos/ico_internacionalizacion.png" >
             </a>
         </div>
         <div class="col-12 d-flex mx-auto justify-content-center">
-            <a href="internacionalizacion" id="mn_internacionalizacion_t"class="nav-link hvr-curl-top-right fuente-institucional texto-azul f-negrita text-center"  id="" role="button" aria-haspopup="true" aria-expanded="false">
+            <a href="internacionalizacion" id="mn_internacionalizacion_t" class="nav-link hvr-curl-top-right fuente-institucional texto-azul f-negrita text-center">
               Internacionalización <span class="sr-only">(current)</span>
             </a>
         </div>
@@ -29,7 +29,7 @@
             </a>
         </div>
         <div class="col-12 d-flex mx-auto justify-content-center">
-            <a href="proyeccion_institucional" id="mn_proyeccion_soc_t"class=" nav-link hvr-curl-top-right fuente-institucional texto-azul f-negrita text-center">
+            <a href="proyeccion_institucional" id="mn_proyeccion_soc_t" class="nav-link hvr-curl-top-right fuente-institucional texto-azul f-negrita text-center">
               Proyección Social
             </a>
         </div>
@@ -38,5 +38,4 @@
     </li>
   </ul>
 </nav>
-<!-- <center>Menú en desarrollo no terminado</center> -->
 <!-- ------------MENÚ INSTITUCIONAL----------------------- -->
