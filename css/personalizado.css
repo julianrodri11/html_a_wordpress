@@ -353,10 +353,14 @@
 /* CLUB CONVERSACIONAL */
 #menu_club_conv:hover>div>div>#mn_club_conv {
   content: url("../img/iconos/ico_club_conv_h.png") !important;
+  -webkit-transition: all 0.5s ease-out;
 }
 
 #menu_club_conv:hover>div>div:nth-child(2)>#mn_club_conv_t {
   color: #e9c727 !important;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 /* CURSOS E IDIOMAS */
@@ -366,6 +370,9 @@
 
 #menu_cursos_idi:hover>div>div:nth-child(2)>#mn_cursos_idi_t {
   color: #e9c727 !important;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 /* BRITISH COUNSIL */
@@ -375,6 +382,9 @@
 
 #menu_british:hover>div>div:nth-child(2)>#mn_british_t {
   color: #e9c727 !important;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 /* WRITE CONVERSACIONAL */
@@ -384,6 +394,9 @@
 
 #menu_write:hover>div>div:nth-child(2)>#mn_write_t {
   color: #e9c727 !important;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 /* EXAM ENGLISH */
@@ -393,6 +406,9 @@
 
 #menu_exam:hover>div>div:nth-child(2)>#mn_exam_t {
   color: #e9c727 !important;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 /* MENU CIAN */
