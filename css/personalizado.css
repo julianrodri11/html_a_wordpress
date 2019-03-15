@@ -326,9 +326,127 @@
   color: #e9c727 !important;
 }
 
-
-
 /* FIN MENU BIENESTAR */
+
+/* MENU PROYECCION INSTITUCIONAL */
+/* INTERNACIONALIZACION */
+#menu_internacionalizacion:hover>div>div>#mn_internacionalizacion {
+  content: url("../img/iconos/ico_internacionalizacion_h.png") !important;
+}
+
+#menu_internacionalizacion:hover>div>div:nth-child(2)>#mn_internacionalizacion_t {
+  color: #e9c727 !important;
+}
+
+/* PROYECCION SOCIAL */
+#menu_proyeccion_soc:hover>div>div>#mn_proyeccion_soc {
+  content: url("../img/iconos/ico_proyeccion_soc_h.png") !important;
+}
+
+#menu_proyeccion_soc:hover>div>div:nth-child(2)>#mn_proyeccion_soc_t {
+  color: #e9c727 !important;
+}
+
+/* FIN MENU PROYECCION INSTITUCIONAL */
+
+/* MENU CIAN */
+/* CLUB CONVERSACIONAL */
+#menu_club_conv:hover>div>div>#mn_club_conv {
+  content: url("../img/iconos/ico_club_conv_h.png") !important;
+}
+
+#menu_club_conv:hover>div>div:nth-child(2)>#mn_club_conv_t {
+  color: #e9c727 !important;
+}
+
+/* CURSOS E IDIOMAS */
+#menu_cursos_idi:hover>div>div>#mn_cursos_idi {
+  content: url("../img/iconos/ico_cursos_idi_h.png") !important;
+}
+
+#menu_cursos_idi:hover>div>div:nth-child(2)>#mn_cursos_idi_t {
+  color: #e9c727 !important;
+}
+
+/* BRITISH COUNSIL */
+#menu_british:hover>div>div>#mn_british {
+  content: url("../img/iconos/ico_british_h.png") !important;
+}
+
+#menu_british:hover>div>div:nth-child(2)>#mn_british_t {
+  color: #e9c727 !important;
+}
+
+/* WRITE CONVERSACIONAL */
+#menu_write:hover>div>div>#mn_write {
+  content: url("../img/iconos/ico_write_h.png") !important;
+}
+
+#menu_write:hover>div>div:nth-child(2)>#mn_write_t {
+  color: #e9c727 !important;
+}
+
+/* EXAM ENGLISH */
+#menu_exam:hover>div>div>#mn_exam {
+  content: url("../img/iconos/ico_exam_h.png") !important;
+}
+
+#menu_exam:hover>div>div:nth-child(2)>#mn_exam_t {
+  color: #e9c727 !important;
+}
+
+/* MENU CIAN */
+
+/* MENU AUNAR VIRTUAL */
+/* CAMPUS VIRTUAL */
+#menu_campus:hover>div>div>#mn_campus {
+  content: url("../img/iconos/ico_campus_h.png") !important;
+}
+
+#menu_campus:hover>div>div:nth-child(2)>#mn_campus_t {
+  color: #e9c727 !important;
+}
+
+/* BIENESTAR EN LINEA */
+#menu_bienestar_lin:hover>div>div>#mn_bienestar_lin {
+  content: url("../img/iconos/ico_bienestar_lin_h.png") !important;
+}
+
+#menu_bienestar_lin:hover>div>div:nth-child(2)>#mn_bienestar_lin_t {
+  color: #e9c727 !important;
+}
+
+/* CIDAE EN LINEA */
+#menu_cidae_lin:hover>div>div>#mn_cidae_lin {
+  content: url("../img/iconos/ico_cidae_lin_h.png") !important;
+}
+
+#menu_cidae_lin:hover>div>div:nth-child(2)>#mn_cidae_lin_t {
+  color: #e9c727 !important;
+}
+
+/* BIBLIOTECA */
+#menu_biblioteca:hover>div>div>#mn_biblioteca {
+  content: url("../img/iconos/ico_biblioteca_h.png") !important;
+}
+
+#menu_biblioteca:hover>div>div:nth-child(2)>#mn_biblioteca_t {
+  color: #e9c727 !important;
+}
+
+/* EMISORA VIRTUAL */
+#menu_emisora:hover>div>div>#mn_emisora {
+  content: url("../img/iconos/ico_emisora_h.png") !important;
+}
+
+#menu_emisora:hover>div>div:nth-child(2)>#mn_emisora_t {
+  color: #e9c727 !important;
+}
+
+/* FIN MENU AUNAR VIRTUAL */
+
+
+
 
 
 /*borde color azul*/

@@ -54,30 +54,38 @@
 		</div>
 		<div class="container-fluid m-0 pb-5">
 			<div class="row m-0 d-flex justify-content-center">
-				<div class="col-4 col-md-2 text-center">
+				<div class="col-4 col-md-2 text-center hvr-underline-from-center" id="menu_">
+					
 					<a class="sin-texto-subrayado texto-azul-os" target="_blanck1" href="https://goo.gl/forms/on4uljowlKOOF5Ua2">
 						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/Club_Conversacional.png" alt="club conversacional aunar"><br>Club Conversacional
 					</a>
+					
 				</div>
-				<div class="col-4 col-md-2 text-center">
+				<div class="col-4 col-md-2 text-center hvr-underline-from-center" id="menu_">
+					
 					<a class="sin-texto-subrayado texto-azul-os" target="_blanck2" href="https://docs.google.com/forms/d/e/1FAIpQLSet-HfLJwxcBGJWPYB31ZJrbge8heywPB99fEjbNijji_NZKQ/viewform">
 						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/cursos_de_idiomas.png" alt="cursos de idiomas aunar"> <br>Cursos de Idiomas:
 					</a>
+					
 				</div>
-				<div class="col-4 col-md-2 text-center border-left borde-azul">
+				<div class="col-4 col-md-2 text-center border-left borde-azul hvr-underline-from-center" id="menu_"">
 					<a class="sin-texto-subrayado texto-azul-os" target="_blanck3" href="http://learnenglishteens.britishcouncil.org/skills">
 						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/British_Counsil.png" alt="British Counsil aunar"><br>British Counsil
 					</a>
 				</div>
-				<div class="col-4 col-md-2 text-center">
+				<div class="col-4 col-md-2 text-center hvr-underline-from-center" id="menu_">
+					
 					<a class="sin-texto-subrayado texto-azul-os" target="_blanck4" href="https://thewritepractice.com/writing-practice/">
 						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/The_Write_Practice.png" alt="The Write Practice aunar"> <br>The Write Practice
 					</a>
+					
 				</div>
-				<div class="col-4 col-md-2 text-center">
+				<div class="col-4 col-md-2 text-center hvr-underline-from-center" id="menu_">
+					
 					<a class="sin-texto-subrayado texto-azul-os" target="_blanck5" href="https://www.examenglish.com/CEFR/cefr.php">
 						<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cian/Exam_English.png" alt="Exam English aunar"> <br>Exam English
 					</a>
+					
 				</div>
 			</div>
 		</div>
