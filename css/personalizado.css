@@ -217,49 +217,118 @@
 /* FIN MENU RECTORIA */
 /* MENU VICERRECTORÍA DE INVESTIGACIÓN */
 #menu_vice_investigacion:hover>div>div>#mn_vice_investigacion {
-  content: url("../img/iconos/ico_vice_investigacion_h.png") !important;  
+  content: url("../img/iconos/ico_vice_investigacion_h.png") !important;
 }
+
 #menu_vice_investigacion:hover>div>div:nth-child(2)>#mn_vice_investigacion_t {
   color: #e9c727 !important;
 }
+
 /* CIDAE */
 #menu_cidae:hover>div>div>#mn_cidae {
-  content: url("../img/iconos/ico_cidae_h.png") !important;  
+  content: url("../img/iconos/ico_cidae_h.png") !important;
 }
+
 #menu_cidae:hover>div>div:nth-child(2)>#mn_cidae_t {
   color: #e9c727 !important;
 }
+
 /* CREAN */
 #menu_crean:hover>div>div>#mn_crean {
-  content: url("../img/iconos/ico_crean_h.png") !important;  
+  content: url("../img/iconos/ico_crean_h.png") !important;
 }
+
 #menu_crean:hover>div>div:nth-child(2)>#mn_crean_t {
   color: #e9c727 !important;
 }
+
 /* OTRI */
 #menu_otri:hover>div>div>#mn_otri {
-  content: url("../img/iconos/ico_otri_h.png") !important;  
+  content: url("../img/iconos/ico_otri_h.png") !important;
 }
+
 #menu_otri:hover>div>div:nth-child(2)>#mn_otri_t {
   color: #e9c727 !important;
 }
+
 /* POSGRADOS */
 #menu_posgrados:hover>div>div>#mn_posgrados {
-  content: url("../img/iconos/ico_posgrados_h.png") !important;  
+  content: url("../img/iconos/ico_posgrados_h.png") !important;
 }
+
 #menu_posgrados:hover>div>div:nth-child(2)>#mn_posgrados_t {
   color: #e9c727 !important;
 }
+
 /* PUBLICACIONES */
 #menu_publicaciones:hover>div>div>#mn_publicaciones {
-  content: url("../img/iconos/ico_publicaciones_h.png") !important;  
+  content: url("../img/iconos/ico_publicaciones_h.png") !important;
 }
+
 #menu_publicaciones:hover>div>div:nth-child(2)>#mn_publicaciones_t {
   color: #e9c727 !important;
 }
 
-
 /* FIN MENU VICERRECTORÍA DE INVESTIGACIÓN */
+
+/* MENU BIENESTAR */
+/* BIENESTAR */
+#menu_bienestar:hover>div>div>#mn_bienestar {
+  content: url("../img/iconos/ico_bienestar_h.png") !important;
+}
+
+#menu_bienestar:hover>div>div:nth-child(2)>#mn_bienestar_t {
+  color: #e9c727 !important;
+}
+
+/* PRIMEROS AUXILIOS */
+#menu_primeros_aux:hover>div>div>#mn_primeros_aux {
+  content: url("../img/iconos/ico_primeros_aux_h.png") !important;
+}
+
+#menu_primeros_aux:hover>div>div:nth-child(2)>#mn_primeros_aux_t {
+  color: #e9c727 !important;
+}
+
+/* PSICOLOGIA */
+#menu_psicologia:hover>div>div>#mn_psicologia {
+  content: url("../img/iconos/ico_psicologia_h.png") !important;
+}
+
+#menu_psicologia:hover>div>div:nth-child(2)>#mn_psicologia_t {
+  color: #e9c727 !important;
+}
+
+/* DEPORTES */
+#menu_deportes:hover>div>div>#mn_deportes {
+  content: url("../img/iconos/ico_deportes_h.png") !important;
+}
+
+#menu_deportes:hover>div>div:nth-child(2)>#mn_deportes_t {
+  color: #e9c727 !important;
+}
+
+/* CULTURA */
+#menu_cultura:hover>div>div>#mn_cultura {
+  content: url("../img/iconos/ico_cultura_h.png") !important;
+}
+
+#menu_cultura:hover>div>div:nth-child(2)>#mn_cultura_t {
+  color: #e9c727 !important;
+}
+
+/* INCLUSIÓN SOCIAL */
+#menu_inclusion_soc:hover>div>div>#mn_inclusion_soc {
+  content: url("../img/iconos/ico_inclusion_soc_h.png") !important;
+}
+
+#menu_inclusion_soc:hover>div>div:nth-child(2)>#mn_inclusion_soc_t {
+  color: #e9c727 !important;
+}
+
+
+
+/* FIN MENU BIENESTAR */
 
 
 /*borde color azul*/
