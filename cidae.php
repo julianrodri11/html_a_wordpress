@@ -17,8 +17,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/cidae/cidae-aunar.jpg" alt="Centro de Investigaciones AUNAR"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/cidae/cidae-aunar.jpg" alt="Centro de Investigaciones AUNAR"/>
 				</div>
 			</div>
 		</div>

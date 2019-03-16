@@ -23,7 +23,7 @@
 				</div>
 			</div>
 		</div>
-		<?php  include_once('secciones/menu2.php') ?>
+		<?php  include_once('secciones/menu2.php'); ?>
 
 		<!-- noticias -->
 		<div class="container-fluid texto-azul-os py-2">
@@ -45,7 +45,7 @@
 
 				</div>
 			</div>
-</div>
+		</div>
 			<!-- fin noticias -->
 			<!-- enlaces externos -->
 			<div class="container-fluid py-2">
@@ -56,93 +56,9 @@
 					<!-- <div class="col-12  "><p class="pt-sans f-negrita texto-azul-os text-center mx-auto">NIVELES DE FORMACIÓN</p></div> -->
 				</div>
 			</div>
-			<div class="container-fluid m-0 pb-5">
-				<div class="row m-0 d-flex justify-content-center">
-
-					<div class="col-4 col-md-2 text-center hvr-underline-from-center" id="menu_club_conv">
-						<div>
-							<div class="col-12">
-								<a href="https://goo.gl/forms/on4uljowlKOOF5Ua2" id="mn_club_conv" class="fuente-institucional texto-azul text-center f-negrita"
-								 target="_blanck1">
-									<img width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_club_conv.png" alt="club conversacional aunar">
-								</a>
-							</div>
-							<div class="col-12 d-flex mx-auto justify-content-center">
-								<a href="https://goo.gl/forms/on4uljowlKOOF5Ua2" id="mn_club_conv_t" class="sin-texto-subrayado f-negrita fuente-institucional texto-azul ">
-									Club Conversacional
-								</a>
-							</div>
-						</div>
-					</div>
-
-
-					<div class="col-4 col-md-2 text-center hvr-underline-from-center" id="menu_cursos_idi">
-						<div>
-							<div class="col-12">
-								<a  href="https://docs.google.com/forms/d/e/1FAIpQLSet-HfLJwxcBGJWPYB31ZJrbge8heywPB99fEjbNijji_NZKQ/viewform" id="mn_cursos_idi" class="fuente-institucional texto-azul text-center f-negrita" target="_blanck2">
-									<img width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_cursos_idi.png" alt="Cursos de idiomas aunar">
-								</a>
-							</div>
-							<div class="col-12 d-flex mx-auto justify-content-center">
-								<a href="https://docs.google.com/forms/d/e/1FAIpQLSet-HfLJwxcBGJWPYB31ZJrbge8heywPB99fEjbNijji_NZKQ/viewform" id="mn_cursos_idi_t" class="f-negrita fuente-institucional texto-azul ">
-									Cursos de Idiomas
-								</a>
-							</div>
-						</div>
-					</div>
-
-
-					<div class="col-4 col-md-2 text-center border-left borde-azul hvr-underline-from-center" id="menu_british">
-						<div>
-							<div class="col-12">
-								<a class="sin-texto-subrayado texto-azul-os" id="mn_british" target="_blanck3" href="http://learnenglishteens.britishcouncil.org/skills">
-									<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_british.png" alt="British Counsil aunar">
-								</a>
-							</div>
-							<div class="col-12 d-flex mx-auto justify-content-center">
-								<a href="" id="mn_british_t" class="nav-link f-negrita fuente-institucional texto-azul ">
-									British
-								</a>
-							</div>
-						</div>
-					</div>
-
-
-
-
-					<div class="col-4 col-md-2 text-center hvr-underline-from-center" id="menu_write">
-						<div>
-							<div class="col-12">
-								<a class="sin-texto-subrayado texto-azul-os" id="mn_write" target="_blanck4" href="https://thewritepractice.com/writing-practice/">
-									<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_write.png" alt="The Write Practice aunar">
-
-								</a>
-							</div>
-							<div class="col-12 d-flex mx-auto justify-content-center">
-								<a href="" id="mn_write_t" class="nav-link f-negrita fuente-institucional texto-azul ">
-									The Write Practice
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-4 col-md-2 text-center hvr-underline-from-center" id="menu_exam">
-						<div>
-							<div class="col-12">
-								<a class="sin-texto-subrayado texto-azul-os" id="mn_exam" target="_blanck5" href="https://www.examenglish.com/CEFR/cefr.php">
-									<img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_exam.png" alt="Exam English aunar">
-								</a>
-							</div>
-							<div class="col-12 d-flex mx-auto justify-content-center">
-								<a href="" id="mn_exam_t" class="nav-link f-negrita fuente-institucional texto-azul ">
-									Exam English
-								</a>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
+			<!-- se importa menú de CIAN -->
+			<?php include_once('secciones/menu_cian.php');?>
+			<!-- fin menuú cian -->
 			<!-- fin enlaces externos -->
 
 			<div class="container-fluid texto-azul-os">

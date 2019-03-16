@@ -13,8 +13,8 @@
           <img width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_campus.png" ></a>
         </div>
         <div class="col-12 d-flex mx-auto justify-content-center">
-              <a href="http://campus.aunar.edu.co/" id="mn_campus_t" class="nav-link f-negrita fuente-institucional texto-azul ">
-              Campus AUNAR Virtual <span class="sr-only">(current)</span>
+              <a href="http://campus.aunar.edu.co/" id="mn_campus_t" class="nav-link f-negrita fuente-institucional texto-azul text-center">
+              Campus AUNAR<br> Virtual <span class="sr-only">(current)</span>
               </a>
         </div>
       </div>
@@ -27,8 +27,8 @@
           <img width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_bienestar.png" ></a>
           </div>
           <div class="col-12 d-flex mx-auto justify-content-center">
-               <a href="bienestar" id="mn_bienestar_t" class="nav-link f-negrita fuente-institucional texto-azul ">
-               Bienestar en Línea
+               <a href="bienestar" id="mn_bienestar_t" class="nav-link f-negrita fuente-institucional texto-azul text-center">
+               Bienestar<br>en Línea
               </a>
           </div>
         </div>
@@ -41,7 +41,7 @@
           <img width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_cidae.png" ></a>
           </div>
           <div class="col-12 d-flex mx-auto justify-content-center">
-              <a href="cidae" id="mn_cidae_lin_t" class="nav-link f-negrita fuente-institucional texto-azul ">
+              <a href="cidae" id="mn_cidae_lin_t" class="nav-link f-negrita fuente-institucional texto-azul text-center">
               CIDAE en Línea
               </a>
           </div>
@@ -55,7 +55,7 @@
           <img width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_biblioteca.png" ></a>
           </div>
           <div class="col-12 d-flex mx-auto justify-content-center">
-              <a href="http://biblioteca.aunar.edu.co/" id="mn_biblioteca_t" class="nav-link f-negrita fuente-institucional texto-azul ">
+              <a href="http://biblioteca.aunar.edu.co/" id="mn_biblioteca_t" class="nav-link f-negrita fuente-institucional texto-azul text-center">
               Biblioteca
               </a>
           </div>
@@ -69,7 +69,7 @@
           <img width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_emisora.png" ></a>
           </div>
           <div class="col-12 d-flex mx-auto justify-content-center">
-              <a href="radio-aunar-stereo" id="mn_emisora_t" class="nav-link f-negrita fuente-institucional texto-azul ">
+              <a href="radio-aunar-stereo" id="mn_emisora_t" class="nav-link f-negrita fuente-institucional texto-azul text-center">
               Emisora Virtual
               </a>
           </div>

@@ -13,7 +13,7 @@
             <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_bienestar.png" ></a>
         </div>
         <div class="col-12 d-flex mx-auto justify-content-center">
-              <a href="bienestar" id="mn_bienestar_t" class="nav-link f-negrita fuente-institucional texto-azul ">
+              <a href="bienestar" id="mn_bienestar_t" class="nav-link f-negrita fuente-institucional texto-azul text-center">
                 Bienestar <br> Institucional<span class="sr-only">(current)</span>
               </a>
         </div>
@@ -27,7 +27,7 @@
             <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_primeros_aux.png" ></a>
           </div>
           <div class="col-12 d-flex mx-auto justify-content-center">
-              <a href="primeros_auxilios" id="mn_primeros_aux_t" class="nav-link f-negrita fuente-institucional texto-azul ">
+              <a href="primeros_auxilios" id="mn_primeros_aux_t" class="nav-link f-negrita fuente-institucional texto-azul text-center">
                 Primeros auxilios
               </a>
           </div>
@@ -41,7 +41,7 @@
             <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_psicologia.png" ></a>
           </div>
           <div class="col-12 d-flex mx-auto justify-content-center">
-              <a href="psicologia" id="mn_psicologia_t" class="nav-link f-negrita fuente-institucional texto-azul ">
+              <a href="psicologia" id="mn_psicologia_t" class="nav-link f-negrita fuente-institucional texto-azul text-center">
                 Psicología
               </a>
           </div>
@@ -55,7 +55,7 @@
             <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_deportes.png" ></a>
           </div>
           <div class="col-12 d-flex mx-auto justify-content-center">
-              <a href="deportes" id="mn_deportes_t" class="nav-link f-negrita fuente-institucional texto-azul ">
+              <a href="deportes" id="mn_deportes_t" class="nav-link f-negrita fuente-institucional texto-azul text-center">
                 Deportes
               </a>
           </div>
@@ -69,7 +69,7 @@
             <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_cultura.png" ></a>
           </div>
           <div class="col-12 d-flex mx-auto justify-content-center">
-              <a href="cultura" id="mn_cultura_t" class="nav-link f-negrita fuente-institucional texto-azul ">
+              <a href="cultura" id="mn_cultura_t" class="nav-link f-negrita fuente-institucional texto-azul text-center">
                 Cultura
               </a>
           </div>
@@ -83,7 +83,7 @@
             <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_inclusion_soc.png" ></a>
           </div>
           <div class="col-12 d-flex mx-auto justify-content-center">
-              <a href="inclusion_social" id="mn_inclusion_soc_t" class="nav-link f-negrita fuente-institucional texto-azul ">
+              <a href="inclusion_social" id="mn_inclusion_soc_t" class="nav-link f-negrita fuente-institucional texto-azul text-center">
                 Inclusión Social
               </a>
           </div>
