@@ -434,7 +434,7 @@
 
 /* CIDAE EN LINEA */
 #menu_cidae_lin:hover>div>div>#mn_cidae_lin {
-  content: url("../img/iconos/ico_cidae_lin_h.png") !important;
+  content: url("../img/iconos/ico_cidae_h.png") !important;
 }
 
 #menu_cidae_lin:hover>div>div:nth-child(2)>#mn_cidae_lin_t {
