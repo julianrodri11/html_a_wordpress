@@ -25,7 +25,7 @@
 				if ($contador%2==0) {
 					$fondo="fondo-gris-os";
 				} else {
-					$fondo="";
+					$fondo="fondo-gris-c";
 				}
 				
 		?>
