@@ -759,7 +759,7 @@
 
 .fondo-eventos {
   background-image: url("../img/eventos-autonoma-de-narino.jpg");
-  background-size: cover;
+  background-size: contain;
   /*necesario para que se mire en todas las pantallas*/
 
 }
