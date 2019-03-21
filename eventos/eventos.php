@@ -35,10 +35,17 @@
 					<div class="col-12 col-lg-4 p-2 d-flex align-items-center">								
 					
 						<a class="p-0" data-toggle="tooltip" data-placement="auto" title="Ver Evento" href="<?php the_permalink($recent["ID"]) ?>">
-							<?php
+							<?php // Verifica si el post tiene una imagen, si es verdadero: la muestra, 
 							if ( has_post_thumbnail( $recent["ID"]) ) {
 								echo  get_the_post_thumbnail($recent["ID"],'post-thumbnail',['class' => 'img-fluid z-index-20', 'width' => '95%']);
 							}
+							else
+								{
+								//sino,  en caso de que el post no tenga imagen se le agrega una por defecto 
+								?>
+												<img src="<?php bloginfo('template_url')?>/img/eventos.jpg" class="img-fluid z-index-20 wp-post-image" alt=""  width="95%">
+								<?php
+								 }
 							?>
 						</a>
 					

@@ -28,7 +28,7 @@
 		<?php include_once('secciones/menu2.php'); ?>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-12 col-md-3 bg-dark text-white">
+				<div class="col-12 col-md-3 fondo-azul text-white">
 					<?php /*sidebar creado en functions para habilitar widget*/ ///get_sidebar() ?>
 					<div class="col-12 text-center my-5 ">
 						<label class="fuente-institucional texto-amarillo f-size-16 f-negrita">Eventos Recientes</label>
@@ -42,10 +42,17 @@
 					<div class="row my-3 hvr-underline-from-center transparencia-hover border-warning border-bottom m-1 d-flex align-items-center">						
 						<div class="col-4 p-0 py-1">							
 							<a class="p-0" href="<?php the_permalink($recent["ID"]) ?>">
-								<?php
+								<?php //verifica si el post tiene imagen destacada
 								if ( has_post_thumbnail( $recent["ID"]) ) {
 									echo  get_the_post_thumbnail($recent["ID"],'post-thumbnail',['class' => 'img-fluid z-index-20', 'width' => '95%']);
 								}
+								else
+								{
+								//sino,  en caso de que el post no tenga imagen se le agrega una por defecto 
+								?>
+												<img src="<?php bloginfo('template_url')?>/img/eventos.jpg" class="img-fluid z-index-20 wp-post-image" alt=""  width="95%">
+								<?php
+								 }
 								?>
 							</a>
 						</div>
@@ -81,10 +88,18 @@
 							<div class="row d-flex justify-content-center">
 								<!-- imagen -->
 								<div class="col-12">
-									<?php // check if the post or page has a Featured Image assigned to it.
+									<?php // Verifica si el post tiene una imagen, si es verdadero: la muestra, 
 									if ( has_post_thumbnail() ) {
 										the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid ', 'width' => '100%']);
-									} ?>
+									} 
+									else
+										{
+										//sino,  en caso de que el post no tenga imagen se le agrega una por defecto 
+										?>
+														<img src="<?php bloginfo('template_url')?>/img/eventos.jpg" class="img-fluid z-index-20 wp-post-image" alt=""  width="95%">
+										<?php
+										}
+									?>
 								</div>
 							</div>
 						</div>
