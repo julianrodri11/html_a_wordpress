@@ -119,42 +119,36 @@
 			</div>
 		</div>
 		
-		<!-- -----------------EVENTOS--------------------------------- -->
-		<div class="container-fluid fondo-amarillo fondo-eventos-vicerectoria">
-			<div class="row">
-				<div class="col-lg-12 p-2 d-flex align-items-center justify-content-center justify-content-sm-center justify-content-md-center e_arriba_abajo">
-					
-					<div class="p-1 mt-5 mt-sm-5 bd-highlight text-center pr-3">
-						<h1 class="my-1 fuente-institucional text-white f-negrita">Eventos</h1>
-						<label class="  fuente-institucional text-white f-size-18">¡Entérate nuestras novedades!</label>
-					</div>
-			</div>
-			
-			<div class="col-lg-12  ">
-				<div class="row p-3 ">
-					
-					<div class="col-md-6 p-3 derecha_izquierda d-flex align-items-center">
-						<div class="col-12 p-lg-4 mb-3">							
-							<!-- seccion de eventos  -->
-							<?php include_once('slider/eventos-autonoma-de-narino.php'); ?>			
-							<!-- fin sección eventos -->
-						</div>
-					</div>
-					<div class="col-md-6 p-2 hvr-grow-shadow izquierda_derecha d-flex align-items-center" >
-						<div class="col p-2 text-center "><a href="radio-aunar-stereo"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img/aunar-stereo.png"/></a></div>
-						<!-- <div class=" texto-azul text-center ">
-										<div class="row">
-														<div class="col-12 mb-0 p-0 fuente-institucional ">AUNAR STEREO</div>
-														<div class="col-12 "><label class="f-size-14">¡Tú también puedes ser un creador de espacios de diálogo!</label></div>
-										</div>
-						</div> -->
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-	
-	<!-- ----------------FIN EVENTOS------------------------------ -->
+	<!-- -----------------EVENTOS--------------------------------- -->
+    <div class="container-fluid fondo-amarillo fondo-eventos p-0">
+      <div class="row m-0">
+        
+        <div class="col-lg-12 p-2 d-flex align-items-center justify-content-center justify-content-sm-center justify-content-md-center e_arriba_abajo">          
+          <div class="p-1 mt-5 mt-sm-5 bd-highlight text-center pr-3">
+            <h1 class="my-1 fuente-institucional texto-azul f-negrita">Eventos</h1>
+            <label class="texto-azul fuente-institucional f-size-18">¡Entérate de nuestras novedades!</label>
+          </div>        
+        </div>
+
+      <div class="col-lg-12 ">
+        <div class="row m-0 p-3 ">          
+          <div class="col-md-6 p-2 hvr-grow-shadow izquierda_derecha d-flex align-items-center" >
+            <div class="col p-2 text-center "><a href="radio-aunar-stereo"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img/aunar-stereo.png"/></a>
+            </div>          
+          </div>
+          <div class="col-md-6 p-3 izquierda_derecha d-flex align-items-center">
+            <div class="col-12 p-lg-4 mb-3">              
+              <!-- seccion de eventos  -->
+                <?php include_once('slider/eventos-autonoma-de-narino.php'); ?>
+              <!-- fin sección eventos -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- ----------------FIN EVENTOS------------------------------ -->
 	<!-- personal encargado -->
 	<div class="container-fluid py-5">
 		
