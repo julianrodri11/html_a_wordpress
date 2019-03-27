@@ -128,15 +128,13 @@
 						<h1 class="my-1 fuente-institucional text-white f-negrita">Eventos</h1>
 						<label class="  fuente-institucional text-white f-size-18">¡Entérate nuestras novedades!</label>
 					</div>
-				<!-- div class="p-1 bg-primary bd-highlight">Flex item 2</div>
-				<div class="p-1 bg-white bd-highlight">Flex item 3</div> -->
 			</div>
+			
 			<div class="col-lg-12  ">
 				<div class="row p-3 ">
 					
 					<div class="col-md-6 p-3 derecha_izquierda d-flex align-items-center">
-						<div class="col-12 p-lg-4 mb-3">
-							
+						<div class="col-12 p-lg-4 mb-3">							
 							<!-- seccion de eventos  -->
 							<?php include_once('slider/eventos-autonoma-de-narino.php'); ?>			
 							<!-- fin sección eventos -->
@@ -153,8 +151,9 @@
 					</div>
 				</div>
 			</div>
+			</div>
 		</div>
-	</div>
+	
 	<!-- ----------------FIN EVENTOS------------------------------ -->
 	<!-- personal encargado -->
 	<div class="container-fluid py-5">
