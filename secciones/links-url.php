@@ -26,3 +26,5 @@
 <script type="text/javascript" src="js/jquery.smoove.min.js"></script>
 <!-- efectos personalizados -->
 <script type="text/javascript" src="js/efectos_smoove.js"></script>
+<!-- aumentar y disminuir zoom -->
+<script  type="text/javascript" src="js/accesibilidad.js"></script>
