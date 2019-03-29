@@ -121,32 +121,41 @@
 		
 	
 	<!-- -----------------EVENTOS--------------------------------- -->
-    <div class="container-fluid fondo-amarillo fondo-eventos p-0">
+    <div class="container-fluid fondo-amarillo fondo-eventos-vicerectoria p-0">
       <div class="row m-0">
-
-			
-      <div class="col-lg-12 ">
-        <div class="row m-0 p-3 ">          
-          <div class="col-md-6 p-2 hvr-grow-shadow izquierda_derecha d-flex align-items-center" >
-            <div class="col p-2 text-center "><a href="radio-aunar-stereo"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img/aunar-stereo.png"/></a>
-            </div>          
-          </div>
-          <div class="col-md-6 p-3 izquierda_derecha d-flex align-items-center">
-            <div class="col-12 p-lg-4 mb-3">              
-              <!-- seccion de eventos  -->
-                <?php include_once('slider/eventos-autonoma-de-narino.php'); ?>
-              <!-- fin sección eventos -->
-            </div>
-          </div>
-        </div>
-			</div>
-			
-        <div class="col-lg-12 p-2 d-flex align-items-center justify-content-center justify-content-sm-center justify-content-md-center e_arriba_abajo">          
+			<!-- mensaje de eventos -->
+			<div class="col-lg-12 p-2 d-flex align-items-center justify-content-center justify-content-sm-center justify-content-md-center e_arriba_abajo">          
           <div class="p-1 mt-5 mt-sm-5 bd-highlight text-center pr-3">
             <h1 class="my-1 fuente-institucional texto-azul f-negrita">Eventos</h1>
             <label class="texto-azul fuente-institucional f-size-18">¡Entérate de nuestras novedades!</label>
           </div>        
         </div>
+			
+      <div class="col-lg-12 ">
+
+        <div class="row m-0 p-3 ">          
+				
+				<!-- lado izquierdo de eventos -->
+				<div class="col-md-6 p-3 izquierda_derecha d-flex align-items-center">
+            <div class="col-12 p-lg-4 mb-3">              
+              <!-- seccion de eventos  -->
+                <?php include_once('slider/eventos-autonoma-de-narino.php'); ?>
+              <!-- fin sección eventos -->
+            </div>
+				</div>
+
+				<!-- lado derecho de eventos -->
+				<div class="col-md-6 p-2 hvr-grow-shadow izquierda_derecha d-flex align-items-center" >
+            <div class="col p-2 text-center "><a href="radio-aunar-stereo"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img/aunar-stereo.png"/></a>
+            </div>          
+					</div>
+					        
+					
+				</div>
+				
+			</div>
+			
+        
 
 
     </div>
