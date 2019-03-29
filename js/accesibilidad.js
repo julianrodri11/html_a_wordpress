@@ -1,7 +1,7 @@
 var fontSize = 1,
   factor = 0.1,
-  limite = 4,
-  limitedesc = 4,
+  limite = 5,
+  limitedesc = 5,
   contador = 0;
 contadordesc = 0
 // Menu superior
