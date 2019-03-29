@@ -179,6 +179,16 @@
   font-style: italic;
 }
 
+/* PUNTERO PARA ZOOM MÁS  */
+.zoom-mas {
+  cursor: zoom-in;
+}
+
+/* PUNTERO PARA ZOOM MÁS  */
+.zoom-menos {
+  cursor: zoom-out;
+}
+
 /*transparencia en la seccion de noticias*/
 .transparencia {
   background-image: url('../img/transparente5x5px.png');

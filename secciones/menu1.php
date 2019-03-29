@@ -133,8 +133,8 @@
                         data-toggle="modal" data-target="#btn_traductor" onclick="llamar_traductor()">Idioma <img src="<?php bloginfo('template_url')?>/img/google_translate.png" style="border-radius:50%; " width="18px" alt=""></div>
                         <!-- iconos de ampliar y reducir -->
                         <div class="f-size-14  badge badge-pill badge-primary fondo-azul pointer hover-texto-blanco hover-amarillo ">
-                            <a class="px-0 pointer" id="aumentar" data-toggle="tooltip" data-placement="auto" title="Ampliar">A+</a>
-                            <a class="px-0 pointer" id="disminuir" data-toggle="tooltip" data-placement="auto" title="Reducir">A-</a>
+                            <a class="px-0 zoom-mas" id="aumentar" data-toggle="tooltip" data-placement="auto" title="Ampliar">A+</a>
+                            <a class="px-0 zoom-menos" id="disminuir" data-toggle="tooltip" data-placement="auto" title="Reducir">A-</a>
                             <a class="px-0 pointer" id="restablecer" data-toggle="tooltip" data-placement="auto" title="Restablecer">R</a>
                         </div></div>
                     </div>
