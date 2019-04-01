@@ -34,4 +34,19 @@ $('#restablecer').on('click', function () {
   });
   contador = 0;
   contadordesc = 0;
+  // RESTABLECER EL COLOR DE LA PÁGINA
+  $("div").removeClass("filtro-gris");
+  $("a").removeClass("filtro-gris");
+  $("p").removeClass("filtro-gris");
+  $("img").removeClass("filtro-gris");
+  $("footer").removeClass("filtro-gris");
+});
+// COLOCAR PÁGINA EN GRIS
+$("#contraste").on("click", function () {
+  $("div").addClass("filtro-gris");
+  $("a").addClass("filtro-gris");
+  $("p").addClass("filtro-gris");
+  $("img").addClass("filtro-gris");
+  $("footer").addClass("filtro-gris");
+
 });
