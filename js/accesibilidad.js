@@ -1,10 +1,14 @@
+// CODIGO QUE SIRVE PARA HACER ZOOM, YA SEA AUMENTAR O
+// DISMINUIR LA FUENTE, ADEMÁS DE CAMBIAR EL CONTRASTE 
+// DE TODA LA PÁGINA A GRISES
+
 var fontSize = 1,
   factor = 0.1,
   limite = 5,
   limitedesc = 5,
   contador = 0;
 contadordesc = 0
-// Menu superior
+// AUMENTAR LA FUENTE DE LA PÁGINA
 $('#aumentar').on('click', function () {
 
   if (contador <= limite) {
@@ -12,10 +16,13 @@ $('#aumentar').on('click', function () {
     $('body').css({
       'font-size': fontSize + 'em'
     });
+    $('li').css({
+      'font-size': fontSize + 'em'
+    });
     contador++;
   }
 });
-//
+// DISMINUIR LA FUENTE DE LA PÁGINA
 $('#disminuir').on('click', function () {
 
   if (contadordesc <= limitedesc) {
@@ -23,13 +30,19 @@ $('#disminuir').on('click', function () {
     $('body').css({
       'font-size': fontSize + 'em'
     });
+    $('li').css({
+      'font-size': fontSize + 'em'
+    });
     contadordesc++;
   }
 });
-
+// RESTABLECER EL TAMAÑO DE LA FUENTE DE LA PÁGINA
 $('#restablecer').on('click', function () {
   fontSize = 1;
   $('body').css({
+    'font-size': fontSize + 'em'
+  });
+  $('li').css({
     'font-size': fontSize + 'em'
   });
   contador = 0;
