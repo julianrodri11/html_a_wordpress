@@ -9,16 +9,14 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">      
-      <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/Pendones-inscripciones-2018-2.jpg" alt="Inscribete en nuestro programas">
+      <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/Pendones-inscripciones-2018-2.jpg" alt="Inscribete en nuestro programas">
       <!--div class="carousel-caption">
         <h3></h3>
         <p></p>
       </div-->
     </div>
     <div class="carousel-item">
-      <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/plazo-matricula-financiera-academica-aunar.jpg" alt="Congreso Autonoma de Nariño">
+      <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/plazo-matricula-financiera-academica-aunar.jpg" alt="Congreso Autonoma de Nariño">
       <!--div class="carousel-caption">
         <h3>Lorem Fuga, nesciunt </h3>
         <p>voluptatibus consectetur, consequuntur nemo necessitatibus.</p>
@@ -26,8 +24,7 @@
     </div>
     <div class="carousel-item">
         <a href="inscripciones"> 
-          <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/incripciones-abiertas-aunar-2018-2.png" alt="Oferta académica 20018 II">
+          <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/incripciones-abiertas-aunar-2018-2.png" alt="Oferta académica 20018 II">
         </a>
       <!-- <div class="carousel-caption">
         <h3>Lorem ipsum.</h3>
@@ -35,8 +32,7 @@
       </div> -->
     </div>
     <!-- <div class="carousel-item">
-      <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/slider3.jpg" alt="Estudia con nosotros">
+      <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/slider3.jpg" alt="Estudia con nosotros">
       div class="carousel-caption">
         <h3>Lorem.</h3>
         <p>Lorem ipsum dolor sit.</p>

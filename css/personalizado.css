@@ -1272,16 +1272,12 @@
   z-index: 1070;
 }
 
-/* ACCESIBILIDAD CONTRASTE */
 
+/* ACCESIBILIDAD CONTRASTE */
 .filtro-gris {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-
-
 }
-
-
 
 
 /*VALIDACIONES PARA DIFERENTES PANTALLAS */

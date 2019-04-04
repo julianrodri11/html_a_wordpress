@@ -9,16 +9,14 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <a href="inscripciones"> 
-        <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img
-/carreras/slider_admon.jpg" alt="Director Administrador de Empresas Aunar"></a>
+        <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img/carreras/slider_admon.jpg" alt="Director Administrador de Empresas Aunar"></a>
       <!--div class="carousel-caption">
         <h3></h3>
         <p></p>
       </div-->
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img
-/carreras/slider_admon_director.jpg" alt="Director Administrador de Empresas Aunar">
+      <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img/carreras/slider_admon_director.jpg" alt="Director Administrador de Empresas Aunar">
       <!--div class="carousel-caption">
         <h3>Lorem Fuga, nesciunt </h3>
         <p>voluptatibus consectetur, consequuntur nemo necessitatibus.</p>

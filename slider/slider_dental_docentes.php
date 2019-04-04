@@ -9,16 +9,14 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <a href="inscripciones"> 
-        <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img
-/carreras/slider_dental.jpg" alt="Director Mecánica Dental Aunar"></a>
+        <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img/carreras/slider_dental.jpg" alt="Director Mecánica Dental Aunar"></a>
       <!--div class="carousel-caption">
         <h3></h3>
         <p></p>
       </div-->
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img
-/carreras/slider_dental_director.jpg" alt="Director Mecánica Dental Aunar">
+      <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img/carreras/slider_dental_director.jpg" alt="Director Mecánica Dental Aunar">
       <!--div class="carousel-caption">
         <h3>Lorem Fuga, nesciunt </h3>
         <p>voluptatibus consectetur, consequuntur nemo necessitatibus.</p>

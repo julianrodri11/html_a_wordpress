@@ -304,7 +304,7 @@
 		<!-- fin plan de estudios -->
 
 		<!-- malla curricular -->
-		<div class="container-fluid mb-5">
+		<div class="container-fluid mt-5">
 	<div class="row  fuente-institucional texto-azul">
 		<div class="col-4 p-4  hover-texto-blanco text-center fondo-amarillo-intenso f-negrita pointer">
 			<a class="texto-azul-os sin-texto-subrayado" target="_blanck" href="<?php bloginfo('template_url')?>/docs/malla_curricular/administracion_empresas.pdf" data-toggle="tooltip" data-placement="auto" title="Abrir malla">Malla Curricular</a></div>
@@ -314,13 +314,14 @@
 			</div>
 			
 		</div>
-		<!-- slider de cada carrera -->
-		<div class="row">
-			<?php  include_once('slider/slider_admon_docentes.php')?>
 		</div>
+		
+		<!-- slider de cada carrera -->		
+			<?php  include_once('slider/slider_admon_docentes.php')?>		
 		<!-- fin slider de cada carrera -->
+		
 		<!-- acordion Docentes-->
-		<div class="container">
+		<div class="container my-5">
 			<div id="accordion" class="accordion">
 				<div class="card mb-0 sin-borde">
 					
@@ -865,7 +866,7 @@
 			</div>
 		</div>
 		<!-- fin acordeon docentes -->		
-	</div>
+	
 		<!-- Fin malla curricular -->
 		<?php			
 			 get_footer(); ;
