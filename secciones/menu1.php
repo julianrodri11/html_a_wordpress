@@ -107,7 +107,7 @@
             <div class="row pt-2 ml-0  mr-2 d-flex justify-content-end justify-content-lg-center">
                 <div class="col-6 d-flex justify-content-star justify-content-sm-center m-0 p-0">
                     <div class=" f-italica f-negrita f-size-14  m-0 p-0">
-                        <div class=" ">
+                        <div class="asis-redessociales">
                             <a class="px-0 px-sm-1" data-toggle="tooltip" data-placement="auto" title="Facebook" target="_blank_facebook" href="https://www.facebook.com/aunarpasto/">
                                 <img src="<?php bloginfo('template_url')?>/img/ico_redes/fbk_aunar.png" width="25" alt="facebook">
                             </a>
@@ -128,7 +128,7 @@
                 </div>
                 <!-- boton traducir -->
                 <div class="col-6 m-0 p-0">
-                    <div class="div m-0 p-0 d-flex justify-content-end justify-content-sm-center">
+                    <div class="div m-0 p-0 d-flex justify-content-end justify-content-sm-center asis-iconosaccesibilidad">
                         <div class="f-size-14 mr-1 badge badge-pill badge-primary fondo-azul pointer hover-texto-blanco hover-amarillo "
                         data-toggle="modal" data-target="#btn_traductor" onclick="llamar_traductor()">Idioma <img src="<?php bloginfo('template_url')?>/img/google_translate.png" style="border-radius:50%; " width="14px" alt=""></div>
                         <!-- iconos de ampliar y reducir -->
@@ -139,6 +139,7 @@
                             <a class="px-0 zoom-mas" id="aumentar" data-toggle="tooltip" data-placement="auto" title="Ampliar">A+</a>
                             <a class="px-0 zoom-menos" id="disminuir" data-toggle="tooltip" data-placement="auto" title="Reducir">A-</a>
                             <a class="px-0 pointer" id="restablecer" data-toggle="tooltip" data-placement="auto" title="Restablecer">R</a>
+                            <a class="px-0 pointer" id="" data-toggle="tooltip" data-placement="auto" title="Hacer un recorrido guiado" onclick="asistente()">&#x21AF</a>
                         </div></div>
                     </div>
                 </div>

@@ -117,3 +117,5 @@
     <!-- -------------------FIN FOOTER CONTACTOS------------------ -->
   </footer>
   <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/accesibilidad.js" async></script>
+  <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/shepherd.js"></script>
+  <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/recorrido.js"></script>

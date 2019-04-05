@@ -74,7 +74,7 @@
     <div class="container-fluid p-0 m-0">
       <div class="row d-flex justify-content-center p-0 m-0">
         <div class="col-12 col-lg-12 p-2 fondo-azul-oscuro">
-          <div class="row p-0 m-0">
+          <div class="row p-0 m-0 asis-portal-noticias">
             <div class="col-12 col-sm-6 text-center text-sm-right pr-sm-4 p-0 m-0 ">
               <h4 class="texto-amarillo f-negrita fuente-institucional my-1 ">Portal Noticias</h4>
             </div>

@@ -27,3 +27,4 @@ else window.addEventListener('load', loadDeferredStyles);
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/jquery.smoove.min.js" async></script>
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/efectos_smoove.js" async></script>
 <?php /*VARIABLE QUE SACA EL NOMBRE DEL SERVIDOR*/ //$servidor = $_SERVER['SERVER_NAME']; ?>
+<link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/shepherd-theme-default.css">

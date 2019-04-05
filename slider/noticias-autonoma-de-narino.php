@@ -55,7 +55,7 @@ if ( $my_query -> have_posts() ) :
           <!-- slider de noticias -->
           <div class="container py-5">
             <div class="row d-flex justify-content-center align-items-center">
-              <div class="col-12 ">
+              <div class="col-12 asis-mas-noticias">
                 <!-- silider -->
                 <div id="Mas_Noticias" class="carousel slide " data-ride="carousel" data-interval="4000">
                   <!-- Indicators -->

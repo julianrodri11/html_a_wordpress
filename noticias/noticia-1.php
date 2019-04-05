@@ -1,7 +1,7 @@
 <!-- -- título noticias ------------ -->
 <div class="container-fluid mt-3 ">
   <div class="row d-flex justify-content-center">
-    <div class="col-lg-8 col-sm-12 col-md-6text-center border-bottom borde-azul">
+    <div class="col-lg-8 col-sm-12 col-md-6 text-center border-bottom borde-azul ">
       <div class="row">
         <div class="col-12 pt-1 pl-1 mt-sm-5 py-3 text-center"><h1 class=" mt-0 fuente-institucional texto-azul f-negrita">Noticias</h1></div>
         <div class="col-12 pb-2 texto-azul f-size-18 fuente-institucional">¡Conoce las principales acciones y logros de nuestra comunidad!</div>
@@ -10,7 +10,7 @@
   </div>
 </div>
 <!-- -- Fin título noticias -------- -->
-<div class="container-fluid m-0 p-0 py-5 border-bottom borde-azul ">
+<div class="container-fluid m-0 p-0 py-5 border-bottom borde-azul asis-noticias">
   
   <?php
   
