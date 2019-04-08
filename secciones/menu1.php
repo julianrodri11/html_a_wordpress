@@ -139,7 +139,13 @@
                             <a class="px-0 zoom-mas" id="aumentar" data-toggle="tooltip" data-placement="auto" title="Ampliar">A+</a>
                             <a class="px-0 zoom-menos" id="disminuir" data-toggle="tooltip" data-placement="auto" title="Reducir">A-</a>
                             <a class="px-0 pointer" id="restablecer" data-toggle="tooltip" data-placement="auto" title="Restablecer">R</a>
-                            <a class="px-0 pointer" id="" data-toggle="tooltip" data-placement="auto" title="Hacer un recorrido guiado" onclick="asistente()">&#x21AF</a>
+                            <?php
+                            if ( is_front_page() ) :
+                            ?><a class="px-0 pointer" id="" data-toggle="tooltip" data-placement="auto" title="Hacer un recorrido guiado" onclick="asistente()">&#x21AF</a>
+                            <?php
+                            endif;
+                            ?>
+                            
                         </div></div>
                     </div>
                 </div>
