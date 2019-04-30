@@ -29,6 +29,8 @@
                             <li><a class="dropdown-item f-negrita texto-azul hvr-underline-from-center dropdown-toggle"
                             href="#">Calendarios</a>
                             <ul class="dropdown-menu f-size-12">
+                                <li><a class="dropdown-item f-negrita texto-azul hvr-underline-from-center" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2019_I.pdf"
+                                target="_blanck_1">Calendario Académico 2019-1</a></li>
                                 <li><a class="dropdown-item f-negrita texto-azul hvr-underline-from-center" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2018_II.pdf"
                                 target="_blanck_1">Calendario Académico 2018-2</a></li>
                                 <li><a class="dropdown-item f-negrita texto-azul hvr-underline-from-center" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2018_1.pdf"
@@ -48,7 +50,7 @@
                         Estudiantes
                     </a>
                     <ul class="dropdown-menu f-size-12" aria-labelledby="navbarDropdownMenu_est">
-                        <li><a class="dropdown-item f-negrita texto-azul hvr-underline-from-center" href="<?php bloginfo('template_url')?>/docs/reglamento_estudiantil.pdf"
+                        <li><a class="dropdown-item f-negrita texto-azul hvr-underline-from-center" href="<?php bloginfo('template_url')?>/docs/footer/Reglamento_Estudiantil_Modificado_2018.pdf"
                         target="_blanck_6">Reglamento Estudiantil</a></li>
                         <li><a class="dropdown-item f-negrita texto-azul hvr-underline-from-center" href="http://estudiantes.aunar.edu.co/"
                         target="_blanck_7">Bisel Estudiantes</a></li>
@@ -80,7 +82,7 @@
                             Extensiones
                         </a>
                         <ul class="dropdown-menu f-size-12" aria-labelledby="navbarDropdownMenu_ext">
-                            <li><a class=" dropdown-item texto-azul f-negrita hvr-underline-from-center" href="http://aunarcali.edu.co/ext/"
+                            <li><a class=" dropdown-item texto-azul f-negrita hvr-underline-from-center" href="http://aunarcali.edu.co/"
                             target="_blanck_11">Cali</a> </li>
                             <li><a class=" dropdown-item texto-azul f-negrita hvr-underline-from-center" href="http://www.aunarvillavicencio.edu.co/"
                             target="_blanck_12">Villavicencio</a> </li>

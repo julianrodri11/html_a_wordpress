@@ -90,9 +90,6 @@ function asistente() {
 
 	});
 
-
-	///prueba
-
 	tour.addStep('buscador-programas', {
 		title: 'Búsqueda de programas',
 		text: 'En esta sección podrá buscar y filtrar por ciudad, modalidad los diferentes programas ofertados por AUNAR ',

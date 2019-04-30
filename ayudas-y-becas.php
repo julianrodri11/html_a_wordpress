@@ -16,8 +16,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/ayudas-y-becas-aunar.jpg" alt="AYUDAS Y BECAS - AUNAR"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/ayudas-y-becas-aunar.jpg" alt="AYUDAS Y BECAS - AUNAR"/>
 				</div>
 			</div>
 		</div>
@@ -40,16 +39,12 @@
 				<div class="col-12 col-md-3">
 					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 						<!-- pestaña 1 -->
-						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
 							Filosofía
-						</a>
-						<!-- pestaña 2 -->
-						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-							Objetivo y alcance
 						</a>
 						<!-- pestaña 3 -->
 						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-							Entidad responsable de la asignación de estímulos Financieros
+							Comité de Becas y Descuentos
 						</a>
 						<!-- pestaña 4 -->
 						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
@@ -84,29 +79,16 @@
 								</p>
 							</div>
 						</div>
-						<!-- pestaña 2-->
-						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-							<div class="col-12 p-2 px-md-5 text-center">
-								<h3><strong>Objetivos y alcance</strong></h3>
-							</div>
-							<div class="col-12 p-2 px-md-5 text-justify">
-								<p class="pt-sans">
-									Este documento tiene como objetivo establecer con claridad las políticas generales para la solicitud, el otorgamiento, administración y asignación de las becas y financiamientos.
-									<br>
-									Las políticas y normas aquí establecidas se refieren a los estímulos que ofrece la institución y disminuir la deserción estudiantil de la corporación universitaria autónoma de Nariño.
-								</p>
-							</div>
-						</div>
+						
 						<!-- pestaña 3-->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
 							<div class="col-12 p-2 px-md-5 text-center">
-								<h3><strong>Entidad responsable de la asignación de estímulos Financieros</strong></h3>
+								<h3><strong>Comité de Becas y Descuentos</strong></h3>
 							</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p class="pt-sans">
-									El otorgamiento de becas y estímulos financieros es responsabilidad y función del Comité de Becas y Descuentos. Con el fin de asegurar que la asignación de dichos apoyos se realice de forma imparcial y considerando la situación particular de cada alumno, este comité deberá estar integrado por la rectoría, las diferentes vicerrectorías bienestar institucional, académica, investigación, administrativa y financiera.
-									<br>
-									El Comité estará presidido por el Vicerrector de bienestar institucional.
+									El otorgamiento de becas y estímulos financieros es responsabilidad y función del Comité de Becas y Descuentos. Con el fin de asegurar que la asignación de dichos apoyos se realice de forma imparcial y considerando la situación particular de cada alumno, este comité estará integrado por la rectoría, las diferentes vicerrectorías bienestar institucional, académica, investigación, administrativa y financiera.
+									<br><br>El Comité estará presidido por el Vicerrector de bienestar institucional.       
 								</p>
 							</div>
 						</div>

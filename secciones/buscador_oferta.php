@@ -6,7 +6,8 @@
               <h1 class="f-negrita fuente-institucional text-center">¿Donde quieres estudiar?</h1>
             </div>
             <div class="col-12 col-lg-10 text-center text-light fuente-institucional p-3">
-              <strong>AUNAR</strong> te permite elegir tu programa de interés para que estudies en cualquier sede del país
+              <!-- <strong>AUNAR</strong> te permite elegir tu programa de interés para que estudies en cualquier sede del país -->
+              Busca el programa de tu interés en las extensiones AUNAR del país.  
             </div>
           </div>
           <div class="col-12 col-lg-6 col-xl-5 p-2 izquierda_derecha">
@@ -16,7 +17,7 @@
                   <!-- SELECT DE SEDES -->
                   <div class="form-group pt-sans">                  
                     <select name="sede" class="form-control" onchange="cambia()">
-                    <option value="0">Seleccione Sede				</option>
+                    <option value="0">Seleccione Extensión				</option>
                     <option value="1">PASTO				            </option>
                     <option value="2">CALI				            </option>
                     <option value="3">CARTAGENA				        </option>

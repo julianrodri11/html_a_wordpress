@@ -30,7 +30,9 @@
 					</div>
 				</div>
 				<div class="row m-2">
-					<div class="col-12 col-lg-12 text-center pt-sans texto-azul">Si crees que cumples con estas características, puedes acceder a los siguientes</div>
+					<div class="col-12 col-lg-12 text-center pt-sans texto-azul">
+					Los siguientes son los formatos institucionales para aplicar en las convocatorias abiertas
+					</div>
 				</div>
 				<div class="row m-2 border-bottom borde-azul pb-3">
 					<div class="col-12 col-lg-12 ">

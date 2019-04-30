@@ -22,7 +22,7 @@
             </a>
           </div>
           <div class="mb-1 text-light fuente-institucional small">
-            <a class="text-white" data-toggle="tooltip" data-placement="auto" title="Ver" target="f4" href="<?php bloginfo('template_url')?>/docs/footer/Reglamento_Estudiantil.pdf">
+            <a class="text-white" data-toggle="tooltip" data-placement="auto" title="Ver" target="f4" href="<?php bloginfo('template_url')?>/docs/footer/Reglamento_Estudiantil_Modificado_2018.pdf">
               Reglamento Estudiantil
             </a>
           </div>

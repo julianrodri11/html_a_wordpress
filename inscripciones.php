@@ -78,18 +78,18 @@
                 </div>
                 <div class=" col-12 col-lg-12 pl-5 pt-3 pb-3   ">
                     <div class="row d-flex justify-content-center">
-                        <div class="col-12 col-lg-6 texto-azul ">
-                            <div class="col-12">*Copia de documento de identidad ampliado 150% (Tarjeta de identidad, cédula de ciudadanía o contraseña)</div>
-                            <div class="col-12">*Copia a color de resultados PRUEBAS SABER 11 (ICFES)</div>
-                            <div class="col-12">*Copia del diploma de bachillerato</div>
-                            <div class="col-12">*Copia del acta de grado</div>
-                            <div class="col-12">*Certificado médico</div>
-                            <div class="col-12">*Examen de serología</div>
-                            <div class="col-12">*Registro civil</div>
-                            <div class="col-12">*Copia carné de salud</div>
-                            <div class="col-12">*Libreta militar</div>
-                            <div class="col-12">*1 Foto fondo azul 3x4</div>
-                            <div class="col-12">*1 Carpeta ocio color café</div>
+                        <div class="col-12 col-lg-6 texto-azul pl-lg-5">
+                            <div class="col-12"><li>Copia de documento de identidad ampliado 150% (Tarjeta de identidad, cédula de ciudadanía o contraseña)</div>
+                            <div class="col-12"><li>Copia a color de resultados PRUEBAS SABER 11 (ICFES)</div>
+                            <div class="col-12"><li>Copia del diploma de bachillerato</div>
+                            <div class="col-12"><li>Copia del acta de grado</div>
+                            <div class="col-12"><li>Certificado médico</div>
+                            <div class="col-12"><li>Examen de serología</div>
+                            <div class="col-12"><li>Registro civil</div>
+                            <div class="col-12"><li>Copia carné de salud</div>
+                            <div class="col-12"><li>Libreta militar</div>
+                            <div class="col-12"><li>1 Foto fondo azul 3x4</div>
+                            <div class="col-12"><li>1 Carpeta ocio color café</div>
                         </div>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
             <div class="container border-bottom borde-azul pb-4">
                 <div class="mt-4   ">
                     <div class="col-12"><h3 class="p-2 f-negrita fuente-institucional texto-azul text-center">Aspirantes a programas presenciales y a distancia</h3></div>
-                    <div class="col-12 text-justify pt-sans texto-azul">Todo aspirante de programa presencial y a distancia debe realizar su preinscripción por medio de esta página. Posteriormente, cancelar el valor de inscripción en la cuenta especicada en su recibo de pago. Una vez consignado el pago, deben acercarse a la Ofc. de Mercadeo para legalizar su inscripción con los documentos requeridos y el soporte de pago de inscripción.
+                    <div class="col-12 text-justify pt-sans texto-azul">Todo aspirante de programa presencial y a distancia debe realizar su preinscripción por medio de esta página. Posteriormente, se deberá cancelar el valor de inscripción en la cuenta especificada en su recibo de pago. Una vez consignado el pago, es necesario acercarse a la Oficina de Mercadeo para legalizar su inscripción con los documentos requeridos y el soporte de pago de inscripción.
                         <div class="col-12  mt-3">
                             <div class="row d-flex justify-content-center">
                                 <a href="#" class="p-2 mr-3 border borde-azul badge badge-pill hover-amarillo hover-texto-blanco texto-azul sin-texto-subrayado">PDF ADMITIDOS</a>

@@ -36,6 +36,7 @@
       <div class="row ">
         <div class="col-lg-3 pt-5 pb-4 col-md-3 col-sm-12 d-flex justify-content-center align-items-center">
           <div class="row p-3 fondo-azul text-whited-flex justify-content-center">
+            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2019_I.pdf" target="_blank">Calendario Académico 2019-1</a></div>
             <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2018_II.pdf" target="_blank">Calendario Académico 2018-2</a></div>
             <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2018_1.pdf" target="_blank">Calendario Académico 2018-1</a></div>
             <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2017_2.pdf" target="_blank">Calendario Académico 2017-2</a></div>
@@ -48,7 +49,9 @@
               <a class="hvr-underline-from-center pb-2" href="<?php bloginfo('template_url')?>/docs/derechos_pecuniarios2018.pdf"  data-toggle="tooltip" data-placement="bottom" title="Click aquí" target="_blank">
               <img  class=" img-fluid" alt="Derechos pecuniarios autonoma de nariño" src="<?php bloginfo('template_url')?>/img/derechos.png"></a>
             </div>
-            <div class="col-12 p-5 texto-azul fuente-institucional">Los siguientes son los montos de los derechos pecuniarios por servicios académicos y administrativos para el año 2018, debidamente aprobados por el Consejo Directivo de la Corporación Universitaria Autónoma de Nariño</div>
+            <div class="col-12 p-5 texto-azul fuente-institucional">
+              Los anteriores son los montos correspondientes a los derechos pecuniarios por servicios académicos y administrativos para el año 2019, aprobados por el Consejo Directivo de la Corporación Universitaria Autónoma de Nariño.
+            </div>
           </div>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-12 d-flex justify-content-center align-items-center">
@@ -116,7 +119,7 @@
         <div class="col-lg-12 p-2 d-flex align-items-center justify-content-center justify-content-sm-center justify-content-md-center e_arriba_abajo">          
           <div class="p-1 mt-5 mt-sm-5 bd-highlight text-center pr-3">
             <h1 class="my-1 fuente-institucional texto-azul f-negrita">Eventos</h1>
-            <label class="texto-azul fuente-institucional f-size-18">¡Entérate de nuestras novedades!</label>
+            <label class="texto-azul fuente-institucional f-size-18">Calendario de eventos</label>
           </div>        
         </div>
 
