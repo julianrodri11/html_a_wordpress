@@ -165,44 +165,44 @@
 	<!-- personal encargado -->
 	<div class="container-fluid py-5">
 		
-		<div class="row m-0 p-0 ">
-			
-			<!-- imagen de personal -->
-			<div class="col-12 col-lg-5 d-flex justify-content-center align-items-center">
-				<div class="row col-12 ">
-					<div class="col-12 py-3 text-center text-lg-right mx-auto ">
-						<!-- aqui va todo lo que se quiera centrar -->
-						<img src="<?php bloginfo('template_url')?>/img/investigacion/pedro-pablo-burbano.png.png" alt="Pedro Pablo Burbano" width="35%">
-					</div>
-				</div>
-			</div>
-			<!-- fin imagen de personal -->
-			<!-- información personal -->
-			<div class="col-12 col-lg-5 d-flex justify-content-center align-items-center">
-				<div class="row col-12 ">
-					<div class="col-12 py-3 mx-auto text-left texto-azul-os ">
-						<!-- aqui va todo lo que se quiera centrar -->
-						<h4 class="texto-amarillo fuente-institucional f-negrita p-0">VICERECTOR (A)</h4>
-						<div class="pt-sans">
-							<label class="f-negrita">PEDRO PABLO BURBANO</label>
-							<br>Lic. en física
-							<br>Esp. Economía de los recursos naturales
-							<br>Esp. Ciencia, tecnología y sociedad
-							<br>Esp. Dirección y gerencia pública en administración local
-							<br>Mg. Docencia de la física
-							<br>Mg. Análisis y gestión de la ciencia y la tecnología
-							<br>Mg. MBA directivo
-							<br>Doc. Estudios políticos
-							<br>Docente de los Colegios Seminario Misional de Sibundoy, Champagnat de Sibundoy y Minuto de Dios, Bogotá.
-							<br>Docente de las Universidades: Cauca, ESAP, Distrital, Los Libertadores, Instituto Tecnológico del Putumayo, Autónoma de Nariño.
-							<br><br>
-							Vicerrectoria.investigacion@aunar.edu.co
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- fin información personal -->
-		</div>
+	<!-- 	<div class="row m-0 p-0 "> -->
+<!-- 			 -->
+<!-- 			imagen de personal -->
+<!-- 			<div class="col-12 col-lg-5 d-flex justify-content-center align-items-center"> -->
+<!-- 				<div class="row col-12 "> -->
+<!-- 					<div class="col-12 py-3 text-center text-lg-right mx-auto "> -->
+<!-- 						aqui va todo lo que se quiera centrar -->
+<!-- 						<img src="<?php bloginfo('template_url')?>/img/investigacion/pedro-pablo-burbano.png.png" alt="Pedro Pablo Burbano" width="35%"> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 			fin imagen de personal -->
+<!-- 			información personal -->
+<!-- 			<div class="col-12 col-lg-5 d-flex justify-content-center align-items-center"> -->
+<!-- 				<div class="row col-12 "> -->
+<!-- 					<div class="col-12 py-3 mx-auto text-left texto-azul-os "> -->
+<!-- 						aqui va todo lo que se quiera centrar -->
+<!-- 						<h4 class="texto-amarillo fuente-institucional f-negrita p-0">VICERECTOR (A)</h4> -->
+<!-- 						<div class="pt-sans"> -->
+<!-- 							<label class="f-negrita">PEDRO PABLO BURBANO</label> -->
+<!-- 							<br>Lic. en física -->
+<!-- 							<br>Esp. Economía de los recursos naturales -->
+<!-- 							<br>Esp. Ciencia, tecnología y sociedad -->
+<!-- 							<br>Esp. Dirección y gerencia pública en administración local -->
+<!-- 							<br>Mg. Docencia de la física -->
+<!-- 							<br>Mg. Análisis y gestión de la ciencia y la tecnología -->
+<!-- 							<br>Mg. MBA directivo -->
+<!-- 							<br>Doc. Estudios políticos -->
+<!-- 							<br>Docente de los Colegios Seminario Misional de Sibundoy, Champagnat de Sibundoy y Minuto de Dios, Bogotá. -->
+<!-- 							<br>Docente de las Universidades: Cauca, ESAP, Distrital, Los Libertadores, Instituto Tecnológico del Putumayo, Autónoma de Nariño. -->
+<!-- 							<br><br> -->
+<!-- 							Vicerrectoria.investigacion@aunar.edu.co -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 			fin información personal -->
+<!-- 		</div> -->
 		<!-- linea amarilla -->
 		<div class="row  m-0 p-0">
 			<div class="col-8 borde-amarillo border-bottom p-0 mx-auto py-3"></div>

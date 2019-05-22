@@ -46,7 +46,7 @@
 					</a>
 				</div>
 				<div class="col-12 d-flex mx-auto justify-content-center">
-					<a href="vicerrectorias" id="mn_vicerrectoria_t" class="nav-link hvr-curl-top-right f-negrita fuente-institucional texto-azul ">Vicerrectoría
+					<a href="vicerrectorias" id="mn_vicerrectoria_t" class="nav-link hvr-curl-top-right f-negrita fuente-institucional texto-azul ">Vicerrectorías
 					</a>
 				</div>
 			</div>

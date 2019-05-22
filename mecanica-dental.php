@@ -172,33 +172,23 @@
 								como integrante de un equipo de trabajo cuya dedicación exclusiva es la salud oral y así tener la
 								capacidad de integrarse al desarrollo productivo del país a partir de las competencias y destrezas
 								manuales adquiridas en su formación, lo cual permite mejorar su calidad de vida en la medida que logra
-								sus metas personales y laborales.</div>
-							<div class="col-12">
-								<br>Los egresados son capaces de:
-								<br>-Actuar como auxiliar del odontólogo en forma individual, o asociado como miembro de un equipo de
-								salud, de acuerdo a pautas éticas y morales y bajo las normas legales que rigen el ejercicio de la
-								profesión
-								Complementar la atención clínica odontológica a través del diseño y la elaboración adecuada de la
-								aparatología protésica, estética, ortodóntica y de ortopedia maxilar
-								<br>-Desarrollar plenamente su capacidad profesional como auxiliar del odontólogo con criterio
-								científico y capacidad técnica
-								<br>-Organizar el trabajo del laboratorio dental, adaptando procedimientos, produciendo información,
-								asignando o distribuyendo tareas, recursos y materiales
-								Fabricar, modificar y reparar prótesis dentales y aparatos de ortodoncia a partir del diseño
-								especificaciones técnicas de fabricación, siguiendo las especificaciones de calidad y de seguridad e
-								higiene establecidas.
-								<br>-Participar en proyectos de investigación y en programas formativos, así como proponer medidas
-								relacionadas con la eficiencia, la seguridad y la calidad.
-								<br>-Mantener actualizados sus conocimientos científicos
-								<br>-Tener en cuenta las medidas de bioseguridad en el laboratorio
-								<br>-Brindar información del producto o servicio al cliente interno y externo, conforme a requerimientos
-								del cliente o usuario y según políticas de servicio institucionales.
-								<br>-Mantener el ambiente de trabajo en condiciones de higiene y seguridad acorde con la reglamentación
-								empresarial.
-								<br>-Distribuir y vender productos de laboratorio dental
-								Ser responsable, respetuoso y creativo en el desempeño laboral
-								<br>-Adaptarse a las nuevas situaciones generadas como consecuencia de la innovación tecnológica y
-								organizativa introducidas en su campo laboral
+								sus metas personales y laborales. <br>
+								<br>Los egresados son capaces de: <br>
+							</div>
+							<div class="col-12 pl-lg-5"><br>
+								
+								<li>Actuar como auxiliar del odontólogo en forma individual, o asociado como miembro de un equipo de	salud, de acuerdo a pautas éticas y morales y bajo las normas legales que rigen el ejercicio de la profesión </li>
+								<li>Complementar la atención clínica odontológica a través del diseño y la elaboración adecuada de la aparatología protésica, estética, ortodóntica y de ortopedia maxilar</li>
+								<li>Desarrollar plenamente su capacidad profesional como auxiliar del odontólogo con criterio científico y capacidad técnica</li>
+								<li>Organizar el trabajo del laboratorio dental, adaptando procedimientos, produciendo información, asignando o distribuyendo tareas, recursos y materiales Fabricar, modificar y reparar prótesis dentales y aparatos de ortodoncia a partir del diseño especificaciones técnicas de fabricación, siguiendo las especificaciones de calidad y de seguridad e higiene establecidas.</li>
+								<li>Participar en proyectos de investigación y en programas formativos, así como proponer medidas relacionadas con la eficiencia, la seguridad y la calidad.</li>
+								<li>Mantener actualizados sus conocimientos científicos</li>
+								<li>Tener en cuenta las medidas de bioseguridad en el laboratorio</li>
+								<li>Brindar información del producto o servicio al cliente interno y externo, conforme a requerimientos del cliente o usuario y según políticas de servicio institucionales.</li>
+								<li>Mantener el ambiente de trabajo en condiciones de higiene y seguridad acorde con la reglamentación empresarial.</li>
+								<li>Distribuir y vender productos de laboratorio dental</li>
+								<li>Ser responsable, respetuoso y creativo en el desempeño laboral</li>
+								<li>Adaptarse a las nuevas situaciones generadas como consecuencia de la innovación tecnológica y organizativa introducidas en su campo laboral</li>
 							</div>
 						</div>
 
@@ -219,7 +209,7 @@
 							desarrollo integral, así como los fundamentos básicos en las áreas de biología, lenguaje, química,
 							tecnología y segunda lengua; también debe poseer destrezas y habilidades motoras para la manipulación de
 							materiales y equipos que se utilizarán en el desarrollo del programa.
-							<br>
+							<br><br>
 							El aspirante debe tener actitudes sociales y de sensibilización frente a las necesidades de la salud oral
 							de su comunidad para contribuir al mejoramiento de la calidad de vida de las personas mediante el
 							compromiso social y su sentido humano. Muestra disposición para participar de manera activa y colaborativa

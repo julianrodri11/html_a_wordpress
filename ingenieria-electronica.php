@@ -23,8 +23,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/carreras/ingenieria-electronica-aunar.jpg" alt="ingeniería electrónica autónoma de nariño" />
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/carreras/ingenieria-electronica-aunar.jpg" alt="ingeniería electrónica autónoma de nariño" />
 				</div>
 			</div>
 		</div>
@@ -173,14 +172,17 @@
 						capacitado para: Diseñar y desarrollar todo tipo de sistemas electrónicos, con alto índice de complejidad,
 						además, dar soporte en el campo de las telecomunicaciones en las organizaciones en donde se desempeñe. De
 						igual forma podrá desempeñarse como:<br>
-						- Director del departamento técnico en empresas del sector público y privado.<br>
-						- Empresario independiente en la producción de circuitos electrónicos.<br>
-						- Ingeniero de montaje y mantenimiento de sistemas electrónicos y de redes de comunicación.<br>
-						- Diseñador o interventor de proyectos tecnológicos.<br>
-						- Consultor de empresas relacionadas con la electrónica.<br>
-						- Director de mantenimiento preventivo y correctivo de equipos electrónicos.<br>
-						- Diseñador de soluciones en automatización de procesos industriales.<br>
-						- Director y/o participante en proyectos de investigación tecnológica.<br>
+					</div>
+					<div class="col-12 pt-sans text-justify pl-lg-5">
+						<br>
+						<li> Director del departamento técnico en empresas del sector público y privado. 	</li>
+						<li> Empresario independiente en la producción de circuitos electrónicos. 	</li>
+						<li> Ingeniero de montaje y mantenimiento de sistemas electrónicos y de redes de comunicación. 	</li>
+						<li> Diseñador o interventor de proyectos tecnológicos. 	</li>
+						<li> Consultor de empresas relacionadas con la electrónica. 	</li>
+						<li> Director de mantenimiento preventivo y correctivo de equipos electrónicos. 	</li>
+						<li> Diseñador de soluciones en automatización de procesos industriales. 	</li>
+						<li> Director y/o participante en proyectos de investigación tecnológica. 	</li>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 border-left borde-amarillo">

@@ -162,13 +162,12 @@
 								como:
 							</div>
 							<div class="col-12">
-								<br>-Auxiliar de procesos en la industria de la confección de prendas de vestir.
-								<br>-Auxiliar en los procesos de intervención textil como tinción y estampación coherentes con las
-								tendencias de la moda.
-								<br>-Auxiliar de procesos de control de calidad en diseño y confección de prendas de vestir.
-								<br>-Operador de máquinas Industriales propias del sector de la confección.
-								<br>-Patronista en una fábrica de prendas de vestir.
-								<br>-Supervisor de ensamble de piezas en un taller de confección de prendas de vestir.
+								<li>Auxiliar de procesos en la industria de la confección de prendas de vestir.</li>
+								<li>Auxiliar en los procesos de intervención textil como tinción y estampación coherentes con las tendencias de la moda.</li>
+								<li>Auxiliar de procesos de control de calidad en diseño y confección de prendas de vestir.</li>
+								<li>Operador de máquinas Industriales propias del sector de la confección.</li>
+								<li>Patronista en una fábrica de prendas de vestir.</li>
+								<li>Supervisor de ensamble de piezas en un taller de confección de prendas de vestir.</li>
 							</div>
 						</div>
 
@@ -181,21 +180,14 @@
 							DISEÑO Y CONFECCIÓN DE MODAS?</h3>
 					</div>
 					<div class="col-12 pt-sans text-justify">
-						<br> - Desarrollar colecciones con alto contenido estético y creativo coherentes
-						con las tendencias de la moda mediante el uso de software específico.
-						<br> - Crear y diseñar prendas femeninas, masculinas e infantiles de diferentes
-						líneas del vestuario.
-						<br> - Patronar, escalar y trazar prendas de las diferentes líneas y universos del
-						vestuario.
-						<br> - Confeccionar prendas de vestir bajo altos estándares de calidad.
-						<br> - Reconocer los conceptos de calidad y producción de prendas de vestir
-						requeridos por el sector textil, regional y nacional.
-						<br> - Estructurar procesos productivos de prendas de vestir desde la idea
-						creativa hasta el producto final garantizando su calidad.
-						<br> - Interpretar instrumentos técnicos de producción y de fabricación en la
-						confección de prendas de vestir.
-						<br> - Supervisar las diferentes funciones de la cadena de suministros de una
-						empresa de confección.
+						<li>Desarrollar colecciones con alto contenido estético y creativo coherentes con las tendencias de la moda mediante el uso de software específico.</li>
+						<li>Crear y diseñar prendas femeninas, masculinas e infantiles de diferentes líneas del vestuario.</li>
+						<li>Patronar, escalar y trazar prendas de las diferentes líneas y universos del vestuario.</li>
+						<li>Confeccionar prendas de vestir bajo altos estándares de calidad.</li>
+						<li>Reconocer los conceptos de calidad y producción de prendas de vestir requeridos por el sector textil, regional y nacional.</li>
+						<li>Estructurar procesos productivos de prendas de vestir desde la idea creativa hasta el producto final garantizando su calidad.</li>
+						<li>Interpretar instrumentos técnicos de producción y de fabricación en la	confección de prendas de vestir.</li>
+						<li>Supervisar las diferentes funciones de la cadena de suministros de una	empresa de confección.</li>
 					</div>
 				</div>
 			</div>

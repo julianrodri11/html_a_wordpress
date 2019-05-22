@@ -86,9 +86,18 @@
 				<div class="col-12 col-lg-7 col-md-6 p-5">
 					<div class="col-12"> <h3 class="fuente-institucional f-color-iinformatica f-negrita">Objetivo General</h3></div>
 					<div class="col-12 pt-sans text-justify">
-						<p>El programa de Ingeniería Informática de la Corporación Universitaria Autónoma de Nariño, es un programa en modalidad a distancia, que se orienta específicamente al desarrollo de software para atender las necesidades actuales, en el tratamiento de grandes volúmenes de datos.
+						<p>
+							El programa de Ingeniería Informática de la Corporación Universitaria Autónoma de Nariño, nació con resolución del Ministerio de Educación Nacional No. 16643 del 20 de noviembre de 2013. Es un programa en modalidad a distancia con 9 semestres, que se orienta específicamente al desarrollo de software para atender las necesidades actuales, en el tratamiento de grandes volúmenes de datos.
 						</p>
-						
+						<p>En acuerdo No. 62-18 de 31 de mayo de 2018, se aprobaron las líneas de investigación del programa:</p>
+					</div>
+					<div class="col-12 pt-sans text-justify pl-lg-5">
+						<li>Desarrollo de Software</li>
+						<li>Sistemas Inteligentes</li><br>
+					</div>
+					<div class="col-12 pt-sans text-justify">
+						<p>El programa actualmente cuenta con un grupo de investigación llamado <b>SEDMATEC</b>, que acoge las líneas de investigación del programa y ha tenido avances significativos con respecto al los estándares de medición de Colciencias.</p>
+						<p>Para más información sobre los productos de investigación del programa: <a class="btn text-light fondo-azul-oscuro pt-sans hvr-forward" href="http://sites.google.com/aunar.edu.co/investigacion" target="_blanck">Click aquí</a>  </p>						
 					</div>
 				</div>
 			</div>
@@ -126,12 +135,20 @@
 					<div class="col-12"><h5 class="fuente-institucional f-color-iinformatica f-negrita">AL GRADUARTE</h5><h3 class="fuente-institucional f-color-iinformatica f-negrita text-center">¿DÓNDE PUEDES TRABAJAR?</h3></div>
 					<div class="col-12 pt-sans text-justify">
 						<p>El Ingeniero Informático de la AUNAR  actúa  como un profesional independiente, gestor de su propia empresa o vinculado en calidad al:
-						</p>
-						<br>-Analizar, diseñar, implementar y evaluar software por medio de lenguajes de programación y técnicas avanzadas de ingeniería, aplicando normas de calidad vigentes.
-						<br>-Desarrollar e implementar políticas y procedimientos para el procesamiento electrónico de datos y desarrollo de sistemas informáticos.
-						<br>-Resolver problemas relacionados con la adquisición, transmisión, control y gestión de información presentes en la investigación, la industria, el comercio, la educación, entretenimiento y demás procesos inherentes.
-						<br>-Crear empresas vinculada al desarrollo de productos y servicios en Tecnologías de la Información y la Comunicación.
-						<br>-Formular, gestionar y evaluar proyectos tecnológicos viables y sostenibles, basados en el uso de las tecnologías de la información y la comunicación.
+						</p>					
+					</div>
+					<div class="col-12 pt-sans text-justify pl-lg-5">
+						<br>
+						<li>Analizar, diseñar, implementar y evaluar software por medio de lenguajes de programación y técnicas avanzadas de ingeniería, aplicando normas de calidad vigentes.
+							</li>
+						<li>Desarrollar e implementar políticas y procedimientos para el procesamiento electrónico de datos y desarrollo de sistemas informáticos.
+							</li>
+						<li>Resolver problemas relacionados con la adquisición, transmisión, control y gestión de información presentes en la investigación, la industria, el comercio, la educación, entretenimiento y demás procesos inherentes.
+							</li>
+						<li>Crear empresas vinculada al desarrollo de productos y servicios en Tecnologías de la Información y la Comunicación.
+							</li>
+						<li>Formular, gestionar y evaluar proyectos tecnológicos viables y sostenibles, basados en el uso de las tecnologías de la información y la comunicación.
+							</li>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 border-left b-color-iinformatica">

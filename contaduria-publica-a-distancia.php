@@ -89,7 +89,7 @@
 				<div class="col-12 col-lg-7 col-md-6 p-5">
 					<div class="col-12"> <h3 class="fuente-institucional f-color-cpublica-dis f-negrita">Objetivo General</h3></div>
 					<div class="col-12 pt-sans text-justify">
-						<p>El Programa que ofrece la Corporación Universitaria Autónoma de Nariño posee el contenido curricular de la formación profesional la cual responde a los lineamientos nacionales e internacionales, complementando los elementos teóricos con los aspectos prácticos en un ambiente integral y dinámico en la formación de las competencias y saberes que dan competitividad al egresado, en un contexto cada vez más globalizado. <br>
+						<p>El Programa que ofrece la Corporación Universitaria Autónoma de Nariño posee el contenido curricular de la formación profesional la cual responde a los lineamientos nacionales e internacionales, complementando los elementos teóricos con los aspectos prácticos en un ambiente integral y dinámico en la formación de las competencias y saberes que dan competitividad al egresado, en un contexto cada vez más globalizado. <br><br>
 							Específicamente el <strong> PROFESIONAL EN CONTADURÍA PÚBLICA</strong>, será capaz de participar, organizar y ejecutar estrategias de manejo y dirección de la información financiera y contable, recopilación y evaluación de la información  relacionada con  actividades financieras de las empresas públicas y privadas; asesorar en la aplicación e interpretación de estados financieros, aspectos fiscales y normatividad tributaria vigente a nivel nacional e internacional, aplicar de estrategias que permitan solucionar problemas específicos del área contable en armonía con los aspectos jurídicos.
 						</p>
 					</div>
@@ -132,19 +132,21 @@
 			<div class="row p-4 m-1 ">
 				<div class="col-12 col-sm-6 ">
 					<div class="col-12"><h5 class="fuente-institucional f-color-cpublica-dis f-negrita">AL GRADUARTE</h5><h3 class="fuente-institucional f-color-cpublica-dis f-negrita text-center">¿DÓNDE PUEDES TRABAJAR?</h3></div>
-					<div class="col-12 pt-sans text-justify">
-						<br>-Jefe financiero. Contador público responsable de la asesoría financiera, económica y fiscal.
-						<br>-Ocupar el cargo de revisor Fiscal y desarrollar auditoría interna o externa en los entes económicos.
-						<br>-Gerencia, asesorar y prestar consultoría a organizaciones; Además de proponer estrategias de crecimiento y desarrollo organizacional en el marco del proceso de la globalización de la economía y de la apertura de los mercados.
+					<div class="col-12 pt-sans text-justify pl-lg-5">
+						<li>Jefe financiero. Contador público responsable de la asesoría financiera, económica y fiscal.</li>
+						<li>Ocupar el cargo de revisor Fiscal y desarrollar auditoría interna o externa en los entes económicos.</li>
+						<li>Gerencia, asesorar y prestar consultoría a organizaciones; Además de proponer estrategias de crecimiento y desarrollo organizacional en el marco del proceso de la globalización de la economía y de la apertura de los mercados.</li>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 border-left b-color-cpublica-dis">
 					<div class="col-12"><h5 class="fuente-institucional f-color-cpublica-dis f-negrita">¿QUÉ HACE UN</h5><h3 class="fuente-institucional f-color-cpublica-dis f-negrita text-center">CONTADOR PÚBLICO?</h3></div>
 					<div class="col-12 pt-sans text-justify">
 						El Profesional en Contaduría Pública de la Corporación Universitaria Autónoma de Nariño, estará  capacitado para el manejo y dirección de la información financiera y contable, con  formación humana, ética, mentalidad investigativa, innovadora y empresarial orientada a la solución de problemas prácticos y al desarrollo de competencias que le permitan:
-						<br>-Recopilar y evaluar información del registro de las actividades de los entes económicos públicos  y privados en todos sus aspectos financieros y sociales mediante la rendición de informes fidedignos.
-						<br>-Aplicar el pensamiento estratégico que permita solucionar los problemas específicos del área contable de los entes económicos, armonizando con los aspectos jurídicos, administrativos e informáticos y su vinculación con el entorno socio económico regional, nacional e internacional.
-						<br>-Asesorar en la aplicación e interpretación de los aspectos fiscales y normatividad tributaria  vigente del orden nacional e internacional.
+					</div>
+					<div class="col-12 pt-sans text-justify pl-lg-5"><br>
+						<li>Recopilar y evaluar información del registro de las actividades de los entes económicos públicos  y privados en todos sus aspectos financieros y sociales mediante la rendición de informes fidedignos.</li>
+						<li>Aplicar el pensamiento estratégico que permita solucionar los problemas específicos del área contable de los entes económicos, armonizando con los aspectos jurídicos, administrativos e informáticos y su vinculación con el entorno socio económico regional, nacional e internacional.</li>
+						<li>Asesorar en la aplicación e interpretación de los aspectos fiscales y normatividad tributaria  vigente del orden nacional e internacional.</li>
 					</div>
 					<div class="col-12 mt-5"><h6 class="fuente-institucional f-color-cpublica-dis f-negrita">Líneas de profundización<br>(Electivas):</h6></div>
 					

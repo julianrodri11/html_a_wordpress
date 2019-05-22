@@ -128,11 +128,13 @@
 				<div class="col-12 col-sm-6 ">
 					<div class="col-12"><h5 class="fuente-institucional f-color-aempresas f-negrita">AL GRADUARTE</h5><h3 class="fuente-institucional f-color-aempresas f-negrita text-center">¿DÓNDE PUEDES TRABAJAR?</h3></div>
 					<div class="col-12 pt-sans text-justify">
-						El profesional del Programa de Administración de Empresas de la AUNAR estará capacitado para:<br>
-						-Gestor de ideas de negocio y proyecto de desarrollo. <br>
-						-Director de organizaciones empresariales. <br>
-						-Asesor y consultor empresarial. <br>
-						
+						El profesional del Programa de Administración de Empresas de la AUNAR estará capacitado para:<br>						
+					</div>
+					<div class="col-12 pt-sans text-justify pl-lg-5">
+						<br>
+						<li>Gestor de ideas de negocio y proyecto de desarrollo. </li>
+						<li>Director de organizaciones empresariales. </li>
+						<li>Asesor y consultor empresarial. </li>						
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 border-left b-color-aempresas">

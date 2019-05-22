@@ -54,11 +54,11 @@
 				<div class="col-12 col-md-3">
 					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 						<!-- pestaña 1 -->
-						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita border-bottom borde-azul fondo-gris-os active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita border-bottom borde-azul" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
 							Información Institucional AUNAR
 						</a>
 						<!-- pestaña 2 -->
-						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita border-bottom borde-azul" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita border-bottom borde-azul  fondo-gris-os" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
 							Misión, Visión
 						</a>
 						<!-- pestaña 3 -->
@@ -75,7 +75,7 @@
 							Organigrama
 						</a>
 						<!-- pestaña 7 -->
-						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita border-bottom borde-azul fondo-gris-os" id="v-pills-act-7-tab" data-toggle="pill" href="#v-pills-act-7" role="tab" aria-controls="v-pills-act-7" aria-selected="false">
+						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita border-bottom borde-azul fondo-gris-os  active" id="v-pills-act-7-tab" data-toggle="pill" href="#v-pills-act-7" role="tab" aria-controls="v-pills-act-7" aria-selected="false">
 							Símbolos
 						</a>
 						<!-- pestaña 8 -->
@@ -168,10 +168,69 @@ Para 1992 y acorde con las disposiciones de la Ley 30 de Educación, se crearon 
 						<!-- pestaña 7-->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-act-7" role="tabpanel" aria-labelledby="v-pills-act-7-tab">
 							<div class="col-12 p-2 px-md-5 text-center">
-								<h3 class=" f-negrita fuente-institucional texto-azul">SíMBOLOS</h3>
+								<h3 class=" f-negrita fuente-institucional texto-azul">SÍMBOLOS</h3><br>
+								<h3 class=" f-negrita fuente-institucional texto-azul">ESCUDO</h3>
 							</div>
-							<div class="col-12 p-2 px-md-5">
-								<strong class="bg-danger">Información no enviada</strong>
+							<div class="col-12 p-2 px-md-5 d-flex justify-content-center mx-auto"><img class="img-fluid" width="70%" src="<?php bloginfo('template_url')?>/img/logo-autonoma-de-narino-AUNAR.png" alt="Logo Autónoma de Nariño - aunar">
+							</div>
+							<div class="col-12 p-2 px-md-5 text-center">
+								<h3 class=" f-negrita fuente-institucional texto-azul">HIMNO</h3>
+								<br>
+								<h5>Música y letra: Arturo Hernández.</h5>
+								<br>
+								<h4>Estrofa I</h4>
+
+								<p>
+								Formadores idóneos de cambio <br>
+								Compromiso de ciencia y saber <br>
+								Liderazgo en respeto y cultura <br>
+								Son valores de nuestro emprender <br>
+								</p>
+								
+								<h4>Estrofa II</h4>
+
+								<p>
+								El principio de nuestra exigencia <br>
+								Es el campo de la educació <br>
+								Generando acciones de lucha <br>
+								Innovando en la investigación <br>
+								</p>
+								
+								<h4>Coro</h4>
+
+								<p>
+								Oh lugar de pujanza y empeño <br>
+								Fulgurante y gloriosa de bien <br>
+								//Se tú, espíritu de compromiso <br>
+								En la ciencia, el estado y la fe// <br>
+								</p>
+								
+								<h4>Estrofa III</h4>
+
+								<p>
+								Trasciende y reafirma tu raza <br>
+								En el ámbito del conocer <br>
+								Es la Autónoma el sitio sagrado <br>
+								Y es el aula altar del saber <br>
+								</p>
+								
+								<h4>Estrofa IV</h4>
+
+								<p>
+								Aprender nuestra filosofía <br>
+								Con respeto a la libertad <br>
+								Propender por amor y justicia <br>
+								Ascendiendo a la calidad <br>
+								</p>
+								
+								<h4>Coro</h4>
+
+								<p>
+								Oh lugar de pujanza y empeño <br>
+								Fulgurante y gloriosa de bien <br>
+								//Se tú, espíritu de compromiso <br>
+								En la ciencia, el estado y la fe// <br>
+								</p>
 							</div>
 						</div>
 						<!-- pestaña 8-->
@@ -224,65 +283,72 @@ Para 1992 y acorde con las disposiciones de la Ley 30 de Educación, se crearon 
 								<h3 class=" f-negrita fuente-institucional texto-azul">DIRECTORIO</h3>
 							</div>
 							<div class="col-12 p-2 px-md-5 text-justify pt-sans">
-								102 RECEPCIÓN
-								<br> 103 REGISTRO Y CONTROL
-								<br> 104 MERCADEO 1
-								<br> 105 MERCADEO 2
-								<br> 106 MERCADEO 3
-								<br> 107 ENFERMERÍA
-								<br> 108 MEDICO
-								<br> 109 CREDITO Y CARTERA
-								<br> 110 BIENESTAR
-								<br> 111 VICE. BIENESTAR
-								<br> 112 PROYECCIÓN  SOCIAL
-								<br> 113 GESTION DOCUMENTAL
-								<br> 100 LABORATORIO
-								<br> 114 BIBLIOTECA
-								<br> 201 SECRETARIA CIDAE
-								<br> 202 OTRI
-								<br> 203 CREAN
-								<br> 204 SECRETARÍA DE PLANEACIÓN
-								<br> 205 SECRE. DECA. CONTABILIDAD Y ADMINISTRACIÓN
-								<br> 206 SECRE VICE. INVESTIGACIÓN
-								<br> 207 POSTGRADOS
-								<br> 211 PSICOLOGÍA
-								<br> 301 REVISORÍA FISCAL
-								<br> 302 TESORERÍA
-								<br> 303 CAJA
-								<br> 304 SECRETARIA VICE. ADMON
-								<br> 305 GRADUADOS
-								<br> 307 SECRETARIA RECTORÍA
-								<br> 308 ALMACÉN
-								309 VIRTUAL
-								<br> 310 INTERNACIONALIZACIÓN
-								<br> 311 JURÍDICA
-								<br> 312 CONTABILIDAD
-								<br> 313 OFICINA ING. ELECTRÓNICA - LABORATORIOS
-								<br> 314 AUDIOVISUALES
-								<br> 315 SECRETARIA GENERAL
-								<br> 401 DISEÑO DE MODAS
-								<br> 402 DECANATURA ELECTRÓNICA
-								<br> 403 DECANATURA ING. INFORMA
-								<br> 404 DECANATURA MECÁNICA
-								<br> 406 ASIST. TALENTO HUMANO
-								<br> 407 CORD. SEGURIDAD
-								<br> 408 AUX. TALENTO HUMANO - SGSST
-								<br> 409 MANTENIMIENTO
-								<br> 411 SISTEMAS
-								<br> 412 DEC. MECANICA DENTAL
-								<br> 414 SEC. VICE ACADEMICA
-								<br> 502 INGLÉS
-								<br> 503 EMISORA
-								<br><br>
-								<strong> LÍNEAS TELEFÓNICAS</strong>
-								<br>
-								L1= 7226020 - L2=7232452 - L3=7291789   (RECEPCIÓN)
-								<br> L7=7238908 - L8= 7230508 <br>
-								<br> <strong> MERCADEO </strong>
-								<br> L4= 7238908  CONTABILIDAD
-								<br> L6=7291758    RECTORIA
-								<br> L5=7225219   TALENTO HUMANO
-							<br> </div>
+								<table class="table table-hover">
+								  <thead>
+								    <tr class="bg-dark text-white"><th scope="col">Extensión</th><th scope="col">Dependencia</th></tr>
+								  </thead>
+								<tr class="table-light"><th scope="row"> 102</th> <td> RECEPCIÓN </td> </tr>
+								<tr class="table-dark" ><th scope="row" > 103</th> <td> REGISTRO Y CONTROL </td> </tr>
+								<tr class="table-light"><th scope="row"> 104</th> <td> MERCADEO 1 </td> </tr>
+								<tr class="table-dark" ><th scope="row"> 105</th> <td> MERCADEO 2 </td> </tr>
+								<tr class="table-light"><th scope="row"> 106</th> <td> MERCADEO 3 </td> </tr>
+								<tr class="table-dark" ><th scope="row"> 107</th> <td> ENFERMERÍA </td> </tr>
+								<tr class="table-light"><th scope="row"> 108</th> <td> MEDICO </td> </tr>
+								<tr class="table-dark" ><th scope="row"> 109</th> <td> CREDITO Y CARTERA </td> </tr>
+							  <tr class="table-light"><th scope="row"> 110</th> <td> BIENESTAR </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 111</th> <td> VICE. BIENESTAR </td> </tr>
+							  <tr class="table-light"><th scope="row"> 112</th> <td> PROYECCIÓN  SOCIAL </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 113</th> <td> GESTION DOCUMENTAL </td> </tr>
+							  <tr class="table-light"><th scope="row"> 100</th> <td> LABORATORIO </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 114</th> <td> BIBLIOTECA </td> </tr>
+							  <tr class="table-light"><th scope="row"> 201</th> <td> SECRETARIA CIDAE </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 202</th> <td> OTRI </td> </tr>
+							  <tr class="table-light"><th scope="row"> 203</th> <td> CREAN </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 204</th> <td> SECRETARÍA DE PLANEACIÓN </td> </tr>
+							  <tr class="table-light"><th scope="row"> 205</th> <td> SECRE. DECA. CONTABILIDAD Y ADMINISTRACIÓN </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 206</th> <td> SECRE VICE. INVESTIGACIÓN </td> </tr>
+							  <tr class="table-light"><th scope="row"> 207</th> <td> POSTGRADOS </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 211</th> <td> PSICOLOGÍA </td> </tr>
+							  <tr class="table-light"><th scope="row"> 301</th> <td> REVISORÍA FISCAL </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 302</th> <td> TESORERÍA </td> </tr>
+							  <tr class="table-light"><th scope="row"> 303</th> <td> CAJA </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 304</th> <td> SECRETARIA VICE. ADMON </td> </tr>
+							  <tr class="table-light"><th scope="row"> 305</th> <td> GRADUADOS </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 307</th> <td> SECRETARIA RECTORÍA </td> </tr>
+							  <tr class="table-light"><th scope="row"> 308</th> <td> ALMACÉN </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 309</th> <td> VIRTUAL </td> </tr>
+							  <tr class="table-light"><th scope="row"> 310</th> <td> INTERNACIONALIZACIÓN </td> </tr>
+								<tr class="table-dark" ><th scope="row"> 311</th> <td> JURÍDICA </td> </tr>
+							  <tr class="table-light"><th scope="row"> 312</th> <td> CONTABILIDAD </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 313</th> <td> OFICINA ING. ELECTRÓNICA - LABORATORIOS </td> </tr>
+							  <tr class="table-light"><th scope="row"> 314</th> <td> AUDIOVISUALES </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 315</th> <td> SECRETARIA GENERAL </td> </tr>
+							  <tr class="table-light"><th scope="row"> 401</th> <td> DISEÑO DE MODAS </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 402</th> <td> DECANATURA ELECTRÓNICA </td> </tr>
+							  <tr class="table-light"><th scope="row"> 403</th> <td> DECANATURA ING. INFORMA </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 404</th> <td> DECANATURA MECÁNICA </td> </tr>
+							  <tr class="table-light"><th scope="row"> 406</th> <td> ASIST. TALENTO HUMANO </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 407</th> <td> CORD. SEGURIDAD </td> </tr>
+							  <tr class="table-light"><th scope="row"> 408</th> <td> AUX. TALENTO HUMANO - SGSST </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 409</th> <td> MANTENIMIENTO </td> </tr>
+							  <tr class="table-light"><th scope="row"> 411</th> <td> SISTEMAS </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 412</th> <td> DEC. MECANICA DENTAL </td> </tr>
+							  <tr class="table-light"><th scope="row"> 414</th> <td> SEC. VICE ACADEMICA </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 502</th> <td> INGLÉS </td> </tr>
+							  <tr class="table-light"><th scope="row"> 503</th> <td> EMISORA </td> </tr>
+							  <!--  -->
+							  <tr class="bg-dark text-white" ><td colspan="2" class="f-negrita">LÍNEAS TELEFÓNICAS </td> </tr>							  
+							  <tr class="table-dark" ><th scope="row"> 7226020</th> <td> LÍNEA 1</td> </tr>
+							  <tr class="table-light"><th scope="row"> 7232452</th> <td> LÍNEA 2 </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 7291789</th> <td> LÍNEA 3 RECEPCIÓN</td> </tr>
+							  <tr class="table-light"><th scope="row"> 7238908</th> <td> LÍNEA 4 CONTABILIDAD</td> </tr>
+							  <!--  -->
+							  <tr class="table-dark" ><th scope="row"> 7225219</th> <td> LÍNEA 5 TALENTO HUMANO</td> </tr>
+							  <tr class="table-light"><th scope="row"> 7291758</th> <td> LÍNEA 6 RECTORÍA </td> </tr>
+							  <tr class="table-dark" ><th scope="row"> 7238908</th> <td> LÍNEA 7 </td> </tr>
+							  <tr class="table-light"><th scope="row"> 7230508</th> <td> LÍNEA 8 </td> </tr>
+								</table>
+								</div>
 						</div>
 					</div>
 				</div>

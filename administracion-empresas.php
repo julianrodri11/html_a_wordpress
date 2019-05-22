@@ -135,9 +135,13 @@
 						<p><strong>EL PROFESIONAL EN ADMINISTRACIÓN DE EMPRESAS</strong>, será capaz de realizar procesos de gestión empresarial, asesoría, consultoría y dirección de empresas con mentalidad emprendedora e innovación, contribuyendo al desarrollo socioeconómico del sector productivo, bajo normas internacionales de calidad.</p>
 						
 						El profesional de administración de empresas será competente para:
-						<br>-Crear y dirigir su propia empresa, dirigir, de carácter económico, industrial, comercial, financiero y de servicios en los sectores públicos y privados.
-						<br>-Formular, aplicar y evaluar proyectos de investigación para las organizaciones.
-						<br>-Desempeñarse como ejecutivo, asesor, consultor o conferencista en los diferentes campos de las ciencias administrativas.
+						
+					</div>
+					<div class="col-12 pt-sans text-justify pl-lg-5">
+						<br>
+						<li>Crear y dirigir su propia empresa, dirigir, de carácter económico, industrial, comercial, financiero y de servicios en los sectores públicos y privados.</li>
+						<li>Formular, aplicar y evaluar proyectos de investigación para las organizaciones.</li>
+						<li>Desempeñarse como ejecutivo, asesor, consultor o conferencista en los diferentes campos de las ciencias administrativas.</li>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 border-left b-color-aempresas">

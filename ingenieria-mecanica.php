@@ -128,29 +128,34 @@
 				<div class="col-12 col-sm-6 ">
 					<div class="col-12"><h5 class="fuente-institucional f-color-imecanica f-negrita">AL GRADUARTE</h5><h3 class="fuente-institucional f-color-imecanica f-negrita text-center">¿DÓNDE PUEDES TRABAJAR?</h3></div>
 					<div class="col-12 pt-sans text-justify">
-						El Ingeniero Mecánico de la AUNAR  actúa  como un profesional independiente, gestor de su propia empresa o vinculado en calidad de:
-						<br><br>- Líder de procesos industriales y de producción en el mantenimiento de maquinaria y equipos.
-						<br>-Montaje de sistemas mecánicos en plantas industriales y de servicios.
-						<br>-Impulsará el desarrollo del sector metalmecánico de la región.
-						<br>-Veedor de los recursos medioambientales.
-						<br>-Investigador de nuevas fuentes alternativas de energía.
-						<br>-Diseñador de maquinaria, equipos industriales y herramientas mecánicas.
-						<br>-Asesor y apoyo para los niveles superiores en el soporte técnico.
-						<br>-Jefe de departamento de mantenimiento.
-						<br>-Gestor de  proyectos de investigación en el campo metalmecánico.
-						<br>-Consultor en seguridad industrial.
-						<br>-Innovador empresarial del sector metalmecánico.
+						El Ingeniero Mecánico de la AUNAR  actúa  como un profesional independiente, gestor de su propia empresa o vinculado en calidad de: <br>	
+					</div>
+					<div class="col-12 pt-sans text-justify  pl-lg-5">
+						<br>		
+						<li>Líder de procesos industriales y de producción en el mantenimiento de maquinaria y equipos.</li>
+						<li>Montaje de sistemas mecánicos en plantas industriales y de servicios.</li>
+						<li>Impulsará el desarrollo del sector metalmecánico de la región.</li>
+						<li>Veedor de los recursos medioambientales.</li>
+						<li>Investigador de nuevas fuentes alternativas de energía.</li>
+						<li>Diseñador de maquinaria, equipos industriales y herramientas mecánicas.</li>
+						<li>Asesor y apoyo para los niveles superiores en el soporte técnico.</li>
+						<li>Jefe de departamento de mantenimiento.</li>
+						<li>Gestor de  proyectos de investigación en el campo metalmecánico.</li>
+						<li>Consultor en seguridad industrial.</li>
+						<li>Innovador empresarial del sector metalmecánico.</li>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 border-left b-color-imecanica">
 					<div class="col-12"><h5 class="fuente-institucional f-color-imecanica f-negrita">¿QUÉ HACE UN</h5><h3 class="fuente-institucional f-color-imecanica f-negrita text-center">INGENIERO MECÁNICO(A)?</h3></div>
 					<div class="col-12 pt-sans text-justify">
 						El Ingeniero Mecánico de AUNAR  posee  las siguientes características:
-						<br><br>-Capacidad de liderazgo en el sector metalmecánico.
-						<br>-Creativo en la  adaptación, diseño e innovador en el montaje de procesos productivos y  de  ensamblaje de maquinaria industrial.
-						<br>-Ensamblador de equipos y maquinaria industrial.
-						<br>-Liderazgo en el desarrollo de  proyectos de ingeniería mecánica en el sector industrial, agroindustrial y manufacturero.
-						<br>-Profesional con alto sentido ético y práctico de los principios morales y cívicos que le permite brindar un servicio ágil, oportuno y veraz en el campo metalmecánico
+					</div>
+					<div class="col-12 pt-sans text-justify pl-lg-5"> <br>
+						<li>Capacidad de liderazgo en el sector metalmecánico.</li>
+						<li>Creativo en la  adaptación, diseño e innovador en el montaje de procesos productivos y  de  ensamblaje de maquinaria industrial.</li>
+						<li>Ensamblador de equipos y maquinaria industrial.</li>
+						<li>Liderazgo en el desarrollo de  proyectos de ingeniería mecánica en el sector industrial, agroindustrial y manufacturero.</li>
+						<li>Profesional con alto sentido ético y práctico de los principios morales y cívicos que le permite brindar un servicio ágil, oportuno y veraz en el campo metalmecánico</li>
 					</div>
 					<div class="col-12 mt-5"><h6 class="fuente-institucional f-color-imecanica f-negrita">Líneas de profundización<br>(Electivas):</h6></div>
 					<div class="col-12 ">
@@ -158,10 +163,10 @@
 							<div class="col-12">1. Mantenimiento - Electrotecnia avanzada</div>
 						</div>
 						<div class="row p-2">
-							<div class="col-12">2.Mecánica Automotriz - Fundamentos de robótica</div>
+							<div class="col-12">2. Mecánica Automotriz - Fundamentos de robótica</div>
 						</div>
 						<div class="row p-2">
-							<div class="col-12">3.Mecánica Diesel - Diseño de maquinaria agrícola</div>
+							<div class="col-12">3. Mecánica Diesel - Diseño de maquinaria agrícola</div>
 						</div>
 					</div>
 					
