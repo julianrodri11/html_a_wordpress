@@ -16,8 +16,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/investigacion/semilleros.jpg" alt="SEMILLEROS - Autónoma de Nariño"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/investigacion/semilleros.jpg" alt="SEMILLEROS - Autónoma de Nariño"/>
 				</div>
 			</div>
 		</div>
@@ -57,20 +56,18 @@
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p>Convocar y Crear Semilleros de Investigación de las diferentes facultades, para fomentar la investigación y a su vez fortalecer capacidades de trabajo en equipo, oralidad, escritura, entre otras.</p>
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/investigacion/ciclo_semillerista_aunar.jpg" alt="Ciclo semillerista AUNAR"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/investigacion/ciclo_semillerista_aunar.jpg" alt="Ciclo semillerista AUNAR"></div>
 						</div>
 						<!-- Pestaña 3-->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
 							<div class="col-12 p-2 px-md-5 text-center"><strong>FORMALIZACIÓN DE SEMILLEROS</strong></div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/investigacion/formalizacion_de_semilleros.jpg" alt="Formalizacion semilleros AUNAR"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/investigacion/formalizacion_de_semilleros.jpg" alt="Formalizacion semilleros AUNAR"></div>
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<P>Se logró cumplir la meta de formalización de los semilleros en el tema administrativo y operativo, con lo cual hemos consolidado en este primer periodo académico 5 semilleros de investigación:</P>
-								<P> a)Los programas de ingeniería Informática y Mecánica el anterior año (2016) trabajó con un semillero conjunto el cual tenía como línea de investigación la robótica llamado MACHINE, por definición del programa de Ingeniería mecánica y el apoyo de los docentes se creó un semillero denominado ICIMA, coordinado por la docente Gisela Cabrera con apoyo de los ingenieros: Juan C. Guerrero, Iván Ruiz, Nelson Sáenz, Álvaro Burgos y Diego Parra. Este semillero se encuentra formalizado.
-									<br> <br>b)Por su parte, el programa de ingeniería informática crea dos semilleros de investigación denominados: ASIMOV y SINAPSIS coordinados por el ingeniero Juan Carlos Alvarado en apoyo con la coordinadora de programa ingeniera Lilian Cruz. Este semillero se encuentra formalizado.
-									<br> <br>c)El programa de Ingeniería electrónica crea un nuevo semillero SIGNAL formalizado y coordinado por el ingeniero Oscar Rodríguez.
-									<br> <br>d)Los programas de Administración de empresas y contaduría pública de manera unificada crean un semillero de investigación formalizado y coordinado por el docente Iván Esney Benavides Torres quien trabaja en apoyo con la docente Irina Jurado, denominado GRAINE.
+								<P> a)Los programas de Ingeniería Informática y Mecánica el anterior año (2016) trabajó con un semillero conjunto el cual tenía como línea de investigación la robótica llamado MACHINE, por definición del programa de Ingeniería Mecánica y el apoyo de los docentes se creó un semillero denominado ICIMA, coordinado por la docente Gisela Cabrera con apoyo de los ingenieros: Juan C. Guerrero, Iván Ruiz, Nelson Sáenz, Álvaro Burgos y Diego Parra. Este semillero se encuentra formalizado.
+									<br> <br>b)Por su parte, el programa de Ingeniería Informática crea dos semilleros de investigación denominados: ASIMOV y SINAPSIS coordinados por el ingeniero Juan Carlos Alvarado en apoyo con la coordinadora de programa ingeniera Lilian Cruz. Este semillero se encuentra formalizado.
+									<br> <br>c)El programa de Ingeniería Electrónica crea un nuevo semillero SIGNAL formalizado y coordinado por el ingeniero Oscar Rodríguez.
+									<br> <br>d)Los programas de Administración de Empresas y Contaduría Pública de manera unificada crean un semillero de investigación formalizado y coordinado por el docente Iván Esney Benavides Torres quien trabaja en apoyo con la docente Irina Jurado, denominado GRAINE.
 								</P>
 							</div>
 						</div>

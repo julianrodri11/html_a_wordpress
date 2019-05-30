@@ -155,7 +155,7 @@
 					<div class="col-12"><h5 class="fuente-institucional f-color-iinformatica f-negrita">¿QUÉ HACE UN</h5><h3 class="fuente-institucional f-color-iinformatica f-negrita text-center">INGENIERO(A) INFORMÁTICO(A)?</h3></div>
 					<div class="col-12 pt-sans text-justify">
 						<p>
-							El ingeniero informático egresado de la Corporación Universitaria Autónoma de Nariño es capaz de desarrollar sistemas informáticos innovadores que apliquen conceptos científicos y tecnológicos; formados en principios éticos, sociales y humanísticos, con mentalidad investigativa, innovadora y empresarial, en consecuencia, desarrolla competencias que le permiten:
+							El Ingeniero Informático egresado de la Corporación Universitaria Autónoma de Nariño es capaz de desarrollar sistemas informáticos innovadores que apliquen conceptos científicos y tecnológicos; formados en principios éticos, sociales y humanísticos, con mentalidad investigativa, innovadora y empresarial, en consecuencia, desarrolla competencias que le permiten:
 						</p>
 						<p>
 							Administrar recursos tecnológicos y humanos con criterios de calidad.

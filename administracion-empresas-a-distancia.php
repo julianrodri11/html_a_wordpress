@@ -90,7 +90,7 @@
 				<div class="col-12 col-lg-7 col-md-6 p-5">
 					<div class="col-12"> <h3 class="fuente-institucional f-color-aempresas f-negrita">Objetivo General</h3></div>
 					<div class="col-12 pt-sans text-justify">
-						<p>El Programa de administración de empresas de “AUNAR” se enfoca en el desarrollo de habilidades y conocimientos para el, análisis en la gestión y evaluación de procesos organizacionales en un contexto de desarrollo socio-económico autosostenible. El Programa de administración de empresas Aunar es el único en el departamento de Nariño y Putumayo proveniente de una empresa netamente nariñense y dedicada a la sociedad de consumo de estrato social 1,2 y 3. Su flexibilidad permite ahondar en las áreas que el estudiante elija sin que esto signifique una debilidad en su capacidad integral; de hecho, la habilidad de desenvolverse en campos de muy diversa índole es una de las fortalezas del administrador de empresas. Formar un profesional como administrador de empresas para entregarlo a una sociedad de consumo con gran capacidad de trabajo en equipo, formador de formadores de aprender a aprender y de estar en permanente perfeccionamiento dado el avance científico y tecnológico. </p>
+						<p>El Programa de Administración de Empresas de “AUNAR” se enfoca en el desarrollo de habilidades y conocimientos para el análisis en la gestión y evaluación de procesos organizacionales en un contexto de desarrollo socio-económico autosostenible. El Programa de Administración de Empresas Aunar es el único en el departamento de Nariño y Putumayo proveniente de una empresa netamente nariñense y dedicada a la sociedad de consumo de estrato social 1,2 y 3. Su flexibilidad permite ahondar en las áreas que el estudiante elija sin que esto signifique una debilidad en su capacidad integral; de hecho, la habilidad de desenvolverse en campos de muy diversa índole es una de las fortalezas del administrador de empresas. Formar un profesional como administrador de empresas para entregarlo a una sociedad de consumo con gran capacidad de trabajo en equipo, formador de formadores de aprender a aprender y de estar en permanente perfeccionamiento dado el avance científico y tecnológico. </p>
 						
 					</div>
 				</div>
@@ -140,7 +140,7 @@
 				<div class="col-12 col-sm-6 border-left b-color-aempresas">
 					<div class="col-12"><h5 class="fuente-institucional f-color-aempresas f-negrita">¿QUÉ HACE UN</h5><h3 class="fuente-institucional f-color-aempresas f-negrita text-center">ADMINISTRADOR DE EMPRESAS?</h3></div>
 					<div class="col-12 pt-sans text-justify">
-						El profesional egresado del programa de Administración de Empresas de la Corporación Universitaria Autónoma de Nariño, está capacitado para realizar procesos de gestión empresarial, asesoría, consultoría y dirección de empresas con mentalidad emprendedora e innovación, contribuyendo al desarrollo socioeconómico del sector productivo, bajo normas internacionales de calidad.
+						El profesional egresado del Programa de Administración de Empresas de la Corporación Universitaria Autónoma de Nariño, está capacitado para realizar procesos de gestión empresarial, asesoría, consultoría y dirección de empresas con mentalidad emprendedora e innovación, contribuyendo al desarrollo socioeconómico del sector productivo, bajo normas internacionales de calidad.
 					</div>
 					
 				</div>

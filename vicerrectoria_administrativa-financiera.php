@@ -83,7 +83,7 @@
 							<br>
 							<p class="pt-sans text-justify">
 								La Vicerrectoría Administrativa y Financiera es un
-								departamento que se encuentra bajo la dirección del al
+								departamento que se encuentra bajo la Dirección del la
 								Rectoría. Forma parte del Consejo Directivo y de los Comités de
 								Rectoría, Financiero y de Compras.
 							</p>
@@ -155,7 +155,7 @@
 								financiera y tributaria a varias empresas del sector real tanto de Pasto,
 								como de otras ciudades del país y del exterior.
 								<br>- También ha incursionado en el sector educativo en el área de control
-								interno y además como docente de pregrado y Postgrado en
+								interno y además como docente de Pregrado y Posgrado en
 								Instituciones como la Universidad Mariana, Cesmag, Fundación
 								Universitaria del Área Andina (FUA), Instituto de Educación del
 								Putumayo (INESUP).

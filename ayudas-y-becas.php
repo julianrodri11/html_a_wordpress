@@ -27,7 +27,7 @@
 				<div class="col-9 mx-auto">
 					<div class="col-12 p-3">
 						<p class="pt-sans text-justify">
-							expide el documento Políticas y Normas de Apoyos Financieros y Becas, en función del documento expedido por la Vicerrectoría de Bienestar Institucional a través del comité de descuento y becas, el cual constituye la base para los reglamentos de apoyos financieros.
+							expide el documento Políticas y Normas de Apoyos Financieros y Becas, en función del documento expedido por la Vicerrectoría de Bienestar Institucional a través del Comité de Descuento y Becas, el cual constituye la base para los reglamentos de apoyos financieros.
 						</p>
 					</div>
 				</div>
@@ -73,9 +73,9 @@
 							</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p class="pt-sans">
-									La CORPORACION UNIVERSITARIA AUTONOMA DE NARIÑO (AUNAR). está consciente de su responsabilidad que tiene de cooperar, desde el ámbito académico, al desarrollo de las comunidades en donde opera. Por esto brinda, a través de becas y descuentos educativos, una opción educativa a aquellos alumnos que están en la disposición y tienen las habilidades necesarias para cursar exitosamente sus estudios de pregrado y posgrado de la AUNAR que requieren de apoyo financiero para hacerlo.
+									La CORPORACION UNIVERSITARIA AUTONOMA DE NARIÑO (AUNAR). Está consciente de su responsabilidad que tiene de cooperar, desde el ámbito académico, al desarrollo de las comunidades en donde opera. Por esto brinda, a través de becas y descuentos educativos, una opción educativa a aquellos alumnos que están en la disposición y tienen las habilidades necesarias para cursar exitosamente sus estudios de pregrado y posgrado de la AUNAR que requieren de apoyo financiero para hacerlo.
 									<br>
-									Además, para llevar a cabo sus actividades académicas y formativas con los niveles de excelencia establecidos en su Visión, La AUNAR otorga becas al mérito académico a los alumnos más destacados de nuestras universidades educación superior.
+									Además, para llevar a cabo sus actividades académicas y formativas con los niveles de excelencia establecidos en su visión, La AUNAR otorga becas al mérito académico a los alumnos más destacados de nuestras universidades de educación superior.
 								</p>
 							</div>
 						</div>
@@ -87,8 +87,8 @@
 							</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p class="pt-sans">
-									El otorgamiento de becas y estímulos financieros es responsabilidad y función del Comité de Becas y Descuentos. Con el fin de asegurar que la asignación de dichos apoyos se realice de forma imparcial y considerando la situación particular de cada alumno, este comité estará integrado por la rectoría, las diferentes vicerrectorías bienestar institucional, académica, investigación, administrativa y financiera.
-									<br><br>El Comité estará presidido por el Vicerrector de bienestar institucional.       
+									El otorgamiento de becas y estímulos financieros es responsabilidad y función del comité de becas y descuentos. Con el fin de asegurar que la asignación de dichos apoyos se realice de forma imparcial y considerando la situación particular de cada alumno, este comité estará integrado por la rectoría, las diferentes vicerrectorías, bienestar institucional, académica, investigación, administrativa y financiera.
+									<br><br>El Comité estará presidido por el Vicerrector de Bienestar Institucional.       
 								</p>
 							</div>
 						</div>
@@ -116,11 +116,11 @@
 								<p class="pt-sans">
 									<br><strong> A)   Becas mérito académico.</strong>
 									<br><br><strong> Los requisitos mínimos que deberá cumplir el estudiante para acceder a un porcentaje de beca al mérito académico son:</strong>
-									<br>-Estar matriculado en los diferentes programas académicos de la corporación universitaria autónoma de Nariño.
+									<br>-Estar matriculado en los diferentes programas académicos de la Corporación Universitaria Autónoma de Nariño.
 									<br>-Obtener un promedio académico mayor o igual a 4.5.
 									<br>-Obtener un buen desempeño académico.
 									<br>-Todos los semestres pueden participar desde que posee promedio académico.
-									<br>-Obtener certificación de la institución educativas básica secundaria de excelencia académica.
+									<br>-Obtener certificación de la institución educativa básica secundaria de excelencia académica.
 									<br>-Obtención de becas por los diferentes convenios.
 									<br>-Obtención de reconocimiento en el departamento de investigación.
 									<br>-Obtención de reconocimiento representativos de la institución.
@@ -131,13 +131,13 @@
 									<br><br><strong> B)   Descuentos:</strong>
 									<br><br><strong> Los requisitos mínimos que deberá cumplir el estudiante para acceder a un porcentaje de beca son:</strong>
 									<br>-Estar matriculado a la corporación universitaria autónoma de nariño.
-									<br>-Estoy estímulos son otorgados por el comité de becas y descuentos.
+									<br>-Estos estímulos son otorgados por el comité de becas y descuentos.
 									<br><br><strong>C)   Crédito Educativo:</strong>
 									<br><br><strong> Los requisitos mínimos que deberá cumplir el estudiante que desee obtener estos tipos de apoyo financiero son:</strong>
 									<br>-Llenar debidamente su solicitud de apoyo financiero y presentar la documentación requerida por el departamento de jurídica.
 									<br>-No estar condicionado académicamente por la institución.
 									<br>-No contar con créditos educativos externos.
-									<br>-Demostrar satisfactoriamente, a juicio del Comité de becas y descuentos, que requiere de apoyo financiero para continuar con sus estudios.
+									<br>-Demostrar satisfactoriamente, a juicio del Comité de Becas y Descuentos, que requiere de apoyo financiero para continuar con sus estudios.
 									<br>-Tener un buen manejo crediticia institucional.
 									<br>-Cumplir con los requisitos de créditos educativos.
 									<br>-Cumplir con las fechas pactadas.
@@ -153,7 +153,7 @@
 								<p class="pt-sans text-justify">
 									Cualquier estudiante que incurra en alguna falta de disciplina contemplada en el reglamento estudiantil, así como en actos que dañen la imagen de nuestra Institución, su beca o crédito educativo quedará automáticamente cancelada.
 									<br>
-									Las becas y/o los créditos educativos son aplicables a los períodos académicos semestrales, para los estudiantes de pregrado y posgrado
+									Las becas y/o los créditos educativos son aplicables a los períodos académicos semestrales, para los estudiantes de pregrado y posgrado.
 									<br>
 									Su aplicación en los cursos intensivos de verano quedará sujeta a la determinación del Comité de Becas y Descuentos.
 								</p>

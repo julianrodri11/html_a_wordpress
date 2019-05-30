@@ -52,7 +52,7 @@
 				<div class="col-12 col-md-5 m-lg-4">
 					<div class="row m-md-2 p-md-5 ">
 						<div class="col-12 pt-5"><h3 class="fuente-institucional f-negrita"> Misión</h3></div>
-						<div class="col-12 text-justify pt-sans">La oficina de internacionalización tiene como misión, promover el movimiento de la comunidad universitaria hacia otras instituciones académicas, empresariales, científicas, culturales, artísticas, gubernamentales o deportivas, de carácter local, regional, nacional e internacional.  </div>
+						<div class="col-12 text-justify pt-sans">La oficina de Internacionalización tiene como misión, promover el movimiento de la comunidad universitaria hacia otras instituciones académicas, empresariales, científicas, culturales, artísticas, gubernamentales o deportivas, de carácter local, regional, nacional e internacional.  </div>
 					</div>
 				</div>
 				<!-- visión -->
@@ -103,15 +103,15 @@
 						<div class="tab-pane fade pt-sans texto-azul-os text-justify" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 							<div class="col-12">
 								•	Movilidad académica estudiantil: <br>
-								•	Intercambio académico: Permite a los estudiantes cursar uno o dos periodos académicos en una institución aliada.<br>
-								•	Doble titulación: El objetivo de esta movilidad es ofrecer a estudiantes un segmento de su formación en cada una de las instituciones y, como consecuencia, la obtención del diploma de ambas universidades.<br>
-								•	Pasantía práctica: Este tipo de movilidad tiene como objetivo, proporcionar al estudiante un espacio vivencial, para aplicar los conocimientos teóricos adquiridos en el transcurso de su programa académico, y al mismo tiempo, proporcionar experiencias para fortalecer su perfil profesional. <br>
-								•	Curso de idioma: Permite al estudiante estar inmerso en la cultura y el idioma del país de selección.<br>
-								•	Misión: Son viajes académicos cortos con el propósito de permitir al estudiante tener un acercamiento a diferentes instituciones, universidades, empresas, organizaciones), generalmente de carácter global. La misión les permite al mismo tiempo, vivir una experiencia cultural.<br>
-								•	Rotación médica: Son prácticas en áreas específicas de formación que realizan los estudiantes de medicina, durante su tiempo de internado o de práctica, para aplicar sus conocimientos teóricos y prácticos en instituciones de prestación de servicios de salud en el ámbito internacional. <br>
-								•	Curso corto: Son cursos de corta duración que tienen como propósito fomentar la interculturalidad mientras se cursa una materia que se podrá homologar como parte de la malla curricular del estudiante.<br>
-								•	Voluntariado: El voluntariado es un trabajo no remunerado en un área específica. Es útil para los estudiantes que deseen adquirir experiencia laboral y al mismo tiempo tener una experiencia internacional.<br>
-								•	Estancia de investigación: En este tipo de movilidad el estudiante participa en actividades científicas en una universidad o centro de investigación en el exterior.
+								•	Intercambio académico: permite a los estudiantes cursar uno o dos periodos académicos en una institución aliada.<br>
+								•	Doble titulación: el objetivo de esta movilidad es ofrecer a estudiantes un segmento de su formación en cada una de las instituciones y, como consecuencia, la obtención del diploma de ambas universidades.<br>
+								•	Pasantía práctica: este tipo de movilidad tiene como objetivo, proporcionar al estudiante un espacio vivencial, para aplicar los conocimientos teóricos adquiridos en el transcurso de su programa académico, y al mismo tiempo, proporcionar experiencias para fortalecer su perfil profesional. <br>
+								•	Curso de idioma: permite al estudiante estar inmerso en la cultura y el idioma del país de selección.<br>
+								•	Misión: son viajes académicos cortos con el propósito de permitir al estudiante tener un acercamiento a diferentes instituciones, universidades, empresas, organizaciones), generalmente de carácter global. La misión les permite al mismo tiempo, vivir una experiencia cultural.<br>
+								•	Rotación médica: son prácticas en áreas específicas de formación que realizan los estudiantes de medicina, durante su tiempo de internado o de práctica, para aplicar sus conocimientos teóricos y prácticos en instituciones de prestación de servicios de salud en el ámbito internacional. <br>
+								•	Curso corto: son cursos de corta duración que tienen como propósito fomentar la interculturalidad mientras se cursa una materia que se podrá homologar como parte de la malla curricular del estudiante.<br>
+								•	Voluntariado: el voluntariado es un trabajo no remunerado en un área específica. Es útil para los estudiantes que deseen adquirir experiencia laboral y al mismo tiempo tener una experiencia internacional.<br>
+								•	Estancia de investigación: en este tipo de movilidad el estudiante participa en actividades científicas en una universidad o centro de investigación en el exterior.
 							</div>
 						</div>
 						<div class="tab-pane fade pt-sans texto-azul-os text-justify" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">

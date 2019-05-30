@@ -55,7 +55,7 @@
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<strong>Visión</strong>
-								<p>Para el año 2023 seremos reconocidos como el centro de emprendimiento universitario pionero y líder en el proceso de formación de la mentalidad emprendedora en el suroccidente colombiano.</p>
+								<p>Para el año 2023 seremos reconocidos como el Centro de Emprendimiento Universitario pionero y líder en el proceso de formación de la mentalidad emprendedora en el suroccidente colombiano.</p>
 							</div>							
 						</div>
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
@@ -77,13 +77,13 @@
 								<p>
 									Los procesos que lidera la dependencia son:
 									<br><br>
-									Articulación institucional en emprendimiento: Desde donde se busca Interrelacionar las actividades curriculares que se están desarrollando dentro de las diferentes asignaturas incluidas en los pensum académicos de los diferentes programas ofrecidos por la institución de tal manera que se consolide una temática transversal de la formación profesional en mentalidad emprendedora.
+									Articulación institucional en emprendimiento: desde donde se busca Interrelacionar las actividades curriculares que se están desarrollando dentro de las diferentes asignaturas incluidas en los pensum académicos de los diferentes programas ofrecidos por la institución de tal manera que se consolide una temática transversal de la formación profesional en mentalidad emprendedora.
 									<br><br>
-									Formación extracurricular en emprendimiento: cuya finalidad es la de diseñar, construir y ejecutar espacios extracurriculares que permitan la motivación y la formación integral del nuevo profesional como un ser autónomo, creativo, innovador y emprendedor con sentido social.
+									Formación extracurricular en emprendimiento: cuya finalidad es diseñar, construir y ejecutar espacios extracurriculares que permitan la motivación y la formación integral del nuevo profesional como un ser autónomo, creativo, innovador y emprendedor con sentido social.
 									<br><br>
-									Acompañamiento al emprendedor: En este proceso se brida asesoría personalizada a los emprendedores que deseen avanzar de manera significativa en su objetivo de crear sus propias unidades de negocio o liderar sus proyectos emprendedores.
+									Acompañamiento al emprendedor: en este proceso se brida asesoría personalizada a los emprendedores que deseen avanzar de manera significativa en su objetivo de crear sus propias unidades de negocio o liderar sus proyectos emprendedores.
 									<br><br>
-									Participación dinámica con el entorno: Buscando participar activamente en redes locales, regionales, nacionales e internacionales en emprendimiento y fortalecer las relaciones con el entorno empresarial de la región, de tal manera que se obtenga una interacción que permita la transferencia tecnológica y de innovación en beneficio del emprendimiento.
+									Participación dinámica con el entorno: buscando participar activamente en redes locales, regionales, nacionales e internacionales en emprendimiento y fortalecer las relaciones con el entorno empresarial de la región, de tal manera que se obtenga una interacción que permita la transferencia tecnológica y de innovación en beneficio del emprendimiento.
 								</p>
 							</div>
 						</div>
@@ -116,7 +116,7 @@
 							<h4 class="texto-amarillo fuente-institucional f-negrita p-0">DIRECTOR</h4>
 							<div class="pt-sans text-justify pr-lg-5">
 								<label class="f-negrita">IRINA MARGARITA JURADO PAZ</label>
-								<br>Profesional en administración de empresas con una maestría en Administración de Empresas con especialidad en dirección de proyectos. Vinculada con AUNAR desde el 2012 y en calidad de director de esta dependencia desde 2014.
+								<br>Profesional en Administración de Empresas con una maestría en Administración de Empresas con especialidad en Dirección de Proyectos. Vinculada con AUNAR desde el 2012 y en calidad de director de esta dependencia desde 2014.
 								<br>
 								Ha participado como ponente en diferentes congresos internacionales en Panamá, Ecuador y Argentina. Además, lidera el grupo de investigación Equipo CREA. Actualmente, en calidad de delegada institucional, lidera la secretaría técnica de la Red Regional de Emprendimiento de Nariño.
 								<br><br> E-mail: irina.jurado@aunar.edu.co –
@@ -150,7 +150,7 @@
 							<h4 class="texto-amarillo fuente-institucional f-negrita p-0">PRACTICANTE</h4>
 							<div class="pt-sans text-justify pr-lg-5">
 								<label class="f-negrita">ANDERSON GEOVANI DÍAZ MUÑOZ</label>
-								<br>Estudiante de Administración de empresas de AUNAR, está cursando noveno semestre y actualmente contribuye en el fortalecimiento administrativo y organizacional de la dependencia.
+								<br>Estudiante de Administración de Empresas de AUNAR, está cursando noveno semestre y actualmente contribuye en el fortalecimiento administrativo y organizacional de la dependencia.
 								<br><br> Email: crean@aunar.edu.co
 							</div>
 						</div>

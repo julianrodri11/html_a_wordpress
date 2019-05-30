@@ -103,7 +103,7 @@
 									<br><br>
 									Es así como se sustenta la existencia del CENTRO DE INVESTIGACIONES, DESARROLLO Y ASESORÍA EMPRESARIAL. CIDAE, estamento, comprometido con el desarrollo teórico y práctico de la actividad investigativa, así como con el desarrollo de acciones de proyección social, que se encaminan a la articulación del quehacer universitario con el contexto y que se concretiza con la asesoría y la planeación de actividades que convocan al sector empresarial, permiten su desarrollo y plantea alternativas que redundan en su desarrollo, en el aprendizaje, en la imagen corporativa de la institución universitaria y en el desarrollo regional.
 									<br><br>
-									La naturaleza y la esencia misma del CIDAE, obliga a establecer dos pilares fundamentales que retroalimentan permanentemente su dinámica y su quehacer en la vida universitaria: El campo de la investigación y el campo de lo empresarial, los cuales permiten la articulación de la docencia, la investigación misma y la proyección social.
+									La naturaleza y la esencia misma del CIDAE, obliga a establecer dos pilares fundamentales que retroalimentan permanentemente su dinámica y su quehacer en la vida universitaria: el campo de la investigación y el campo de lo empresarial, los cuales permiten la articulación de la docencia, la investigación misma y la proyección social.
 									<br><br>
 								</p>
 							</div>

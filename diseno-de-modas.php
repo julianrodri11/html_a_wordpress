@@ -135,7 +135,7 @@
 					<div class="col-12 pt-sans text-justify">El Programa Técnico Laboral por Competencias en Diseño y Confección
 						de Modas posee un plan de estudios que apunta a la formación de técnicos capaces de desempeñarse en
 						diferentes actividades que tengan que ver con diseño, corte y confección de prendas de vestir, en procesos
-						creativos de la moda en un marco de competitividad y calidad</div>
+						creativos de la moda en un marco de competitividad y calidad.</div>
 				</div>
 				<div class="col-12 col-sm-6 ">
 					<div class="col-12">

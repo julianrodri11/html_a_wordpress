@@ -170,13 +170,13 @@
 								<br>
 								<strong>4.	¿Cómo me matriculo en los cursos del Campus Aunar Virtual?</strong>
 								
-								<p>Los cursos del Campus Aunar Virtual hacen parte de programas académicos modalidad virtual (Tecnología y Técnico) que ofrece la Corporación Universitaria Autónoma de Nariño, por lo tanto, no pueden ser matriculados por personal externo a la institución. Es importan mencionar, que las matriculas en línea se pueden realizar a través del link http://inscripciones.aunar.edu.co/ Para Mayor información contáctenos en la siguiente dirección de correo mercadeo@aunar.edu.co o edgar.munoz@aunar.edu.co</p>
+								<p>Los cursos del Campus Aunar Virtual hacen parte de programas académicos modalidad virtual (Tecnología y Técnico) que ofrece la Corporación Universitaria Autónoma de Nariño, por lo tanto, no pueden ser matriculados por personal externo a la institución. Es importante mencionar, que las matriculas en línea se pueden realizar a través del link http://inscripciones.aunar.edu.co/ Para Mayor información contáctenos en la siguiente dirección de correo mercadeo@aunar.edu.co o edgar.munoz@aunar.edu.co</p>
 								<br>
 								<strong> 5.	¿En qué momento puedo ingresar al Campus Aunar Virtual?</strong>
 								<p>El Campus Aunar Virtual está disponible las 24 horas del día. La hora de ingreso la define el usuario dependiendo de su tiempo y sus ocupaciones. </p>
 								<br>
 								<strong> 6.	¿Cuándo se presenten dificultades para el ingreso a la Plataforma y desarrollo de las actividades que ésta ofrece, con quién puedo comunicarme?</strong>
-								<p>Se debe en cuenta el tipo de dificultad que se presenta, es decir, si el inconveniente se debe a olvido de la contraseña deberá remitirse al link: ¿Olvidé mi contraseña, qué debo hacer? Si se trata de una falla técnica deberá contactarse con la persona que administra la Plataforma Virtual a través del siguiente correo edgar.munoz@aunar.edu.co. Por el contrario, si los problemas que usted encuentre están relacionados directamente con los contenidos, actividades y/o evaluaciones deberá comunicarse con el tutor encargado del mismo, por vía celular o correo electrónico; datos que usted conocerá con anterioridad. </p>
+								<p>Se debe tener en cuenta el tipo de dificultad que se presenta, es decir, si el inconveniente se debe a olvido de la contraseña deberá remitirse al link: ¿Olvidé mi contraseña, qué debo hacer? Si se trata de una falla técnica deberá contactarse con la persona que administra la Plataforma Virtual a través del siguiente correo edgar.munoz@aunar.edu.co. Por el contrario, si los problemas que usted encuentre están relacionados directamente con los contenidos, actividades y/o evaluaciones deberá comunicarse con el tutor encargado del mismo, por vía celular o correo electrónico; datos que usted conocerá con anterioridad. </p>
 								<br>
 								<strong> 7.	¿Cómo participar en el desarrollo de foros y demás actividades que ofrece el Campus Aunar Virtual?</strong>
 								<p>Se recomienda revisar y aplicar las indicaciones del manual de usuario: Manual de usuario </p>

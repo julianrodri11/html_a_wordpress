@@ -102,8 +102,8 @@
 					<div class="col-12 pt-sans text-justify">
 						<p>El Programa <strong>Técnico Laboral por competencias en Mecánica Dental</strong> que ofrece la
 							Corporación Universitaria Autónoma de Nariño a la Comunidad de Nariño, está estructurado dentro de un
-							contexto Nacional e Internacional con un contenido Curricular practico, integral y dinámico en la
-							formación de las Competencias que lleven al Graduado a competir dentro de un entorno y política de
+							contexto nacional e internacional con un contenido curricular practico, integral y dinámico en la
+							formación de las competencias que lleven al graduado a competir dentro de un entorno y política de
 							globalización que vive el País.
 						</p>
 						<p>La formación del <strong>Técnico Laboral por competencias en Mecánica Dental</strong>, desarrolla un
@@ -177,18 +177,19 @@
 							</div>
 							<div class="col-12 pl-lg-5"><br>
 								
-								<li>Actuar como auxiliar del odontólogo en forma individual, o asociado como miembro de un equipo de	salud, de acuerdo a pautas éticas y morales y bajo las normas legales que rigen el ejercicio de la profesión </li>
-								<li>Complementar la atención clínica odontológica a través del diseño y la elaboración adecuada de la aparatología protésica, estética, ortodóntica y de ortopedia maxilar</li>
-								<li>Desarrollar plenamente su capacidad profesional como auxiliar del odontólogo con criterio científico y capacidad técnica</li>
-								<li>Organizar el trabajo del laboratorio dental, adaptando procedimientos, produciendo información, asignando o distribuyendo tareas, recursos y materiales Fabricar, modificar y reparar prótesis dentales y aparatos de ortodoncia a partir del diseño especificaciones técnicas de fabricación, siguiendo las especificaciones de calidad y de seguridad e higiene establecidas.</li>
+								<li>Actuar como auxiliar del odontólogo en forma individual, o asociado como miembro de un equipo de	salud, de acuerdo a pautas éticas y morales y bajo las normas legales que rigen el ejercicio de la profesión.</li>
+								<li>Complementar la atención clínica odontológica a través del diseño y la elaboración adecuada de la aparatología protésica, estética, ortodóntica y de ortopedia maxilar.</li>
+								<li>Desarrollar plenamente su capacidad profesional como auxiliar del odontólogo con criterio científico y capacidad técnica.</li>
+								<li>Organizar el trabajo del laboratorio dental, adaptando procedimientos, produciendo información, asignando o distribuyendo tareas, recursos y materiales.</li>
+								<li>Fabricar, modificar y reparar prótesis dentales y aparatos de ortodoncia a partir del diseño especificaciones técnicas de fabricación, siguiendo las especificaciones de calidad y de seguridad e higiene establecidas.</li>
 								<li>Participar en proyectos de investigación y en programas formativos, así como proponer medidas relacionadas con la eficiencia, la seguridad y la calidad.</li>
-								<li>Mantener actualizados sus conocimientos científicos</li>
-								<li>Tener en cuenta las medidas de bioseguridad en el laboratorio</li>
+								<li>Mantener actualizados sus conocimientos científicos.</li>
+								<li>Tener en cuenta las medidas de bioseguridad en el laboratorio.</li>
 								<li>Brindar información del producto o servicio al cliente interno y externo, conforme a requerimientos del cliente o usuario y según políticas de servicio institucionales.</li>
 								<li>Mantener el ambiente de trabajo en condiciones de higiene y seguridad acorde con la reglamentación empresarial.</li>
-								<li>Distribuir y vender productos de laboratorio dental</li>
-								<li>Ser responsable, respetuoso y creativo en el desempeño laboral</li>
-								<li>Adaptarse a las nuevas situaciones generadas como consecuencia de la innovación tecnológica y organizativa introducidas en su campo laboral</li>
+								<li>Distribuir y vender productos de laboratorio dental.</li>
+								<li>Ser responsable, respetuoso y creativo en el desempeño laboral.</li>
+								<li>Adaptarse a las nuevas situaciones generadas como consecuencia de la innovación tecnológica y organizativa introducidas en su campo laboral.</li>
 							</div>
 						</div>
 

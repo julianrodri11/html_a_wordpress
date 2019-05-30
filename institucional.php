@@ -120,7 +120,7 @@ Para 1992 y acorde con las disposiciones de la Ley 30 de Educación, se crearon 
 							</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p class="pt-sans texto-azul-os">
-									La Autónoma de Nariño, “AUNAR”, es una Institución de Educación Superior comprometida con la Cultura, La Ciencia la Investigación; la excelencia en la formación de profesionales íntegros y el liderazgo en el desarrollo social.
+									La Autónoma de Nariño, “AUNAR”, es una Institución de Educación Superior comprometida con la cultura, ciencia, investigación; la excelencia en la formación de profesionales íntegros y el liderazgo en el desarrollo social.
 								</p>
 							</div>
 							<div class="col-12 p-2 px-md-5 text-center">
@@ -139,7 +139,7 @@ Para 1992 y acorde con las disposiciones de la Ley 30 de Educación, se crearon 
 								<span class="pt-sans"> <strong><h3 class="f-negrita">OBJETIVO</h3></strong></span>
 							</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
-								<P class="pt-sans">Formar Profesionales íntegros, idóneos, éticos, proactivos, líderes del cambio, eficientes, eficaces, competitivos, con mentalidad creativa y empresarial, con espíritu investigativo, crítico, reflexivo y participativo, mediante una formación científica, tecnológica, humana y profesional que contribuya a la transformación y desarrollo de la sociedad y del contexto social.
+								<P class="pt-sans">Formar profesionales íntegros, idóneos, éticos, proactivos, líderes del cambio, eficientes, eficaces, competitivos, con mentalidad creativa y empresarial, con espíritu investigativo, crítico, reflexivo y participativo, mediante una formación científica, tecnológica, humana y profesional que contribuya a la transformación y desarrollo de la sociedad y del contexto social.
 								</P>
 							</div>
 						</div>
