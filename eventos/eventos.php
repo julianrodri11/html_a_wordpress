@@ -34,25 +34,25 @@
 					<!-- <div class="col-12 col-lg-4 p-2 f-negrita">Fiestas AUNAR:</div> -->
 					<div class="col-12 col-lg-4 p-2 d-flex align-items-center">								
 					
-						<a class="p-0" data-toggle="tooltip" data-placement="auto" title="Ver Evento" href="<?php the_permalink($recent["ID"]) ?>">
-							<?php // Verifica si el post tiene una imagen, si es verdadero: la muestra, 
-							if ( has_post_thumbnail( $recent["ID"]) ) {
-								echo  get_the_post_thumbnail($recent["ID"],'post-thumbnail',['class' => 'img-fluid z-index-20', 'width' => '95%']);
-							}
-							else
-								{
-								//sino,  en caso de que el post no tenga imagen se le agrega una por defecto 
-								?>
-												<img src="<?php bloginfo('template_url')?>/img/eventos.jpg" class="img-fluid z-index-20 wp-post-image" alt=""  width="95%">
-								<?php
-								 }
+					<!-- 	<a class="p-0" data-toggle="tooltip" data-placement="auto" title="Ver Evento" href="<?php the_permalink($recent["ID"]) ?>">
+						<?php // Verifica si el post tiene una imagen, si es verdadero: la muestra, 
+						if ( has_post_thumbnail( $recent["ID"]) ) {
+							echo  get_the_post_thumbnail($recent["ID"],'post-thumbnail',['class' => 'img-fluid z-index-20', 'width' => '95%']);
+						}
+						else
+							{
+							//sino,  en caso de que el post no tenga imagen se le agrega una por defecto 
 							?>
-						</a>
-					
+											<img src="<?php bloginfo('template_url')?>/img/eventos.jpg" class="img-fluid z-index-20 wp-post-image" alt=""  width="95%">
+							<?php
+							 }
+						?>
+					</a> -->
+						<?php echo '<a class="pt-sans texto-azul sin-texto-subrayado f-negrita" data-toggle="tooltip" data-placement="auto" title="Ver Evento" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> '; ?>
 					</div>
 					<div class="col-12 col-lg-8 p-2 ">
 							
-						<?php echo '<a class="pt-sans texto-azul sin-texto-subrayado f-negrita" data-toggle="tooltip" data-placement="auto" title="Ver Evento" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> '; ?><br>Fecha de publicación: <?php echo date( 'd - m - Y', strtotime( $recent['post_date'] ) ); ?>
+						<?php echo '<a class="pt-sans texto-azul sin-texto-subrayado" href="' . get_permalink($recent["ID"]) . '">'; ?>Ver detalles del evento  <?php echo date( 'd - m - Y', strtotime( $recent['post_date'] ) ); ?>
 						
 					</div>								
 				</div>
