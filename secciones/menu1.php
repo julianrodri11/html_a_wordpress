@@ -103,7 +103,7 @@
         </nav>
     </div>
     <!-- fin de nabvar -->
-    <div class="col-lg-5 p-0 m-0 pt-2">
+    <div class="col-lg-5 p-0 m-0 pt-3">
         <!-- boton traducir y redes -->
         <div class="rectangulo-sesgado mb-0">
             <div class="row pt-2 ml-0  mr-2 d-flex justify-content-end justify-content-lg-center">
