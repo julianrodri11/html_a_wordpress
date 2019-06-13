@@ -92,6 +92,7 @@
         <li class="nav-item py-0 text-center border-right borde-azul">
             <a class=" nav-link texto-azul-os px-lg1 hvr-underline-from-center pointer " href="talento_humano">Talento Humano</a>
         </li>
+        <?php /* ?>
         <!--
         <li class="nav-item dropdown py-0 border-right borde-azul text-center">
             <a class="nav-link dropdown-toggle texto-azul-os px-lg-3  hvr-underline-from-center" href="#" id="navbarDropdownMenu_th" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -108,6 +109,7 @@
             <li> <a class=" dropdown-item hvr-underline-from-left texto-azul-os">reglamentos</a></li>
             </ul>
             </li> -->
+            <?php */ ?>
 <li class="nav-item dropdown py-0 border-right borde-azul text-center">
     <a class="nav-link dropdown-toggle texto-azul-os px-lg-3  hvr-underline-from-center" href="#" id="navbarDropdownMenu_cian" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         CIAN

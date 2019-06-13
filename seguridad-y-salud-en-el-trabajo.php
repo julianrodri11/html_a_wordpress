@@ -242,7 +242,9 @@
 							<div class="col-12 p-2 px-md-5 text-center">
 								<h3 class=" f-negrita fuente-institucional texto-azul">-----</h3>
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/investigacion/organigrama-cidae-aunar.jpg" alt="organigrama cida aunar"></div>
+							<div class="col-12 p-2 px-md-5">
+								<!-- <img class="img-fluid" width="100%" src="<?php # bloginfo('template_url')?>/img/investigacion/organigrama-cidae-aunar.jpg" alt="organigrama cida aunar"> -->
+							</div>
 						</div>
 						<!-- pestaña 8-->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-act-8" role="tabpanel" aria-labelledby="v-pills-act-8-tab">
