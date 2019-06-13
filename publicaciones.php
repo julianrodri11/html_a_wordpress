@@ -16,8 +16,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/investigacion/publicaciones-aunar.png" alt="PUBLICACIONES - Autónoma de Nariño"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/investigacion/publicaciones-aunar.png" alt="PUBLICACIONES - Autónoma de Nariño"/>
 				</div>
 			</div>
 		</div>
@@ -32,8 +31,7 @@
 					<div class="row col-12 p-0">
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<a href="http://aunartech.aunar.edu.co/" target="aunar_tech"><img class="img-fluid img_virtual"  src="<?php bloginfo('template_url')?>/img
-/investigacion/publicacion-1.jpg" alt="publicaciones AUNAR" width="100%"></a>
+							<a href="http://aunartech.aunar.edu.co/" target="aunar_tech"><img class="img-fluid img_virtual"  src="<?php bloginfo('template_url')?>/img/investigacion/publicacion-1.jpg" alt="publicaciones AUNAR" width="100%"></a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
 									<!-- aqui se puede colocar un boton para una acción -->
@@ -93,8 +91,7 @@
 					<div class="row col-12 p-0">
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual ">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<a href="http://www.aunar.edu.co/docs/CREAN.pdf" target="boletin_investigacion"><img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
-/investigacion/publicacion-2.jpg" alt="publicaciones AUNAR" width="100%"></a>
+							<a href="http://www.aunar.edu.co/docs/CREAN.pdf" target="boletin_investigacion"><img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img/investigacion/publicacion-2.jpg" alt="publicaciones AUNAR" width="100%"></a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
 									<!-- aqui se puede colocar un boton para una acción -->
@@ -113,8 +110,7 @@
 					<div class="row col-12 p-0">
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<a href="http://www.aunar.edu.co/docs/Revista-Virtual-2018.pdf" target="revista"><img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
-/investigacion/publicacion-3.jpg" alt="publicaciones AUNAR" width="100%"></a>
+							<a href="http://www.aunar.edu.co/docs/Revista-Virtual-2018.pdf" target="revista"><img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img/investigacion/publicacion-3.jpg" alt="publicaciones AUNAR" width="100%"></a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
 									<!-- aqui se puede colocar un boton para una acción -->

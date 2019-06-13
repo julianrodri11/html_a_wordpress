@@ -1,10 +1,10 @@
-<?php /* Template Name: Plantilla Postgrados*/ ?>
+<?php /* Template Name: Plantilla Posgrados*/ ?>
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS */  get_header();   ?>
 		<!--TÍTULO DE LA PÁGINA-->
-		<title>POSTGRADOS - AUTÓNOMA DE NARIÑO</title>
+		<title>POSGRADOS - AUTÓNOMA DE NARIÑO</title>
 	</head>
 	<body>
 		<?php
@@ -16,7 +16,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/investigacion/postgrados.jpg" alt="POSTGRADOS - Autónoma de Nariño"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/investigacion/posgrados.jpg" alt="POSGRADOS - Autónoma de Nariño"/>
 				</div>
 			</div>
 		</div>
@@ -36,26 +36,34 @@
 				<div class="col-12 col-md-9">
 					<div class="tab-content pt-sans texto-azul-os" id="v-pills-tabContent">
 						<div class="tab-pane fade p-3 fondo-gris-os show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-							<div class="col-12 p-2 px-md-5 text-justify">
-								<strong>Descripción</strong>
-								<p>La perspectiva de la formación Superior avanza con el propósito de alternativas emergentes en los países Latinoamérica y del Caribe como referencia de la excelencia de profesional en la área investigativa, científica, tecnológica y humanista con prototipos educativos pertinentes, transformadora, participativa, protagónica, sostenibles y generando modelos de desarrollos integrados productivos para sociedad</p>
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"><h3><strong>DESCRIPCIÓN</strong></h3></span>
+						</div>
+							<div class="col-12 p-2 px-md-5 text-justify">								
+								<p>La perspectiva de la formación superior avanza con el propósito de alternativas emergentes en los países Latinoamérica y del Caribe como referencia de la excelencia de profesional en la área investigativa, científica, tecnológica y humanista con prototipos educativos pertinentes, transformadora, participativa, protagónica, sostenibles y generando modelos de desarrollos integrados productivos para sociedad</p>
 							</div>
 						</div>
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"><h3><strong>MISIÓN</strong></h3></span>
+						</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
-								<strong>Misión</strong>
 								<p>Formar talento humano de excelencia en los diferentes programas académicos de formación integral, investigativa, científica, tecnológica y humanista, que genere múltiples enfoques sociales para enfrentar los nuevos retos que demanda la sociedad y que vinculen al desarrollo sostenible, la investigación y la innovación en las áreas de posgrados, doctorados y posdoctorados.  </p>
 							</div>
 						</div>
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"><h3><strong>VISIÓN</strong></h3></span>
+						</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
-								<strong>Visión</strong>
 								<p>Optimizar la formación profesional de alto nivel investigativo, que confluyen de manera integral, científicos, humanista, tecnológico que impulsen el desarrollo científico nacional, regional, local e internacional</p>
 							</div>
 						</div>
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"><h3><strong>OBJETIVOS</strong></h3></span>
+						</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
-								<strong>Objetivos</strong>
 								<p>Propiciar programas académicos de formación integral en el marco del conocimiento, la investigación, la ciencia, la tecnología y las humanidades, bajo la conceptualización científica, reconociendo el aporte significativo investigativo.</p>
 							</div>
 						</div>
@@ -92,7 +100,7 @@
 					<div class="row col-12 ">
 						<div class="col-12 py-3 text-center text-lg-right mx-auto ">
 							<!-- aqui va todo lo que se quiera centrar -->
-							<img src="<?php bloginfo('template_url')?>/img/investigacion/docente-postgrados.png" alt="Pedro Pablo Burbano" width="50%">
+							<img src="<?php bloginfo('template_url')?>/img/investigacion/docente-posgrados.png" alt="Pedro Pablo Burbano" width="50%">
 						</div>
 					</div>
 				</div>

@@ -143,15 +143,24 @@
 				<div class="col-12 col-md-9">
 					<div class="tab-content pt-sans texto-azul-os" id="v-pills-tabContent">
 						<div class="tab-pane fade p-3 fondo-gris-os show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"><h3><strong>MISIÓN</strong></h3></span>
+							</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
-								<strong class="pt-sans"> MISIÓN</strong>
 								<p>AUNAR VIRTUAL, es una dependencia de la Corporación Universitaria Autónoma de Nariño que fomenta el desarrollo académico y administrativo de los programas presenciales y de educación a distancia modalidad virtual a través de ambientes virtuales.</p>
-								<strong class="pt-sans"> VISIÓN</strong>
+							</div>
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"><h3><strong>VISIÓN</strong></h3></span>
+							</div>	
+							<div class="col-12 p-2 px-md-5 text-justify">								
 								<p>AUNAR VIRTUAL, como unidad de desarrollo académico y administrativo, evoluciona hacia el liderazgo en la educación superior en ambientes virtuales que posibiliten la excelencia académica, la cultura investigativa y la responsabilidad social, para contribuir al desarrollo integral y sostenible a nivel regional, nacional e internacional.</p>
 							</div>
 							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/virtual/organigrama-aunar-virtual.png"></div>
 						</div>
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"><h3><strong>PREGUNTAS FRECUENTES</strong></h3></span>
+							</div>
 							<div class="col-12 p-2 px-md-5 text-justify texto-azul-os">
 								
 								<strong> 1.	¿Cómo ingresar al Campus Aunar Virtual?</strong>
@@ -187,6 +196,9 @@
 							</div>
 						</div>
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"><h3><strong>MÓDULO INTRODUCTORIO</strong></h3></span>
+							</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<strong>Video Introductorio al Campus Aunar Virtual - Modalidad a Distancia</strong>
 							</div>

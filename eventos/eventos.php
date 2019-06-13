@@ -34,27 +34,26 @@
 					<!-- <div class="col-12 col-lg-4 p-2 f-negrita">Fiestas AUNAR:</div> -->
 					<div class="col-12 col-lg-4 p-2 d-flex align-items-center">								
 					
-					<!-- 	<a class="p-0" data-toggle="tooltip" data-placement="auto" title="Ver Evento" href="<?php the_permalink($recent["ID"]) ?>">
-						<?php // Verifica si el post tiene una imagen, si es verdadero: la muestra, 
-						if ( has_post_thumbnail( $recent["ID"]) ) {
-							echo  get_the_post_thumbnail($recent["ID"],'post-thumbnail',['class' => 'img-fluid z-index-20', 'width' => '95%']);
-						}
-						else
-							{
-							//sino,  en caso de que el post no tenga imagen se le agrega una por defecto 
-							?>
-											<img src="<?php bloginfo('template_url')?>/img/eventos.jpg" class="img-fluid z-index-20 wp-post-image" alt=""  width="95%">
-							<?php
-							 }
-						?>
-					</a> -->
+					
 						<?php echo '<a class="pt-sans texto-azul sin-texto-subrayado f-negrita" data-toggle="tooltip" data-placement="auto" title="Ver Evento" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> '; ?>
 					</div>
-					<div class="col-12 col-lg-8 p-2 ">
+					<div class="col-12 col-lg-6 p-2">
 							
-						<?php echo '<a class="pt-sans texto-azul sin-texto-subrayado" href="' . get_permalink($recent["ID"]) . '">'; ?>Ver detalles del evento  <?php echo date( 'd - m - Y', strtotime( $recent['post_date'] ) ); ?>
-						
+						<?php echo '<a class="pt-sans texto-azul sin-texto-subrayado" href="' . get_permalink($recent["ID"]) . '">'; ?>Fecha evento: 
+						<?php if( get_field('dia_evento',$recent["ID"]) ): ?>
+				    			<strong> <?php the_field('dia_evento',$recent["ID"]); ?> </strong>							    			
+						<?php endif; ?>
+						<?php if( get_field('mes_evento',$recent["ID"]) ): ?>							    			
+				    			<strong> <?php the_field('mes_evento',$recent["ID"]); ?> </strong>							    			
+						<?php endif; ?>
+						<?php if( get_field('year_evento',$recent["ID"]) ): ?>							    			
+				    			<strong> <?php the_field('year_evento',$recent["ID"]); ?></strong>
+						<?php endif; ?>						
+						</a>
 					</div>								
+					<div class="col-12 col-lg-2 d-flex align-items-center">		
+							<a href="single-eventos" class="ml-0 p-1 border borde-azul badge badge-pill bg-white hover-amarillo texto-azul sin-texto-subrayado hover-sin-borde">Ver más</a>		
+					</div>
 				</div>
 			</div>
 					<?php

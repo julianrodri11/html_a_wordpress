@@ -78,7 +78,7 @@
 						<!-- pestaña 1 -->
 						<div class="tab-pane fade p-3 fondo-gris-os show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
 							<div class="col-12 p-2 px-md-5 text-center">
-								<span class="text-center pt-sans"> <strong>CENTRO DE INVESTIGACIONES DESARROLLO Y ASESORÍA EMPRESARIAL <br>"CIDAE"</strong></span>
+								<span class="text-center pt-sans"> <h3><strong>CENTRO DE INVESTIGACIONES DESARROLLO Y ASESORÍA EMPRESARIAL <br>"CIDAE"</strong></h3></span>
 							</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p class="pt-sans">
@@ -111,6 +111,9 @@
 						
 						<!-- pestaña 2-->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"> <h3><strong>MISIÓN</strong></h3></span>
+							</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p class="pt-sans">
 									<strong>EL CENTRO DE INVESTIGACIONES, DESARROLLO Y ASESORÍA EMPRESARIAL CIDAE</strong>, es un estamento comprometido con el desarrollo teórico práctico de la actividad investigativa de tal manera que sea factible generar, desarrollar y fomentar en el estudiante y en el docente una actitud crítica, reflexiva y creativa frente al conocimiento y al papel desempeñado dentro del contexto y de su propio criterio profesional.
@@ -120,6 +123,9 @@
 						
 						<!-- pestaña 3-->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"> <h3><strong>VISIÓN</strong></h3></span>
+							</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p class="pt-sans">
 									Institucionalmente el CIDAE, promoverá la investigación en todos los programas de las distintas facultades, para que desde un lenguaje investigativo unificado, fortalezca el desarrollo y ejecución de trabajos de grado y de las distintas formas de investigación tanto para el personal docente como estudiantes con visión científica que satisfaga el interés personal y el servicio a la comunidad; promoverá a partir de la investigación el desarrollo de tecnologías, la creación y consolidación de una comunidad investigativa y se encaminará al reconocimiento de la AUNAR como un ente investigador por excelencia que presenta resultados acordes con las necesidades de la región.
@@ -129,6 +135,9 @@
 						
 						<!-- pestaña 4-->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"> <h3><strong>OBJETIVOS</strong></h3></span>
+							</div>
 							<div class="col-12 p-2 px-md-5 text-justify pt-sans">
 								<strong>Objetivo general</strong>
 								
@@ -158,6 +167,9 @@
 						
 						<!-- pestaña 5-->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-act-deportivas" role="tabpanel" aria-labelledby="v-pills-act-deportivas-tab">
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"> <h3><strong>LÍNEAS DE INVESTIGACIÓN</strong></h3></span>
+							</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p class="pt-sans">
 									Las líneas de Investigación son los enfoques disciplinarios establecidos por la institución, que permiten enmarcar los procesos, prácticas y perspectivas de análisis de los proyectos de investigación.
@@ -174,6 +186,9 @@
 						</div>
 						<!-- pestaña 6-->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-act-6" role="tabpanel" aria-labelledby="v-pills-act-6-tab">
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"> <h3><strong>PRINCIPIOS DE INVESTIGACIÓN</strong></h3></span>
+							</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p class="pt-sans">Como principios de la investigación en la institución se identifican:
 									<br><br>
@@ -195,13 +210,12 @@
 							<div class="col-12 p-2 px-md-5 text-center">
 								<h3 class=" f-negrita fuente-institucional texto-azul">Organigrama CIDAE AUNAR</h3>
 							</div>
-							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/investigacion/organigrama-cidae-aunar.jpg" alt="organigrama cida aunar"></div>
+							<div class="col-12 p-2 px-md-5"><img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/investigacion/organigrama-cidae-aunar.jpg" alt="organigrama cida aunar"></div>
 						</div>
 						<!-- pestaña 8-->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-act-8" role="tabpanel" aria-labelledby="v-pills-act-8-tab">
 							<div class="col-12 p-2 px-md-5 text-center">
-								<h3 class=" f-negrita fuente-institucional texto-azul">Formatos</h3>
+								<h3 class=" f-negrita fuente-institucional texto-azul">FORMATOS</h3>
 							</div>
 							<div class="col-12 p-2 px-md-5 text-justify pt-sans">
 								DOCUMENTOS REQUERIDOS CREACIÓN GRUPOS DE INVESTIGACIÓN <br>
@@ -234,8 +248,7 @@
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
 							<!-- aqui va todo lo que se quiera centrar -->
 							<a href="grupos-de-investigacion" target="gin">
-								<img class="img-fluid img_virtual"  src="<?php bloginfo('template_url')?>/img
-/cidae/grupos-de-investigacion-cidae.jpg" alt="Grupos de investigación AUNAR" width="100%">
+								<img class="img-fluid img_virtual"  src="<?php bloginfo('template_url')?>/img/cidae/grupos-de-investigacion-cidae.jpg" alt="Grupos de investigación AUNAR" width="100%">
 							</a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
@@ -293,8 +306,7 @@
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual ">
 							<!-- aqui va todo lo que se quiera centrar -->
 							<a href="semilleros" target="semilleros">
-								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
-/cidae/semilleros-de-investigacion-cidae.jpg" alt="Semilleros de investigación AUNAR" width="100%">
+								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img/cidae/semilleros-de-investigacion-cidae.jpg" alt="Semilleros de investigación AUNAR" width="100%">
 							</a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">
@@ -317,8 +329,7 @@
 						<div class="col-12 p-0 text-center mx-auto content_img_virtual">
 							<!-- aqui va todo lo que se quiera centrar -->
 							<a href="trabajos-de-grado" target="trab_grado">
-								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img
-/cidae/trabajo-de-grado-cidae.jpg" alt="Trabajo de grado CIDAE - AUNAR" width="100%">
+								<img class="img-fluid img_virtual" src="<?php bloginfo('template_url')?>/img/cidae/trabajo-de-grado-cidae.jpg" alt="Trabajo de grado CIDAE - AUNAR" width="100%">
 							</a>
 							<div class="cont_texto_secundario">
 								<div class="texto_secundario pt-sans texto-azul-os f-negrita">

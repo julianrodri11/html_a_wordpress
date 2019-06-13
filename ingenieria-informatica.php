@@ -84,7 +84,7 @@
 					</div>
 				</div>
 				<div class="col-12 col-lg-7 col-md-6 p-5">
-					<div class="col-12"> <h3 class="fuente-institucional f-color-iinformatica f-negrita">Objetivo General</h3></div>
+					<div class="col-12"> <h3 class="fuente-institucional f-color-iinformatica f-negrita">Descripción</h3></div>
 					<div class="col-12 pt-sans text-justify">
 						<p>
 							El programa de Ingeniería Informática de la Corporación Universitaria Autónoma de Nariño, nació con resolución del Ministerio de Educación Nacional No. 16643 del 20 de noviembre de 2013. Es un programa en modalidad a distancia con 9 semestres, que se orienta específicamente al desarrollo de software para atender las necesidades actuales, en el tratamiento de grandes volúmenes de datos.

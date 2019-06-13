@@ -65,7 +65,7 @@
 						
 						<!-- penstaña 1 -->
 						<div class="tab-pane fade p-3 fondo-gris-os show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-							<div class="col-12 p-2 px-md-5"><strong>Misión</strong></div>
+							<div class="col-12 p-2 px-md-5 text-center"><h3><strong>MISIÓN</strong></h3></div>
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p>La Vicerrectoría de Investigaciones y posgrados de la AUNAR fomenta, realiza y prospecta diferentes actividades articuladoras de Investigación, Desarrollo e Innovación, I+D+I, y posgrados en planes, programas y proyectos con el fin de dinamizar y originar alternativas de solución al cuadrinomio Empresa-Estado-Sociedad-Universidad. </p>
 							</div>
@@ -74,7 +74,7 @@
 						
 						<!-- penstaña 2 -->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-							<div class="col-12 p-2 px-md-5"><strong>Visión</strong></div>
+							<div class="col-12 p-2 px-md-5 text-center"><h3><strong>VISIÓN</strong></h3></div>
 							<div class="col-12 p-2 px-md-5 text-justify" >
 								La Vicerrectoría de Investigaciones y posgrados de la AUNAR en diez años será reconocida y valorada por su excelencia investigativa, por tener programas de posgrados de alta calidad, por generar alternativas de solución a la sociedad del suroccidente colombiano, por tener a los mejores docentes investigadores y por ser registrada y acreditada nacional e internacionalmente por sus labores de I+D+I y posgrados.
 							</div>
@@ -83,7 +83,7 @@
 						
 						<!-- penstaña 3 -->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
-							<div class="col-12 p-2 px-md-5"><strong>Objetivos</strong></div>
+							<div class="col-12 p-2 px-md-5 text-center"><h3><strong>OBJETIVOS</strong></h3></div>
 							<div class="col-12 p-2 px-md-5 text-justify" >
 								<ul>
 									<li><strong></strong>  Estimular la investigación formativa, básica, aplicada y de desarrollo entre los diferentes actores de la comunidad universitaria. </li>

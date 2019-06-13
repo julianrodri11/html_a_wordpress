@@ -151,7 +151,7 @@
 					<div class="col-12">
 						<h3 class="fuente-institucional texto-amarillo f-negrita text-center">Visión</h3>
 					</div>
-					<div class="col-12 pt-sans text-justify">El programa de ingeniería electrónica de la Corporación Universitaria
+					<div class="col-12 pt-sans text-justify">El programa de Ingeniería Electrónica de la Corporación Universitaria
 						Autónoma de Nariño, será pionero en el manejo de nuevas tecnologías en las ciencias de la electrónica, líder
 						en el sur-occidente Colombiano, en la formación de ingenieros en electrónica, generadora de procesos
 						investigativos como base de la proyección social de nuestra región y formadora de profesionales humanos con
@@ -169,7 +169,7 @@
 					</div>
 					<div class="col-12 pt-sans text-justify">
 						El profesional en Ingeniería Electrónica de la Corporación Universitaria Autónoma de Nariño, estará
-						capacitado para: Diseñar y desarrollar todo tipo de sistemas electrónicos, con alto índice de complejidad,
+						capacitado para: diseñar y desarrollar todo tipo de sistemas electrónicos, con alto índice de complejidad,
 						además, dar soporte en el campo de las telecomunicaciones en las organizaciones en donde se desempeñe. De
 						igual forma podrá desempeñarse como:<br>
 					</div>
@@ -191,11 +191,11 @@
 						<h3 class="fuente-institucional texto-amarillo f-negrita text-center">INGENIERO ELECTRÓNICO?</h3>
 					</div>
 					<div class="col-12 pt-sans text-justify">
-						El Ingeniero en electrónica de la CORPORACIÓN UNIVERSITARIA AUTÓNOMA DE NARIÑO, será capaz de: analizar,
+						El Ingeniero en Electrónica de la CORPORACIÓN UNIVERSITARIA AUTÓNOMA DE NARIÑO, será capaz de: analizar,
 						diseñar, investigar, operar, planear, adaptar e instalar sistemas electrónicos. Debe poseer además los
 						suficientes conocimientos en los campos administrativo, legislativo y cultural para desempeñarse
 						adecuadamente en el medio socio-económico del país, enmarcando todos sus actos dentro de los principios
-						éticos y de justicia social cristiana
+						éticos y de justicia social cristiana.
 					</div>
 					<div class="col-12 mt-5">
 						<h6 class="fuente-institucional texto-amarillo f-negrita">Líneas de profundización<br>(Electivas):</h6>

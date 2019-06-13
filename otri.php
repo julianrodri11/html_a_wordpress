@@ -40,33 +40,42 @@
 					<div class="tab-content pt-sans texto-azul-os" id="v-pills-tabContent">
 						<!-- Pestaña 1-->
 						<div class="tab-pane fade p-3 fondo-gris-os show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"><h3><strong>DESCRIPCIÓN</strong></h3></span>
+							</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<strong>Descripción de la Oficina OTRI</strong>
-								<p>La Oficina de Transferencia de Resultados de Investigación (<strong> OTRI </strong>), está adscrita a la vicerrectoría de I+D+I y Posgrados de la Corporación Universitaria Autónoma de Nariño, tiene como objetivo principal transferir a la sociedad y al sector productivo, los resultados de investigación generados por los grupos y semilleros de investigación de “AUNAR, incorporando el conocimiento y capacidades de la Institución a las necesidades del sector empresarial.
+								<p>La Oficina de Transferencia de Resultados de Investigación (<strong>OTRI</strong>), está adscrita a la vicerrectoría de I+D+I y Posgrados de la Corporación Universitaria Autónoma de Nariño, tiene como objetivo principal transferir a la sociedad y al sector productivo, los resultados de investigación generados por los grupos y semilleros de investigación de “AUNAR, incorporando el conocimiento y capacidades de la Institución a las necesidades del sector empresarial.
 								</p>
 								
 							</div>
 						</div>						
 						<!-- Pestaña 2-->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"><h3><strong>MISIÓN</strong></h3></span>
+						</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
-								<strong>Misión</strong>
 								<p>La misión de la <strong> OTRI </strong> es proporcionar a los estudiantes, investigadores y funcionarios administrativos de la Corporación Universitaria Autónoma de Nariño, la información, el asesoramiento y el acompañamiento en la gestión de la investigación, la propiedad intelectual y la transferencia de conocimiento, con el fin de estimular la investigación aplicada y el contacto permanente con las empresas de la región.</p>
 							</div>
 						</div>						
 						<!-- Pestaña 3-->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"><h3><strong>VISIÓN</strong></h3></span>
+						</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
-								<strong>Visión</strong>
 								<p>Ser reconocida al 2022, como una oficina de referencia en la transferencia de resultados de investigación hacia el sector productivo del sur occidente colombiano.
 								</p>
 							</div>
 						</div>						
 						<!-- Pestaña 4-->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+							<div class="col-12 p-2 px-md-5 text-center">
+								<span class="text-center pt-sans"><h3><strong>OBJETIVOS</strong></h3></span>
+						</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
-								<strong>Objetivos</strong>
-								<br>- Identificar Resultados de Investigación de la Institución con potencial de ser transferidos.
+										- Identificar Resultados de Investigación de la Institución con potencial de ser transferidos.
 								<br>- Promocionar y difundir la oferta tecnológica resultado de la investigación de “AUNAR”.
 								<br>- Gestionar la Propiedad Intelectual.
 								<br>- Realizar actividades de Vigilancia Tecnológica.

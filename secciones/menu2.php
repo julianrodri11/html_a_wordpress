@@ -13,7 +13,7 @@
                 <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os" href="institucional">Información Institucional</a></li>
                 <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os" href="rectoria">Rectoría</a>  </li>
                 <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os" href="vicerrectorias">Vicerrectorías</a>  </li>
-                <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os" href="sitio_en_construccion">Planeación</a>  </li>
+                <!-- <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os" href="sitio_en_construccion">Planeación</a>  </li> -->
             </ul>
         </li>
         <li class="nav-item dropdown py-0 border-right borde-azul text-center">
@@ -63,7 +63,7 @@
                 <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os  " href="cidae">CIDAE</a></li>
                 <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os  " href="crean">CREAN</a></li>
                 <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os  " href="otri">OTRI</a>      </li>
-                <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os  " href="postgrados">Postgrados</a></li>
+                <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os  " href="posgrados">Posgrados</a></li>
                 <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os  " href="publicaciones">publicaciones</a></li>
             </ul>
         </li>
@@ -113,7 +113,7 @@
         CIAN
     </a>
     <ul class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdownMenu_cian">
-        <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os " href="cian">Dpto de Inglés</a> </li>
+        <li><a class=" dropdown-item hvr-underline-from-left texto-azul-os " href="cian">Dpto de Idiomas</a> </li>
     </ul>
 </li>
 <li class="nav-item active  py-0 text-center">

@@ -91,7 +91,7 @@
 						<p>El Programa de Ingeniería Mecánica que ofrece la Corporación Universitaria Autónoma de Nariño posee el contenido curricular de la formación profesional la cual responde a los lineamientos nacionales e internacionales, complementando los elementos teóricos con los aspectos prácticos en un ambiente integral y dinámico en la formación de las competencias y saberes que dan competitividad al egresado, en un contexto cada vez más globalizado.
 						</p>
 						<p>
-							Específicamente el <strong>PROFESIONAL DE INGENIERÍA</strong> será capaz de liderar procesos industriales y de producción  o el mantenimiento de maquinaria y equipos; de igual forma la formación recibida en el programa  le permitirá realizar labores de montaje de sistemas mecánicos en plantas industriales y de servicios; Impulsará el desarrollo del sector metalmecánico de los contextos en los cuales ejerza la profesión, desarrollar procesos de investigación encaminados al desarrollo del sector metalmecánico, realizar consultoría en seguridad industrial y asesorar en el soporte técnico en las empresas del sector metalmecánico.
+							Específicamente el <strong>PROFESIONAL DE INGENIERÍA</strong> será capaz de liderar procesos industriales y de producción  o el mantenimiento de maquinaria y equipos; de igual forma la formación recibida en el programa  le permitirá realizar labores de montaje de sistemas mecánicos en plantas industriales y de servicios; impulsará el desarrollo del sector metalmecánico de los contextos en los cuales ejerza la profesión, desarrollar procesos de investigación encaminados al desarrollo del sector metalmecánico, realizar consultoría en seguridad industrial y asesorar en el soporte técnico en las empresas del sector metalmecánico.
 						</p>
 					</div>
 				</div>
@@ -115,11 +115,11 @@
 			<div class="row p-4 m-1 ">
 				<div class="col-12 col-sm-6 ">
 					<div class="col-12"> <h3 class="fuente-institucional f-color-imecanica f-negrita text-center">Misión</h3></div>
-					<div class="col-12 pt-sans text-justify">La facultad de Ingeniería Mecánica  de la Corporación autónoma de Nariño AUNAR, forma profesionales con ingenio creativo e investigativo, con capacidad para identificar oportunidades, encaminadas en la creación de empresas, con criterios de excelencia, con valores éticos y actitud de autoformación, innovadores y descubridores de soluciones a problemas de su entorno en los campos de su competencia</div>
+					<div class="col-12 pt-sans text-justify">La facultad de Ingeniería Mecánica  de la Corporación autónoma de Nariño AUNAR, forma profesionales con ingenio creativo e investigativo, con capacidad para identificar oportunidades, encaminadas en la creación de empresas, con criterios de excelencia, con valores éticos y actitud de autoformación, innovadores y descubridores de soluciones a problemas de su entorno en los campos de su competencia.</div>
 				</div>
 				<div class="col-12 col-sm-6 ">
 					<div class="col-12"> <h3 class="fuente-institucional f-color-imecanica f-negrita text-center">Visión</h3></div>
-					<div class="col-12 pt-sans text-justify">Ser un programa que forme profesionales Integrales con alto sentido ético y moral, reconocidos por su excelencia académica y técnica, líderes en la creación de empresas en el sector mecánico, comprometidos con el uso racional de los recursos naturales y la conservación del medio ambiente, agentes de cambio e impulso del desarrollo social, económico y científico de la región y el país, generadores de soluciones a problemas tecnológicos</div>
+					<div class="col-12 pt-sans text-justify">Ser un programa que forme profesionales integrales con alto sentido ético y moral, reconocidos por su excelencia académica y técnica, líderes en la creación de empresas en el sector mecánico, comprometidos con el uso racional de los recursos naturales y la conservación del medio ambiente, agentes de cambio e impulso del desarrollo social, económico y científico de la región y el país, generadores de soluciones a problemas tecnológicos.</div>
 				</div>
 			</div>
 		</div>
@@ -155,7 +155,7 @@
 						<li>Creativo en la  adaptación, diseño e innovador en el montaje de procesos productivos y  de  ensamblaje de maquinaria industrial.</li>
 						<li>Ensamblador de equipos y maquinaria industrial.</li>
 						<li>Liderazgo en el desarrollo de  proyectos de ingeniería mecánica en el sector industrial, agroindustrial y manufacturero.</li>
-						<li>Profesional con alto sentido ético y práctico de los principios morales y cívicos que le permite brindar un servicio ágil, oportuno y veraz en el campo metalmecánico</li>
+						<li>Profesional con alto sentido ético y práctico de los principios morales y cívicos que le permite brindar un servicio ágil, oportuno y veraz en el campo metalmecánico.</li>
 					</div>
 					<div class="col-12 mt-5"><h6 class="fuente-institucional f-color-imecanica f-negrita">Líneas de profundización<br>(Electivas):</h6></div>
 					<div class="col-12 ">

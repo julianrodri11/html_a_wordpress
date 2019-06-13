@@ -74,7 +74,7 @@
 
       <div>
         <div class="col-12">
-          <a href="postgrados" id="mn_posgrados" class="nav-link fuente-institucional f-negrita texto-azul text-center">
+          <a href="posgrados" id="mn_posgrados" class="nav-link fuente-institucional f-negrita texto-azul text-center">
             <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/iconos/ico_posgrados.png"
               alt="POSGRADOS AUNAR"></a>
         </div>

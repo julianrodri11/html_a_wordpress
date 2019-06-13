@@ -6,9 +6,11 @@ function evento($columna1,$columna2)
         <div class="row p-1 hover-texto-blanco eventos transparencia-hover hover-borde-blanco d-flex align-items-center texto-azul">
           <div class="col-12 <?php echo $columna1; ?> d-flex justify-content-center justify-content-sm-start">
             <div class=" hexagon p-3">
-              <div class="row pt-2 text-center ">
-                <span class="col-12 fuente-institucional f-negrita f-size-16">20</span>
-                <span class="col-12 fuente-institucional f-negrita f-size-16">Junio</span>
+              <div class="row pt-2 text-center ">                
+                <?php if( get_field('dia_evento') || get_field('mes_evento')): ?>                  
+                  <span class="col-12 fuente-institucional f-size-18 d-flex justify-content-center f-negrita"><?php the_field('dia_evento'); ?></span>
+                  <span class="col-12 fuente-institucional f-size-15 d-flex justify-content-center f-negrita f-mayusculas" ><?php the_field('mes_evento'); ?></span>                  
+              <?php endif; ?>
               </div>
             </div>
           </div>
@@ -18,9 +20,15 @@ function evento($columna1,$columna2)
                 <a class="p-0 sin-texto-subrayado texto-azul-os hover-texto-blanco" data-toggle="tooltip" data-placement="auto" title="Ver Evento" href="<?php the_permalink() ?>"><?php echo the_title(); ?></a>
               </label></div>
               <div class="col-lg-12 text-center text-lg-left text-md-left">
-                  LUGAR:
+                  <?php if( get_field('lugar_evento')): ?>  
+                   <strong>LUGAR:</strong>  <?php the_field('lugar_evento'); ?>
+                  <?php endif; ?>
               </div>
-              <div class="col-lg-12 text-center text-lg-left text-md-left">Hora: 8:00 am</div>
+              <div class="col-lg-12 text-center text-lg-left text-md-left">
+                <?php if( get_field('hora_evento')): ?>  
+                <strong>Hora:</strong> <?php the_field('hora_evento'); ?>
+                <?php endif; ?>
+              </div>
             </div>
           </div>
         </div>

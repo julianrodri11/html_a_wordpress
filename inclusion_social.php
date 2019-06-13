@@ -17,8 +17,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 p-0">
-					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img
-/bienestar/inclusion_social.jpg"/>
+					<img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/bienestar/inclusion_social.jpg"/>
 				</div>
 			</div>
 		</div>
@@ -27,10 +26,10 @@
 		<div class="container-fluid fondo-gris-c p-lg-5">
 			
 			<div class="row px-lg-5 m-lg-2 pt-sans texto-azul-os text-justify">
-				<div class="col-12 col-md-6 p-lg-5"><p>La coordinación de inclusión social es la instancia facilitadora del proceso de educación inclusiva superior. para ello está  comprometida  inicialmente  con la caracterización, estudio e identificación de barreras y alternativas de acción  para lograr que tanto  estudiantes  pertenecientes a la institución  que han sido social e históricamente excluidos por sus condiciones de capacidades especiales, vulnerabilidad ,diversidad cultural y/o Formas de vida, como la comunidad educativa en general  puedan ejercer su derecho a la participación y sean tenidos en cuenta en las decisiones que les involucran fomentando el reconocimiento de la diversidad de la población sujeto, identificando  y minimizando las barreras para el aprendizaje y la participación y maximizar los recursos que apoyen los procesos.
+				<div class="col-12 col-md-6 p-lg-5"><p>La Coordinación de Inclusión Social es la instancia facilitadora del proceso de educación inclusiva superior. para ello está  comprometida  inicialmente  con la caracterización, estudio e identificación de barreras y alternativas de acción  para lograr que tanto  estudiantes  pertenecientes a la institución  que han sido social e históricamente excluidos por sus condiciones de capacidades especiales, vulnerabilidad, diversidad cultural y/o Formas de vida, como la comunidad educativa en general  puedan ejercer su derecho a la participación y sean tenidos en cuenta en las decisiones que les involucran fomentando el reconocimiento de la diversidad de la población sujeto, identificando  y minimizando las barreras para el aprendizaje y la participación y maximizar los recursos que apoyen los procesos.
 				</p>
 				<h3 class="fuente-institucional f-negrita texto-azul-os mx-auto">Objetivo General</h3>
-				<p>Contribuir en la Construcción y desarrollo de un modelo de educación que responda a una política institucional inclusiva y a las características de la población estudiantil, garantizandoles el derecho a la educación, a la oportunidad y a la igualdad, mediante una oferta educativa pertinente de calidad que respete y los proyecte en campos laborales de alta demanda en el marco de la interculturalidad, diversidad y equidad, para su desarrollo integral como seres humanos.</p>
+				<p>Contribuir en la construcción y desarrollo de un modelo de educación que responda a una política institucional inclusiva y a las características de la población estudiantil, garantizándoles el derecho a la educación, oportunidad e igualdad, mediante una oferta educativa pertinente de calidad que respete y los proyecte en campos laborales de alta demanda en el marco de la interculturalidad, diversidad y equidad, para su desarrollo integral como seres humanos.</p>
 			</div>
 			<div class="col-12 col-md-6 p-lg-5 border-left borde-amarillo borde-2">
 				<div class="row ">
@@ -55,8 +54,7 @@
 						
 						<div class="row">
 							<div class="col-12 col-md-6 text-center">
-								<img src="<?php bloginfo('template_url')?>/img
-/bienestar/deportes.png" class="align-self-center mr-3 rounded-circle img-fluid" >
+								<img src="<?php bloginfo('template_url')?>/img/bienestar/deportes.png" class="align-self-center mr-3 rounded-circle img-fluid" >
 							</div>
 							<div class="col-12 col-md-6 text-center text-md-left">
 								<h4 class="fuente-institucional texto-amarillo f-negrita">PROFESIONAL ENCARGADO</h4>
