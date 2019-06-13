@@ -68,12 +68,12 @@
 						?>
 						<div class="col-12 col-md-8 text-center f-negrita texto-azul border-bottom borde-azul py-4 f-size-18">
 							<?php the_title(); ?>
-							<meta name="keywords" content="<?php the_title(); ?>">
+							
 						</div>
 						<div class="col-12 col-md-8 pt-sans f-italica p-lg-4 text-justify">
 							
 								<?php the_excerpt(); ?>
-								<meta name="description" content="<?php the_excerpt(); ?>">
+								
 							
 						</div>
 						<div class="col-12 col-md-8">
@@ -86,9 +86,11 @@
 										#obtiene la url de una imagen del post noticia para cuando se comparta la noticia en face se muestre la imagen
 						        $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 						        
 						        ?>
-						        <meta property="og:image" content="<?php echo $featured_img_url; ?>">
+						        <meta property="og:image" content=<?php echo $featured_img_url; ?> />
 						        <?php
 									} ?>
+										<meta name="keywords" content=<?php the_title(); ?>/>
+										<meta name="description" content=<?php the_excerpt(); ?> />
 								
 
 								</div>
