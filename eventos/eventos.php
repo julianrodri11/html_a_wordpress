@@ -9,7 +9,7 @@
  ?>
 			<div class="col-12 col-md-11">
 				<div class="row">
-					<div class="col-8 p-2 fondo-azul-oscuro text-white pl-4"><h3>Últimas Eventos</h3></div>
+					<div class="col-8 p-2 fondo-azul-oscuro text-white pl-4"><h3>Últimos Eventos</h3></div>
 					<div class="col-4 fondo-azul-oscuro texto-amarillo d-flex justify-content-center align-items-center">
 						<a href="single-eventos" class="my-1 p-2 border borde-azul badge badge-pill bg-white hover-amarillo texto-azul sin-texto-subrayado hover-sin-borde">Más Eventos</a>
 					</div>

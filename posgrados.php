@@ -28,9 +28,9 @@
 				<div class="col-12 col-md-3">
 					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Descripción</a>
-						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Misión</a>
-						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Visión</a>
-						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Objetivos</a>
+						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Misión, Visión</a>
+						<!-- <a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Visión</a> -->
+						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Objetivos</a>
 					</div>
 				</div>
 				<div class="col-12 col-md-9">
@@ -46,19 +46,19 @@
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
 							<div class="col-12 p-2 px-md-5 text-center">
 								<span class="text-center pt-sans"><h3><strong>MISIÓN</strong></h3></span>
-						</div>
+							</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p>Formar talento humano de excelencia en los diferentes programas académicos de formación integral, investigativa, científica, tecnológica y humanista, que genere múltiples enfoques sociales para enfrentar los nuevos retos que demanda la sociedad y que vinculen al desarrollo sostenible, la investigación y la innovación en las áreas de posgrados, doctorados y posdoctorados.  </p>
 							</div>
-						</div>
-						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
 							<div class="col-12 p-2 px-md-5 text-center">
 								<span class="text-center pt-sans"><h3><strong>VISIÓN</strong></h3></span>
-						</div>
+							</div>
 							<div class="col-12 p-2 px-md-5 text-justify">
 								<p>Optimizar la formación profesional de alto nivel investigativo, que confluyen de manera integral, científicos, humanista, tecnológico que impulsen el desarrollo científico nacional, regional, local e internacional</p>
 							</div>
 						</div>
+						<!-- <div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">							
+						</div> -->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
 							<div class="col-12 p-2 px-md-5 text-center">
 								<span class="text-center pt-sans"><h3><strong>OBJETIVOS</strong></h3></span>

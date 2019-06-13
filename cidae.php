@@ -37,36 +37,36 @@
 						
 						<!-- pestaña 2 -->
 						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-							Misión
+							Misión, Visión
 						</a>
 						
 						<!-- pestaña 3 -->
-						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+						<!-- <a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
 							Visión
-						</a>
+						</a> -->
 						
 						<!-- pestaña 4 -->
-						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
 							Objetivos
 						</a>
 						
 						<!-- pestaña 5 -->
-						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os" id="v-pills-act-deportivas-tab" data-toggle="pill" href="#v-pills-act-deportivas" role="tab" aria-controls="v-pills-act-deportivas" aria-selected="false">
+						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita" id="v-pills-act-deportivas-tab" data-toggle="pill" href="#v-pills-act-deportivas" role="tab" aria-controls="v-pills-act-deportivas" aria-selected="false">
 							Líneas de investigación
 						</a>
 						
 						<!-- pestaña 6 -->
-						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris" id="v-pills-act-6-tab" data-toggle="pill" href="#v-pills-act-6" role="tab" aria-controls="v-pills-act-6" aria-selected="false">
+						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os" id="v-pills-act-6-tab" data-toggle="pill" href="#v-pills-act-6" role="tab" aria-controls="v-pills-act-6" aria-selected="false">
 							Principios de Ia Investigación
 						</a>
 						
 						<!-- pestaña 7 -->
-						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os" id="v-pills-act-7-tab" data-toggle="pill" href="#v-pills-act-7" role="tab" aria-controls="v-pills-act-7" aria-selected="false">
+						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita" id="v-pills-act-7-tab" data-toggle="pill" href="#v-pills-act-7" role="tab" aria-controls="v-pills-act-7" aria-selected="false">
 							Organigrama
 						</a>
 						
 						<!-- pestaña 8 -->
-						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris" id="v-pills-act-8-tab" data-toggle="pill" href="#v-pills-act-8" role="tab" aria-controls="v-pills-act-8" aria-selected="false">
+						<a class="nav-link fuente-institucional texto-azul-os sin-texto-subrayado hvr-underline-from-center f-negrita fondo-gris-os" id="v-pills-act-8-tab" data-toggle="pill" href="#v-pills-act-8" role="tab" aria-controls="v-pills-act-8" aria-selected="false">
 							Formatos para Descargar
 						</a>
 						
@@ -119,10 +119,6 @@
 									<strong>EL CENTRO DE INVESTIGACIONES, DESARROLLO Y ASESORÍA EMPRESARIAL CIDAE</strong>, es un estamento comprometido con el desarrollo teórico práctico de la actividad investigativa de tal manera que sea factible generar, desarrollar y fomentar en el estudiante y en el docente una actitud crítica, reflexiva y creativa frente al conocimiento y al papel desempeñado dentro del contexto y de su propio criterio profesional.
 								</p>
 							</div>
-						</div>
-						
-						<!-- pestaña 3-->
-						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
 							<div class="col-12 p-2 px-md-5 text-center">
 								<span class="text-center pt-sans"> <h3><strong>VISIÓN</strong></h3></span>
 							</div>
@@ -132,6 +128,11 @@
 								</p>
 							</div>
 						</div>
+						
+						<!-- pestaña 3-->
+						<!-- <div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+							
+						</div> -->
 						
 						<!-- pestaña 4-->
 						<div class="tab-pane fade p-3 fondo-gris-os" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
