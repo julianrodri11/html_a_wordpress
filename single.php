@@ -80,6 +80,8 @@
 							<div class="row d-flex justify-content-center">
 								<!-- imagen -->
 								<div class="col-12">
+									<meta name="keywords" content=<?php the_title(); ?>/>
+									<meta name="description" content=<?php the_excerpt(); ?> />
 									<?php // Verifica si una noticia tiene una imagen
 									if ( has_post_thumbnail() ) {
 										the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid ', 'width' => '100%']);
@@ -89,9 +91,6 @@
 						        <meta property="og:image" content=<?php echo $featured_img_url; ?> />
 						        <?php
 									} ?>
-										<meta name="keywords" content=<?php the_title(); ?>/>
-										<meta name="description" content=<?php the_excerpt(); ?> />
-								
 
 								</div>
 							</div>
