@@ -3,10 +3,7 @@
 <html <?php language_attributes();?>>
 	<head>
 		<?php /*ENLACES DE LIBRERIAS*/  get_header();   ?>
-		<title>PORTAL DE NOTICIAS - AUTÓNOMA DE NARIÑO</title>
-		<meta name="description" content="Leidy Mera, estudiante de la Corporación Universitaria Autónoma de Nariño, sede Ipiales, ha ganado importantes reconocimientos a nivel mundial debido a su pasión y dedicación por el ciclo montañismo ¡Conozcamos esta desafiante historia!">
-		<meta name="keywords" content="Leidy Mera Gana importantes reconocimientos">
-		<meta property="og:image" content="<?php bloginfo('template_url')?>/img/noticias/slider-portal-de-noticias.jpg">
+		<title>PORTAL DE NOTICIAS - AUTÓNOMA DE NARIÑO</title>		
 	</head>
 	<body>
 		
@@ -38,10 +35,9 @@
 						$recent_posts = wp_get_recent_posts( $args );
 						foreach( $recent_posts as $recent ){
 					?>
-					<div class="row my-3 hvr-underline-from-center transparencia-hover border-warning border-bottom m-1 d-flex align-items-center">
-						<!-- <div class="col-4 p-0 "><img class="img-fluid rounded p-1" src="<?php bloginfo('template_url')?>/img/noticias/noticia1.jpg" alt="Noticias" width="100%"></div> -->
+					<div class="row my-3 hvr-underline-from-center transparencia-hover border-warning border-bottom m-1 d-flex align-items-center">						
 						<div class="col-4 p-0 py-1">
-							<!-- <img class="img-fluid rounded p-1" src="<?php bloginfo('template_url')?>/img/noticias/noticia1.jpg" alt="Noticias" width="100%"> -->
+							<!-- <img class="img-fluid rounded p-1" src="<?php #bloginfo('template_url')?>/img/noticias/noticia1.jpg" alt="Noticias" width="100%"> -->
 							<a class="p-0" href="<?php the_permalink($recent["ID"]) ?>">
 								<?php
 								if ( has_post_thumbnail( $recent["ID"]) ) {
@@ -50,11 +46,11 @@
 								?>
 							</a>
 						</div>
-						<div class="col-8 p-0 m-0 "><?php echo '<a class="pt-sans texto-amarillo sin-texto-subrayado" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> '; ?><br>Fecha: <?php echo date( 'd - m - Y', strtotime( $recent['post_date'] ) ); ?>
+						<div class="col-8 p-0 m-0 "><?php echo '<a class="pt-sans texto-amarillo sin-texto-subrayado" href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> '; ?><br>Fecha: <?php echo date( 'd M Y', strtotime( $recent['post_date'] ) ); ?>
 						
-						<!-- <?php $excerpt = wp_trim_excerpt( $recent['post_excerpt']); // $excerpt contains the excerpt of the concerned post
-							  echo $excerpt; 
-						?> -->
+						 <?php #$excerpt = wp_trim_excerpt( $recent['post_excerpt']); // $excerpt contains the excerpt of the concerned post
+							  	 #echo $excerpt; 
+						?> 
 
 						</div>						
 					</div>	<?php
@@ -64,6 +60,7 @@
 					?>
 					
 				</div>
+				
 				<div class="col-12 col-md-9 p-lg-5 fondo-gris-c">
 					<div class="row d-flex justify-content-center fuente-institucional">
 						<?php
@@ -71,25 +68,34 @@
 						?>
 						<div class="col-12 col-md-8 text-center f-negrita texto-azul border-bottom borde-azul py-4 f-size-18">
 							<?php the_title(); ?>
+							<meta name="keywords" content="<?php the_title(); ?>">
 						</div>
 						<div class="col-12 col-md-8 pt-sans f-italica p-lg-4 text-justify">
-							<p>
+							
 								<?php the_excerpt(); ?>
-							</p>
+								<meta name="description" content="<?php the_excerpt(); ?>">
+							
 						</div>
 						<div class="col-12 col-md-8">
 							<div class="row d-flex justify-content-center">
 								<!-- imagen -->
 								<div class="col-12">
-									<?php // check if the post or page has a Featured Image assigned to it.
+									<?php // Verifica si una noticia tiene una imagen
 									if ( has_post_thumbnail() ) {
 										the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid ', 'width' => '100%']);
+										#obtiene la url de una imagen del post noticia para cuando se comparta la noticia en face se muestre la imagen
+						        $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 						        
+						        ?>
+						        <meta property="og:image" content="<?php echo $featured_img_url; ?>">
+						        <?php
 									} ?>
+								
+
 								</div>
 							</div>
 						</div>
 						<div class="col-12 col-md-8">
-							<!-- <img class="mx-auto img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/noticias/slider-portal-de-noticias.jpg"/> -->
+							
 						</div>
 						<div class="col-12 col-md-8 text-justify pt-3">
 							<?php the_content(); ?>

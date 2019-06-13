@@ -1,8 +1,8 @@
 <meta charset="<?php bloginfo('charset'); ?>">
-<link rel="shortcut icon" href="<?php bloginfo('template_url')?>/img/aunar.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/jquery.min.js" async></script>
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/popper.min.js" async></script>
+<link rel="shortcut icon" href="<?php bloginfo('template_url')?>/img/aunar.ico">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/css/bootstrap.min.css">
 <noscript id="deferred-styles">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/css/personalizado.css">
