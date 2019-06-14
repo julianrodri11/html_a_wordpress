@@ -22,7 +22,7 @@
             </a>
           </div>
           <div class="mb-1 text-light fuente-institucional small">
-            <a class="text-white" data-toggle="tooltip" data-placement="auto" title="Ver" target="f4" href="<?php bloginfo('template_url')?>/docs/footer/Reglamento_Estudiantil_Modificado_2018.pdf">
+            <a class="text-white" data-toggle="tooltip" data-placement="auto" title="Ver" target="f4" href="<?php bloginfo('template_url')?>/docs/footer/Reglamento_Estudiantil.pdf">
               Reglamento Estudiantil
             </a>
           </div>
@@ -79,7 +79,7 @@
       </div>
       <div class="col-12 py-2 text-center text-white fuente-institucional small">
         <a class="texto-amarillo f-negrita" data-toggle="tooltip" data-placement="auto" title="Ver políticas" href="politicas-de-proteccion-de-datos">
-          POLÍTICAS DE PROTECCIÓN DE DATOS PERSONALES
+          PROTECCIÓN DE DATOS PERSONALES
         </a>
       </div>
     </div>
