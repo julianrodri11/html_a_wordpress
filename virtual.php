@@ -231,7 +231,7 @@
 				<div class="col-12 col-sm-6 col-md-4 col-lg-2 pb-5">
 					
 					<div class="col-12 p-0 content_img_virtual">
-						<a href="plantas-aromaticas.php" target="plantas-aromaticas">
+						<a href="plantas-aromaticas" target="plantas-aromaticas">
 							<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img/virtual/1.jpg" >
 							<div class="cont_texto_principal">
 								<div class="texto_principal fuente-institucional f-negrita texto-azul-os">Transformación de Plantas Aromáticas
@@ -270,7 +270,7 @@
 				<div class="col-12 col-sm-6 col-md-4 col-lg-2 pb-5">
 					
 					<div class="col-12 p-0 content_img_virtual">
-						<a href="mercadeo-agropecuario.php" target="mercadeo-agropecuario">
+						<a href="mercadeo-agropecuario" target="mercadeo-agropecuario">
 							<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img/virtual/2.jpg" >
 							<div class="cont_texto_principal">
 								<div class="texto_principal fuente-institucional f-negrita texto-azul-os">Mercadeo Agropecuario
@@ -308,7 +308,7 @@
 				</div>
 				<div class="col-12 col-sm-6 col-md-4 col-lg-2 pb-5">
 					
-					<div class="col-12 p-0 content_img_virtual"> <a href="administracion-empresas-a-distancia.php" target="administracion-empresas">
+					<div class="col-12 p-0 content_img_virtual"> <a href="administracion-empresas-a-distancia" target="administracion-empresas">
 						<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img/virtual/3.jpg" >
 						<div class="cont_texto_principal">
 							<div class="texto_principal fuente-institucional f-negrita texto-azul-os">Administración de Empresas
@@ -347,7 +347,7 @@
 			<div class="col-12 col-sm-6 col-md-4 col-lg-2 pb-5">
 				
 				<div class="col-12 p-0 content_img_virtual">
-					<a href="contaduria-publica-a-distancia.php" target="contaduria-publica">
+					<a href="contaduria-publica-a-distancia" target="contaduria-publica">
 						<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img/virtual/4.jpg" >
 						<div class="cont_texto_principal">
 							<div class="texto_principal fuente-institucional f-negrita texto-azul-os">Contaduría Pública
@@ -386,7 +386,7 @@
 			<div class="col-12 col-sm-6 col-md-4 col-lg-2 pb-5">
 				
 				<div class="col-12 p-0 content_img_virtual">
-					<a href="ingenieria-informatica.php" target="ingenieria-informatica">
+					<a href="ingenieria-informatica" target="ingenieria-informatica">
 						<img class="mx-auto img-fluid img_virtual" width="100%" src="<?php bloginfo('template_url')?>/img/virtual/5.jpg" >
 						<div class="cont_texto_principal">
 							<div class="texto_principal fuente-institucional f-negrita texto-azul-os">Ingeniería Informática
