@@ -11,7 +11,7 @@
   </head>
   <body>
     <!-- --------------------MODAL INICIAL----------------------- -->
-   <?php include_once('modal/modal-inicial-1.php'); ?>
+    <?php include_once('modal/modal-inicial-1.php');?>
     <!-- -------------------FIN MODAL INICIAL-------------------- -->
     <!-- ------------------MODAL TRADUCTOR----------------------- -->
     <?php include_once('secciones/modal-traductor.php');?>
@@ -36,17 +36,18 @@
       <div class="row ">
         <div class="col-lg-3 pt-5 pb-4 col-md-3 col-sm-12 d-flex justify-content-center align-items-center">
           <div class="row p-3 fondo-azul text-whited-flex justify-content-center">
-            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2019_II.pdf" target="_blank">Calendario Académico 2019-2</a></div>
             <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2019_I.pdf" target="_blank">Calendario Académico 2019-1</a></div>
             <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2018_II.pdf" target="_blank">Calendario Académico 2018-2</a></div>
-            
+            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2018_1.pdf" target="_blank">Calendario Académico 2018-1</a></div>
+            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2017_2.pdf" target="_blank">Calendario Académico 2017-2</a></div>
+            <div class="pl-1 pr-1 "><a class="fuente-institucional text-white hover-texto-amarillo" href="<?php bloginfo('template_url')?>/docs/CALENDARIO_ACADEMICO_2017_1.pdf" target="_blank">Calendario Académico 2017-1</a></div>
           </div>
         </div>
         <div class="col-lg-7 pt-5 pb-4 col-md-6 col-sm-12 text-center ">
           <div class="row ">
             <div class="col-12 ">
-              <a class="hvr-underline-from-center pb-2" href="<?php bloginfo('template_url')?>/docs/Derechos_2019.pdf"  data-toggle="tooltip" data-placement="bottom" title="Click aquí" target="_blank">
-              <img  class=" img-fluid" alt="Derechos pecuniarios autonoma de nariño" src="<?php bloginfo('template_url')?>/img/Derechos_2019.png"></a>
+              <a class="hvr-underline-from-center pb-2" href="<?php bloginfo('template_url')?>/docs/derechos_pecuniarios2018.pdf"  data-toggle="tooltip" data-placement="bottom" title="Click aquí" target="_blank">
+              <img  class=" img-fluid" alt="Derechos pecuniarios autonoma de nariño" src="<?php bloginfo('template_url')?>/img/derechos.png"></a>
             </div>
             <div class="col-12 p-5 texto-azul fuente-institucional">
               Los anteriores son los montos correspondientes a los derechos pecuniarios por servicios académicos y administrativos para el año 2019, aprobados por el Consejo Directivo de la Corporación Universitaria Autónoma de Nariño.
@@ -125,7 +126,7 @@
       <div class="col-lg-12 ">
         <div class="row m-0 p-3 ">          
           <div class="col-md-6 p-2 hvr-grow-shadow izquierda_derecha d-flex align-items-center" >
-            <div class="col p-2 text-center "><a href="http://www.aunarstereo.com/"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img/aunar-stereo.png"/></a>
+            <div class="col p-2 text-center "><a href="radio-aunar-stereo"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img/aunar-stereo.png"/></a>
             </div>          
           </div>
           <div class="col-md-6 p-3 izquierda_derecha d-flex align-items-center">
