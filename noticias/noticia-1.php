@@ -62,10 +62,10 @@
   <!-- noticia 2 -->
   <div class="row m-0">
     <div class="m-0 p-0 col-12 col-lg-6 mt-3 mt-lg-0 order-2 order-lg-1">
-      <div class="row">
+      <div class="row m-0 p-0">
         <!-- imagen -->
-        <div class="col-12">
-          <a class="p-0" href="<?php the_permalink() ?>">
+        <div class="col-12 p-0 m-0">
+          <a class="p-0 m-0" href="<?php the_permalink() ?>">
             <?php // check if the post or page has a Featured Image assigned to it.
             if ( has_post_thumbnail() ) {
               the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid', 'width' => '100%']);
