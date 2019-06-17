@@ -125,7 +125,7 @@
       <div class="col-lg-12 ">
         <div class="row m-0 p-3 ">          
           <div class="col-md-6 p-2 hvr-grow-shadow izquierda_derecha d-flex align-items-center" >
-            <div class="col p-2 text-center "><a href="http://www.aunarstereo.com/"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img/aunar-stereo.png"/></a>
+            <div class="col p-2 text-center "><a href="http://www.aunarstereo.com/"><img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img/aunar-stereo.webp"/></a>
             </div>          
           </div>
           <div class="col-md-6 p-3 izquierda_derecha d-flex align-items-center">

@@ -19,7 +19,7 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/sitioenconstruccion_aunar.jpg"
+              <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/sitioenconstruccion_aunar.webp"
                 alt="Inscribete en nuestro programas">
               <!--div class="carousel-caption">
               <h3></h3>

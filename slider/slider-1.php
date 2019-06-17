@@ -15,7 +15,7 @@
       </div-->
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img/congreso-autonoma-de-narino-2018.jpg" alt="Congreso Autonoma de Nariño">
+      <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img/congreso-autonoma-de-narino-2018.webp" alt="Congreso Autonoma de Nariño">
       <!--div class="carousel-caption">
         <h3>Lorem Fuga, nesciunt </h3>
         <p>voluptatibus consectetur, consequuntur nemo necessitatibus.</p>
