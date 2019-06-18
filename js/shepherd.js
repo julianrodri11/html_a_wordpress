@@ -1,4 +1,4 @@
-/*! shepherd.js 2.5.0 */
+/*! shepherd.js 2.10.0 */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
@@ -6,1443 +6,40 @@
   (global = global || self, global.Shepherd = factory());
 }(this, function () { 'use strict';
 
-  /**
-   * The base implementation of `_.slice` without an iteratee call guard.
-   *
-   * @private
-   * @param {Array} array The array to slice.
-   * @param {number} [start=0] The start position.
-   * @param {number} [end=array.length] The end position.
-   * @returns {Array} Returns the slice of `array`.
-   */
-  function baseSlice(array, start, end) {
-    var index = -1,
-        length = array.length;
-
-    if (start < 0) {
-      start = -start > length ? 0 : (length + start);
-    }
-    end = end > length ? length : end;
-    if (end < 0) {
-      end += length;
-    }
-    length = start > end ? 0 : ((end - start) >>> 0);
-    start >>>= 0;
-
-    var result = Array(length);
-    while (++index < length) {
-      result[index] = array[index + start];
-    }
-    return result;
-  }
-
-  /**
-   * Checks if `value` is the
-   * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
-   * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
-   *
-   * @static
-   * @memberOf _
-   * @since 0.1.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is an object, else `false`.
-   * @example
-   *
-   * _.isObject({});
-   * // => true
-   *
-   * _.isObject([1, 2, 3]);
-   * // => true
-   *
-   * _.isObject(_.noop);
-   * // => true
-   *
-   * _.isObject(null);
-   * // => false
-   */
-  function isObject(value) {
-    var type = typeof value;
-    return value != null && (type == 'object' || type == 'function');
-  }
-
-  /** Detect free variable `global` from Node.js. */
-  var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
-
-  /** Detect free variable `self`. */
-  var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
-
-  /** Used as a reference to the global object. */
-  var root = freeGlobal || freeSelf || Function('return this')();
-
-  /** Built-in value references. */
-  var Symbol$1 = root.Symbol;
-
-  /** Used for built-in method references. */
-  var objectProto = Object.prototype;
-
-  /** Used to check objects for own properties. */
-  var hasOwnProperty = objectProto.hasOwnProperty;
-
-  /**
-   * Used to resolve the
-   * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
-   * of values.
-   */
-  var nativeObjectToString = objectProto.toString;
-
-  /** Built-in value references. */
-  var symToStringTag = Symbol$1 ? Symbol$1.toStringTag : undefined;
-
-  /**
-   * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
-   *
-   * @private
-   * @param {*} value The value to query.
-   * @returns {string} Returns the raw `toStringTag`.
-   */
-  function getRawTag(value) {
-    var isOwn = hasOwnProperty.call(value, symToStringTag),
-        tag = value[symToStringTag];
-
-    try {
-      value[symToStringTag] = undefined;
-      var unmasked = true;
-    } catch (e) {}
-
-    var result = nativeObjectToString.call(value);
-    if (unmasked) {
-      if (isOwn) {
-        value[symToStringTag] = tag;
-      } else {
-        delete value[symToStringTag];
-      }
-    }
-    return result;
-  }
-
-  /** Used for built-in method references. */
-  var objectProto$1 = Object.prototype;
-
-  /**
-   * Used to resolve the
-   * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
-   * of values.
-   */
-  var nativeObjectToString$1 = objectProto$1.toString;
-
-  /**
-   * Converts `value` to a string using `Object.prototype.toString`.
-   *
-   * @private
-   * @param {*} value The value to convert.
-   * @returns {string} Returns the converted string.
-   */
-  function objectToString(value) {
-    return nativeObjectToString$1.call(value);
-  }
-
-  /** `Object#toString` result references. */
-  var nullTag = '[object Null]',
-      undefinedTag = '[object Undefined]';
-
-  /** Built-in value references. */
-  var symToStringTag$1 = Symbol$1 ? Symbol$1.toStringTag : undefined;
-
-  /**
-   * The base implementation of `getTag` without fallbacks for buggy environments.
-   *
-   * @private
-   * @param {*} value The value to query.
-   * @returns {string} Returns the `toStringTag`.
-   */
-  function baseGetTag(value) {
-    if (value == null) {
-      return value === undefined ? undefinedTag : nullTag;
-    }
-    return (symToStringTag$1 && symToStringTag$1 in Object(value))
-      ? getRawTag(value)
-      : objectToString(value);
-  }
-
-  /**
-   * Checks if `value` is object-like. A value is object-like if it's not `null`
-   * and has a `typeof` result of "object".
-   *
-   * @static
-   * @memberOf _
-   * @since 4.0.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
-   * @example
-   *
-   * _.isObjectLike({});
-   * // => true
-   *
-   * _.isObjectLike([1, 2, 3]);
-   * // => true
-   *
-   * _.isObjectLike(_.noop);
-   * // => false
-   *
-   * _.isObjectLike(null);
-   * // => false
-   */
-  function isObjectLike(value) {
-    return value != null && typeof value == 'object';
-  }
-
-  /** `Object#toString` result references. */
-  var symbolTag = '[object Symbol]';
-
-  /**
-   * Checks if `value` is classified as a `Symbol` primitive or object.
-   *
-   * @static
-   * @memberOf _
-   * @since 4.0.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
-   * @example
-   *
-   * _.isSymbol(Symbol.iterator);
-   * // => true
-   *
-   * _.isSymbol('abc');
-   * // => false
-   */
-  function isSymbol(value) {
-    return typeof value == 'symbol' ||
-      (isObjectLike(value) && baseGetTag(value) == symbolTag);
-  }
-
-  /** Used as references for various `Number` constants. */
-  var NAN = 0 / 0;
-
-  /** Used to match leading and trailing whitespace. */
-  var reTrim = /^\s+|\s+$/g;
-
-  /** Used to detect bad signed hexadecimal string values. */
-  var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
-
-  /** Used to detect binary string values. */
-  var reIsBinary = /^0b[01]+$/i;
-
-  /** Used to detect octal string values. */
-  var reIsOctal = /^0o[0-7]+$/i;
-
-  /** Built-in method references without a dependency on `root`. */
-  var freeParseInt = parseInt;
-
-  /**
-   * Converts `value` to a number.
-   *
-   * @static
-   * @memberOf _
-   * @since 4.0.0
-   * @category Lang
-   * @param {*} value The value to process.
-   * @returns {number} Returns the number.
-   * @example
-   *
-   * _.toNumber(3.2);
-   * // => 3.2
-   *
-   * _.toNumber(Number.MIN_VALUE);
-   * // => 5e-324
-   *
-   * _.toNumber(Infinity);
-   * // => Infinity
-   *
-   * _.toNumber('3.2');
-   * // => 3.2
-   */
-  function toNumber(value) {
-    if (typeof value == 'number') {
-      return value;
-    }
-    if (isSymbol(value)) {
-      return NAN;
-    }
-    if (isObject(value)) {
-      var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
-      value = isObject(other) ? (other + '') : other;
-    }
-    if (typeof value != 'string') {
-      return value === 0 ? value : +value;
-    }
-    value = value.replace(reTrim, '');
-    var isBinary = reIsBinary.test(value);
-    return (isBinary || reIsOctal.test(value))
-      ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
-      : (reIsBadHex.test(value) ? NAN : +value);
-  }
-
-  /** Used as references for various `Number` constants. */
-  var INFINITY = 1 / 0,
-      MAX_INTEGER = 1.7976931348623157e+308;
-
-  /**
-   * Converts `value` to a finite number.
-   *
-   * @static
-   * @memberOf _
-   * @since 4.12.0
-   * @category Lang
-   * @param {*} value The value to convert.
-   * @returns {number} Returns the converted number.
-   * @example
-   *
-   * _.toFinite(3.2);
-   * // => 3.2
-   *
-   * _.toFinite(Number.MIN_VALUE);
-   * // => 5e-324
-   *
-   * _.toFinite(Infinity);
-   * // => 1.7976931348623157e+308
-   *
-   * _.toFinite('3.2');
-   * // => 3.2
-   */
-  function toFinite(value) {
-    if (!value) {
-      return value === 0 ? value : 0;
-    }
-    value = toNumber(value);
-    if (value === INFINITY || value === -INFINITY) {
-      var sign = (value < 0 ? -1 : 1);
-      return sign * MAX_INTEGER;
-    }
-    return value === value ? value : 0;
-  }
-
-  /**
-   * Converts `value` to an integer.
-   *
-   * **Note:** This method is loosely based on
-   * [`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).
-   *
-   * @static
-   * @memberOf _
-   * @since 4.0.0
-   * @category Lang
-   * @param {*} value The value to convert.
-   * @returns {number} Returns the converted integer.
-   * @example
-   *
-   * _.toInteger(3.2);
-   * // => 3
-   *
-   * _.toInteger(Number.MIN_VALUE);
-   * // => 0
-   *
-   * _.toInteger(Infinity);
-   * // => 1.7976931348623157e+308
-   *
-   * _.toInteger('3.2');
-   * // => 3
-   */
-  function toInteger(value) {
-    var result = toFinite(value),
-        remainder = result % 1;
-
-    return result === result ? (remainder ? result - remainder : result) : 0;
-  }
-
-  /**
-   * Creates a slice of `array` with `n` elements dropped from the beginning.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.5.0
-   * @category Array
-   * @param {Array} array The array to query.
-   * @param {number} [n=1] The number of elements to drop.
-   * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
-   * @returns {Array} Returns the slice of `array`.
-   * @example
-   *
-   * _.drop([1, 2, 3]);
-   * // => [2, 3]
-   *
-   * _.drop([1, 2, 3], 2);
-   * // => [3]
-   *
-   * _.drop([1, 2, 3], 5);
-   * // => []
-   *
-   * _.drop([1, 2, 3], 0);
-   * // => [1, 2, 3]
-   */
-  function drop(array, n, guard) {
-    var length = array == null ? 0 : array.length;
-    if (!length) {
-      return [];
-    }
-    n = (guard || n === undefined) ? 1 : toInteger(n);
-    return baseSlice(array, n < 0 ? 0 : n, length);
-  }
-
-  /**
-   * Checks if `value` is `undefined`.
-   *
-   * @static
-   * @since 0.1.0
-   * @memberOf _
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is `undefined`, else `false`.
-   * @example
-   *
-   * _.isUndefined(void 0);
-   * // => true
-   *
-   * _.isUndefined(null);
-   * // => false
-   */
-  function isUndefined(value) {
-    return value === undefined;
-  }
-
-  class Evented {
-    on(event, handler, ctx) {
-      const once = arguments.length <= 3 || arguments[3] === undefined ? false : arguments[3];
-
-      if (isUndefined(this.bindings)) {
-        this.bindings = {};
-      }
-
-      if (isUndefined(this.bindings[event])) {
-        this.bindings[event] = [];
-      }
-
-      this.bindings[event].push({
-        handler,
-        ctx,
-        once
-      });
+  function _typeof(obj) {
+    if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+      _typeof = function (obj) {
+        return typeof obj;
+      };
+    } else {
+      _typeof = function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+      };
     }
 
-    once(event, handler, ctx) {
-      this.on(event, handler, ctx, true);
+    return _typeof(obj);
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
     }
+  }
 
-    off(event, handler) {
-      if (isUndefined(this.bindings) || isUndefined(this.bindings[event])) {
-        return false;
-      }
-
-      if (isUndefined(handler)) {
-        delete this.bindings[event];
-      } else {
-        this.bindings[event].forEach((binding, index) => {
-          if (binding.handler === handler) {
-            this.bindings[event].splice(index, 1);
-          }
-        });
-      }
+  function _defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
     }
-
-    trigger(event) {
-      if (!isUndefined(this.bindings) && this.bindings[event]) {
-        const args = drop(arguments);
-        this.bindings[event].forEach((binding, index) => {
-          const ctx = binding.ctx,
-                handler = binding.handler,
-                once = binding.once;
-          const context = ctx || this;
-          handler.apply(context, args);
-
-          if (once) {
-            this.bindings[event].splice(index, 1);
-          }
-        });
-      }
-    }
-
   }
 
-  /**
-   * Creates a base function for methods like `_.forIn` and `_.forOwn`.
-   *
-   * @private
-   * @param {boolean} [fromRight] Specify iterating from right to left.
-   * @returns {Function} Returns the new base function.
-   */
-  function createBaseFor(fromRight) {
-    return function(object, iteratee, keysFunc) {
-      var index = -1,
-          iterable = Object(object),
-          props = keysFunc(object),
-          length = props.length;
-
-      while (length--) {
-        var key = props[fromRight ? length : ++index];
-        if (iteratee(iterable[key], key, iterable) === false) {
-          break;
-        }
-      }
-      return object;
-    };
-  }
-
-  /**
-   * The base implementation of `baseForOwn` which iterates over `object`
-   * properties returned by `keysFunc` and invokes `iteratee` for each property.
-   * Iteratee functions may exit iteration early by explicitly returning `false`.
-   *
-   * @private
-   * @param {Object} object The object to iterate over.
-   * @param {Function} iteratee The function invoked per iteration.
-   * @param {Function} keysFunc The function to get the keys of `object`.
-   * @returns {Object} Returns `object`.
-   */
-  var baseFor = createBaseFor();
-
-  /**
-   * The base implementation of `_.times` without support for iteratee shorthands
-   * or max array length checks.
-   *
-   * @private
-   * @param {number} n The number of times to invoke `iteratee`.
-   * @param {Function} iteratee The function invoked per iteration.
-   * @returns {Array} Returns the array of results.
-   */
-  function baseTimes(n, iteratee) {
-    var index = -1,
-        result = Array(n);
-
-    while (++index < n) {
-      result[index] = iteratee(index);
-    }
-    return result;
-  }
-
-  /** `Object#toString` result references. */
-  var argsTag = '[object Arguments]';
-
-  /**
-   * The base implementation of `_.isArguments`.
-   *
-   * @private
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is an `arguments` object,
-   */
-  function baseIsArguments(value) {
-    return isObjectLike(value) && baseGetTag(value) == argsTag;
-  }
-
-  /** Used for built-in method references. */
-  var objectProto$2 = Object.prototype;
-
-  /** Used to check objects for own properties. */
-  var hasOwnProperty$1 = objectProto$2.hasOwnProperty;
-
-  /** Built-in value references. */
-  var propertyIsEnumerable = objectProto$2.propertyIsEnumerable;
-
-  /**
-   * Checks if `value` is likely an `arguments` object.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.1.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is an `arguments` object,
-   *  else `false`.
-   * @example
-   *
-   * _.isArguments(function() { return arguments; }());
-   * // => true
-   *
-   * _.isArguments([1, 2, 3]);
-   * // => false
-   */
-  var isArguments = baseIsArguments(function() { return arguments; }()) ? baseIsArguments : function(value) {
-    return isObjectLike(value) && hasOwnProperty$1.call(value, 'callee') &&
-      !propertyIsEnumerable.call(value, 'callee');
-  };
-
-  /**
-   * Checks if `value` is classified as an `Array` object.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.1.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is an array, else `false`.
-   * @example
-   *
-   * _.isArray([1, 2, 3]);
-   * // => true
-   *
-   * _.isArray(document.body.children);
-   * // => false
-   *
-   * _.isArray('abc');
-   * // => false
-   *
-   * _.isArray(_.noop);
-   * // => false
-   */
-  var isArray = Array.isArray;
-
-  /**
-   * This method returns `false`.
-   *
-   * @static
-   * @memberOf _
-   * @since 4.13.0
-   * @category Util
-   * @returns {boolean} Returns `false`.
-   * @example
-   *
-   * _.times(2, _.stubFalse);
-   * // => [false, false]
-   */
-  function stubFalse() {
-    return false;
-  }
-
-  /** Detect free variable `exports`. */
-  var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
-
-  /** Detect free variable `module`. */
-  var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
-
-  /** Detect the popular CommonJS extension `module.exports`. */
-  var moduleExports = freeModule && freeModule.exports === freeExports;
-
-  /** Built-in value references. */
-  var Buffer = moduleExports ? root.Buffer : undefined;
-
-  /* Built-in method references for those with the same name as other `lodash` methods. */
-  var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
-
-  /**
-   * Checks if `value` is a buffer.
-   *
-   * @static
-   * @memberOf _
-   * @since 4.3.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
-   * @example
-   *
-   * _.isBuffer(new Buffer(2));
-   * // => true
-   *
-   * _.isBuffer(new Uint8Array(2));
-   * // => false
-   */
-  var isBuffer = nativeIsBuffer || stubFalse;
-
-  /** Used as references for various `Number` constants. */
-  var MAX_SAFE_INTEGER = 9007199254740991;
-
-  /** Used to detect unsigned integer values. */
-  var reIsUint = /^(?:0|[1-9]\d*)$/;
-
-  /**
-   * Checks if `value` is a valid array-like index.
-   *
-   * @private
-   * @param {*} value The value to check.
-   * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
-   * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
-   */
-  function isIndex(value, length) {
-    var type = typeof value;
-    length = length == null ? MAX_SAFE_INTEGER : length;
-
-    return !!length &&
-      (type == 'number' ||
-        (type != 'symbol' && reIsUint.test(value))) &&
-          (value > -1 && value % 1 == 0 && value < length);
-  }
-
-  /** Used as references for various `Number` constants. */
-  var MAX_SAFE_INTEGER$1 = 9007199254740991;
-
-  /**
-   * Checks if `value` is a valid array-like length.
-   *
-   * **Note:** This method is loosely based on
-   * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
-   *
-   * @static
-   * @memberOf _
-   * @since 4.0.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
-   * @example
-   *
-   * _.isLength(3);
-   * // => true
-   *
-   * _.isLength(Number.MIN_VALUE);
-   * // => false
-   *
-   * _.isLength(Infinity);
-   * // => false
-   *
-   * _.isLength('3');
-   * // => false
-   */
-  function isLength(value) {
-    return typeof value == 'number' &&
-      value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER$1;
-  }
-
-  /** `Object#toString` result references. */
-  var argsTag$1 = '[object Arguments]',
-      arrayTag = '[object Array]',
-      boolTag = '[object Boolean]',
-      dateTag = '[object Date]',
-      errorTag = '[object Error]',
-      funcTag = '[object Function]',
-      mapTag = '[object Map]',
-      numberTag = '[object Number]',
-      objectTag = '[object Object]',
-      regexpTag = '[object RegExp]',
-      setTag = '[object Set]',
-      stringTag = '[object String]',
-      weakMapTag = '[object WeakMap]';
-
-  var arrayBufferTag = '[object ArrayBuffer]',
-      dataViewTag = '[object DataView]',
-      float32Tag = '[object Float32Array]',
-      float64Tag = '[object Float64Array]',
-      int8Tag = '[object Int8Array]',
-      int16Tag = '[object Int16Array]',
-      int32Tag = '[object Int32Array]',
-      uint8Tag = '[object Uint8Array]',
-      uint8ClampedTag = '[object Uint8ClampedArray]',
-      uint16Tag = '[object Uint16Array]',
-      uint32Tag = '[object Uint32Array]';
-
-  /** Used to identify `toStringTag` values of typed arrays. */
-  var typedArrayTags = {};
-  typedArrayTags[float32Tag] = typedArrayTags[float64Tag] =
-  typedArrayTags[int8Tag] = typedArrayTags[int16Tag] =
-  typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] =
-  typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] =
-  typedArrayTags[uint32Tag] = true;
-  typedArrayTags[argsTag$1] = typedArrayTags[arrayTag] =
-  typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] =
-  typedArrayTags[dataViewTag] = typedArrayTags[dateTag] =
-  typedArrayTags[errorTag] = typedArrayTags[funcTag] =
-  typedArrayTags[mapTag] = typedArrayTags[numberTag] =
-  typedArrayTags[objectTag] = typedArrayTags[regexpTag] =
-  typedArrayTags[setTag] = typedArrayTags[stringTag] =
-  typedArrayTags[weakMapTag] = false;
-
-  /**
-   * The base implementation of `_.isTypedArray` without Node.js optimizations.
-   *
-   * @private
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
-   */
-  function baseIsTypedArray(value) {
-    return isObjectLike(value) &&
-      isLength(value.length) && !!typedArrayTags[baseGetTag(value)];
-  }
-
-  /**
-   * The base implementation of `_.unary` without support for storing metadata.
-   *
-   * @private
-   * @param {Function} func The function to cap arguments for.
-   * @returns {Function} Returns the new capped function.
-   */
-  function baseUnary(func) {
-    return function(value) {
-      return func(value);
-    };
-  }
-
-  /** Detect free variable `exports`. */
-  var freeExports$1 = typeof exports == 'object' && exports && !exports.nodeType && exports;
-
-  /** Detect free variable `module`. */
-  var freeModule$1 = freeExports$1 && typeof module == 'object' && module && !module.nodeType && module;
-
-  /** Detect the popular CommonJS extension `module.exports`. */
-  var moduleExports$1 = freeModule$1 && freeModule$1.exports === freeExports$1;
-
-  /** Detect free variable `process` from Node.js. */
-  var freeProcess = moduleExports$1 && freeGlobal.process;
-
-  /** Used to access faster Node.js helpers. */
-  var nodeUtil = (function() {
-    try {
-      // Use `util.types` for Node.js 10+.
-      var types = freeModule$1 && freeModule$1.require && freeModule$1.require('util').types;
-
-      if (types) {
-        return types;
-      }
-
-      // Legacy `process.binding('util')` for Node.js < 10.
-      return freeProcess && freeProcess.binding && freeProcess.binding('util');
-    } catch (e) {}
-  }());
-
-  /* Node.js helper references. */
-  var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
-
-  /**
-   * Checks if `value` is classified as a typed array.
-   *
-   * @static
-   * @memberOf _
-   * @since 3.0.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
-   * @example
-   *
-   * _.isTypedArray(new Uint8Array);
-   * // => true
-   *
-   * _.isTypedArray([]);
-   * // => false
-   */
-  var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
-
-  /** Used for built-in method references. */
-  var objectProto$3 = Object.prototype;
-
-  /** Used to check objects for own properties. */
-  var hasOwnProperty$2 = objectProto$3.hasOwnProperty;
-
-  /**
-   * Creates an array of the enumerable property names of the array-like `value`.
-   *
-   * @private
-   * @param {*} value The value to query.
-   * @param {boolean} inherited Specify returning inherited property names.
-   * @returns {Array} Returns the array of property names.
-   */
-  function arrayLikeKeys(value, inherited) {
-    var isArr = isArray(value),
-        isArg = !isArr && isArguments(value),
-        isBuff = !isArr && !isArg && isBuffer(value),
-        isType = !isArr && !isArg && !isBuff && isTypedArray(value),
-        skipIndexes = isArr || isArg || isBuff || isType,
-        result = skipIndexes ? baseTimes(value.length, String) : [],
-        length = result.length;
-
-    for (var key in value) {
-      if ((inherited || hasOwnProperty$2.call(value, key)) &&
-          !(skipIndexes && (
-             // Safari 9 has enumerable `arguments.length` in strict mode.
-             key == 'length' ||
-             // Node.js 0.10 has enumerable non-index properties on buffers.
-             (isBuff && (key == 'offset' || key == 'parent')) ||
-             // PhantomJS 2 has enumerable non-index properties on typed arrays.
-             (isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset')) ||
-             // Skip index properties.
-             isIndex(key, length)
-          ))) {
-        result.push(key);
-      }
-    }
-    return result;
-  }
-
-  /** Used for built-in method references. */
-  var objectProto$4 = Object.prototype;
-
-  /**
-   * Checks if `value` is likely a prototype object.
-   *
-   * @private
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
-   */
-  function isPrototype(value) {
-    var Ctor = value && value.constructor,
-        proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto$4;
-
-    return value === proto;
-  }
-
-  /**
-   * Creates a unary function that invokes `func` with its argument transformed.
-   *
-   * @private
-   * @param {Function} func The function to wrap.
-   * @param {Function} transform The argument transform.
-   * @returns {Function} Returns the new function.
-   */
-  function overArg(func, transform) {
-    return function(arg) {
-      return func(transform(arg));
-    };
-  }
-
-  /* Built-in method references for those with the same name as other `lodash` methods. */
-  var nativeKeys = overArg(Object.keys, Object);
-
-  /** Used for built-in method references. */
-  var objectProto$5 = Object.prototype;
-
-  /** Used to check objects for own properties. */
-  var hasOwnProperty$3 = objectProto$5.hasOwnProperty;
-
-  /**
-   * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
-   *
-   * @private
-   * @param {Object} object The object to query.
-   * @returns {Array} Returns the array of property names.
-   */
-  function baseKeys(object) {
-    if (!isPrototype(object)) {
-      return nativeKeys(object);
-    }
-    var result = [];
-    for (var key in Object(object)) {
-      if (hasOwnProperty$3.call(object, key) && key != 'constructor') {
-        result.push(key);
-      }
-    }
-    return result;
-  }
-
-  /** `Object#toString` result references. */
-  var asyncTag = '[object AsyncFunction]',
-      funcTag$1 = '[object Function]',
-      genTag = '[object GeneratorFunction]',
-      proxyTag = '[object Proxy]';
-
-  /**
-   * Checks if `value` is classified as a `Function` object.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.1.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a function, else `false`.
-   * @example
-   *
-   * _.isFunction(_);
-   * // => true
-   *
-   * _.isFunction(/abc/);
-   * // => false
-   */
-  function isFunction(value) {
-    if (!isObject(value)) {
-      return false;
-    }
-    // The use of `Object#toString` avoids issues with the `typeof` operator
-    // in Safari 9 which returns 'object' for typed arrays and other constructors.
-    var tag = baseGetTag(value);
-    return tag == funcTag$1 || tag == genTag || tag == asyncTag || tag == proxyTag;
-  }
-
-  /**
-   * Checks if `value` is array-like. A value is considered array-like if it's
-   * not a function and has a `value.length` that's an integer greater than or
-   * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
-   *
-   * @static
-   * @memberOf _
-   * @since 4.0.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
-   * @example
-   *
-   * _.isArrayLike([1, 2, 3]);
-   * // => true
-   *
-   * _.isArrayLike(document.body.children);
-   * // => true
-   *
-   * _.isArrayLike('abc');
-   * // => true
-   *
-   * _.isArrayLike(_.noop);
-   * // => false
-   */
-  function isArrayLike(value) {
-    return value != null && isLength(value.length) && !isFunction(value);
-  }
-
-  /**
-   * Creates an array of the own enumerable property names of `object`.
-   *
-   * **Note:** Non-object values are coerced to objects. See the
-   * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
-   * for more details.
-   *
-   * @static
-   * @since 0.1.0
-   * @memberOf _
-   * @category Object
-   * @param {Object} object The object to query.
-   * @returns {Array} Returns the array of property names.
-   * @example
-   *
-   * function Foo() {
-   *   this.a = 1;
-   *   this.b = 2;
-   * }
-   *
-   * Foo.prototype.c = 3;
-   *
-   * _.keys(new Foo);
-   * // => ['a', 'b'] (iteration order is not guaranteed)
-   *
-   * _.keys('hi');
-   * // => ['0', '1']
-   */
-  function keys(object) {
-    return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
-  }
-
-  /**
-   * The base implementation of `_.forOwn` without support for iteratee shorthands.
-   *
-   * @private
-   * @param {Object} object The object to iterate over.
-   * @param {Function} iteratee The function invoked per iteration.
-   * @returns {Object} Returns `object`.
-   */
-  function baseForOwn(object, iteratee) {
-    return object && baseFor(object, iteratee, keys);
-  }
-
-  /**
-   * This method returns the first argument it receives.
-   *
-   * @static
-   * @since 0.1.0
-   * @memberOf _
-   * @category Util
-   * @param {*} value Any value.
-   * @returns {*} Returns `value`.
-   * @example
-   *
-   * var object = { 'a': 1 };
-   *
-   * console.log(_.identity(object) === object);
-   * // => true
-   */
-  function identity(value) {
-    return value;
-  }
-
-  /**
-   * Casts `value` to `identity` if it's not a function.
-   *
-   * @private
-   * @param {*} value The value to inspect.
-   * @returns {Function} Returns cast function.
-   */
-  function castFunction(value) {
-    return typeof value == 'function' ? value : identity;
-  }
-
-  /**
-   * Iterates over own enumerable string keyed properties of an object and
-   * invokes `iteratee` for each property. The iteratee is invoked with three
-   * arguments: (value, key, object). Iteratee functions may exit iteration
-   * early by explicitly returning `false`.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.3.0
-   * @category Object
-   * @param {Object} object The object to iterate over.
-   * @param {Function} [iteratee=_.identity] The function invoked per iteration.
-   * @returns {Object} Returns `object`.
-   * @see _.forOwnRight
-   * @example
-   *
-   * function Foo() {
-   *   this.a = 1;
-   *   this.b = 2;
-   * }
-   *
-   * Foo.prototype.c = 3;
-   *
-   * _.forOwn(new Foo, function(value, key) {
-   *   console.log(key);
-   * });
-   * // => Logs 'a' then 'b' (iteration order is not guaranteed).
-   */
-  function forOwn(object, iteratee) {
-    return object && baseForOwn(object, castFunction(iteratee));
-  }
-
-  /** Built-in value references. */
-  var getPrototype = overArg(Object.getPrototypeOf, Object);
-
-  /** `Object#toString` result references. */
-  var objectTag$1 = '[object Object]';
-
-  /** Used for built-in method references. */
-  var funcProto = Function.prototype,
-      objectProto$6 = Object.prototype;
-
-  /** Used to resolve the decompiled source of functions. */
-  var funcToString = funcProto.toString;
-
-  /** Used to check objects for own properties. */
-  var hasOwnProperty$4 = objectProto$6.hasOwnProperty;
-
-  /** Used to infer the `Object` constructor. */
-  var objectCtorString = funcToString.call(Object);
-
-  /**
-   * Checks if `value` is a plain object, that is, an object created by the
-   * `Object` constructor or one with a `[[Prototype]]` of `null`.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.8.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
-   * @example
-   *
-   * function Foo() {
-   *   this.a = 1;
-   * }
-   *
-   * _.isPlainObject(new Foo);
-   * // => false
-   *
-   * _.isPlainObject([1, 2, 3]);
-   * // => false
-   *
-   * _.isPlainObject({ 'x': 0, 'y': 0 });
-   * // => true
-   *
-   * _.isPlainObject(Object.create(null));
-   * // => true
-   */
-  function isPlainObject(value) {
-    if (!isObjectLike(value) || baseGetTag(value) != objectTag$1) {
-      return false;
-    }
-    var proto = getPrototype(value);
-    if (proto === null) {
-      return true;
-    }
-    var Ctor = hasOwnProperty$4.call(proto, 'constructor') && proto.constructor;
-    return typeof Ctor == 'function' && Ctor instanceof Ctor &&
-      funcToString.call(Ctor) == objectCtorString;
-  }
-
-  /**
-   * Checks if `value` is likely a DOM element.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.1.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a DOM element, else `false`.
-   * @example
-   *
-   * _.isElement(document.body);
-   * // => true
-   *
-   * _.isElement('<body>');
-   * // => false
-   */
-  function isElement(value) {
-    return isObjectLike(value) && value.nodeType === 1 && !isPlainObject(value);
-  }
-
-  /** Used to detect overreaching core-js shims. */
-  var coreJsData = root['__core-js_shared__'];
-
-  /** Used to detect methods masquerading as native. */
-  var maskSrcKey = (function() {
-    var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
-    return uid ? ('Symbol(src)_1.' + uid) : '';
-  }());
-
-  /**
-   * Checks if `func` has its source masked.
-   *
-   * @private
-   * @param {Function} func The function to check.
-   * @returns {boolean} Returns `true` if `func` is masked, else `false`.
-   */
-  function isMasked(func) {
-    return !!maskSrcKey && (maskSrcKey in func);
-  }
-
-  /** Used for built-in method references. */
-  var funcProto$1 = Function.prototype;
-
-  /** Used to resolve the decompiled source of functions. */
-  var funcToString$1 = funcProto$1.toString;
-
-  /**
-   * Converts `func` to its source code.
-   *
-   * @private
-   * @param {Function} func The function to convert.
-   * @returns {string} Returns the source code.
-   */
-  function toSource(func) {
-    if (func != null) {
-      try {
-        return funcToString$1.call(func);
-      } catch (e) {}
-      try {
-        return (func + '');
-      } catch (e) {}
-    }
-    return '';
-  }
-
-  /**
-   * Used to match `RegExp`
-   * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
-   */
-  var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
-
-  /** Used to detect host constructors (Safari). */
-  var reIsHostCtor = /^\[object .+?Constructor\]$/;
-
-  /** Used for built-in method references. */
-  var funcProto$2 = Function.prototype,
-      objectProto$7 = Object.prototype;
-
-  /** Used to resolve the decompiled source of functions. */
-  var funcToString$2 = funcProto$2.toString;
-
-  /** Used to check objects for own properties. */
-  var hasOwnProperty$5 = objectProto$7.hasOwnProperty;
-
-  /** Used to detect if a method is native. */
-  var reIsNative = RegExp('^' +
-    funcToString$2.call(hasOwnProperty$5).replace(reRegExpChar, '\\$&')
-    .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
-  );
-
-  /**
-   * The base implementation of `_.isNative` without bad shim checks.
-   *
-   * @private
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a native function,
-   *  else `false`.
-   */
-  function baseIsNative(value) {
-    if (!isObject(value) || isMasked(value)) {
-      return false;
-    }
-    var pattern = isFunction(value) ? reIsNative : reIsHostCtor;
-    return pattern.test(toSource(value));
-  }
-
-  /**
-   * Gets the value at `key` of `object`.
-   *
-   * @private
-   * @param {Object} [object] The object to query.
-   * @param {string} key The key of the property to get.
-   * @returns {*} Returns the property value.
-   */
-  function getValue(object, key) {
-    return object == null ? undefined : object[key];
-  }
-
-  /**
-   * Gets the native function at `key` of `object`.
-   *
-   * @private
-   * @param {Object} object The object to query.
-   * @param {string} key The key of the method to get.
-   * @returns {*} Returns the function if it's native, else `undefined`.
-   */
-  function getNative(object, key) {
-    var value = getValue(object, key);
-    return baseIsNative(value) ? value : undefined;
-  }
-
-  /* Built-in method references that are verified to be native. */
-  var DataView = getNative(root, 'DataView');
-
-  /* Built-in method references that are verified to be native. */
-  var Map = getNative(root, 'Map');
-
-  /* Built-in method references that are verified to be native. */
-  var Promise = getNative(root, 'Promise');
-
-  /* Built-in method references that are verified to be native. */
-  var Set = getNative(root, 'Set');
-
-  /* Built-in method references that are verified to be native. */
-  var WeakMap = getNative(root, 'WeakMap');
-
-  /** `Object#toString` result references. */
-  var mapTag$1 = '[object Map]',
-      objectTag$2 = '[object Object]',
-      promiseTag = '[object Promise]',
-      setTag$1 = '[object Set]',
-      weakMapTag$1 = '[object WeakMap]';
-
-  var dataViewTag$1 = '[object DataView]';
-
-  /** Used to detect maps, sets, and weakmaps. */
-  var dataViewCtorString = toSource(DataView),
-      mapCtorString = toSource(Map),
-      promiseCtorString = toSource(Promise),
-      setCtorString = toSource(Set),
-      weakMapCtorString = toSource(WeakMap);
-
-  /**
-   * Gets the `toStringTag` of `value`.
-   *
-   * @private
-   * @param {*} value The value to query.
-   * @returns {string} Returns the `toStringTag`.
-   */
-  var getTag = baseGetTag;
-
-  // Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
-  if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag$1) ||
-      (Map && getTag(new Map) != mapTag$1) ||
-      (Promise && getTag(Promise.resolve()) != promiseTag) ||
-      (Set && getTag(new Set) != setTag$1) ||
-      (WeakMap && getTag(new WeakMap) != weakMapTag$1)) {
-    getTag = function(value) {
-      var result = baseGetTag(value),
-          Ctor = result == objectTag$2 ? value.constructor : undefined,
-          ctorString = Ctor ? toSource(Ctor) : '';
-
-      if (ctorString) {
-        switch (ctorString) {
-          case dataViewCtorString: return dataViewTag$1;
-          case mapCtorString: return mapTag$1;
-          case promiseCtorString: return promiseTag;
-          case setCtorString: return setTag$1;
-          case weakMapCtorString: return weakMapTag$1;
-        }
-      }
-      return result;
-    };
-  }
-
-  var getTag$1 = getTag;
-
-  /** `Object#toString` result references. */
-  var mapTag$2 = '[object Map]',
-      setTag$2 = '[object Set]';
-
-  /** Used for built-in method references. */
-  var objectProto$8 = Object.prototype;
-
-  /** Used to check objects for own properties. */
-  var hasOwnProperty$6 = objectProto$8.hasOwnProperty;
-
-  /**
-   * Checks if `value` is an empty object, collection, map, or set.
-   *
-   * Objects are considered empty if they have no own enumerable string keyed
-   * properties.
-   *
-   * Array-like values such as `arguments` objects, arrays, buffers, strings, or
-   * jQuery-like collections are considered empty if they have a `length` of `0`.
-   * Similarly, maps and sets are considered empty if they have a `size` of `0`.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.1.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is empty, else `false`.
-   * @example
-   *
-   * _.isEmpty(null);
-   * // => true
-   *
-   * _.isEmpty(true);
-   * // => true
-   *
-   * _.isEmpty(1);
-   * // => true
-   *
-   * _.isEmpty([1, 2, 3]);
-   * // => false
-   *
-   * _.isEmpty({ 'a': 1 });
-   * // => false
-   */
-  function isEmpty(value) {
-    if (value == null) {
-      return true;
-    }
-    if (isArrayLike(value) &&
-        (isArray(value) || typeof value == 'string' || typeof value.splice == 'function' ||
-          isBuffer(value) || isTypedArray(value) || isArguments(value))) {
-      return !value.length;
-    }
-    var tag = getTag$1(value);
-    if (tag == mapTag$2 || tag == setTag$2) {
-      return !value.size;
-    }
-    if (isPrototype(value)) {
-      return !baseKeys(value).length;
-    }
-    for (var key in value) {
-      if (hasOwnProperty$6.call(value, key)) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  /** `Object#toString` result references. */
-  var stringTag$1 = '[object String]';
-
-  /**
-   * Checks if `value` is classified as a `String` primitive or object.
-   *
-   * @static
-   * @since 0.1.0
-   * @memberOf _
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a string, else `false`.
-   * @example
-   *
-   * _.isString('abc');
-   * // => true
-   *
-   * _.isString(1);
-   * // => false
-   */
-  function isString(value) {
-    return typeof value == 'string' ||
-      (!isArray(value) && isObjectLike(value) && baseGetTag(value) == stringTag$1);
-  }
-
-  if (!Element.prototype.matches) {
-      Element.prototype.matches =
-          Element.prototype.matchesSelector ||
-          Element.prototype.msMatchesSelector ||
-          Element.prototype.webkitMatchesSelector;
+  function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
   }
 
   function _defineProperty(obj, key, value) {
@@ -1458,6 +55,24 @@
     }
 
     return obj;
+  }
+
+  function _extends() {
+    _extends = Object.assign || function (target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+
+      return target;
+    };
+
+    return _extends.apply(this, arguments);
   }
 
   function _objectSpread(target) {
@@ -1477,6 +92,53 @@
     }
 
     return target;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function");
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) _setPrototypeOf(subClass, superClass);
+  }
+
+  function _getPrototypeOf(o) {
+    _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+      return o.__proto__ || Object.getPrototypeOf(o);
+    };
+    return _getPrototypeOf(o);
+  }
+
+  function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+      o.__proto__ = p;
+      return o;
+    };
+
+    return _setPrototypeOf(o, p);
+  }
+
+  function _assertThisInitialized(self) {
+    if (self === void 0) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return self;
+  }
+
+  function _possibleConstructorReturn(self, call) {
+    if (call && (typeof call === "object" || typeof call === "function")) {
+      return call;
+    }
+
+    return _assertThisInitialized(self);
   }
 
   function _slicedToArray(arr, i) {
@@ -1517,81 +179,94 @@
     throw new TypeError("Invalid attempt to destructure non-iterable instance");
   }
 
-  var defineProperty = (function() {
-    try {
-      var func = getNative(Object, 'defineProperty');
-      func({}, '', {});
-      return func;
-    } catch (e) {}
-  }());
-
   /**
-   * The base implementation of `assignValue` and `assignMergeValue` without
-   * value checks.
-   *
-   * @private
-   * @param {Object} object The object to modify.
-   * @param {string} key The key of the property to assign.
-   * @param {*} value The value to assign.
+   * lodash 4.0.0 (Custom Build) <https://lodash.com/>
+   * Build: `lodash modularize exports="npm" -o ./`
+   * Copyright 2012-2016 The Dojo Foundation <http://dojofoundation.org/>
+   * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+   * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+   * Available under MIT license <https://lodash.com/license>
    */
-  function baseAssignValue(object, key, value) {
-    if (key == '__proto__' && defineProperty) {
-      defineProperty(object, key, {
-        'configurable': true,
-        'enumerable': true,
-        'value': value,
-        'writable': true
-      });
-    } else {
-      object[key] = value;
-    }
-  }
 
   /**
-   * Performs a
-   * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
-   * comparison between two values to determine if they are equivalent.
+   * Checks if `value` is object-like. A value is object-like if it's not `null`
+   * and has a `typeof` result of "object".
    *
    * @static
    * @memberOf _
-   * @since 4.0.0
    * @category Lang
-   * @param {*} value The value to compare.
-   * @param {*} other The other value to compare.
-   * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
    * @example
    *
-   * var object = { 'a': 1 };
-   * var other = { 'a': 1 };
-   *
-   * _.eq(object, object);
+   * _.isObjectLike({});
    * // => true
    *
-   * _.eq(object, other);
+   * _.isObjectLike([1, 2, 3]);
+   * // => true
+   *
+   * _.isObjectLike(_.noop);
    * // => false
    *
-   * _.eq('a', 'a');
-   * // => true
-   *
-   * _.eq('a', Object('a'));
+   * _.isObjectLike(null);
    * // => false
-   *
-   * _.eq(NaN, NaN);
-   * // => true
    */
-  function eq(value, other) {
-    return value === other || (value !== value && other !== other);
+  function isObjectLike(value) {
+    return !!value && typeof value == 'object';
   }
 
+  var lodash_isobjectlike = isObjectLike;
+
+  /**
+   * Checks if `value` is classified as a `Function` object.
+   * @param {*} value The param to check if it is a function
+   */
+  function isFunction(value) {
+    return typeof value === 'function';
+  }
+  /**
+   * Checks if `value` is classified as a `Number` object.
+   * @param {*} value The param to check if it is a number
+   */
+
+  function isNumber(value) {
+    return typeof value === 'number';
+  }
+  /**
+   * Checks if `value` is classified as a `String` object.
+   * @param {*} value The param to check if it is a string
+   */
+
+  function isString(value) {
+    return typeof value === 'string';
+  }
+  /**
+   * Checks if `value` is undefined.
+   * @param {*} value The param to check if it is undefined
+   */
+
+  function isUndefined(value) {
+    return value === undefined;
+  }
+
+  /**
+   * lodash 4.1.3 (Custom Build) <https://lodash.com/>
+   * Build: `lodash modularize exports="npm" -o ./`
+   * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+   * Released under MIT license <https://lodash.com/license>
+   * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+   * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+   */
+
   /** Used for built-in method references. */
-  var objectProto$9 = Object.prototype;
+  var objectProto = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$7 = objectProto$9.hasOwnProperty;
+  var hasOwnProperty = objectProto.hasOwnProperty;
 
   /**
    * Assigns `value` to `key` of `object` if the existing value is not equivalent
-   * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+   * using [`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)
    * for equality comparisons.
    *
    * @private
@@ -1601,9 +276,9 @@
    */
   function assignValue(object, key, value) {
     var objValue = object[key];
-    if (!(hasOwnProperty$7.call(object, key) && eq(objValue, value)) ||
+    if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) ||
         (value === undefined && !(key in object))) {
-      baseAssignValue(object, key, value);
+      object[key] = value;
     }
   }
 
@@ -1649,9 +324,47 @@
     return baseZipObject(props || [], values || [], assignValue);
   }
 
+  /**
+   * Performs a
+   * [`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)
+   * comparison between two values to determine if they are equivalent.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to compare.
+   * @param {*} other The other value to compare.
+   * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+   * @example
+   *
+   * var object = { 'user': 'fred' };
+   * var other = { 'user': 'fred' };
+   *
+   * _.eq(object, object);
+   * // => true
+   *
+   * _.eq(object, other);
+   * // => false
+   *
+   * _.eq('a', 'a');
+   * // => true
+   *
+   * _.eq('a', Object('a'));
+   * // => false
+   *
+   * _.eq(NaN, NaN);
+   * // => true
+   */
+  function eq(value, other) {
+    return value === other || (value !== value && other !== other);
+  }
+
+  var lodash_zipobject = zipObject;
+
   /**!
    * @fileOverview Kickass library to create and place poppers near their reference elements.
-   * @version 1.14.7
+   * @version 1.15.0
    * @license
    * Copyright (c) 2016 Federico Zivolo and contributors
    *
@@ -2031,7 +744,7 @@
 
 
 
-  var defineProperty$1 = function (obj, key, value) {
+  var defineProperty = function (obj, key, value) {
     if (key in obj) {
       Object.defineProperty(obj, key, {
         value: value,
@@ -2046,7 +759,7 @@
     return obj;
   };
 
-  var _extends = Object.assign || function (target) {
+  var _extends$1 = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i];
 
@@ -2068,7 +781,7 @@
    * @returns {Object} ClientRect like output
    */
   function getClientRect(offsets) {
-    return _extends({}, offsets, {
+    return _extends$1({}, offsets, {
       right: offsets.left + offsets.width,
       bottom: offsets.top + offsets.height
     });
@@ -2356,7 +1069,7 @@
     };
 
     var sortedAreas = Object.keys(rects).map(function (key) {
-      return _extends({
+      return _extends$1({
         key: key
       }, rects[key], {
         area: getArea(rects[key])
@@ -2998,9 +1711,9 @@
     };
 
     // Update `data` attributes, styles and arrowStyles
-    data.attributes = _extends({}, attributes, data.attributes);
-    data.styles = _extends({}, styles, data.styles);
-    data.arrowStyles = _extends({}, data.offsets.arrow, data.arrowStyles);
+    data.attributes = _extends$1({}, attributes, data.attributes);
+    data.styles = _extends$1({}, styles, data.styles);
+    data.arrowStyles = _extends$1({}, data.offsets.arrow, data.arrowStyles);
 
     return data;
   }
@@ -3110,7 +1823,7 @@
     sideValue = Math.max(Math.min(popper[len] - arrowElementSize, sideValue), 0);
 
     data.arrowElement = arrowElement;
-    data.offsets.arrow = (_data$offsets$arrow = {}, defineProperty$1(_data$offsets$arrow, side, Math.round(sideValue)), defineProperty$1(_data$offsets$arrow, altSide, ''), _data$offsets$arrow);
+    data.offsets.arrow = (_data$offsets$arrow = {}, defineProperty(_data$offsets$arrow, side, Math.round(sideValue)), defineProperty(_data$offsets$arrow, altSide, ''), _data$offsets$arrow);
 
     return data;
   }
@@ -3255,7 +1968,14 @@
 
       // flip the variation if required
       var isVertical = ['top', 'bottom'].indexOf(placement) !== -1;
-      var flippedVariation = !!options.flipVariations && (isVertical && variation === 'start' && overflowsLeft || isVertical && variation === 'end' && overflowsRight || !isVertical && variation === 'start' && overflowsTop || !isVertical && variation === 'end' && overflowsBottom);
+
+      // flips variation if reference element overflows boundaries
+      var flippedVariationByRef = !!options.flipVariations && (isVertical && variation === 'start' && overflowsLeft || isVertical && variation === 'end' && overflowsRight || !isVertical && variation === 'start' && overflowsTop || !isVertical && variation === 'end' && overflowsBottom);
+
+      // flips variation if popper content overflows boundaries
+      var flippedVariationByContent = !!options.flipVariationsByContent && (isVertical && variation === 'start' && overflowsRight || isVertical && variation === 'end' && overflowsLeft || !isVertical && variation === 'start' && overflowsBottom || !isVertical && variation === 'end' && overflowsTop);
+
+      var flippedVariation = flippedVariationByRef || flippedVariationByContent;
 
       if (overlapsRef || overflowsBoundaries || flippedVariation) {
         // this boolean to detect any flip loop
@@ -3273,7 +1993,7 @@
 
         // this object contains `position`, we want to preserve it along with
         // any additional property we may add in the future
-        data.offsets.popper = _extends({}, data.offsets.popper, getPopperOffsets(data.instance.popper, data.offsets.reference, data.placement));
+        data.offsets.popper = _extends$1({}, data.offsets.popper, getPopperOffsets(data.instance.popper, data.offsets.reference, data.placement));
 
         data = runModifiers(data.instance.modifiers, data, 'flip');
       }
@@ -3533,7 +2253,7 @@
         if (popper[placement] < boundaries[placement] && !options.escapeWithReference) {
           value = Math.max(popper[placement], boundaries[placement]);
         }
-        return defineProperty$1({}, placement, value);
+        return defineProperty({}, placement, value);
       },
       secondary: function secondary(placement) {
         var mainSide = placement === 'right' ? 'left' : 'top';
@@ -3541,13 +2261,13 @@
         if (popper[placement] > boundaries[placement] && !options.escapeWithReference) {
           value = Math.min(popper[mainSide], boundaries[placement] - (placement === 'right' ? popper.width : popper.height));
         }
-        return defineProperty$1({}, mainSide, value);
+        return defineProperty({}, mainSide, value);
       }
     };
 
     order.forEach(function (placement) {
       var side = ['left', 'top'].indexOf(placement) !== -1 ? 'primary' : 'secondary';
-      popper = _extends({}, popper, check[side](placement));
+      popper = _extends$1({}, popper, check[side](placement));
     });
 
     data.offsets.popper = popper;
@@ -3578,11 +2298,11 @@
       var measurement = isVertical ? 'width' : 'height';
 
       var shiftOffsets = {
-        start: defineProperty$1({}, side, reference[side]),
-        end: defineProperty$1({}, side, reference[side] + reference[measurement] - popper[measurement])
+        start: defineProperty({}, side, reference[side]),
+        end: defineProperty({}, side, reference[side] + reference[measurement] - popper[measurement])
       };
 
-      data.offsets.popper = _extends({}, popper, shiftOffsets[shiftvariation]);
+      data.offsets.popper = _extends$1({}, popper, shiftOffsets[shiftvariation]);
     }
 
     return data;
@@ -3862,7 +2582,23 @@
        * The popper will never be placed outside of the defined boundaries
        * (except if `keepTogether` is enabled)
        */
-      boundariesElement: 'viewport'
+      boundariesElement: 'viewport',
+      /**
+       * @prop {Boolean} flipVariations=false
+       * The popper will switch placement variation between `-start` and `-end` when
+       * the reference element overlaps its boundaries.
+       *
+       * The original placement should have a set variation.
+       */
+      flipVariations: false,
+      /**
+       * @prop {Boolean} flipVariationsByContent=false
+       * The popper will switch placement variation between `-start` and `-end` when
+       * the popper element overlaps its reference boundaries.
+       *
+       * The original placement should have a set variation.
+       */
+      flipVariationsByContent: false
     },
 
     /**
@@ -4079,8 +2815,8 @@
     /**
      * Creates a new Popper.js instance.
      * @class Popper
-     * @param {HTMLElement|referenceObject} reference - The reference element used to position the popper
-     * @param {HTMLElement} popper - The HTML element used as the popper
+     * @param {Element|referenceObject} reference - The reference element used to position the popper
+     * @param {Element} popper - The HTML / XML element used as the popper
      * @param {Object} options - Your custom options to override the ones defined in [Defaults](#defaults)
      * @return {Object} instance - The generated Popper.js instance
      */
@@ -4098,7 +2834,7 @@
       this.update = debounce(this.update.bind(this));
 
       // with {} we create a new object with the options inside it
-      this.options = _extends({}, Popper.Defaults, options);
+      this.options = _extends$1({}, Popper.Defaults, options);
 
       // init state
       this.state = {
@@ -4113,13 +2849,13 @@
 
       // Deep merge modifiers options
       this.options.modifiers = {};
-      Object.keys(_extends({}, Popper.Defaults.modifiers, options.modifiers)).forEach(function (name) {
-        _this.options.modifiers[name] = _extends({}, Popper.Defaults.modifiers[name] || {}, options.modifiers ? options.modifiers[name] : {});
+      Object.keys(_extends$1({}, Popper.Defaults.modifiers, options.modifiers)).forEach(function (name) {
+        _this.options.modifiers[name] = _extends$1({}, Popper.Defaults.modifiers[name] || {}, options.modifiers ? options.modifiers[name] : {});
       });
 
       // Refactoring modifiers' list (Object => Array)
       this.modifiers = Object.keys(this.options.modifiers).map(function (name) {
-        return _extends({
+        return _extends$1({
           name: name
         }, _this.options.modifiers[name]);
       })
@@ -4229,15 +2965,15 @@
   Popper.Defaults = Defaults;
 
   /**!
-  * tippy.js v4.2.0
+  * tippy.js v4.3.4
   * (c) 2017-2019 atomiks
   * MIT License
   */
 
-  var css = ".tippy-iOS{cursor:pointer!important}.tippy-notransition{transition:none}.tippy-popper{transition-timing-function:cubic-bezier(.165,.84,.44,1);max-width:calc(100% - 8px);pointer-events:none;outline:0}.tippy-popper[x-placement^=top] .tippy-backdrop{border-radius:40% 40% 0 0}.tippy-popper[x-placement^=top] .tippy-roundarrow{bottom:-7px;bottom:-6.5px;-webkit-transform-origin:50% 0;transform-origin:50% 0;margin:0 3px}.tippy-popper[x-placement^=top] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(180deg);transform:rotate(180deg)}.tippy-popper[x-placement^=top] .tippy-arrow{border-top:8px solid #333;border-right:8px solid transparent;border-left:8px solid transparent;bottom:-7px;margin:0 3px;-webkit-transform-origin:50% 0;transform-origin:50% 0}.tippy-popper[x-placement^=top] .tippy-backdrop{-webkit-transform-origin:0 25%;transform-origin:0 25%}.tippy-popper[x-placement^=top] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-55%);transform:scale(1) translate(-50%,-55%)}.tippy-popper[x-placement^=top] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-50%,-45%);transform:scale(.2) translate(-50%,-45%);opacity:0}.tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateY(-20px);transform:translateY(-20px)}.tippy-popper[x-placement^=top] [data-animation=perspective]{-webkit-transform-origin:bottom;transform-origin:bottom}.tippy-popper[x-placement^=top] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateY(-10px) rotateX(0);transform:perspective(700px) translateY(-10px) rotateX(0)}.tippy-popper[x-placement^=top] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateY(0) rotateX(60deg);transform:perspective(700px) translateY(0) rotateX(60deg)}.tippy-popper[x-placement^=top] [data-animation=fade][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateY(0);transform:translateY(0)}.tippy-popper[x-placement^=top] [data-animation=scale]{-webkit-transform-origin:bottom;transform-origin:bottom}.tippy-popper[x-placement^=top] [data-animation=scale][data-state=visible]{-webkit-transform:translateY(-10px) scale(1);transform:translateY(-10px) scale(1)}.tippy-popper[x-placement^=top] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateY(-10px) scale(.5);transform:translateY(-10px) scale(.5)}.tippy-popper[x-placement^=bottom] .tippy-backdrop{border-radius:0 0 30% 30%}.tippy-popper[x-placement^=bottom] .tippy-roundarrow{top:-7px;-webkit-transform-origin:50% 100%;transform-origin:50% 100%;margin:0 3px}.tippy-popper[x-placement^=bottom] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(0);transform:rotate(0)}.tippy-popper[x-placement^=bottom] .tippy-arrow{border-bottom:8px solid #333;border-right:8px solid transparent;border-left:8px solid transparent;top:-7px;margin:0 3px;-webkit-transform-origin:50% 100%;transform-origin:50% 100%}.tippy-popper[x-placement^=bottom] .tippy-backdrop{-webkit-transform-origin:0 -50%;transform-origin:0 -50%}.tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-45%);transform:scale(1) translate(-50%,-45%)}.tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-50%);transform:scale(.2) translate(-50%);opacity:0}.tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateY(20px);transform:translateY(20px)}.tippy-popper[x-placement^=bottom] [data-animation=perspective]{-webkit-transform-origin:top;transform-origin:top}.tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateY(10px) rotateX(0);transform:perspective(700px) translateY(10px) rotateX(0)}.tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateY(0) rotateX(-60deg);transform:perspective(700px) translateY(0) rotateX(-60deg)}.tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateY(0);transform:translateY(0)}.tippy-popper[x-placement^=bottom] [data-animation=scale]{-webkit-transform-origin:top;transform-origin:top}.tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=visible]{-webkit-transform:translateY(10px) scale(1);transform:translateY(10px) scale(1)}.tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateY(10px) scale(.5);transform:translateY(10px) scale(.5)}.tippy-popper[x-placement^=left] .tippy-backdrop{border-radius:50% 0 0 50%}.tippy-popper[x-placement^=left] .tippy-roundarrow{right:-12px;-webkit-transform-origin:33.33333333% 50%;transform-origin:33.33333333% 50%;margin:3px 0}.tippy-popper[x-placement^=left] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(90deg);transform:rotate(90deg)}.tippy-popper[x-placement^=left] .tippy-arrow{border-left:8px solid #333;border-top:8px solid transparent;border-bottom:8px solid transparent;right:-7px;margin:3px 0;-webkit-transform-origin:0 50%;transform-origin:0 50%}.tippy-popper[x-placement^=left] .tippy-backdrop{-webkit-transform-origin:50% 0;transform-origin:50% 0}.tippy-popper[x-placement^=left] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-50%);transform:scale(1) translate(-50%,-50%)}.tippy-popper[x-placement^=left] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-75%,-50%);transform:scale(.2) translate(-75%,-50%);opacity:0}.tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateX(-20px);transform:translateX(-20px)}.tippy-popper[x-placement^=left] [data-animation=perspective]{-webkit-transform-origin:right;transform-origin:right}.tippy-popper[x-placement^=left] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateX(-10px) rotateY(0);transform:perspective(700px) translateX(-10px) rotateY(0)}.tippy-popper[x-placement^=left] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateX(0) rotateY(-60deg);transform:perspective(700px) translateX(0) rotateY(-60deg)}.tippy-popper[x-placement^=left] [data-animation=fade][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateX(0);transform:translateX(0)}.tippy-popper[x-placement^=left] [data-animation=scale]{-webkit-transform-origin:right;transform-origin:right}.tippy-popper[x-placement^=left] [data-animation=scale][data-state=visible]{-webkit-transform:translateX(-10px) scale(1);transform:translateX(-10px) scale(1)}.tippy-popper[x-placement^=left] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateX(-10px) scale(.5);transform:translateX(-10px) scale(.5)}.tippy-popper[x-placement^=right] .tippy-backdrop{border-radius:0 50% 50% 0}.tippy-popper[x-placement^=right] .tippy-roundarrow{left:-12px;-webkit-transform-origin:66.66666666% 50%;transform-origin:66.66666666% 50%;margin:3px 0}.tippy-popper[x-placement^=right] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(-90deg);transform:rotate(-90deg)}.tippy-popper[x-placement^=right] .tippy-arrow{border-right:8px solid #333;border-top:8px solid transparent;border-bottom:8px solid transparent;left:-7px;margin:3px 0;-webkit-transform-origin:100% 50%;transform-origin:100% 50%}.tippy-popper[x-placement^=right] .tippy-backdrop{-webkit-transform-origin:-50% 0;transform-origin:-50% 0}.tippy-popper[x-placement^=right] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-50%);transform:scale(1) translate(-50%,-50%)}.tippy-popper[x-placement^=right] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-25%,-50%);transform:scale(.2) translate(-25%,-50%);opacity:0}.tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateX(20px);transform:translateX(20px)}.tippy-popper[x-placement^=right] [data-animation=perspective]{-webkit-transform-origin:left;transform-origin:left}.tippy-popper[x-placement^=right] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateX(10px) rotateY(0);transform:perspective(700px) translateX(10px) rotateY(0)}.tippy-popper[x-placement^=right] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateX(0) rotateY(60deg);transform:perspective(700px) translateX(0) rotateY(60deg)}.tippy-popper[x-placement^=right] [data-animation=fade][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateX(0);transform:translateX(0)}.tippy-popper[x-placement^=right] [data-animation=scale]{-webkit-transform-origin:left;transform-origin:left}.tippy-popper[x-placement^=right] [data-animation=scale][data-state=visible]{-webkit-transform:translateX(10px) scale(1);transform:translateX(10px) scale(1)}.tippy-popper[x-placement^=right] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateX(10px) scale(.5);transform:translateX(10px) scale(.5)}.tippy-tooltip{position:relative;color:#fff;border-radius:.25rem;font-size:.875rem;padding:.3125rem .5625rem;line-height:1.4;text-align:center;background-color:#333}.tippy-tooltip[data-size=small]{padding:.1875rem .375rem;font-size:.75rem}.tippy-tooltip[data-size=large]{padding:.375rem .75rem;font-size:1rem}.tippy-tooltip[data-animatefill]{overflow:hidden;background-color:transparent}.tippy-tooltip[data-interactive],.tippy-tooltip[data-interactive] path{pointer-events:auto}.tippy-tooltip[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-tooltip[data-inertia][data-state=hidden]{transition-timing-function:ease}.tippy-arrow,.tippy-roundarrow{position:absolute;width:0;height:0}.tippy-roundarrow{width:18px;height:7px;fill:#333;pointer-events:none}.tippy-backdrop{position:absolute;background-color:#333;border-radius:50%;width:calc(110% + 2rem);left:50%;top:50%;z-index:-1;transition:all cubic-bezier(.46,.1,.52,.98);-webkit-backface-visibility:hidden;backface-visibility:hidden}.tippy-backdrop:after{content:\"\";float:left;padding-top:100%}.tippy-backdrop+.tippy-content{transition-property:opacity;will-change:opacity}.tippy-backdrop+.tippy-content[data-state=visible]{opacity:1}.tippy-backdrop+.tippy-content[data-state=hidden]{opacity:0}";
+  var css = ".tippy-iOS{cursor:pointer!important;-webkit-tap-highlight-color:transparent}.tippy-popper{transition-timing-function:cubic-bezier(.165,.84,.44,1);max-width:calc(100% - 8px);pointer-events:none;outline:0}.tippy-popper[x-placement^=top] .tippy-backdrop{border-radius:40% 40% 0 0}.tippy-popper[x-placement^=top] .tippy-roundarrow{bottom:-7px;bottom:-6.5px;-webkit-transform-origin:50% 0;transform-origin:50% 0;margin:0 3px}.tippy-popper[x-placement^=top] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(180deg);transform:rotate(180deg)}.tippy-popper[x-placement^=top] .tippy-arrow{border-top:8px solid #333;border-right:8px solid transparent;border-left:8px solid transparent;bottom:-7px;margin:0 3px;-webkit-transform-origin:50% 0;transform-origin:50% 0}.tippy-popper[x-placement^=top] .tippy-backdrop{-webkit-transform-origin:0 25%;transform-origin:0 25%}.tippy-popper[x-placement^=top] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-55%);transform:scale(1) translate(-50%,-55%)}.tippy-popper[x-placement^=top] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-50%,-45%);transform:scale(.2) translate(-50%,-45%);opacity:0}.tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateY(-20px);transform:translateY(-20px)}.tippy-popper[x-placement^=top] [data-animation=perspective]{-webkit-transform-origin:bottom;transform-origin:bottom}.tippy-popper[x-placement^=top] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateY(-10px) rotateX(0);transform:perspective(700px) translateY(-10px) rotateX(0)}.tippy-popper[x-placement^=top] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateY(0) rotateX(60deg);transform:perspective(700px) translateY(0) rotateX(60deg)}.tippy-popper[x-placement^=top] [data-animation=fade][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateY(0);transform:translateY(0)}.tippy-popper[x-placement^=top] [data-animation=scale]{-webkit-transform-origin:bottom;transform-origin:bottom}.tippy-popper[x-placement^=top] [data-animation=scale][data-state=visible]{-webkit-transform:translateY(-10px) scale(1);transform:translateY(-10px) scale(1)}.tippy-popper[x-placement^=top] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateY(-10px) scale(.5);transform:translateY(-10px) scale(.5)}.tippy-popper[x-placement^=bottom] .tippy-backdrop{border-radius:0 0 30% 30%}.tippy-popper[x-placement^=bottom] .tippy-roundarrow{top:-7px;-webkit-transform-origin:50% 100%;transform-origin:50% 100%;margin:0 3px}.tippy-popper[x-placement^=bottom] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(0);transform:rotate(0)}.tippy-popper[x-placement^=bottom] .tippy-arrow{border-bottom:8px solid #333;border-right:8px solid transparent;border-left:8px solid transparent;top:-7px;margin:0 3px;-webkit-transform-origin:50% 100%;transform-origin:50% 100%}.tippy-popper[x-placement^=bottom] .tippy-backdrop{-webkit-transform-origin:0 -50%;transform-origin:0 -50%}.tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-45%);transform:scale(1) translate(-50%,-45%)}.tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-50%);transform:scale(.2) translate(-50%);opacity:0}.tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateY(20px);transform:translateY(20px)}.tippy-popper[x-placement^=bottom] [data-animation=perspective]{-webkit-transform-origin:top;transform-origin:top}.tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateY(10px) rotateX(0);transform:perspective(700px) translateY(10px) rotateX(0)}.tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateY(0) rotateX(-60deg);transform:perspective(700px) translateY(0) rotateX(-60deg)}.tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateY(0);transform:translateY(0)}.tippy-popper[x-placement^=bottom] [data-animation=scale]{-webkit-transform-origin:top;transform-origin:top}.tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=visible]{-webkit-transform:translateY(10px) scale(1);transform:translateY(10px) scale(1)}.tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateY(10px) scale(.5);transform:translateY(10px) scale(.5)}.tippy-popper[x-placement^=left] .tippy-backdrop{border-radius:50% 0 0 50%}.tippy-popper[x-placement^=left] .tippy-roundarrow{right:-12px;-webkit-transform-origin:33.33333333% 50%;transform-origin:33.33333333% 50%;margin:3px 0}.tippy-popper[x-placement^=left] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(90deg);transform:rotate(90deg)}.tippy-popper[x-placement^=left] .tippy-arrow{border-left:8px solid #333;border-top:8px solid transparent;border-bottom:8px solid transparent;right:-7px;margin:3px 0;-webkit-transform-origin:0 50%;transform-origin:0 50%}.tippy-popper[x-placement^=left] .tippy-backdrop{-webkit-transform-origin:50% 0;transform-origin:50% 0}.tippy-popper[x-placement^=left] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-50%);transform:scale(1) translate(-50%,-50%)}.tippy-popper[x-placement^=left] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-75%,-50%);transform:scale(.2) translate(-75%,-50%);opacity:0}.tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateX(-20px);transform:translateX(-20px)}.tippy-popper[x-placement^=left] [data-animation=perspective]{-webkit-transform-origin:right;transform-origin:right}.tippy-popper[x-placement^=left] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateX(-10px) rotateY(0);transform:perspective(700px) translateX(-10px) rotateY(0)}.tippy-popper[x-placement^=left] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateX(0) rotateY(-60deg);transform:perspective(700px) translateX(0) rotateY(-60deg)}.tippy-popper[x-placement^=left] [data-animation=fade][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateX(0);transform:translateX(0)}.tippy-popper[x-placement^=left] [data-animation=scale]{-webkit-transform-origin:right;transform-origin:right}.tippy-popper[x-placement^=left] [data-animation=scale][data-state=visible]{-webkit-transform:translateX(-10px) scale(1);transform:translateX(-10px) scale(1)}.tippy-popper[x-placement^=left] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateX(-10px) scale(.5);transform:translateX(-10px) scale(.5)}.tippy-popper[x-placement^=right] .tippy-backdrop{border-radius:0 50% 50% 0}.tippy-popper[x-placement^=right] .tippy-roundarrow{left:-12px;-webkit-transform-origin:66.66666666% 50%;transform-origin:66.66666666% 50%;margin:3px 0}.tippy-popper[x-placement^=right] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(-90deg);transform:rotate(-90deg)}.tippy-popper[x-placement^=right] .tippy-arrow{border-right:8px solid #333;border-top:8px solid transparent;border-bottom:8px solid transparent;left:-7px;margin:3px 0;-webkit-transform-origin:100% 50%;transform-origin:100% 50%}.tippy-popper[x-placement^=right] .tippy-backdrop{-webkit-transform-origin:-50% 0;transform-origin:-50% 0}.tippy-popper[x-placement^=right] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-50%);transform:scale(1) translate(-50%,-50%)}.tippy-popper[x-placement^=right] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-25%,-50%);transform:scale(.2) translate(-25%,-50%);opacity:0}.tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateX(20px);transform:translateX(20px)}.tippy-popper[x-placement^=right] [data-animation=perspective]{-webkit-transform-origin:left;transform-origin:left}.tippy-popper[x-placement^=right] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateX(10px) rotateY(0);transform:perspective(700px) translateX(10px) rotateY(0)}.tippy-popper[x-placement^=right] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateX(0) rotateY(60deg);transform:perspective(700px) translateX(0) rotateY(60deg)}.tippy-popper[x-placement^=right] [data-animation=fade][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateX(0);transform:translateX(0)}.tippy-popper[x-placement^=right] [data-animation=scale]{-webkit-transform-origin:left;transform-origin:left}.tippy-popper[x-placement^=right] [data-animation=scale][data-state=visible]{-webkit-transform:translateX(10px) scale(1);transform:translateX(10px) scale(1)}.tippy-popper[x-placement^=right] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateX(10px) scale(.5);transform:translateX(10px) scale(.5)}.tippy-tooltip{position:relative;color:#fff;border-radius:.25rem;font-size:.875rem;padding:.3125rem .5625rem;line-height:1.4;text-align:center;background-color:#333}.tippy-tooltip[data-size=small]{padding:.1875rem .375rem;font-size:.75rem}.tippy-tooltip[data-size=large]{padding:.375rem .75rem;font-size:1rem}.tippy-tooltip[data-animatefill]{overflow:hidden;background-color:transparent}.tippy-tooltip[data-interactive],.tippy-tooltip[data-interactive] .tippy-roundarrow path{pointer-events:auto}.tippy-tooltip[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-tooltip[data-inertia][data-state=hidden]{transition-timing-function:ease}.tippy-arrow,.tippy-roundarrow{position:absolute;width:0;height:0}.tippy-roundarrow{width:18px;height:7px;fill:#333;pointer-events:none}.tippy-backdrop{position:absolute;background-color:#333;border-radius:50%;width:calc(110% + 2rem);left:50%;top:50%;z-index:-1;transition:all cubic-bezier(.46,.1,.52,.98);-webkit-backface-visibility:hidden;backface-visibility:hidden}.tippy-backdrop:after{content:\"\";float:left;padding-top:100%}.tippy-backdrop+.tippy-content{transition-property:opacity;will-change:opacity}.tippy-backdrop+.tippy-content[data-state=visible]{opacity:1}.tippy-backdrop+.tippy-content[data-state=hidden]{opacity:0}";
 
-  function _extends$1() {
-    _extends$1 = Object.assign || function (target) {
+  function _extends$2() {
+    _extends$2 = Object.assign || function (target) {
       for (var i = 1; i < arguments.length; i++) {
         var source = arguments[i];
 
@@ -4251,10 +2987,10 @@
       return target;
     };
 
-    return _extends$1.apply(this, arguments);
+    return _extends$2.apply(this, arguments);
   }
 
-  var version = "4.2.0";
+  var version = "4.3.4";
 
   var isBrowser$1 = typeof window !== 'undefined' && typeof document !== 'undefined';
   var ua = isBrowser$1 ? navigator.userAgent : '';
@@ -4297,6 +3033,7 @@
     onMount: function onMount() {},
     onShow: function onShow() {},
     onShown: function onShown() {},
+    onTrigger: function onTrigger() {},
     placement: 'top',
     popperOptions: {},
     role: 'tooltip',
@@ -4308,6 +3045,7 @@
     touch: true,
     touchHold: false,
     trigger: 'mouseenter focus',
+    triggerTarget: null,
     updateDuration: 0,
     wait: null,
     zIndex: 9999
@@ -4318,15 +3056,6 @@
 
   };
   var POPPER_INSTANCE_DEPENDENCIES = ['arrow', 'arrowType', 'boundary', 'distance', 'flip', 'flipBehavior', 'flipOnUpdate', 'offset', 'placement', 'popperOptions'];
-
-  var Selectors = {
-    POPPER: '.tippy-popper',
-    TOOLTIP: '.tippy-tooltip',
-    CONTENT: '.tippy-content',
-    BACKDROP: '.tippy-backdrop',
-    ARROW: '.tippy-arrow',
-    ROUND_ARROW: '.tippy-roundarrow'
-  };
 
   var elementProto = isBrowser$1 ? Element.prototype : {};
   var matches = elementProto.matches || elementProto.matchesSelector || elementProto.webkitMatchesSelector || elementProto.mozMatchesSelector || elementProto.msMatchesSelector;
@@ -4341,19 +3070,10 @@
    * Ponyfill for Element.prototype.closest
    */
 
-  function closest(element, parentSelector) {
-    return (elementProto.closest || function (selector) {
-      // @ts-ignore
-      var el = this;
-
-      while (el) {
-        if (matches.call(el, selector)) {
-          return el;
-        }
-
-        el = el.parentElement;
-      }
-    }).call(element, parentSelector);
+  function closest(element, selector) {
+    return closestCallback(element, function (el) {
+      return matches.call(el, selector);
+    });
   }
   /**
    * Works like Element.prototype.closest, but uses a callback instead
@@ -4367,20 +3087,92 @@
 
       element = element.parentElement;
     }
+
+    return null;
   }
 
+  // Passive event listener config
   var PASSIVE = {
-    passive: true
-  };
-  var PADDING = 4;
+    passive: true // Popper `preventOverflow` padding
 
-  var keys$1 = Object.keys(defaultProps);
+  };
+  var PADDING = 4; // Popper attributes
+  // In Popper v2 these will be `data-*` instead of `x-*` to adhere to HTML5 spec
+
+  var PLACEMENT_ATTRIBUTE = 'x-placement';
+  var OUT_OF_BOUNDARIES_ATTRIBUTE = 'x-out-of-boundaries'; // Classes
+
+  var IOS_CLASS = "tippy-iOS";
+  var ACTIVE_CLASS = "tippy-active";
+  var POPPER_CLASS = "tippy-popper";
+  var TOOLTIP_CLASS = "tippy-tooltip";
+  var CONTENT_CLASS = "tippy-content";
+  var BACKDROP_CLASS = "tippy-backdrop";
+  var ARROW_CLASS = "tippy-arrow";
+  var ROUND_ARROW_CLASS = "tippy-roundarrow"; // Selectors
+
+  var POPPER_SELECTOR = ".".concat(POPPER_CLASS);
+  var TOOLTIP_SELECTOR = ".".concat(TOOLTIP_CLASS);
+  var CONTENT_SELECTOR = ".".concat(CONTENT_CLASS);
+  var BACKDROP_SELECTOR = ".".concat(BACKDROP_CLASS);
+  var ARROW_SELECTOR = ".".concat(ARROW_CLASS);
+  var ROUND_ARROW_SELECTOR = ".".concat(ROUND_ARROW_CLASS);
+
+  var isUsingTouch = false;
+  function onDocumentTouch() {
+    if (isUsingTouch) {
+      return;
+    }
+
+    isUsingTouch = true;
+
+    if (isIOS) {
+      document.body.classList.add(IOS_CLASS);
+    }
+
+    if (window.performance) {
+      document.addEventListener('mousemove', onDocumentMouseMove);
+    }
+  }
+  var lastMouseMoveTime = 0;
+  function onDocumentMouseMove() {
+    var now = performance.now(); // Chrome 60+ is 1 mousemove per animation frame, use 20ms time difference
+
+    if (now - lastMouseMoveTime < 20) {
+      isUsingTouch = false;
+      document.removeEventListener('mousemove', onDocumentMouseMove);
+
+      if (!isIOS) {
+        document.body.classList.remove(IOS_CLASS);
+      }
+    }
+
+    lastMouseMoveTime = now;
+  }
+  function onWindowBlur() {
+    var _document = document,
+        activeElement = _document.activeElement;
+
+    if (activeElement && activeElement.blur && activeElement._tippy) {
+      activeElement.blur();
+    }
+  }
+  /**
+   * Adds the needed global event listeners
+   */
+
+  function bindGlobalEventListeners() {
+    document.addEventListener('touchstart', onDocumentTouch, PASSIVE);
+    window.addEventListener('blur', onWindowBlur);
+  }
+
+  var keys = Object.keys(defaultProps);
   /**
    * Returns an object of optional props from data-tippy-* attributes
    */
 
   function getDataAttributeOptions(reference) {
-    return keys$1.reduce(function (acc, key) {
+    return keys.reduce(function (acc, key) {
       var valueAsString = (reference.getAttribute("data-tippy-".concat(key)) || '').trim();
 
       if (!valueAsString) {
@@ -4409,6 +3201,7 @@
     var polyfills = {
       isVirtual: true,
       attributes: virtualReference.attributes || {},
+      contains: function contains() {},
       setAttribute: function setAttribute(key, value) {
         virtualReference.attributes[key] = value;
       },
@@ -4453,10 +3246,17 @@
     return {}.toString.call(value) === '[object Object]' && !value.addEventListener;
   }
   /**
+   * Determines if the value is a reference element
+   */
+
+  function isReferenceElement(value) {
+    return !!value._tippy && !matches.call(value, POPPER_SELECTOR);
+  }
+  /**
    * Safe .hasOwnProperty check, for prototype-less objects
    */
 
-  function hasOwnProperty$8(obj, key) {
+  function hasOwnProperty$1(obj, key) {
     return {}.hasOwnProperty.call(obj, key);
   }
   /**
@@ -4487,7 +3287,7 @@
    * Returns a value at a given index depending on if it's an array or number
    */
 
-  function getValue$1(value, index, defaultValue) {
+  function getValue(value, index, defaultValue) {
     if (Array.isArray(value)) {
       var v = value[index];
       return v == null ? defaultValue : v;
@@ -4496,19 +3296,22 @@
     return value;
   }
   /**
-   * Debounce utility
+   * Debounce utility. To avoid bloating bundle size, we're only passing 1
+   * argument here, a more generic function would pass all arguments. Only
+   * `onMouseMove` uses this which takes the event object for now.
    */
 
   function debounce$1(fn, ms) {
-    var timeoutId;
-    return function () {
-      var _this = this,
-          _arguments = arguments;
+    // Avoid wrapping in `setTimeout` if ms is 0 anyway
+    if (ms === 0) {
+      return fn;
+    }
 
-      clearTimeout(timeoutId); // @ts-ignore
-
-      timeoutId = setTimeout(function () {
-        return fn.apply(_this, _arguments);
+    var timeout;
+    return function (arg) {
+      clearTimeout(timeout);
+      timeout = setTimeout(function () {
+        fn(arg);
       }, ms);
     };
   }
@@ -4528,11 +3331,18 @@
     return a.indexOf(b) > -1;
   }
   /**
+   * Determines if the value is a real element
+   */
+
+  function isRealElement(value) {
+    return value instanceof Element;
+  }
+  /**
    * Determines if the value is singular-like
    */
 
   function isSingular(value) {
-    return !!(value && hasOwnProperty$8(value, 'isVirtual')) || value instanceof Element;
+    return !!(value && hasOwnProperty$1(value, 'isVirtual')) || isRealElement(value);
   }
   /**
    * Firefox extensions don't allow setting .innerHTML directly, this will trick it
@@ -4545,7 +3355,7 @@
    * Evaluates a function if one, or returns the value
    */
 
-  function evaluateValue(value, args) {
+  function invokeWithArgsOrReturn(value, args) {
     return typeof value === 'function' ? value.apply(null, args) : value;
   }
   /**
@@ -4563,7 +3373,7 @@
    */
 
   function canReceiveFocus(element) {
-    return element instanceof Element ? matches.call(element, 'a[href],area[href],button,details,input,textarea,select,iframe,[tabindex]') && !element.hasAttribute('disabled') : true;
+    return isRealElement(element) ? matches.call(element, 'a[href],area[href],button,details,input,textarea,select,iframe,[tabindex]') && !element.hasAttribute('disabled') : true;
   }
   /**
    * Returns a new `div` element
@@ -4573,13 +3383,35 @@
     return document.createElement('div');
   }
   /**
+   * Applies a transition duration to a list of elements
+   */
+
+  function setTransitionDuration(els, value) {
+    els.forEach(function (el) {
+      if (el) {
+        el.style.transitionDuration = "".concat(value, "ms");
+      }
+    });
+  }
+  /**
+   * Sets the visibility state to elements so they can begin to transition
+   */
+
+  function setVisibilityState(els, state) {
+    els.forEach(function (el) {
+      if (el) {
+        el.setAttribute('data-state', state);
+      }
+    });
+  }
+  /**
    * Evaluates the props object by merging data attributes and
    * disabling conflicting options where necessary
    */
 
   function evaluateProps(reference, props) {
-    var out = _extends$1({}, props, {
-      content: evaluateValue(props.content, [reference])
+    var out = _extends$2({}, props, {
+      content: invokeWithArgsOrReturn(props.content, [reference])
     }, props.ignoreAttributes ? {} : getDataAttributeOptions(reference));
 
     if (out.arrow || isUCBrowser) {
@@ -4594,7 +3426,7 @@
 
   function validateOptions(options, defaultProps) {
     Object.keys(options).forEach(function (option) {
-      if (!hasOwnProperty$8(defaultProps, option)) {
+      if (!hasOwnProperty$1(defaultProps, option)) {
         throw new Error("[tippy]: `".concat(option, "` is not a valid option"));
       }
     });
@@ -4605,14 +3437,14 @@
    */
 
   function setInnerHTML(element, html) {
-    element[innerHTML()] = html instanceof Element ? html[innerHTML()] : html;
+    element[innerHTML()] = isRealElement(html) ? html[innerHTML()] : html;
   }
   /**
    * Sets the content of a tooltip
    */
 
   function setContent(contentEl, props) {
-    if (props.content instanceof Element) {
+    if (isRealElement(props.content)) {
       setInnerHTML(contentEl, '');
       contentEl.appendChild(props.content);
     } else if (typeof props.content !== 'function') {
@@ -4626,10 +3458,10 @@
 
   function getChildren(popper) {
     return {
-      tooltip: popper.querySelector(Selectors.TOOLTIP),
-      backdrop: popper.querySelector(Selectors.BACKDROP),
-      content: popper.querySelector(Selectors.CONTENT),
-      arrow: popper.querySelector(Selectors.ARROW) || popper.querySelector(Selectors.ROUND_ARROW)
+      tooltip: popper.querySelector(TOOLTIP_SELECTOR),
+      backdrop: popper.querySelector(BACKDROP_SELECTOR),
+      content: popper.querySelector(CONTENT_SELECTOR),
+      arrow: popper.querySelector(ARROW_SELECTOR) || popper.querySelector(ROUND_ARROW_SELECTOR)
     };
   }
   /**
@@ -4654,10 +3486,10 @@
     var arrow = div();
 
     if (arrowType === 'round') {
-      arrow.className = 'tippy-roundarrow';
+      arrow.className = ROUND_ARROW_CLASS;
       setInnerHTML(arrow, '<svg viewBox="0 0 18 7" xmlns="http://www.w3.org/2000/svg"><path d="M0 7s2.021-.015 5.253-4.218C6.584 1.051 7.797.007 9 0c1.203-.007 2.416 1.035 3.761 2.782C16.012 7.005 18 7 18 7H0z"/></svg>');
     } else {
-      arrow.className = 'tippy-arrow';
+      arrow.className = ARROW_CLASS;
     }
 
     return arrow;
@@ -4668,7 +3500,7 @@
 
   function createBackdropElement() {
     var backdrop = div();
-    backdrop.className = 'tippy-backdrop';
+    backdrop.className = BACKDROP_CLASS;
     backdrop.setAttribute('data-state', 'hidden');
     return backdrop;
   }
@@ -4689,21 +3521,10 @@
     tooltip.removeAttribute('data-interactive');
   }
   /**
-   * Applies a transition duration to a list of elements
-   */
-
-  function applyTransitionDuration(els, value) {
-    els.forEach(function (el) {
-      if (el) {
-        el.style.transitionDuration = "".concat(value, "ms");
-      }
-    });
-  }
-  /**
    * Add/remove transitionend listener from tooltip
    */
 
-  function toggleTransitionEndListener(tooltip, action, listener) {
+  function updateTransitionEndListener(tooltip, action, listener) {
     // UC Browser hasn't adopted the `transitionend` event despite supporting
     // unprefixed transitions...
     var eventName = isUCBrowser && document.body.style.webkitTransition !== undefined ? 'webkitTransitionEnd' : 'transitionend';
@@ -4713,20 +3534,9 @@
    * Returns the popper's placement, ignoring shifting (top-start, etc)
    */
 
-  function getPopperPlacement(popper) {
-    var fullPlacement = popper.getAttribute('x-placement');
+  function getBasicPlacement(popper) {
+    var fullPlacement = popper.getAttribute(PLACEMENT_ATTRIBUTE);
     return fullPlacement ? fullPlacement.split('-')[0] : '';
-  }
-  /**
-   * Sets the visibility state to elements so they can begin to transition
-   */
-
-  function setVisibilityState(els, state) {
-    els.forEach(function (el) {
-      if (el) {
-        el.setAttribute('data-state', state);
-      }
-    });
   }
   /**
    * Triggers reflow
@@ -4739,7 +3549,7 @@
    * Adds/removes theme from tooltip's classList
    */
 
-  function toggleTheme(tooltip, action, theme) {
+  function updateTheme(tooltip, action, theme) {
     theme.split(' ').forEach(function (themeName) {
       tooltip.classList[action](themeName + '-theme');
     });
@@ -4750,23 +3560,26 @@
 
   function createPopperElement(id, props) {
     var popper = div();
-    popper.className = 'tippy-popper';
+    popper.className = POPPER_CLASS;
     popper.id = "tippy-".concat(id);
     popper.style.zIndex = '' + props.zIndex;
+    popper.style.position = 'absolute';
+    popper.style.top = '0';
+    popper.style.left = '0';
 
     if (props.role) {
       popper.setAttribute('role', props.role);
     }
 
     var tooltip = div();
-    tooltip.className = 'tippy-tooltip';
+    tooltip.className = TOOLTIP_CLASS;
     tooltip.style.maxWidth = props.maxWidth + (typeof props.maxWidth === 'number' ? 'px' : '');
     tooltip.setAttribute('data-size', props.size);
     tooltip.setAttribute('data-animation', props.animation);
     tooltip.setAttribute('data-state', 'hidden');
-    toggleTheme(tooltip, 'add', props.theme);
+    updateTheme(tooltip, 'add', props.theme);
     var content = div();
-    content.className = 'tippy-content';
+    content.className = CONTENT_CLASS;
     content.setAttribute('data-state', 'hidden');
 
     if (props.interactive) {
@@ -4854,33 +3667,9 @@
 
 
     if (prevProps.theme !== nextProps.theme) {
-      toggleTheme(tooltip, 'remove', prevProps.theme);
-      toggleTheme(tooltip, 'add', nextProps.theme);
+      updateTheme(tooltip, 'remove', prevProps.theme);
+      updateTheme(tooltip, 'add', nextProps.theme);
     }
-  }
-  /**
-   * Runs the callback after the popper's position has been updated
-   * update() is debounced with Promise.resolve() or setTimeout()
-   * scheduleUpdate() is update() wrapped in requestAnimationFrame()
-   */
-
-  function afterPopperPositionUpdates(popperInstance, callback) {
-    var popper = popperInstance.popper,
-        options = popperInstance.options;
-    var onCreate = options.onCreate,
-        onUpdate = options.onUpdate;
-
-    options.onCreate = options.onUpdate = function (data) {
-      reflow(popper);
-      callback();
-
-      if (onUpdate) {
-        onUpdate(data);
-      }
-
-      options.onCreate = onCreate;
-      options.onUpdate = onUpdate;
-    };
   }
   /**
    * Hides all visible poppers on the document
@@ -4888,15 +3677,22 @@
 
   function hideAll() {
     var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-        checkHideOnClick = _ref.checkHideOnClick,
-        exclude = _ref.exclude,
+        excludedReferenceOrInstance = _ref.exclude,
         duration = _ref.duration;
 
-    arrayFrom(document.querySelectorAll(Selectors.POPPER)).forEach(function (popper) {
+    arrayFrom(document.querySelectorAll(POPPER_SELECTOR)).forEach(function (popper) {
       var instance = popper._tippy;
 
-      if (instance && (checkHideOnClick ? instance.props.hideOnClick === true : true) && (!exclude || popper !== exclude.popper)) {
-        instance.hide(duration);
+      if (instance) {
+        var isExcluded = false;
+
+        if (excludedReferenceOrInstance) {
+          isExcluded = isReferenceElement(excludedReferenceOrInstance) ? instance.reference === excludedReferenceOrInstance : popper === excludedReferenceOrInstance.popper;
+        }
+
+        if (!isExcluded) {
+          instance.hide(duration);
+        }
       }
     });
   }
@@ -4929,99 +3725,9 @@
     return -(distance - 10) + 'px';
   }
 
-  var isUsingTouch = false;
-  function onDocumentTouch() {
-    if (isUsingTouch) {
-      return;
-    }
+  var idCounter = 1; // Workaround for IE11's lack of new MouseEvent constructor
 
-    isUsingTouch = true;
-
-    if (isIOS) {
-      document.body.classList.add('tippy-iOS');
-    }
-
-    if (window.performance) {
-      document.addEventListener('mousemove', onDocumentMouseMove);
-    }
-  }
-  var lastMouseMoveTime = 0;
-  function onDocumentMouseMove() {
-    var now = performance.now(); // Chrome 60+ is 1 mousemove per animation frame, use 20ms time difference
-
-    if (now - lastMouseMoveTime < 20) {
-      isUsingTouch = false;
-      document.removeEventListener('mousemove', onDocumentMouseMove);
-
-      if (!isIOS) {
-        document.body.classList.remove('tippy-iOS');
-      }
-    }
-
-    lastMouseMoveTime = now;
-  }
-  function onDocumentClick(event) {
-    // Simulated events dispatched on the document
-    if (!(event.target instanceof Element)) {
-      return hideAll();
-    } // Clicked on an interactive popper
-
-
-    var popper = closest(event.target, Selectors.POPPER);
-
-    if (popper && popper._tippy && popper._tippy.props.interactive) {
-      return;
-    } // Clicked on a reference
-
-
-    var reference = closestCallback(event.target, function (el) {
-      return el._tippy && el._tippy.reference === el;
-    });
-
-    if (reference) {
-      var instance = reference._tippy;
-
-      if (instance) {
-        var isClickTrigger = includes(instance.props.trigger || '', 'click');
-
-        if (isUsingTouch || isClickTrigger) {
-          return hideAll({
-            exclude: instance,
-            checkHideOnClick: true
-          });
-        }
-
-        if (instance.props.hideOnClick !== true || isClickTrigger) {
-          return;
-        }
-
-        instance.clearDelayTimeouts();
-      }
-    }
-
-    hideAll({
-      checkHideOnClick: true
-    });
-  }
-  function onWindowBlur() {
-    var _document = document,
-        activeElement = _document.activeElement;
-
-    if (activeElement && activeElement.blur && activeElement._tippy) {
-      activeElement.blur();
-    }
-  }
-  /**
-   * Adds the needed global event listeners
-   */
-
-  function bindGlobalEventListeners() {
-    document.addEventListener('click', onDocumentClick, true);
-    document.addEventListener('touchstart', onDocumentTouch, PASSIVE);
-    window.addEventListener('blur', onWindowBlur);
-  }
-
-  var idCounter = 1;
+  var mouseMoveListeners = [];
   /**
    * Creates and returns a Tippy object. We're using a closure pattern instead of
    * a class so that the exposed object API is clean without private members
@@ -5035,36 +3741,29 @@
       return null;
     }
     /* ======================= 🔒 Private members 🔒 ======================= */
-    // The last trigger event type that caused the tippy to show
 
 
-    var lastTriggerEventType; // The last mousemove event object created by the document mousemove event
-
-    var lastMouseMoveEvent; // Timeout created by the show delay
-
-    var showTimeoutId; // Timeout created by the hide delay
-
-    var hideTimeoutId; // Frame created by scheduleHide()
-
-    var animationFrameId; // Flag to determine if the tippy is scheduled to show due to the show timeout
-
-    var isScheduledToShow = false; // The current `transitionend` callback reference
-
-    var transitionEndListener; // Array of event listeners currently attached to the reference element
-
-    var listeners = []; // Private onMouseMove handler reference, debounced or not
-
-    var debouncedOnMouseMove = props.interactiveDebounce > 0 ? debounce$1(onMouseMove, props.interactiveDebounce) : onMouseMove; // Node the tippy is currently appended to
-
-    var parentNode;
+    var lastTriggerEventType;
+    var lastMouseMoveEvent;
+    var showTimeoutId;
+    var hideTimeoutId;
+    var scheduleHideAnimationFrameId;
+    var isScheduledToShow = false;
+    var isBeingDestroyed = false;
+    var previousPlacement;
+    var wasVisibleDuringPreviousUpdate = false;
+    var hasMountCallbackRun = false;
+    var currentMountCallback;
+    var currentTransitionEndListener;
+    var listeners = [];
+    var currentComputedPadding;
+    var debouncedOnMouseMove = debounce$1(onMouseMove, props.interactiveDebounce);
     /* ======================= 🔑 Public members 🔑 ======================= */
-    // id used for the `aria-describedby` / `aria-labelledby` attribute
 
-    var id = idCounter++; // Popper element reference
-
-    var popper = createPopperElement(id, props); // Popper element children: { arrow, backdrop, content, tooltip }
-
+    var id = idCounter++;
+    var popper = createPopperElement(id, props);
     var popperChildren = getChildren(popper);
+    var popperInstance = null;
     var state = {
       // Is the instance currently enabled?
       isEnabled: true,
@@ -5075,10 +3774,8 @@
       // Is the tippy currently mounted to the DOM?
       isMounted: false,
       // Has the tippy finished transitioning in?
-      isShown: false // Popper.js instance for the tippy is lazily created
-
+      isShown: false
     };
-    var popperInstance = null;
     var instance = {
       // properties
       id: id,
@@ -5091,483 +3788,109 @@
       // methods
       clearDelayTimeouts: clearDelayTimeouts,
       set: set,
-      setContent: setContent$$1,
+      setContent: setContent,
       show: show,
       hide: hide,
       enable: enable,
       disable: disable,
       destroy: destroy
+      /* ==================== Initial instance mutations =================== */
+
     };
+    reference._tippy = instance;
+    popper._tippy = instance;
     addTriggersToReference();
 
     if (!props.lazy) {
       createPopperInstance();
-      instance.popperInstance.disableEventListeners();
     }
 
     if (props.showOnInit) {
       scheduleShow();
-    } // Ensure the reference element can receive focus (and is not a delegate)
+    } // Ensure the event listeners target can receive focus
 
 
-    if (props.a11y && !props.target && !canReceiveFocus(reference)) {
-      reference.setAttribute('tabindex', '0');
+    if (props.a11y && !props.target && !canReceiveFocus(getEventListenersTarget())) {
+      getEventListenersTarget().setAttribute('tabindex', '0');
     } // Prevent a tippy with a delay from hiding if the cursor left then returned
     // before it started hiding
 
 
     popper.addEventListener('mouseenter', function (event) {
       if (instance.props.interactive && instance.state.isVisible && lastTriggerEventType === 'mouseenter') {
-        scheduleShow(event);
+        // We don't want props.onTrigger() to be called here, since the `event`
+        // object is not related to the reference element
+        scheduleShow(event, true);
       }
     });
     popper.addEventListener('mouseleave', function () {
       if (instance.props.interactive && lastTriggerEventType === 'mouseenter') {
         document.addEventListener('mousemove', debouncedOnMouseMove);
       }
-    }); // Install shortcuts
-
-    reference._tippy = instance;
-    popper._tippy = instance;
+    });
     return instance;
     /* ======================= 🔒 Private methods 🔒 ======================= */
 
     /**
-     * Positions the virtual reference near the cursor
-     */
-
-    function positionVirtualReferenceNearCursor(event) {
-      var _lastMouseMoveEvent = lastMouseMoveEvent = event,
-          clientX = _lastMouseMoveEvent.clientX,
-          clientY = _lastMouseMoveEvent.clientY;
-
-      if (!instance.popperInstance) {
-        return;
-      } // Ensure virtual reference is padded to prevent tooltip from
-      // overflowing. Maybe Popper.js issue?
-
-
-      var placement = getPopperPlacement(instance.popper);
-      var padding = instance.props.arrow ? PADDING + (instance.props.arrowType === 'round' ? 18 : 16) : PADDING;
-      var isVerticalPlacement = includes(['top', 'bottom'], placement);
-      var isHorizontalPlacement = includes(['left', 'right'], placement); // Top / left boundary
-
-      var x = isVerticalPlacement ? Math.max(padding, clientX) : clientX;
-      var y = isHorizontalPlacement ? Math.max(padding, clientY) : clientY; // Bottom / right boundary
-
-      if (isVerticalPlacement && x > padding) {
-        x = Math.min(clientX, window.innerWidth - padding);
-      }
-
-      if (isHorizontalPlacement && y > padding) {
-        y = Math.min(clientY, window.innerHeight - padding);
-      }
-
-      var rect = instance.reference.getBoundingClientRect();
-      var followCursor = instance.props.followCursor;
-      var isHorizontal = followCursor === 'horizontal';
-      var isVertical = followCursor === 'vertical';
-      instance.popperInstance.reference = _extends$1({}, instance.popperInstance.reference, {
-        getBoundingClientRect: function getBoundingClientRect() {
-          return {
-            width: 0,
-            height: 0,
-            top: isHorizontal ? rect.top : y,
-            bottom: isHorizontal ? rect.bottom : y,
-            left: isVertical ? rect.left : x,
-            right: isVertical ? rect.right : x
-          };
-        },
-        clientWidth: 0,
-        clientHeight: 0
-      });
-      instance.popperInstance.scheduleUpdate();
-
-      if (followCursor === 'initial' && instance.state.isVisible) {
-        removeFollowCursorListener();
-      }
-    }
-    /**
-     * Creates the tippy instance for a delegate when it's been triggered
-     */
-
-
-    function createDelegateChildTippy(event) {
-      if (event) {
-        var targetEl = closest(event.target, instance.props.target);
-
-        if (targetEl && !targetEl._tippy) {
-          createTippy(targetEl, _extends$1({}, instance.props, {
-            content: evaluateValue(collectionProps.content, [targetEl]),
-            appendTo: collectionProps.appendTo,
-            target: '',
-            showOnInit: true
-          }));
-          scheduleShow(event);
-        }
-      }
-    }
-    /**
-     * Setup before show() is invoked (delays, etc.)
-     */
-
-
-    function scheduleShow(event) {
-      clearDelayTimeouts();
-
-      if (instance.state.isVisible) {
-        return;
-      } // Is a delegate, create an instance for the child target
-
-
-      if (instance.props.target) {
-        return createDelegateChildTippy(event);
-      }
-
-      isScheduledToShow = true;
-
-      if (instance.props.wait) {
-        return instance.props.wait(instance, event);
-      } // If the tooltip has a delay, we need to be listening to the mousemove as
-      // soon as the trigger event is fired, so that it's in the correct position
-      // upon mount.
-      // Edge case: if the tooltip is still mounted, but then scheduleShow() is
-      // called, it causes a jump.
-
-
-      if (hasFollowCursorBehavior() && !instance.state.isMounted) {
-        document.addEventListener('mousemove', positionVirtualReferenceNearCursor);
-      }
-
-      var delay = getValue$1(instance.props.delay, 0, defaultProps.delay);
-
-      if (delay) {
-        showTimeoutId = setTimeout(function () {
-          show();
-        }, delay);
-      } else {
-        show();
-      }
-    }
-    /**
-     * Setup before hide() is invoked (delays, etc.)
-     */
-
-
-    function scheduleHide() {
-      clearDelayTimeouts();
-
-      if (!instance.state.isVisible) {
-        return removeFollowCursorListener();
-      }
-
-      isScheduledToShow = false;
-      var delay = getValue$1(instance.props.delay, 1, defaultProps.delay);
-
-      if (delay) {
-        hideTimeoutId = setTimeout(function () {
-          if (instance.state.isVisible) {
-            hide();
-          }
-        }, delay);
-      } else {
-        // Fixes a `transitionend` problem when it fires 1 frame too
-        // late sometimes, we don't want hide() to be called.
-        animationFrameId = requestAnimationFrame(function () {
-          hide();
-        });
-      }
-    }
-    /**
      * Removes the follow cursor listener
      */
-
 
     function removeFollowCursorListener() {
       document.removeEventListener('mousemove', positionVirtualReferenceNearCursor);
     }
     /**
-     * Cleans up old listeners
+     * Cleans up interactive mouse listeners
      */
 
 
-    function cleanupOldMouseListeners() {
+    function cleanupInteractiveMouseListeners() {
       document.body.removeEventListener('mouseleave', scheduleHide);
       document.removeEventListener('mousemove', debouncedOnMouseMove);
-    }
-    /**
-     * Event listener invoked upon trigger
-     */
-
-
-    function onTrigger(event) {
-      if (!instance.state.isEnabled || isEventListenerStopped(event)) {
-        return;
-      }
-
-      if (!instance.state.isVisible) {
-        lastTriggerEventType = event.type;
-
-        if (event instanceof MouseEvent) {
-          lastMouseMoveEvent = event;
-        }
-      } // Toggle show/hide when clicking click-triggered tooltips
-
-
-      if (event.type === 'click' && instance.props.hideOnClick !== false && instance.state.isVisible) {
-        scheduleHide();
-      } else {
-        scheduleShow(event);
-      }
-    }
-    /**
-     * Event listener used for interactive tooltips to detect when they should
-     * hide
-     */
-
-
-    function onMouseMove(event) {
-      var referenceTheCursorIsOver = closestCallback(event.target, function (el) {
-        return el._tippy;
+      mouseMoveListeners = mouseMoveListeners.filter(function (listener) {
+        return listener !== debouncedOnMouseMove;
       });
-      var isCursorOverPopper = closest(event.target, Selectors.POPPER) === instance.popper;
-      var isCursorOverReference = referenceTheCursorIsOver === instance.reference;
-
-      if (isCursorOverPopper || isCursorOverReference) {
-        return;
-      }
-
-      if (isCursorOutsideInteractiveBorder(getPopperPlacement(instance.popper), instance.popper.getBoundingClientRect(), event, instance.props)) {
-        cleanupOldMouseListeners();
-        scheduleHide();
-      }
     }
     /**
-     * Event listener invoked upon mouseleave
+     * Returns correct target used for event listeners
      */
 
 
-    function onMouseLeave(event) {
-      if (isEventListenerStopped(event)) {
-        return;
-      }
-
-      if (instance.props.interactive) {
-        document.body.addEventListener('mouseleave', scheduleHide);
-        document.addEventListener('mousemove', debouncedOnMouseMove);
-        return;
-      }
-
-      scheduleHide();
+    function getEventListenersTarget() {
+      return instance.props.triggerTarget || reference;
     }
     /**
-     * Event listener invoked upon blur
+     * Adds the document click event listener for the instance
      */
 
 
-    function onBlur(event) {
-      if (event.target !== instance.reference) {
-        return;
-      }
-
-      if (instance.props.interactive && event.relatedTarget && instance.popper.contains(event.relatedTarget)) {
-        return;
-      }
-
-      scheduleHide();
+    function addDocumentClickListener() {
+      document.addEventListener('click', onDocumentClick, true);
     }
     /**
-     * Event listener invoked when a child target is triggered
+     * Removes the document click event listener for the instance
      */
 
 
-    function onDelegateShow(event) {
-      if (closest(event.target, instance.props.target)) {
-        scheduleShow(event);
-      }
+    function removeDocumentClickListener() {
+      document.removeEventListener('click', onDocumentClick, true);
     }
     /**
-     * Event listener invoked when a child target should hide
+     * Returns transitionable inner elements used in show/hide methods
      */
 
 
-    function onDelegateHide(event) {
-      if (closest(event.target, instance.props.target)) {
-        scheduleHide();
-      }
+    function getTransitionableElements() {
+      return [instance.popperChildren.tooltip, instance.popperChildren.backdrop, instance.popperChildren.content];
     }
     /**
-     * Determines if an event listener should stop further execution due to the
-     * `touchHold` option
+     * Determines if the instance is in `followCursor` mode.
+     * NOTE: in v5, touch devices will use `initial` behavior no matter the value.
      */
 
 
-    function isEventListenerStopped(event) {
-      var supportsTouch = 'ontouchstart' in window;
-      var isTouchEvent = includes(event.type, 'touch');
-      var touchHold = instance.props.touchHold;
-      return supportsTouch && isUsingTouch && touchHold && !isTouchEvent || isUsingTouch && !touchHold && isTouchEvent;
-    }
-    /**
-     * Creates the popper instance for the instance
-     */
-
-
-    function createPopperInstance() {
-      var popperOptions = instance.props.popperOptions;
-      var _instance$popperChild = instance.popperChildren,
-          tooltip = _instance$popperChild.tooltip,
-          arrow = _instance$popperChild.arrow;
-      var preventOverflowModifier = getModifier(popperOptions, 'preventOverflow');
-
-      function applyMutations(data) {
-        if (instance.props.flip && !instance.props.flipOnUpdate) {
-          if (data.flipped) {
-            instance.popperInstance.options.placement = data.placement;
-          }
-
-          setFlipModifierEnabled(instance.popperInstance.modifiers, false);
-        }
-
-        tooltip.setAttribute('x-placement', data.placement);
-        var basePlacement = getPopperPlacement(instance.popper);
-        var styles = tooltip.style; // Account for the `distance` offset
-
-        styles.top = styles.bottom = styles.left = styles.right = '';
-        styles[basePlacement] = getOffsetDistanceInPx(instance.props.distance);
-        var padding = preventOverflowModifier && preventOverflowModifier.padding !== undefined ? preventOverflowModifier.padding : PADDING;
-        var isPaddingNumber = typeof padding === 'number';
-
-        var computedPadding = _extends$1({
-          top: isPaddingNumber ? padding : padding.top,
-          bottom: isPaddingNumber ? padding : padding.bottom,
-          left: isPaddingNumber ? padding : padding.left,
-          right: isPaddingNumber ? padding : padding.right
-        }, !isPaddingNumber && padding);
-
-        computedPadding[basePlacement] = isPaddingNumber ? padding + instance.props.distance : (padding[basePlacement] || 0) + instance.props.distance;
-        instance.popperInstance.modifiers.filter(function (m) {
-          return m.name === 'preventOverflow';
-        })[0].padding = computedPadding;
-      }
-
-      var config = _extends$1({
-        placement: instance.props.placement
-      }, popperOptions, {
-        modifiers: _extends$1({}, popperOptions ? popperOptions.modifiers : {}, {
-          preventOverflow: _extends$1({
-            boundariesElement: instance.props.boundary,
-            padding: PADDING
-          }, preventOverflowModifier),
-          arrow: _extends$1({
-            element: arrow,
-            enabled: !!arrow
-          }, getModifier(popperOptions, 'arrow')),
-          flip: _extends$1({
-            enabled: instance.props.flip,
-            // The tooltip is offset by 10px from the popper in CSS,
-            // we need to account for its distance
-            padding: instance.props.distance + PADDING,
-            behavior: instance.props.flipBehavior
-          }, getModifier(popperOptions, 'flip')),
-          offset: _extends$1({
-            offset: instance.props.offset
-          }, getModifier(popperOptions, 'offset'))
-        }),
-        // This gets invoked when calling `.set()` and updating a popper
-        // instance dependency, since a new popper instance gets created
-        onCreate: function onCreate(data) {
-          applyMutations(data);
-
-          if (popperOptions && popperOptions.onCreate) {
-            popperOptions.onCreate(data);
-          }
-        },
-        // This gets invoked on initial create and show()/scroll/resize update.
-        // This is due to `afterPopperPositionUpdates` overwriting onCreate()
-        // with onUpdate()
-        onUpdate: function onUpdate(data) {
-          applyMutations(data);
-
-          if (popperOptions && popperOptions.onUpdate) {
-            popperOptions.onUpdate(data);
-          }
-        }
-      });
-
-      instance.popperInstance = new Popper(instance.reference, instance.popper, config);
-    }
-    /**
-     * Mounts the tooltip to the DOM, callback to show tooltip is run **after**
-     * popper's position has updated
-     */
-
-
-    function mount(callback) {
-      var shouldEnableListeners = !hasFollowCursorBehavior() && !(instance.props.followCursor === 'initial' && isUsingTouch);
-
-      if (!instance.popperInstance) {
-        createPopperInstance();
-
-        if (!shouldEnableListeners) {
-          instance.popperInstance.disableEventListeners();
-        }
-      } else {
-        if (!hasFollowCursorBehavior()) {
-          instance.popperInstance.scheduleUpdate();
-
-          if (shouldEnableListeners) {
-            instance.popperInstance.enableEventListeners();
-          }
-        }
-
-        setFlipModifierEnabled(instance.popperInstance.modifiers, instance.props.flip);
-      } // If the instance previously had followCursor behavior, it will be
-      // positioned incorrectly if triggered by `focus` afterwards.
-      // Update the reference back to the real DOM element
-
-
-      instance.popperInstance.reference = instance.reference;
-      var arrow = instance.popperChildren.arrow;
-
-      if (hasFollowCursorBehavior()) {
-        if (arrow) {
-          arrow.style.margin = '0';
-        }
-
-        if (lastMouseMoveEvent) {
-          positionVirtualReferenceNearCursor(lastMouseMoveEvent);
-        }
-      } else if (arrow) {
-        arrow.style.margin = '';
-      } // Allow followCursor: 'initial' on touch devices
-
-
-      if (isUsingTouch && lastMouseMoveEvent && instance.props.followCursor === 'initial') {
-        positionVirtualReferenceNearCursor(lastMouseMoveEvent);
-
-        if (arrow) {
-          arrow.style.margin = '0';
-        }
-      }
-
-      afterPopperPositionUpdates(instance.popperInstance, callback);
-      var appendTo = instance.props.appendTo;
-      parentNode = appendTo === 'parent' ? instance.reference.parentNode : evaluateValue(appendTo, [instance.reference]);
-
-      if (!parentNode.contains(instance.popper)) {
-        parentNode.appendChild(instance.popper);
-        instance.props.onMount(instance);
-        instance.state.isMounted = true;
-      }
-    }
-    /**
-     * Determines if the instance is in `followCursor` mode
-     */
-
-
-    function hasFollowCursorBehavior() {
-      return instance.props.followCursor && !isUsingTouch && lastTriggerEventType !== 'focus';
+    function getIsInLooseFollowCursorMode() {
+      var followCursor = instance.props.followCursor;
+      return followCursor && lastTriggerEventType !== 'focus' || isUsingTouch && followCursor === 'initial';
     }
     /**
      * Updates the tooltip's position on each animation frame
@@ -5575,17 +3898,15 @@
 
 
     function makeSticky() {
-      applyTransitionDuration([instance.popper], isIE$1 ? 0 : instance.props.updateDuration);
+      setTransitionDuration([popper], isIE$1 ? 0 : instance.props.updateDuration);
 
       function updatePosition() {
-        if (instance.popperInstance) {
-          instance.popperInstance.scheduleUpdate();
-        }
+        instance.popperInstance.scheduleUpdate();
 
         if (instance.state.isMounted) {
           requestAnimationFrame(updatePosition);
         } else {
-          applyTransitionDuration([instance.popper], 0);
+          setTransitionDuration([popper], 0);
         }
       }
 
@@ -5598,7 +3919,7 @@
 
     function onTransitionedOut(duration, callback) {
       onTransitionEnd(duration, function () {
-        if (!instance.state.isVisible && parentNode && parentNode.contains(instance.popper)) {
+        if (!instance.state.isVisible && popper.parentNode && popper.parentNode.contains(popper)) {
           callback();
         }
       });
@@ -5624,7 +3945,7 @@
 
       function listener(event) {
         if (event.target === tooltip) {
-          toggleTransitionEndListener(tooltip, 'remove', listener);
+          updateTransitionEndListener(tooltip, 'remove', listener);
           callback();
         }
       } // Make callback synchronous if duration is 0
@@ -5635,9 +3956,9 @@
         return callback();
       }
 
-      toggleTransitionEndListener(tooltip, 'remove', transitionEndListener);
-      toggleTransitionEndListener(tooltip, 'add', listener);
-      transitionEndListener = listener;
+      updateTransitionEndListener(tooltip, 'remove', currentTransitionEndListener);
+      updateTransitionEndListener(tooltip, 'add', listener);
+      currentTransitionEndListener = listener;
     }
     /**
      * Adds an event listener to the reference and stores it in `listeners`
@@ -5646,7 +3967,7 @@
 
     function on(eventType, handler) {
       var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-      instance.reference.addEventListener(eventType, handler, options);
+      getEventListenersTarget().addEventListener(eventType, handler, options);
       listeners.push({
         eventType: eventType,
         handler: handler,
@@ -5712,17 +4033,467 @@
         var eventType = _ref.eventType,
             handler = _ref.handler,
             options = _ref.options;
-        instance.reference.removeEventListener(eventType, handler, options);
+        getEventListenersTarget().removeEventListener(eventType, handler, options);
       });
       listeners = [];
     }
     /**
-     * Returns inner elements used in show/hide methods
+     * Positions the virtual reference near the cursor
      */
 
 
-    function getInnerElements() {
-      return [instance.popperChildren.tooltip, instance.popperChildren.backdrop, instance.popperChildren.content];
+    function positionVirtualReferenceNearCursor(event) {
+      var _lastMouseMoveEvent = lastMouseMoveEvent = event,
+          x = _lastMouseMoveEvent.clientX,
+          y = _lastMouseMoveEvent.clientY; // Gets set once popperInstance `onCreate` has been called
+
+
+      if (!currentComputedPadding) {
+        return;
+      } // If the instance is interactive, avoid updating the position unless it's
+      // over the reference element
+
+
+      var isCursorOverReference = closestCallback(event.target, function (el) {
+        return el === reference;
+      });
+      var rect = reference.getBoundingClientRect();
+      var followCursor = instance.props.followCursor;
+      var isHorizontal = followCursor === 'horizontal';
+      var isVertical = followCursor === 'vertical'; // The virtual reference needs some size to prevent itself from overflowing
+
+      var isVerticalPlacement = includes(['top', 'bottom'], getBasicPlacement(popper));
+      var fullPlacement = popper.getAttribute(PLACEMENT_ATTRIBUTE);
+      var isVariation = fullPlacement ? !!fullPlacement.split('-')[1] : false;
+      var size = isVerticalPlacement ? popper.offsetWidth : popper.offsetHeight;
+      var halfSize = size / 2;
+      var verticalIncrease = isVerticalPlacement ? 0 : isVariation ? size : halfSize;
+      var horizontalIncrease = isVerticalPlacement ? isVariation ? size : halfSize : 0;
+
+      if (isCursorOverReference || !instance.props.interactive) {
+        instance.popperInstance.reference = _extends$2({}, instance.popperInstance.reference, {
+          // These `client` values don't get used by Popper.js if they are 0
+          clientWidth: 0,
+          clientHeight: 0,
+          getBoundingClientRect: function getBoundingClientRect() {
+            return {
+              width: isVerticalPlacement ? size : 0,
+              height: isVerticalPlacement ? 0 : size,
+              top: (isHorizontal ? rect.top : y) - verticalIncrease,
+              bottom: (isHorizontal ? rect.bottom : y) + verticalIncrease,
+              left: (isVertical ? rect.left : x) - horizontalIncrease,
+              right: (isVertical ? rect.right : x) + horizontalIncrease
+            };
+          }
+        });
+        instance.popperInstance.update();
+      }
+
+      if (followCursor === 'initial' && instance.state.isVisible) {
+        removeFollowCursorListener();
+      }
+    }
+    /**
+     * Creates the tippy instance for a delegate when it's been triggered
+     */
+
+
+    function createDelegateChildTippy(event) {
+      if (event) {
+        var targetEl = closest(event.target, instance.props.target);
+
+        if (targetEl && !targetEl._tippy) {
+          createTippy(targetEl, _extends$2({}, instance.props, {
+            content: invokeWithArgsOrReturn(collectionProps.content, [targetEl]),
+            appendTo: collectionProps.appendTo,
+            target: '',
+            showOnInit: true
+          }));
+        }
+      }
+    }
+    /**
+     * Event listener invoked upon trigger
+     */
+
+
+    function onTrigger(event) {
+      if (!instance.state.isEnabled || isEventListenerStopped(event)) {
+        return;
+      }
+
+      if (!instance.state.isVisible) {
+        lastTriggerEventType = event.type;
+
+        if (event instanceof MouseEvent) {
+          lastMouseMoveEvent = event; // If scrolling, `mouseenter` events can be fired if the cursor lands
+          // over a new target, but `mousemove` events don't get fired. This
+          // causes interactive tooltips to get stuck open until the cursor is
+          // moved
+
+          mouseMoveListeners.forEach(function (listener) {
+            return listener(event);
+          });
+        }
+      } // Toggle show/hide when clicking click-triggered tooltips
+
+
+      if (event.type === 'click' && instance.props.hideOnClick !== false && instance.state.isVisible) {
+        scheduleHide();
+      } else {
+        scheduleShow(event);
+      }
+    }
+    /**
+     * Event listener used for interactive tooltips to detect when they should
+     * hide
+     */
+
+
+    function onMouseMove(event) {
+      var isCursorOverPopper = closest(event.target, POPPER_SELECTOR) === popper;
+      var isCursorOverReference = closestCallback(event.target, function (el) {
+        return el === reference;
+      });
+
+      if (isCursorOverPopper || isCursorOverReference) {
+        return;
+      }
+
+      if (isCursorOutsideInteractiveBorder(getBasicPlacement(popper), popper.getBoundingClientRect(), event, instance.props)) {
+        cleanupInteractiveMouseListeners();
+        scheduleHide();
+      }
+    }
+    /**
+     * Event listener invoked upon mouseleave
+     */
+
+
+    function onMouseLeave(event) {
+      if (isEventListenerStopped(event)) {
+        return;
+      }
+
+      if (instance.props.interactive) {
+        document.body.addEventListener('mouseleave', scheduleHide);
+        document.addEventListener('mousemove', debouncedOnMouseMove);
+        mouseMoveListeners.push(debouncedOnMouseMove);
+        return;
+      }
+
+      scheduleHide();
+    }
+    /**
+     * Event listener invoked upon blur
+     */
+
+
+    function onBlur(event) {
+      if (event.target !== getEventListenersTarget()) {
+        return;
+      }
+
+      if (instance.props.interactive && event.relatedTarget && popper.contains(event.relatedTarget)) {
+        return;
+      }
+
+      scheduleHide();
+    }
+    /**
+     * Event listener invoked when a child target is triggered
+     */
+
+
+    function onDelegateShow(event) {
+      if (closest(event.target, instance.props.target)) {
+        scheduleShow(event);
+      }
+    }
+    /**
+     * Event listener invoked when a child target should hide
+     */
+
+
+    function onDelegateHide(event) {
+      if (closest(event.target, instance.props.target)) {
+        scheduleHide();
+      }
+    }
+    /**
+     * Determines if an event listener should stop further execution due to the
+     * `touchHold` option
+     */
+
+
+    function isEventListenerStopped(event) {
+      var supportsTouch = 'ontouchstart' in window;
+      var isTouchEvent = includes(event.type, 'touch');
+      var touchHold = instance.props.touchHold;
+      return supportsTouch && isUsingTouch && touchHold && !isTouchEvent || isUsingTouch && !touchHold && isTouchEvent;
+    }
+    /**
+     * Runs the mount callback
+     */
+
+
+    function runMountCallback() {
+      if (!hasMountCallbackRun && currentMountCallback) {
+        hasMountCallbackRun = true;
+        reflow(popper);
+        currentMountCallback();
+      }
+    }
+    /**
+     * Creates the popper instance for the instance
+     */
+
+
+    function createPopperInstance() {
+      var popperOptions = instance.props.popperOptions;
+      var _instance$popperChild = instance.popperChildren,
+          tooltip = _instance$popperChild.tooltip,
+          arrow = _instance$popperChild.arrow;
+      var preventOverflowModifier = getModifier(popperOptions, 'preventOverflow');
+
+      function applyMutations(data) {
+        if (instance.props.flip && !instance.props.flipOnUpdate) {
+          if (data.flipped) {
+            instance.popperInstance.options.placement = data.placement;
+          }
+
+          setFlipModifierEnabled(instance.popperInstance.modifiers, false);
+        } // Apply all of the popper's attributes to the tootip node as well.
+        // Allows users to avoid using the .tippy-popper selector for themes.
+
+
+        tooltip.setAttribute(PLACEMENT_ATTRIBUTE, data.placement);
+
+        if (data.attributes[OUT_OF_BOUNDARIES_ATTRIBUTE] !== false) {
+          tooltip.setAttribute(OUT_OF_BOUNDARIES_ATTRIBUTE, '');
+        } else {
+          tooltip.removeAttribute(OUT_OF_BOUNDARIES_ATTRIBUTE);
+        } // Prevents a transition when changing placements (while tippy is visible)
+        // for scroll/resize updates
+
+
+        if (previousPlacement && previousPlacement !== data.placement && wasVisibleDuringPreviousUpdate) {
+          tooltip.style.transition = 'none';
+          requestAnimationFrame(function () {
+            tooltip.style.transition = '';
+          });
+        }
+
+        previousPlacement = data.placement;
+        wasVisibleDuringPreviousUpdate = instance.state.isVisible;
+        var basicPlacement = getBasicPlacement(popper);
+        var styles = tooltip.style; // Account for the `distance` offset
+
+        styles.top = styles.bottom = styles.left = styles.right = '';
+        styles[basicPlacement] = getOffsetDistanceInPx(instance.props.distance);
+        var padding = preventOverflowModifier && preventOverflowModifier.padding !== undefined ? preventOverflowModifier.padding : PADDING;
+        var isPaddingNumber = typeof padding === 'number';
+
+        var computedPadding = _extends$2({
+          top: isPaddingNumber ? padding : padding.top,
+          bottom: isPaddingNumber ? padding : padding.bottom,
+          left: isPaddingNumber ? padding : padding.left,
+          right: isPaddingNumber ? padding : padding.right
+        }, !isPaddingNumber && padding);
+
+        computedPadding[basicPlacement] = isPaddingNumber ? padding + instance.props.distance : (padding[basicPlacement] || 0) + instance.props.distance;
+        instance.popperInstance.modifiers.filter(function (m) {
+          return m.name === 'preventOverflow';
+        })[0].padding = computedPadding;
+        currentComputedPadding = computedPadding;
+      }
+
+      var config = _extends$2({
+        eventsEnabled: false,
+        placement: instance.props.placement
+      }, popperOptions, {
+        modifiers: _extends$2({}, popperOptions ? popperOptions.modifiers : {}, {
+          preventOverflow: _extends$2({
+            boundariesElement: instance.props.boundary,
+            padding: PADDING
+          }, preventOverflowModifier),
+          arrow: _extends$2({
+            element: arrow,
+            enabled: !!arrow
+          }, getModifier(popperOptions, 'arrow')),
+          flip: _extends$2({
+            enabled: instance.props.flip,
+            // The tooltip is offset by 10px from the popper in CSS,
+            // we need to account for its distance
+            padding: instance.props.distance + PADDING,
+            behavior: instance.props.flipBehavior
+          }, getModifier(popperOptions, 'flip')),
+          offset: _extends$2({
+            offset: instance.props.offset
+          }, getModifier(popperOptions, 'offset'))
+        }),
+        onCreate: function onCreate(data) {
+          applyMutations(data);
+          runMountCallback();
+
+          if (popperOptions && popperOptions.onCreate) {
+            popperOptions.onCreate(data);
+          }
+        },
+        onUpdate: function onUpdate(data) {
+          applyMutations(data);
+          runMountCallback();
+
+          if (popperOptions && popperOptions.onUpdate) {
+            popperOptions.onUpdate(data);
+          }
+        }
+      });
+
+      instance.popperInstance = new Popper(reference, popper, config);
+    }
+    /**
+     * Mounts the tooltip to the DOM
+     */
+
+
+    function mount() {
+      hasMountCallbackRun = false;
+      var isInLooseFollowCursorMode = getIsInLooseFollowCursorMode();
+
+      if (instance.popperInstance) {
+        setFlipModifierEnabled(instance.popperInstance.modifiers, instance.props.flip);
+
+        if (!isInLooseFollowCursorMode) {
+          instance.popperInstance.reference = reference;
+          instance.popperInstance.enableEventListeners();
+        }
+
+        instance.popperInstance.scheduleUpdate();
+      } else {
+        createPopperInstance();
+
+        if (!isInLooseFollowCursorMode) {
+          instance.popperInstance.enableEventListeners();
+        }
+      }
+
+      var appendTo = instance.props.appendTo;
+      var parentNode = appendTo === 'parent' ? reference.parentNode : invokeWithArgsOrReturn(appendTo, [reference]);
+
+      if (!parentNode.contains(popper)) {
+        parentNode.appendChild(popper);
+        instance.props.onMount(instance);
+        instance.state.isMounted = true;
+      }
+    }
+    /**
+     * Setup before show() is invoked (delays, etc.)
+     */
+
+
+    function scheduleShow(event, shouldAvoidCallingOnTrigger) {
+      clearDelayTimeouts();
+
+      if (instance.state.isVisible) {
+        return;
+      } // Is a delegate, create an instance for the child target
+
+
+      if (instance.props.target) {
+        return createDelegateChildTippy(event);
+      }
+
+      isScheduledToShow = true;
+
+      if (event && !shouldAvoidCallingOnTrigger) {
+        instance.props.onTrigger(instance, event);
+      }
+
+      if (instance.props.wait) {
+        return instance.props.wait(instance, event);
+      } // If the tooltip has a delay, we need to be listening to the mousemove as
+      // soon as the trigger event is fired, so that it's in the correct position
+      // upon mount.
+      // Edge case: if the tooltip is still mounted, but then scheduleShow() is
+      // called, it causes a jump.
+
+
+      if (getIsInLooseFollowCursorMode() && !instance.state.isMounted) {
+        if (!instance.popperInstance) {
+          createPopperInstance();
+        }
+
+        document.addEventListener('mousemove', positionVirtualReferenceNearCursor);
+      }
+
+      addDocumentClickListener();
+      var delay = getValue(instance.props.delay, 0, defaultProps.delay);
+
+      if (delay) {
+        showTimeoutId = setTimeout(function () {
+          show();
+        }, delay);
+      } else {
+        show();
+      }
+    }
+    /**
+     * Setup before hide() is invoked (delays, etc.)
+     */
+
+
+    function scheduleHide() {
+      clearDelayTimeouts();
+
+      if (!instance.state.isVisible) {
+        return removeFollowCursorListener();
+      }
+
+      isScheduledToShow = false;
+      var delay = getValue(instance.props.delay, 1, defaultProps.delay);
+
+      if (delay) {
+        hideTimeoutId = setTimeout(function () {
+          if (instance.state.isVisible) {
+            hide();
+          }
+        }, delay);
+      } else {
+        // Fixes a `transitionend` problem when it fires 1 frame too
+        // late sometimes, we don't want hide() to be called.
+        scheduleHideAnimationFrameId = requestAnimationFrame(function () {
+          hide();
+        });
+      }
+    }
+    /**
+     * Listener to handle clicks on the document to determine if the
+     * instance should hide
+     */
+
+
+    function onDocumentClick(event) {
+      // Clicked on interactive popper
+      if (instance.props.interactive && popper.contains(event.target)) {
+        return;
+      } // Clicked on the event listeners target
+
+
+      if (getEventListenersTarget().contains(event.target)) {
+        if (isUsingTouch) {
+          return;
+        }
+
+        if (instance.state.isVisible && includes(instance.props.trigger, 'click')) {
+          return;
+        }
+      }
+
+      if (instance.props.hideOnClick === true) {
+        clearDelayTimeouts();
+        hide();
+      }
     }
     /* ======================= 🔑 Public methods 🔑 ======================= */
 
@@ -5750,7 +4521,7 @@
     function clearDelayTimeouts() {
       clearTimeout(showTimeoutId);
       clearTimeout(hideTimeoutId);
-      cancelAnimationFrame(animationFrameId);
+      cancelAnimationFrame(scheduleHideAnimationFrameId);
     }
     /**
      * Sets new props for the instance and redraws the tooltip
@@ -5761,42 +4532,35 @@
       // Backwards-compatible after TypeScript change
       options = options || {};
       validateOptions(options, defaultProps);
+      removeTriggersFromReference();
       var prevProps = instance.props;
-      var nextProps = evaluateProps(instance.reference, _extends$1({}, instance.props, options, {
+      var nextProps = evaluateProps(reference, _extends$2({}, instance.props, options, {
         ignoreAttributes: true
       }));
-      nextProps.ignoreAttributes = hasOwnProperty$8(options, 'ignoreAttributes') ? options.ignoreAttributes || false : prevProps.ignoreAttributes;
+      nextProps.ignoreAttributes = hasOwnProperty$1(options, 'ignoreAttributes') ? options.ignoreAttributes || false : prevProps.ignoreAttributes;
       instance.props = nextProps;
-
-      if (hasOwnProperty$8(options, 'trigger') || hasOwnProperty$8(options, 'touchHold')) {
-        removeTriggersFromReference();
-        addTriggersToReference();
-      }
-
-      if (hasOwnProperty$8(options, 'interactiveDebounce')) {
-        cleanupOldMouseListeners();
-        debouncedOnMouseMove = debounce$1(onMouseMove, options.interactiveDebounce || 0);
-      }
-
-      updatePopperElement(instance.popper, prevProps, nextProps);
-      instance.popperChildren = getChildren(instance.popper);
+      addTriggersToReference();
+      cleanupInteractiveMouseListeners();
+      debouncedOnMouseMove = debounce$1(onMouseMove, nextProps.interactiveDebounce);
+      updatePopperElement(popper, prevProps, nextProps);
+      instance.popperChildren = getChildren(popper);
 
       if (instance.popperInstance) {
-        instance.popperInstance.update();
-
         if (POPPER_INSTANCE_DEPENDENCIES.some(function (prop) {
-          return hasOwnProperty$8(options, prop);
+          return hasOwnProperty$1(options, prop) && options[prop] !== prevProps[prop];
         })) {
           instance.popperInstance.destroy();
           createPopperInstance();
 
-          if (!instance.state.isVisible) {
-            instance.popperInstance.disableEventListeners();
+          if (instance.state.isVisible) {
+            instance.popperInstance.enableEventListeners();
           }
 
           if (instance.props.followCursor && lastMouseMoveEvent) {
             positionVirtualReferenceNearCursor(lastMouseMoveEvent);
           }
+        } else {
+          instance.popperInstance.update();
         }
       }
     }
@@ -5805,7 +4569,7 @@
      */
 
 
-    function setContent$$1(content) {
+    function setContent(content) {
       set({
         content: content
       });
@@ -5816,19 +4580,16 @@
 
 
     function show() {
-      var duration = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getValue$1(instance.props.duration, 0, defaultProps.duration[1]);
+      var duration = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getValue(instance.props.duration, 0, defaultProps.duration[1]);
 
       if (instance.state.isDestroyed || !instance.state.isEnabled || isUsingTouch && !instance.props.touch) {
         return;
-      } // Destroy tooltip if the reference element is no longer on the DOM
+      } // Standardize `disabled` behavior across browsers.
+      // Firefox allows events on disabled elements, but Chrome doesn't.
+      // Using a wrapper element (i.e. <span>) is recommended.
 
 
-      if (!hasOwnProperty$8(instance.reference, 'isVirtual') && !document.documentElement.contains(instance.reference)) {
-        return destroy();
-      } // Do not show tooltip if the reference element has a `disabled` attribute
-
-
-      if (instance.reference.hasAttribute('disabled')) {
+      if (getEventListenersTarget().hasAttribute('disabled')) {
         return;
       }
 
@@ -5836,27 +4597,31 @@
         return;
       }
 
-      instance.popper.style.visibility = 'visible';
+      addDocumentClickListener();
+      popper.style.visibility = 'visible';
       instance.state.isVisible = true;
 
       if (instance.props.interactive) {
-        instance.reference.classList.add('tippy-active');
+        getEventListenersTarget().classList.add(ACTIVE_CLASS);
       } // Prevent a transition if the popper is at the opposite placement
 
 
-      applyTransitionDuration([instance.popper, instance.popperChildren.tooltip, instance.popperChildren.backdrop], 0);
-      mount(function () {
+      var transitionableElements = getTransitionableElements();
+      setTransitionDuration(transitionableElements.concat(popper), 0);
+
+      currentMountCallback = function currentMountCallback() {
         if (!instance.state.isVisible) {
           return;
-        } // Arrow will sometimes not be positioned correctly. Force another update
-
-
-        if (!hasFollowCursorBehavior()) {
-          instance.popperInstance.update();
         }
 
-        applyTransitionDuration([instance.popper], props.updateDuration);
-        applyTransitionDuration(getInnerElements(), duration);
+        var isInLooseFollowCursorMode = getIsInLooseFollowCursorMode();
+
+        if (isInLooseFollowCursorMode && lastMouseMoveEvent) {
+          positionVirtualReferenceNearCursor(lastMouseMoveEvent);
+        } else if (!isInLooseFollowCursorMode) {
+          // Double update will apply correct mutations
+          instance.popperInstance.update();
+        }
 
         if (instance.popperChildren.backdrop) {
           instance.popperChildren.content.style.transitionDelay = Math.round(duration / 12) + 'ms';
@@ -5866,18 +4631,20 @@
           makeSticky();
         }
 
-        setVisibilityState(getInnerElements(), 'visible');
+        setTransitionDuration([popper], instance.props.updateDuration);
+        setTransitionDuration(transitionableElements, duration);
+        setVisibilityState(transitionableElements, 'visible');
         onTransitionedIn(duration, function () {
-          instance.popperChildren.tooltip.classList.add('tippy-notransition');
-
           if (instance.props.aria) {
-            instance.reference.setAttribute("aria-".concat(instance.props.aria), instance.popper.id);
+            getEventListenersTarget().setAttribute("aria-".concat(instance.props.aria), popper.id);
           }
 
           instance.props.onShown(instance);
           instance.state.isShown = true;
         });
-      });
+      };
+
+      mount();
     }
     /**
      * Hides the tooltip
@@ -5885,39 +4652,41 @@
 
 
     function hide() {
-      var duration = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getValue$1(instance.props.duration, 1, defaultProps.duration[1]);
+      var duration = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getValue(instance.props.duration, 1, defaultProps.duration[1]);
 
-      if (instance.state.isDestroyed || !instance.state.isEnabled) {
+      if (instance.state.isDestroyed || !instance.state.isEnabled && !isBeingDestroyed) {
         return;
       }
 
-      if (instance.props.onHide(instance) === false) {
+      if (instance.props.onHide(instance) === false && !isBeingDestroyed) {
         return;
       }
 
-      instance.popperChildren.tooltip.classList.remove('tippy-notransition');
-
-      if (instance.props.interactive) {
-        instance.reference.classList.remove('tippy-active');
-      }
-
-      instance.popper.style.visibility = 'hidden';
+      removeDocumentClickListener();
+      popper.style.visibility = 'hidden';
       instance.state.isVisible = false;
       instance.state.isShown = false;
-      applyTransitionDuration(getInnerElements(), duration);
-      setVisibilityState(getInnerElements(), 'hidden');
+      wasVisibleDuringPreviousUpdate = false;
+
+      if (instance.props.interactive) {
+        getEventListenersTarget().classList.remove(ACTIVE_CLASS);
+      }
+
+      var transitionableElements = getTransitionableElements();
+      setTransitionDuration(transitionableElements, duration);
+      setVisibilityState(transitionableElements, 'hidden');
       onTransitionedOut(duration, function () {
         if (!isScheduledToShow) {
           removeFollowCursorListener();
         }
 
         if (instance.props.aria) {
-          instance.reference.removeAttribute("aria-".concat(instance.props.aria));
+          getEventListenersTarget().removeAttribute("aria-".concat(instance.props.aria));
         }
 
         instance.popperInstance.disableEventListeners();
         instance.popperInstance.options.placement = instance.props.placement;
-        parentNode.removeChild(instance.popper);
+        popper.parentNode.removeChild(popper);
         instance.props.onHidden(instance);
         instance.state.isMounted = false;
       });
@@ -5930,19 +4699,21 @@
     function destroy(destroyTargetInstances) {
       if (instance.state.isDestroyed) {
         return;
-      } // If the popper is currently mounted to the DOM, we want to ensure it gets
-      // hidden and unmounted instantly upon destruction
+      }
 
+      isBeingDestroyed = true; // If the popper is currently mounted to the DOM, we want to ensure it gets
+      // hidden and unmounted instantly upon destruction
 
       if (instance.state.isMounted) {
         hide(0);
       }
 
       removeTriggersFromReference();
-      delete instance.reference._tippy;
+      delete reference._tippy;
+      var target = instance.props.target;
 
-      if (instance.props.target && destroyTargetInstances) {
-        arrayFrom(instance.reference.querySelectorAll(instance.props.target)).forEach(function (child) {
+      if (target && destroyTargetInstances && isRealElement(reference)) {
+        arrayFrom(reference.querySelectorAll(target)).forEach(function (child) {
           if (child._tippy) {
             child._tippy.destroy();
           }
@@ -5953,6 +4724,7 @@
         instance.popperInstance.destroy();
       }
 
+      isBeingDestroyed = false;
       instance.state.isDestroyed = true;
     }
   }
@@ -5961,7 +4733,6 @@
    * Groups an array of instances by taking control of their props during
    * certain lifecycles.
    */
-
   function group(instances) {
     var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
         _ref$delay = _ref.delay,
@@ -5969,17 +4740,13 @@
         _ref$duration = _ref.duration,
         duration = _ref$duration === void 0 ? 0 : _ref$duration;
 
-    // Already grouped. Cannot group instances more than once (yet) or stale lifecycle
-    // closures will be invoked, causing a stack overflow
-    if (instances.some(function (instance) {
-      return hasOwnProperty$8(instance, '_originalProps');
-    })) {
-      return;
-    }
-
     var isAnyTippyOpen = false;
     instances.forEach(function (instance) {
-      instance._originalProps = _extends$1({}, instance.props);
+      if (instance._originalProps) {
+        instance.set(instance._originalProps);
+      } else {
+        instance._originalProps = _extends$2({}, instance.props);
+      }
     });
 
     function setIsAnyTippyOpen(value) {
@@ -5994,7 +4761,10 @@
         instance.set({
           duration: duration
         });
-        instance.hide();
+
+        if (instance.state.isVisible) {
+          instance.hide();
+        }
       });
       setIsAnyTippyOpen(true);
     }
@@ -6041,7 +4811,7 @@
       globalEventListenersBound = true;
     }
 
-    var props = _extends$1({}, defaultProps, options); // If they are specifying a virtual positioning reference, we need to polyfill
+    var props = _extends$2({}, defaultProps, options); // If they are specifying a virtual positioning reference, we need to polyfill
     // some native DOM props
 
 
@@ -6109,6 +4879,7 @@
       var style = document.createElement('style');
       style.type = 'text/css';
       style.textContent = css;
+      style.setAttribute('data-tippy-stylesheet', '');
       var head = document.head;
       var firstChild = head.firstChild;
 
@@ -6122,26 +4893,35 @@
 
   injectCSS(css);
 
-  const missingTippy = 'Using the attachment feature of Shepherd requires the Tippy.js library';
+  var missingTippy = 'Using the attachment feature of Shepherd requires the Tippy.js library';
 
-  const centeredStylePopperModifier = {
+  var addShepherdClass = {
+    enabled: true,
+    fn: function fn(data) {
+      data.instance.popper.classList.add('shepherd-popper');
+      return data;
+    }
+  };
+  var centeredStylePopperModifier = {
     computeStyle: {
       enabled: true,
-
-      fn(data) {
-        data.styles = Object.assign({}, data.styles, {
+      fn: function fn(data) {
+        data.styles = _extends({}, data.styles, {
           left: '50%',
           top: '50%',
           transform: 'translate(-50%, -50%)'
         });
         return data;
       }
-
-    }
+    },
+    addShepherdClass: addShepherdClass
   }; // Used to compose settings for tippyOptions.popperOptions (https://atomiks.github.io/tippyjs/#popper-options-option)
 
-  const defaultPopperOptions = {
-    positionFixed: true
+  var defaultPopperOptions = {
+    positionFixed: true,
+    modifiers: {
+      addShepherdClass: addShepherdClass
+    }
   };
   /**
    * TODO rewrite the way items are being added to use more performant documentFragment code
@@ -6150,9 +4930,59 @@
    */
 
   function createFromHTML(html) {
-    const el = document.createElement('div');
+    var el = document.createElement('div');
     el.innerHTML = html;
     return el.children[0];
+  }
+  /**
+   * Returns a function, that, as long as it continues to be invoked, will not
+   * be triggered. The function will be called after it stops being called for
+   * N milliseconds. If `immediate` is passed, trigger the function on the
+   * leading edge, instead of the trailing.
+   * @param {Function} func The function to invoke
+   * @param {Number} wait The time to wait in ms
+   * @param {Boolean} immediate If true, the function will be invoked immediately
+   * @return {Function}
+   */
+
+  function debounce$2(func, wait, immediate) {
+    var timeout;
+    return function () {
+      var context = this;
+      var args = arguments;
+
+      var later = function later() {
+        timeout = null;
+
+        if (!immediate) {
+          func.apply(context, args);
+        }
+      };
+
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+
+      if (callNow) {
+        func.apply(context, args);
+      }
+    };
+  }
+  /**
+   * Creates a slice of `arr` with n elements dropped from the beginning.
+   * @param {Array} arr
+   * @param {Number} n
+   * @return {*}
+   */
+
+  function drop(arr) {
+    var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+
+    if (Array.isArray(arr)) {
+      return arr.slice(n);
+    }
+
+    return [];
   }
   /**
    * Parse the position object or string to return the attachment and element to attach to
@@ -6162,7 +4992,7 @@
    */
 
   function _parseAttachToOpts(opts) {
-    if (isObjectLike(opts)) {
+    if (lodash_isobjectlike(opts)) {
       if (opts.hasOwnProperty('element') && opts.hasOwnProperty('on')) {
         return opts;
       }
@@ -6170,8 +5000,8 @@
       return null;
     }
 
-    const positionRe = /^(.+) ((auto|top|left|right|bottom)(-start|-end)?)$/;
-    const matches = positionRe.exec(opts);
+    var positionRe = /^(.+) ((auto|top|left|right|bottom)(-start|-end)?)$/;
+    var matches = positionRe.exec(opts);
 
     if (!matches) {
       return null;
@@ -6191,12 +5021,12 @@
   function parseShorthand(obj, props) {
     if (obj === null || isUndefined(obj)) {
       return obj;
-    } else if (isObjectLike(obj)) {
+    } else if (lodash_isobjectlike(obj)) {
       return obj;
     }
 
-    const values = obj.split(' ');
-    return zipObject(props, values);
+    var values = obj.split(' ');
+    return lodash_zipobject(props, values);
   }
   /**
    * Determines options for the tooltip and initializes
@@ -6212,7 +5042,7 @@
       this.tooltip.destroy();
     }
 
-    const attachToOpts = this.parseAttachTo();
+    var attachToOpts = this.parseAttachTo();
     this.tooltip = _makeTippyInstance.call(this, attachToOpts);
     this.target = attachToOpts.element || document.body;
     this.el.classList.add('shepherd-element');
@@ -6225,8 +5055,9 @@
    */
 
   function parseAttachTo() {
-    const options = _parseAttachToOpts(this.options.attachTo) || {};
-    const returnOpts = Object.assign({}, options);
+    var options = _parseAttachToOpts(this.options.attachTo) || {};
+
+    var returnOpts = _extends({}, options);
 
     if (isString(options.element)) {
       // Can't override the element in user opts reference because we can't
@@ -6237,7 +5068,7 @@
       }
 
       if (!returnOpts.element) {
-        console.error(`The element for this Shepherd step was not found ${options.element}`);
+        console.error("The element for this Shepherd step was not found ".concat(options.element));
       }
     }
 
@@ -6255,7 +5086,7 @@
       return _makeCenteredTippy.call(this);
     }
 
-    const tippyOptions = _makeAttachedTippyOptions.call(this, attachToOptions);
+    var tippyOptions = _makeAttachedTippyOptions.call(this, attachToOptions);
 
     return tippy(attachToOptions.element, tippyOptions);
   }
@@ -6270,20 +5101,21 @@
 
 
   function _makeAttachedTippyOptions(attachToOptions) {
-    const resultingTippyOptions = {
+    var resultingTippyOptions = {
       content: this.el,
       flipOnUpdate: true,
       placement: attachToOptions.on || 'right'
     };
-    Object.assign(resultingTippyOptions, this.options.tippyOptions);
+
+    _extends(resultingTippyOptions, this.options.tippyOptions);
 
     if (this.options.title) {
-      const existingTheme = resultingTippyOptions.theme;
-      resultingTippyOptions.theme = existingTheme ? `${existingTheme} shepherd-has-title` : 'shepherd-has-title';
+      var existingTheme = resultingTippyOptions.theme;
+      resultingTippyOptions.theme = existingTheme ? "".concat(existingTheme, " shepherd-has-title") : 'shepherd-has-title';
     }
 
     if (this.options.tippyOptions && this.options.tippyOptions.popperOptions) {
-      Object.assign(defaultPopperOptions, this.options.tippyOptions.popperOptions);
+      _extends(defaultPopperOptions, this.options.tippyOptions.popperOptions);
     }
 
     resultingTippyOptions.popperOptions = defaultPopperOptions;
@@ -6300,19 +5132,257 @@
 
 
   function _makeCenteredTippy() {
-    const tippyOptions = _objectSpread({
+    var tippyOptions = _objectSpread({
       content: this.el,
       placement: 'top'
     }, this.options.tippyOptions);
 
     tippyOptions.arrow = false;
     tippyOptions.popperOptions = tippyOptions.popperOptions || {};
-    const finalPopperOptions = Object.assign({}, defaultPopperOptions, tippyOptions.popperOptions, {
-      modifiers: Object.assign(centeredStylePopperModifier, tippyOptions.popperOptions.modifiers)
+
+    var finalPopperOptions = _extends({}, defaultPopperOptions, tippyOptions.popperOptions, {
+      modifiers: _extends(centeredStylePopperModifier, tippyOptions.popperOptions.modifiers)
     });
+
     tippyOptions.popperOptions = finalPopperOptions;
     return tippy(document.body, tippyOptions);
   }
+
+  var Evented =
+  /*#__PURE__*/
+  function () {
+    function Evented() {
+      _classCallCheck(this, Evented);
+    }
+
+    _createClass(Evented, [{
+      key: "on",
+      value: function on(event, handler, ctx) {
+        var once = arguments.length <= 3 || arguments[3] === undefined ? false : arguments[3];
+
+        if (isUndefined(this.bindings)) {
+          this.bindings = {};
+        }
+
+        if (isUndefined(this.bindings[event])) {
+          this.bindings[event] = [];
+        }
+
+        this.bindings[event].push({
+          handler: handler,
+          ctx: ctx,
+          once: once
+        });
+      }
+    }, {
+      key: "once",
+      value: function once(event, handler, ctx) {
+        this.on(event, handler, ctx, true);
+      }
+    }, {
+      key: "off",
+      value: function off(event, handler) {
+        var _this = this;
+
+        if (isUndefined(this.bindings) || isUndefined(this.bindings[event])) {
+          return false;
+        }
+
+        if (isUndefined(handler)) {
+          delete this.bindings[event];
+        } else {
+          this.bindings[event].forEach(function (binding, index) {
+            if (binding.handler === handler) {
+              _this.bindings[event].splice(index, 1);
+            }
+          });
+        }
+      }
+    }, {
+      key: "trigger",
+      value: function trigger(event) {
+        var _this2 = this;
+
+        if (!isUndefined(this.bindings) && this.bindings[event]) {
+          var args = drop(Array.prototype.slice.call(arguments));
+          this.bindings[event].forEach(function (binding, index) {
+            var ctx = binding.ctx,
+                handler = binding.handler,
+                once = binding.once;
+            var context = ctx || _this2;
+            handler.apply(context, args);
+
+            if (once) {
+              _this2.bindings[event].splice(index, 1);
+            }
+          });
+        }
+      }
+    }]);
+
+    return Evented;
+  }();
+
+  /**
+   * lodash (Custom Build) <https://lodash.com/>
+   * Build: `lodash modularize exports="npm" -o ./`
+   * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+   * Released under MIT license <https://lodash.com/license>
+   * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+   * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+   */
+
+  /** `Object#toString` result references. */
+  var objectTag = '[object Object]';
+
+  /**
+   * Checks if `value` is a host object in IE < 9.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
+   */
+  function isHostObject(value) {
+    // Many host objects are `Object` objects that can coerce to strings
+    // despite having improperly defined `toString` methods.
+    var result = false;
+    if (value != null && typeof value.toString != 'function') {
+      try {
+        result = !!(value + '');
+      } catch (e) {}
+    }
+    return result;
+  }
+
+  /**
+   * Creates a unary function that invokes `func` with its argument transformed.
+   *
+   * @private
+   * @param {Function} func The function to wrap.
+   * @param {Function} transform The argument transform.
+   * @returns {Function} Returns the new function.
+   */
+  function overArg(func, transform) {
+    return function(arg) {
+      return func(transform(arg));
+    };
+  }
+
+  /** Used for built-in method references. */
+  var funcProto = Function.prototype,
+      objectProto$1 = Object.prototype;
+
+  /** Used to resolve the decompiled source of functions. */
+  var funcToString = funcProto.toString;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$2 = objectProto$1.hasOwnProperty;
+
+  /** Used to infer the `Object` constructor. */
+  var objectCtorString = funcToString.call(Object);
+
+  /**
+   * Used to resolve the
+   * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+   * of values.
+   */
+  var objectToString = objectProto$1.toString;
+
+  /** Built-in value references. */
+  var getPrototype = overArg(Object.getPrototypeOf, Object);
+
+  /**
+   * Checks if `value` is likely a DOM element.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a DOM element, else `false`.
+   * @example
+   *
+   * _.isElement(document.body);
+   * // => true
+   *
+   * _.isElement('<body>');
+   * // => false
+   */
+  function isElement(value) {
+    return !!value && value.nodeType === 1 && isObjectLike$1(value) && !isPlainObject(value);
+  }
+
+  /**
+   * Checks if `value` is object-like. A value is object-like if it's not `null`
+   * and has a `typeof` result of "object".
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+   * @example
+   *
+   * _.isObjectLike({});
+   * // => true
+   *
+   * _.isObjectLike([1, 2, 3]);
+   * // => true
+   *
+   * _.isObjectLike(_.noop);
+   * // => false
+   *
+   * _.isObjectLike(null);
+   * // => false
+   */
+  function isObjectLike$1(value) {
+    return !!value && typeof value == 'object';
+  }
+
+  /**
+   * Checks if `value` is a plain object, that is, an object created by the
+   * `Object` constructor or one with a `[[Prototype]]` of `null`.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.8.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
+   * @example
+   *
+   * function Foo() {
+   *   this.a = 1;
+   * }
+   *
+   * _.isPlainObject(new Foo);
+   * // => false
+   *
+   * _.isPlainObject([1, 2, 3]);
+   * // => false
+   *
+   * _.isPlainObject({ 'x': 0, 'y': 0 });
+   * // => true
+   *
+   * _.isPlainObject(Object.create(null));
+   * // => true
+   */
+  function isPlainObject(value) {
+    if (!isObjectLike$1(value) ||
+        objectToString.call(value) != objectTag || isHostObject(value)) {
+      return false;
+    }
+    var proto = getPrototype(value);
+    if (proto === null) {
+      return true;
+    }
+    var Ctor = hasOwnProperty$2.call(proto, 'constructor') && proto.constructor;
+    return (typeof Ctor == 'function' &&
+      Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString);
+  }
+
+  var lodash_iselement = isElement;
 
   /**
    * Sets up the handler to determine if we should advance the tour
@@ -6320,13 +5390,15 @@
    */
 
   function _setupAdvanceOnHandler(selector) {
-    return event => {
-      if (this.isOpen()) {
-        const targetIsEl = this.el && event.target === this.el;
-        const targetIsSelector = !isUndefined(selector) && event.target.matches(selector);
+    var _this = this;
+
+    return function (event) {
+      if (_this.isOpen()) {
+        var targetIsEl = _this.el && event.target === _this.el;
+        var targetIsSelector = !isUndefined(selector) && event.target.matches(selector);
 
         if (targetIsSelector || targetIsEl) {
-          this.tour.next();
+          _this.tour.next();
         }
       }
     };
@@ -6338,14 +5410,14 @@
 
   function bindAdvance() {
     // An empty selector matches the step element
-    const _parseShorthand = parseShorthand(this.options.advanceOn, ['selector', 'event']),
-          event = _parseShorthand.event,
-          selector = _parseShorthand.selector;
+    var _parseShorthand = parseShorthand(this.options.advanceOn, ['selector', 'event']),
+        event = _parseShorthand.event,
+        selector = _parseShorthand.selector;
 
-    const handler = _setupAdvanceOnHandler.call(this, selector); // TODO: this should also bind/unbind on show/hide
+    var handler = _setupAdvanceOnHandler.call(this, selector); // TODO: this should also bind/unbind on show/hide
 
 
-    const el = document.querySelector(selector);
+    var el = document.querySelector(selector);
 
     if (!isUndefined(selector) && el) {
       el.addEventListener(event, handler);
@@ -6353,7 +5425,7 @@
       document.body.addEventListener(event, handler, true);
     }
 
-    this.on('destroy', () => {
+    this.on('destroy', function () {
       return document.body.removeEventListener(event, handler, true);
     });
   }
@@ -6364,6 +5436,8 @@
    */
 
   function bindButtonEvents(cfg, el) {
+    var _this2 = this;
+
     cfg.events = cfg.events || {};
 
     if (!isUndefined(cfg.action)) {
@@ -6371,21 +5445,29 @@
       cfg.events.click = cfg.action;
     }
 
-    forOwn(cfg.events, (handler, event) => {
-      if (isString(handler)) {
-        const page = handler;
+    if (cfg.events) {
+      Object.entries(cfg.events).forEach(function (_ref) {
+        var _ref2 = _slicedToArray(_ref, 2),
+            event = _ref2[0],
+            handler = _ref2[1];
 
-        handler = () => this.tour.show(page);
-      }
+        if (isString(handler)) {
+          var page = handler;
 
-      el.dataset.buttonEvent = true;
-      el.addEventListener(event, handler); // Cleanup event listeners on destroy
+          handler = function handler() {
+            return _this2.tour.show(page);
+          };
+        }
 
-      this.on('destroy', () => {
-        el.removeAttribute('data-button-event');
-        el.removeEventListener(event, handler);
+        el.dataset.buttonEvent = true;
+        el.addEventListener(event, handler); // Cleanup event listeners on destroy
+
+        _this2.on('destroy', function () {
+          el.removeAttribute('data-button-event');
+          el.removeEventListener(event, handler);
+        });
       });
-    });
+    }
   }
   /**
    * Add a click listener to the cancel link that cancels the tour
@@ -6393,9 +5475,12 @@
    */
 
   function bindCancelLink(link) {
-    link.addEventListener('click', e => {
+    var _this3 = this;
+
+    link.addEventListener('click', function (e) {
       e.preventDefault();
-      this.cancel();
+
+      _this3.cancel();
     });
   }
   /**
@@ -6404,11 +5489,458 @@
    */
 
   function bindMethods(methods) {
-    methods.map(method => {
-      this[method] = this[method].bind(this);
+    var _this4 = this;
+
+    methods.map(function (method) {
+      _this4[method] = _this4[method].bind(_this4);
     });
   }
 
+  if (!Element.prototype.matches) {
+      Element.prototype.matches =
+          Element.prototype.matchesSelector ||
+          Element.prototype.msMatchesSelector ||
+          Element.prototype.webkitMatchesSelector;
+  }
+
+  function createCommonjsModule(fn, module) {
+  	return module = { exports: {} }, fn(module, module.exports), module.exports;
+  }
+
+  var smoothscroll = createCommonjsModule(function (module, exports) {
+  /* smoothscroll v0.4.4 - 2019 - Dustan Kasten, Jeremias Menichelli - MIT License */
+  (function () {
+
+    // polyfill
+    function polyfill() {
+      // aliases
+      var w = window;
+      var d = document;
+
+      // return if scroll behavior is supported and polyfill is not forced
+      if (
+        'scrollBehavior' in d.documentElement.style &&
+        w.__forceSmoothScrollPolyfill__ !== true
+      ) {
+        return;
+      }
+
+      // globals
+      var Element = w.HTMLElement || w.Element;
+      var SCROLL_TIME = 468;
+
+      // object gathering original scroll methods
+      var original = {
+        scroll: w.scroll || w.scrollTo,
+        scrollBy: w.scrollBy,
+        elementScroll: Element.prototype.scroll || scrollElement,
+        scrollIntoView: Element.prototype.scrollIntoView
+      };
+
+      // define timing method
+      var now =
+        w.performance && w.performance.now
+          ? w.performance.now.bind(w.performance)
+          : Date.now;
+
+      /**
+       * indicates if a the current browser is made by Microsoft
+       * @method isMicrosoftBrowser
+       * @param {String} userAgent
+       * @returns {Boolean}
+       */
+      function isMicrosoftBrowser(userAgent) {
+        var userAgentPatterns = ['MSIE ', 'Trident/', 'Edge/'];
+
+        return new RegExp(userAgentPatterns.join('|')).test(userAgent);
+      }
+
+      /*
+       * IE has rounding bug rounding down clientHeight and clientWidth and
+       * rounding up scrollHeight and scrollWidth causing false positives
+       * on hasScrollableSpace
+       */
+      var ROUNDING_TOLERANCE = isMicrosoftBrowser(w.navigator.userAgent) ? 1 : 0;
+
+      /**
+       * changes scroll position inside an element
+       * @method scrollElement
+       * @param {Number} x
+       * @param {Number} y
+       * @returns {undefined}
+       */
+      function scrollElement(x, y) {
+        this.scrollLeft = x;
+        this.scrollTop = y;
+      }
+
+      /**
+       * returns result of applying ease math function to a number
+       * @method ease
+       * @param {Number} k
+       * @returns {Number}
+       */
+      function ease(k) {
+        return 0.5 * (1 - Math.cos(Math.PI * k));
+      }
+
+      /**
+       * indicates if a smooth behavior should be applied
+       * @method shouldBailOut
+       * @param {Number|Object} firstArg
+       * @returns {Boolean}
+       */
+      function shouldBailOut(firstArg) {
+        if (
+          firstArg === null ||
+          typeof firstArg !== 'object' ||
+          firstArg.behavior === undefined ||
+          firstArg.behavior === 'auto' ||
+          firstArg.behavior === 'instant'
+        ) {
+          // first argument is not an object/null
+          // or behavior is auto, instant or undefined
+          return true;
+        }
+
+        if (typeof firstArg === 'object' && firstArg.behavior === 'smooth') {
+          // first argument is an object and behavior is smooth
+          return false;
+        }
+
+        // throw error when behavior is not supported
+        throw new TypeError(
+          'behavior member of ScrollOptions ' +
+            firstArg.behavior +
+            ' is not a valid value for enumeration ScrollBehavior.'
+        );
+      }
+
+      /**
+       * indicates if an element has scrollable space in the provided axis
+       * @method hasScrollableSpace
+       * @param {Node} el
+       * @param {String} axis
+       * @returns {Boolean}
+       */
+      function hasScrollableSpace(el, axis) {
+        if (axis === 'Y') {
+          return el.clientHeight + ROUNDING_TOLERANCE < el.scrollHeight;
+        }
+
+        if (axis === 'X') {
+          return el.clientWidth + ROUNDING_TOLERANCE < el.scrollWidth;
+        }
+      }
+
+      /**
+       * indicates if an element has a scrollable overflow property in the axis
+       * @method canOverflow
+       * @param {Node} el
+       * @param {String} axis
+       * @returns {Boolean}
+       */
+      function canOverflow(el, axis) {
+        var overflowValue = w.getComputedStyle(el, null)['overflow' + axis];
+
+        return overflowValue === 'auto' || overflowValue === 'scroll';
+      }
+
+      /**
+       * indicates if an element can be scrolled in either axis
+       * @method isScrollable
+       * @param {Node} el
+       * @param {String} axis
+       * @returns {Boolean}
+       */
+      function isScrollable(el) {
+        var isScrollableY = hasScrollableSpace(el, 'Y') && canOverflow(el, 'Y');
+        var isScrollableX = hasScrollableSpace(el, 'X') && canOverflow(el, 'X');
+
+        return isScrollableY || isScrollableX;
+      }
+
+      /**
+       * finds scrollable parent of an element
+       * @method findScrollableParent
+       * @param {Node} el
+       * @returns {Node} el
+       */
+      function findScrollableParent(el) {
+        while (el !== d.body && isScrollable(el) === false) {
+          el = el.parentNode || el.host;
+        }
+
+        return el;
+      }
+
+      /**
+       * self invoked function that, given a context, steps through scrolling
+       * @method step
+       * @param {Object} context
+       * @returns {undefined}
+       */
+      function step(context) {
+        var time = now();
+        var value;
+        var currentX;
+        var currentY;
+        var elapsed = (time - context.startTime) / SCROLL_TIME;
+
+        // avoid elapsed times higher than one
+        elapsed = elapsed > 1 ? 1 : elapsed;
+
+        // apply easing to elapsed time
+        value = ease(elapsed);
+
+        currentX = context.startX + (context.x - context.startX) * value;
+        currentY = context.startY + (context.y - context.startY) * value;
+
+        context.method.call(context.scrollable, currentX, currentY);
+
+        // scroll more if we have not reached our destination
+        if (currentX !== context.x || currentY !== context.y) {
+          w.requestAnimationFrame(step.bind(w, context));
+        }
+      }
+
+      /**
+       * scrolls window or element with a smooth behavior
+       * @method smoothScroll
+       * @param {Object|Node} el
+       * @param {Number} x
+       * @param {Number} y
+       * @returns {undefined}
+       */
+      function smoothScroll(el, x, y) {
+        var scrollable;
+        var startX;
+        var startY;
+        var method;
+        var startTime = now();
+
+        // define scroll context
+        if (el === d.body) {
+          scrollable = w;
+          startX = w.scrollX || w.pageXOffset;
+          startY = w.scrollY || w.pageYOffset;
+          method = original.scroll;
+        } else {
+          scrollable = el;
+          startX = el.scrollLeft;
+          startY = el.scrollTop;
+          method = scrollElement;
+        }
+
+        // scroll looping over a frame
+        step({
+          scrollable: scrollable,
+          method: method,
+          startTime: startTime,
+          startX: startX,
+          startY: startY,
+          x: x,
+          y: y
+        });
+      }
+
+      // ORIGINAL METHODS OVERRIDES
+      // w.scroll and w.scrollTo
+      w.scroll = w.scrollTo = function() {
+        // avoid action when no arguments are passed
+        if (arguments[0] === undefined) {
+          return;
+        }
+
+        // avoid smooth behavior if not required
+        if (shouldBailOut(arguments[0]) === true) {
+          original.scroll.call(
+            w,
+            arguments[0].left !== undefined
+              ? arguments[0].left
+              : typeof arguments[0] !== 'object'
+                ? arguments[0]
+                : w.scrollX || w.pageXOffset,
+            // use top prop, second argument if present or fallback to scrollY
+            arguments[0].top !== undefined
+              ? arguments[0].top
+              : arguments[1] !== undefined
+                ? arguments[1]
+                : w.scrollY || w.pageYOffset
+          );
+
+          return;
+        }
+
+        // LET THE SMOOTHNESS BEGIN!
+        smoothScroll.call(
+          w,
+          d.body,
+          arguments[0].left !== undefined
+            ? ~~arguments[0].left
+            : w.scrollX || w.pageXOffset,
+          arguments[0].top !== undefined
+            ? ~~arguments[0].top
+            : w.scrollY || w.pageYOffset
+        );
+      };
+
+      // w.scrollBy
+      w.scrollBy = function() {
+        // avoid action when no arguments are passed
+        if (arguments[0] === undefined) {
+          return;
+        }
+
+        // avoid smooth behavior if not required
+        if (shouldBailOut(arguments[0])) {
+          original.scrollBy.call(
+            w,
+            arguments[0].left !== undefined
+              ? arguments[0].left
+              : typeof arguments[0] !== 'object' ? arguments[0] : 0,
+            arguments[0].top !== undefined
+              ? arguments[0].top
+              : arguments[1] !== undefined ? arguments[1] : 0
+          );
+
+          return;
+        }
+
+        // LET THE SMOOTHNESS BEGIN!
+        smoothScroll.call(
+          w,
+          d.body,
+          ~~arguments[0].left + (w.scrollX || w.pageXOffset),
+          ~~arguments[0].top + (w.scrollY || w.pageYOffset)
+        );
+      };
+
+      // Element.prototype.scroll and Element.prototype.scrollTo
+      Element.prototype.scroll = Element.prototype.scrollTo = function() {
+        // avoid action when no arguments are passed
+        if (arguments[0] === undefined) {
+          return;
+        }
+
+        // avoid smooth behavior if not required
+        if (shouldBailOut(arguments[0]) === true) {
+          // if one number is passed, throw error to match Firefox implementation
+          if (typeof arguments[0] === 'number' && arguments[1] === undefined) {
+            throw new SyntaxError('Value could not be converted');
+          }
+
+          original.elementScroll.call(
+            this,
+            // use left prop, first number argument or fallback to scrollLeft
+            arguments[0].left !== undefined
+              ? ~~arguments[0].left
+              : typeof arguments[0] !== 'object' ? ~~arguments[0] : this.scrollLeft,
+            // use top prop, second argument or fallback to scrollTop
+            arguments[0].top !== undefined
+              ? ~~arguments[0].top
+              : arguments[1] !== undefined ? ~~arguments[1] : this.scrollTop
+          );
+
+          return;
+        }
+
+        var left = arguments[0].left;
+        var top = arguments[0].top;
+
+        // LET THE SMOOTHNESS BEGIN!
+        smoothScroll.call(
+          this,
+          this,
+          typeof left === 'undefined' ? this.scrollLeft : ~~left,
+          typeof top === 'undefined' ? this.scrollTop : ~~top
+        );
+      };
+
+      // Element.prototype.scrollBy
+      Element.prototype.scrollBy = function() {
+        // avoid action when no arguments are passed
+        if (arguments[0] === undefined) {
+          return;
+        }
+
+        // avoid smooth behavior if not required
+        if (shouldBailOut(arguments[0]) === true) {
+          original.elementScroll.call(
+            this,
+            arguments[0].left !== undefined
+              ? ~~arguments[0].left + this.scrollLeft
+              : ~~arguments[0] + this.scrollLeft,
+            arguments[0].top !== undefined
+              ? ~~arguments[0].top + this.scrollTop
+              : ~~arguments[1] + this.scrollTop
+          );
+
+          return;
+        }
+
+        this.scroll({
+          left: ~~arguments[0].left + this.scrollLeft,
+          top: ~~arguments[0].top + this.scrollTop,
+          behavior: arguments[0].behavior
+        });
+      };
+
+      // Element.prototype.scrollIntoView
+      Element.prototype.scrollIntoView = function() {
+        // avoid smooth behavior if not required
+        if (shouldBailOut(arguments[0]) === true) {
+          original.scrollIntoView.call(
+            this,
+            arguments[0] === undefined ? true : arguments[0]
+          );
+
+          return;
+        }
+
+        // LET THE SMOOTHNESS BEGIN!
+        var scrollableParent = findScrollableParent(this);
+        var parentRects = scrollableParent.getBoundingClientRect();
+        var clientRects = this.getBoundingClientRect();
+
+        if (scrollableParent !== d.body) {
+          // reveal element inside parent
+          smoothScroll.call(
+            this,
+            scrollableParent,
+            scrollableParent.scrollLeft + clientRects.left - parentRects.left,
+            scrollableParent.scrollTop + clientRects.top - parentRects.top
+          );
+
+          // reveal parent in viewport unless is fixed
+          if (w.getComputedStyle(scrollableParent).position !== 'fixed') {
+            w.scrollBy({
+              left: parentRects.left,
+              top: parentRects.top,
+              behavior: 'smooth'
+            });
+          }
+        } else {
+          // reveal element in viewport
+          w.scrollBy({
+            left: clientRects.left,
+            top: clientRects.top,
+            behavior: 'smooth'
+          });
+        }
+      };
+    }
+
+    {
+      // commonjs
+      module.exports = { polyfill: polyfill };
+    }
+
+  }());
+  });
+  var smoothscroll_1 = smoothscroll.polyfill;
+
+  smoothscroll.polyfill();
   /**
    * Creates incremented ID for each newly created step
    *
@@ -6416,34 +5948,62 @@
    * @return {Number} The unique id for the step
    */
 
-  const uniqueId = function () {
-    let id = 0;
+  var uniqueId = function () {
+    var id = 0;
     return function () {
       return ++id;
     };
   }();
   /**
-   * Class representing steps to be added to a tour
+   * A class representing steps to be added to a tour.
    * @extends {Evented}
    */
 
 
-  class Step extends Evented {
+  var Step =
+  /*#__PURE__*/
+  function (_Evented) {
+    _inherits(Step, _Evented);
+
     /**
      * Create a step
      * @param {Tour} tour The tour for the step
      * @param {Object} options The options for the step
      * @param {Object|string} options.attachTo What element the step should be attached to on the page.
-     * It can either be a string of the form "element on", or an object with those properties.
-     * For example: ".some #element left", or {element: '.some #element', on: 'left'}.
+     * It can either be a string of the form `[element] [on]` (where [element] is an element selector path):
+     * ```js
+     * const new Step(tour, {
+     *   attachTo: '.some .selector-path left',
+     *   ...moreOptions,
+     * })'
+     * ```
+     * Or an object with those properties:
+     * ```js
+     * const new Step(tour, {
+     *   attachTo: { element: '.some .selector-path', on: 'left' },
+     *   ...moreOptions
+     * })'
+     * ```
      * If you use the object syntax, element can also be a DOM element. If you don’t specify an attachTo the
      * element will appear in the middle of the screen.
      * @param {HTMLElement|string} options.attachTo.element
      * @param {string} options.attachTo.on
      * @param {Object|string} options.advanceOn An action on the page which should advance shepherd to the next step.
-     * It can be of the form `"selector event"`, or an object with those properties.
-     * For example: `".some-element click"`, or `{selector: '.some-element', event: 'click'}`.
-     * It doesn’t have to be an event inside the tour, it can be any event fired on any element on the page.
+     * It can be of the form `"selector event"`:
+     * ```js
+     * const new Step(tour, {
+     *   advanceOn: '.some .selector-path click',
+     *   ...moreOptions
+     * })'
+     * ```
+     * ...or an object with those properties:
+     * ```js
+     * const new Step(tour, {
+     *   advanceOn: { selector: '.some .selector-path', event: 'click' },
+     *   ...moreOptions
+     * })'
+     * ```
+     * `event` doesn’t have to be an event inside the tour, it can be any event fired on any element on the page.
      * You can also always manually advance the Tour by calling `myTour.next()`.
      * @param {function} options.beforeShowPromise A function that returns a promise.
      * When the promise resolves, the rest of the `show` code for the step will execute.
@@ -6466,7 +6026,8 @@
      * @param {string} options.highlightClass An extra class to apply to the `attachTo` element when it is
      * highlighted (that is, when its step is active). You can then target that selector in your CSS.
      * @param {Object} options.tippyOptions Extra [options to pass to tippy.js]{@link https://atomiks.github.io/tippyjs/#all-options}
-     * @param {boolean} options.scrollTo Should the element be scrolled to when this step is shown?
+     * @param {boolean|Object} options.scrollTo Should the element be scrolled to when this step is shown? If true, uses the default `scrollIntoView`,
+     * if an object, passes that object as the params to `scrollIntoView` i.e. `{behavior: 'smooth', block: 'center'}`
      * @param {function} options.scrollToHandler A function that lets you override the default scrollTo behavior and
      * define a custom action to do the scrolling, and possibly other logic.
      * @param {boolean} options.showCancelLink Should a cancel “✕” be shown in the header of the step?
@@ -6488,19 +6049,26 @@
      *   }
      * }
      * ```
+     * @param {Number} options.modalOverlayOpeningPadding An amount of padding to add around the modal overlay opening
      * @return {Step} The newly created Step instance
      */
-    constructor(tour, options) {
-      super(tour, options);
-      this.tour = tour;
-      bindMethods.call(this, ['_show', 'cancel', 'complete', 'destroy', 'hide', 'isOpen', 'scrollTo', 'setupElements', 'show']);
-      this.setOptions(options);
-      this.bindAdvance = bindAdvance.bind(this);
-      this.bindButtonEvents = bindButtonEvents.bind(this);
-      this.bindCancelLink = bindCancelLink.bind(this);
-      this.setupTooltip = setupTooltip.bind(this);
-      this.parseAttachTo = parseAttachTo.bind(this);
-      return this;
+    function Step(tour, options) {
+      var _this;
+
+      _classCallCheck(this, Step);
+
+      _this = _possibleConstructorReturn(this, _getPrototypeOf(Step).call(this, tour, options));
+      _this.tour = tour;
+      bindMethods.call(_assertThisInitialized(_this), ['_show', 'cancel', 'complete', 'destroy', 'hide', 'isOpen', 'scrollTo', 'setupElements', 'show']);
+
+      _this.setOptions(options);
+
+      _this.bindAdvance = bindAdvance.bind(_assertThisInitialized(_this));
+      _this.bindButtonEvents = bindButtonEvents.bind(_assertThisInitialized(_this));
+      _this.bindCancelLink = bindCancelLink.bind(_assertThisInitialized(_this));
+      _this.setupTooltip = setupTooltip.bind(_assertThisInitialized(_this));
+      _this.parseAttachTo = parseAttachTo.bind(_assertThisInitialized(_this));
+      return _possibleConstructorReturn(_this, _assertThisInitialized(_this));
     }
     /**
      * Adds buttons to the step as passed into options
@@ -6510,331 +6078,343 @@
      */
 
 
-    _addButtons(content) {
-      if (!isEmpty(this.options.buttons)) {
-        const footer = document.createElement('footer');
-        const buttons = createFromHTML('<ul class="shepherd-buttons"></ul>');
-        footer.classList.add('shepherd-footer');
-        this.options.buttons.map(cfg => {
-          const button = createFromHTML(`<li><a class="shepherd-button ${cfg.classes || ''}" tabindex="0">${cfg.text}</a>`);
-          buttons.appendChild(button);
-          this.bindButtonEvents(cfg, button.querySelector('a'));
-        });
-        footer.appendChild(buttons);
-        content.appendChild(footer);
+    _createClass(Step, [{
+      key: "_addButtons",
+      value: function _addButtons(content) {
+        var _this2 = this;
+
+        if (Array.isArray(this.options.buttons) && this.options.buttons.length) {
+          var footer = document.createElement('footer');
+          var buttons = createFromHTML('<ul class="shepherd-buttons"></ul>');
+          footer.classList.add('shepherd-footer');
+          this.options.buttons.map(function (cfg) {
+            var button = createFromHTML("<li><a class=\"shepherd-button ".concat(cfg.classes || '', "\" tabindex=\"0\">").concat(cfg.text, "</a>"));
+            buttons.appendChild(button);
+
+            _this2.bindButtonEvents(cfg, button.querySelector('a'));
+          });
+          footer.appendChild(buttons);
+          content.appendChild(footer);
+        }
       }
-    }
-    /**
-     * Adds the "x" button to cancel the tour
-     * @param {HTMLElement} element The step element
-     * @param {HTMLElement} header The header element for the step
-     * @private
-     */
+      /**
+       * Adds the "x" button to cancel the tour
+       * @param {HTMLElement} element The step element
+       * @param {HTMLElement} header The header element for the step
+       * @private
+       */
 
-
-    _addCancelLink(element, header) {
-      if (this.options.showCancelLink) {
-        const link = createFromHTML('<a href class="shepherd-cancel-link"></a>');
-        header.appendChild(link);
-        element.classList.add('shepherd-has-cancel-link');
-        this.bindCancelLink(link);
+    }, {
+      key: "_addCancelLink",
+      value: function _addCancelLink(element, header) {
+        if (this.options.showCancelLink) {
+          var link = createFromHTML('<a href class="shepherd-cancel-link"></a>');
+          header.appendChild(link);
+          element.classList.add('shepherd-has-cancel-link');
+          this.bindCancelLink(link);
+        }
       }
-    }
-    /**
-     * Adds text passed in as options
-     *
-     * @private
-     * @param {HTMLElement} content The content to append the text to
-     */
+      /**
+       * Adds text passed in as options
+       *
+       * @private
+       * @param {HTMLElement} content The content to append the text to
+       */
 
+    }, {
+      key: "_addContent",
+      value: function _addContent(content) {
+        var text = createFromHTML('<div class="shepherd-text"></div>');
+        var paragraphs = this.options.text;
 
-    _addContent(content) {
-      const text = createFromHTML('<div class="shepherd-text"></div>');
-      let paragraphs = this.options.text;
-
-      if (isFunction(paragraphs)) {
-        paragraphs = paragraphs.call(this, text);
-      }
-
-      if (paragraphs instanceof HTMLElement) {
-        text.appendChild(paragraphs);
-      } else {
-        if (isString(paragraphs)) {
-          paragraphs = [paragraphs];
+        if (isFunction(paragraphs)) {
+          paragraphs = paragraphs.call(this, text);
         }
 
-        paragraphs.map(paragraph => {
-          text.innerHTML += `<p>${paragraph}</p>`;
-        });
+        if (paragraphs instanceof HTMLElement) {
+          text.appendChild(paragraphs);
+        } else {
+          if (isString(paragraphs)) {
+            paragraphs = [paragraphs];
+          }
+
+          paragraphs.map(function (paragraph) {
+            text.innerHTML += "<p>".concat(paragraph, "</p>");
+          });
+        }
+
+        content.appendChild(text);
       }
+      /**
+       * Creates Shepherd element for step based on options
+       *
+       * @private
+       * @return {HTMLElement} The DOM element for the step tooltip
+       */
 
-      content.appendChild(text);
-    }
-    /**
-     * Creates Shepherd element for step based on options
-     *
-     * @private
-     * @return {HTMLElement} The DOM element for the step tooltip
-     */
+    }, {
+      key: "_createTooltipContent",
+      value: function _createTooltipContent() {
+        var content = document.createElement('div');
+        var classes = this.options.classes || '';
+        var element = createFromHTML("<div class=\"".concat(classes, "\" data-shepherd-step-id=\"").concat(this.id, "\">"));
+        var header = document.createElement('header');
 
+        if (this.options.title) {
+          var title = document.createElement('h3');
+          title.classList.add('shepherd-title');
+          title.innerHTML = "".concat(this.options.title);
+          header.appendChild(title);
+          element.classList.add('shepherd-has-title');
+        }
 
-    _createTooltipContent() {
-      const content = document.createElement('div');
-      const classes = this.options.classes || '';
-      const element = createFromHTML(`<div class="${classes}" data-shepherd-step-id="${this.id}">`);
-      const header = document.createElement('header');
+        content.classList.add('shepherd-content');
+        header.classList.add('shepherd-header');
+        element.appendChild(content);
+        content.appendChild(header);
 
-      if (this.options.title) {
-        const title = document.createElement('h3');
-        title.classList.add('shepherd-title');
-        title.innerHTML = `${this.options.title}`;
-        header.appendChild(title);
-        element.classList.add('shepherd-has-title');
+        if (!isUndefined(this.options.text)) {
+          this._addContent(content);
+        }
+
+        this._addButtons(content);
+
+        this._addCancelLink(element, header);
+
+        return element;
       }
+      /**
+       * Returns the tour for the step
+       * @return {Tour} The tour instance
+       */
 
-      content.classList.add('shepherd-content');
-      header.classList.add('shepherd-header');
-      element.appendChild(content);
-      content.appendChild(header);
-
-      if (!isUndefined(this.options.text)) {
-        this._addContent(content);
+    }, {
+      key: "getTour",
+      value: function getTour() {
+        return this.tour;
       }
+      /**
+       * Cancel the tour
+       * Triggers the `cancel` event
+       */
 
-      this._addButtons(content);
-
-      this._addCancelLink(element, header);
-
-      return element;
-    }
-    /**
-     * Returns the tour for the step
-     * @return {Tour} The tour instance
-     */
-
-
-    getTour() {
-      return this.tour;
-    }
-    /**
-     * Cancel the tour
-     * Triggers the `cancel` event
-     */
-
-
-    cancel() {
-      this.tour.cancel();
-      this.trigger('cancel');
-    }
-    /**
-     * Complete the tour
-     * Triggers the `complete` event
-     */
-
-
-    complete() {
-      this.tour.complete();
-      this.trigger('complete');
-    }
-    /**
-     * Remove the step, delete the step's element, and destroy the tippy instance for the step
-     * Triggers `destroy` event
-     */
-
-
-    destroy() {
-      if (this.tooltip) {
-        this.tooltip.destroy();
-        this.tooltip = null;
+    }, {
+      key: "cancel",
+      value: function cancel() {
+        this.tour.cancel();
+        this.trigger('cancel');
       }
+      /**
+       * Complete the tour
+       * Triggers the `complete` event
+       */
 
-      if (isElement(this.el) && this.el.parentNode) {
-        this.el.parentNode.removeChild(this.el);
-        this.el = null;
+    }, {
+      key: "complete",
+      value: function complete() {
+        this.tour.complete();
+        this.trigger('complete');
       }
+      /**
+       * Remove the step, delete the step's element, and destroy the tippy instance for the step
+       * Triggers `destroy` event
+       */
 
-      if (this.target) {
-        this._updateStepTargetOnHide();
+    }, {
+      key: "destroy",
+      value: function destroy() {
+        if (this.tooltip) {
+          this.tooltip.destroy();
+          this.tooltip = null;
+        }
+
+        if (lodash_iselement(this.el) && this.el.parentNode) {
+          this.el.parentNode.removeChild(this.el);
+          this.el = null;
+        }
+
+        if (this.target) {
+          this._updateStepTargetOnHide();
+        }
+
+        this.trigger('destroy');
       }
+      /**
+       * Hide the step and destroy the tippy instance
+       */
 
-      this.trigger('destroy');
-    }
-    /**
-     * Hide the step and destroy the tippy instance
-     */
+    }, {
+      key: "hide",
+      value: function hide() {
+        this.tour.modal.hide();
+        this.trigger('before-hide');
+        document.body.removeAttribute('data-shepherd-step');
 
+        if (this.target) {
+          this._updateStepTargetOnHide();
+        }
 
-    hide() {
-      this.tour.modal.hide();
-      this.trigger('before-hide');
-      document.body.removeAttribute('data-shepherd-step');
+        if (this.tooltip) {
+          this.tooltip.hide();
+        }
 
-      if (this.target) {
-        this._updateStepTargetOnHide();
+        this.trigger('hide');
       }
+      /**
+       * Check if the step is open and visible
+       * @return {boolean} True if the step is open and visible
+       */
 
-      if (this.tooltip) {
-        this.tooltip.hide();
+    }, {
+      key: "isOpen",
+      value: function isOpen() {
+        return Boolean(this.tooltip && this.tooltip.state && this.tooltip.state.isVisible);
       }
+      /**
+       * Create the element and set up the tippy instance
+       */
 
-      this.trigger('hide');
-    }
-    /**
-     * Check if the step is open and visible
-     * @return {boolean} True if the step is open and visible
-     */
+    }, {
+      key: "setupElements",
+      value: function setupElements() {
+        if (!isUndefined(this.el)) {
+          this.destroy();
+        }
 
+        this.el = this._createTooltipContent();
 
-    isOpen() {
-      return Boolean(this.tooltip && this.tooltip.state && this.tooltip.state.isVisible);
-    }
-    /**
-     * Create the element and set up the tippy instance
-     */
+        if (this.options.advanceOn) {
+          this.bindAdvance();
+        }
 
-
-    setupElements() {
-      if (!isUndefined(this.el)) {
-        this.destroy();
+        this.setupTooltip();
       }
+      /**
+       * If a custom scrollToHandler is defined, call that, otherwise do the generic
+       * scrollIntoView call.
+       *
+       * @param {boolean|Object} scrollToOptions If true, uses the default `scrollIntoView`,
+       * if an object, passes that object as the params to `scrollIntoView` i.e. `{ behavior: 'smooth', block: 'center' }`
+       */
 
-      this.el = this._createTooltipContent();
-
-      if (this.options.advanceOn) {
-        this.bindAdvance();
-      }
-
-      this.setupTooltip();
-    }
-    /**
-     * If a custom scrollToHandler is defined, call that, otherwise do the generic
-     * scrollIntoView call.
-     */
-
-
-    scrollTo() {
-      const _this$parseAttachTo = this.parseAttachTo(),
+    }, {
+      key: "scrollTo",
+      value: function scrollTo(scrollToOptions) {
+        var _this$parseAttachTo = this.parseAttachTo(),
             element = _this$parseAttachTo.element;
 
-      if (isFunction(this.options.scrollToHandler)) {
-        this.options.scrollToHandler(element);
-      } else if (isElement(element)) {
-        element.scrollIntoView();
-      }
-    }
-    /**
-     * Sets the options for the step, maps `when` to events, sets up buttons
-     * @param {Object} options The options for the step
-     */
-
-
-    setOptions() {
-      let options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-      this.options = options;
-      const when = this.options.when;
-      this.destroy();
-      this.id = this.options.id || `step-${uniqueId()}`;
-      forOwn(when, (handler, event) => {
-        this.on(event, handler, this);
-      });
-    }
-    /**
-     * Wraps `_show` and ensures `beforeShowPromise` resolves before calling show
-     * @return {*|Promise}
-     */
-
-
-    show() {
-      if (isFunction(this.options.beforeShowPromise)) {
-        const beforeShowPromise = this.options.beforeShowPromise();
-
-        if (!isUndefined(beforeShowPromise)) {
-          return beforeShowPromise.then(() => this._show());
+        if (isFunction(this.options.scrollToHandler)) {
+          this.options.scrollToHandler(element);
+        } else if (lodash_iselement(element)) {
+          element.scrollIntoView(scrollToOptions);
         }
       }
+      /**
+       * Sets the options for the step, maps `when` to events, sets up buttons
+       * @param {Object} options The options for the step
+       */
 
-      this._show();
-    }
-    /**
-     * Triggers `before-show`, generates the tooltip DOM content,
-     * sets up a tippy instance for the tooltip, then triggers `show`.
-     * @private
-     */
+    }, {
+      key: "setOptions",
+      value: function setOptions() {
+        var _this3 = this;
 
+        var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+        this.options = options;
+        var when = this.options.when;
+        this.destroy();
+        this.id = this.options.id || "step-".concat(uniqueId());
 
-    _show() {
-      this.tour.beforeShowStep(this);
-      this.trigger('before-show');
+        if (when) {
+          Object.entries(when).forEach(function (_ref) {
+            var _ref2 = _slicedToArray(_ref, 2),
+                event = _ref2[0],
+                handler = _ref2[1];
 
-      if (!this.el) {
-        this.setupElements();
+            _this3.on(event, handler, _this3);
+          });
+        }
       }
+      /**
+       * Wraps `_show` and ensures `beforeShowPromise` resolves before calling show
+       * @return {*|Promise}
+       */
 
-      this.target.classList.add('shepherd-enabled', 'shepherd-target');
-      document.body.setAttribute('data-shepherd-step', this.id);
+    }, {
+      key: "show",
+      value: function show() {
+        var _this4 = this;
 
-      if (this.options.scrollTo) {
-        setTimeout(() => {
-          this.scrollTo();
-        });
+        if (isFunction(this.options.beforeShowPromise)) {
+          var beforeShowPromise = this.options.beforeShowPromise();
+
+          if (!isUndefined(beforeShowPromise)) {
+            return beforeShowPromise.then(function () {
+              return _this4._show();
+            });
+          }
+        }
+
+        this._show();
       }
+      /**
+       * Triggers `before-show`, generates the tooltip DOM content,
+       * sets up a tippy instance for the tooltip, then triggers `show`.
+       * @private
+       */
 
-      this.tooltip.show();
-      this.trigger('show');
-    }
+    }, {
+      key: "_show",
+      value: function _show() {
+        var _this5 = this;
 
-    _updateStepTargetOnHide() {
-      if (this.options.highlightClass) {
-        this.target.classList.remove(this.options.highlightClass);
+        this.tour.beforeShowStep(this);
+        this.trigger('before-show');
+
+        if (!this.el) {
+          this.setupElements();
+        }
+
+        this.target.classList.add('shepherd-enabled', 'shepherd-target');
+        document.body.setAttribute('data-shepherd-step', this.id);
+
+        if (this.options.scrollTo) {
+          setTimeout(function () {
+            _this5.scrollTo(_this5.options.scrollTo);
+          });
+        }
+
+        this.tooltip.show();
+        this.trigger('show');
       }
+      /**
+       * When a step is hidden, remove the highlightClass and 'shepherd-enabled'
+       * and 'shepherd-target' classes
+       * @private
+       */
 
-      this.target.classList.remove('shepherd-enabled', 'shepherd-target');
-    }
+    }, {
+      key: "_updateStepTargetOnHide",
+      value: function _updateStepTargetOnHide() {
+        if (this.options.highlightClass) {
+          this.target.classList.remove(this.options.highlightClass);
+        }
 
-  }
+        this.target.classList.remove('shepherd-enabled', 'shepherd-target');
+      }
+    }]);
 
-  /** `Object#toString` result references. */
-  var numberTag$1 = '[object Number]';
+    return Step;
+  }(Evented);
 
-  /**
-   * Checks if `value` is classified as a `Number` primitive or object.
-   *
-   * **Note:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are
-   * classified as numbers, use the `_.isFinite` method.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.1.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a number, else `false`.
-   * @example
-   *
-   * _.isNumber(3);
-   * // => true
-   *
-   * _.isNumber(Number.MIN_VALUE);
-   * // => true
-   *
-   * _.isNumber(Infinity);
-   * // => true
-   *
-   * _.isNumber('3');
-   * // => false
-   */
-  function isNumber(value) {
-    return typeof value == 'number' ||
-      (isObjectLike(value) && baseGetTag(value) == numberTag$1);
-  }
-
-  const svgNS = 'http://www.w3.org/2000/svg';
-  const elementIds = {
+  var svgNS = 'http://www.w3.org/2000/svg';
+  var elementIds = {
     modalOverlay: 'shepherdModalOverlayContainer',
     modalOverlayMask: 'shepherdModalMask',
     modalOverlayMaskRect: 'shepherdModalMaskRect',
     modalOverlayMaskOpening: 'shepherdModalMaskOpening'
   };
-  const classNames = {
+  var classNames = {
     isVisible: 'shepherd-modal-is-visible',
     modalTarget: 'shepherd-modal-target'
   };
@@ -6843,7 +6423,7 @@
    */
 
   function _createModalContainer() {
-    const element = document.createElementNS(svgNS, 'svg');
+    var element = document.createElementNS(svgNS, 'svg');
     element.setAttributeNS(null, 'id', elementIds.modalOverlay);
     return element;
   }
@@ -6853,7 +6433,7 @@
 
 
   function _createMaskContainer() {
-    const element = document.createElementNS(svgNS, 'mask');
+    var element = document.createElementNS(svgNS, 'mask');
 
     _setAttributes(element, {
       height: '100%',
@@ -6871,7 +6451,7 @@
 
 
   function _createMaskRect() {
-    const element = document.createElementNS(svgNS, 'rect');
+    var element = document.createElementNS(svgNS, 'rect');
 
     _setAttributes(element, {
       fill: '#FFFFFF',
@@ -6890,7 +6470,7 @@
 
 
   function _createMaskOpening() {
-    const element = document.createElementNS(svgNS, 'rect');
+    var element = document.createElementNS(svgNS, 'rect');
 
     _setAttributes(element, {
       fill: '#000000',
@@ -6905,7 +6485,7 @@
 
 
   function _createMaskConsumer() {
-    const element = document.createElementNS(svgNS, 'rect');
+    var element = document.createElementNS(svgNS, 'rect');
 
     _setAttributes(element, {
       height: '100%',
@@ -6914,7 +6494,7 @@
       y: '0'
     });
 
-    element.setAttribute('mask', `url(#${elementIds.modalOverlayMask})`);
+    element.setAttribute('mask', "url(#".concat(elementIds.modalOverlayMask, ")"));
     return element;
   }
   /**
@@ -6935,17 +6515,17 @@
 
 
   function createModalOverlay() {
-    const containerElement = _createModalContainer();
+    var containerElement = _createModalContainer();
 
-    const defsElement = document.createElementNS(svgNS, 'defs');
+    var defsElement = document.createElementNS(svgNS, 'defs');
 
-    const maskContainer = _createMaskContainer();
+    var maskContainer = _createMaskContainer();
 
-    const maskRect = _createMaskRect();
+    var maskRect = _createMaskRect();
 
-    const maskOpening = _createMaskOpening();
+    var maskOpening = _createMaskOpening();
 
-    const maskConsumer = _createMaskConsumer();
+    var maskConsumer = _createMaskConsumer();
 
     maskContainer.appendChild(maskRect);
     maskContainer.appendChild(maskOpening);
@@ -6958,25 +6538,28 @@
    * Uses the bounds of the element we want the opening overtop of to set the dimensions of the opening and position it
    * @param {HTMLElement} targetElement The element the opening will expose
    * @param {SVGElement} openingElement The svg mask for the opening
+   * @param {Number} modalOverlayOpeningPadding An amount of padding to add around the modal overlay opening
    */
 
 
   function positionModalOpening(targetElement, openingElement) {
+    var modalOverlayOpeningPadding = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+
     if (targetElement.getBoundingClientRect && openingElement instanceof SVGElement) {
-      const _targetElement$getBou = targetElement.getBoundingClientRect(),
-            x = _targetElement$getBou.x,
-            y = _targetElement$getBou.y,
-            width = _targetElement$getBou.width,
-            height = _targetElement$getBou.height,
-            left = _targetElement$getBou.left,
-            top = _targetElement$getBou.top; // getBoundingClientRect is not consistent. Some browsers use x and y, while others use left and top
+      var _targetElement$getBou = targetElement.getBoundingClientRect(),
+          x = _targetElement$getBou.x,
+          y = _targetElement$getBou.y,
+          width = _targetElement$getBou.width,
+          height = _targetElement$getBou.height,
+          left = _targetElement$getBou.left,
+          top = _targetElement$getBou.top; // getBoundingClientRect is not consistent. Some browsers use x and y, while others use left and top
 
 
       _setAttributes(openingElement, {
-        x: x || left,
-        y: y || top,
-        width,
-        height
+        x: (x || left) - modalOverlayOpeningPadding,
+        y: (y || top) - modalOverlayOpeningPadding,
+        width: width + modalOverlayOpeningPadding * 2,
+        height: height + modalOverlayOpeningPadding * 2
       });
     }
   }
@@ -6993,7 +6576,7 @@
   }
 
   function getModalMaskOpening(modalElement) {
-    return modalElement.querySelector(`#${elementIds.modalOverlayMaskOpening}`);
+    return modalElement.querySelector("#".concat(elementIds.modalOverlayMaskOpening));
   }
 
   function preventModalBodyTouch(event) {
@@ -7010,7 +6593,7 @@
 
 
   function toggleShepherdModalClass(currentElement) {
-    const shepherdModal = document.querySelector(`${classNames.modalTarget}`);
+    var shepherdModal = document.querySelector("".concat(classNames.modalTarget));
 
     if (shepherdModal) {
       shepherdModal.classList.remove(classNames.modalTarget);
@@ -7027,7 +6610,7 @@
 
 
   function _setAttributes(el, attrs) {
-    Object.keys(attrs).forEach(key => {
+    Object.keys(attrs).forEach(function (key) {
       el.setAttribute(key, attrs[key]);
     });
   }
@@ -7043,7 +6626,7 @@
 
 
   function getElementFromObject(attachTo) {
-    const op = attachTo.element;
+    var op = attachTo.element;
 
     if (op instanceof HTMLElement) {
       return op;
@@ -7062,14 +6645,15 @@
 
 
   function getElementForStep(step) {
-    const attachTo = step.options.attachTo;
+    var attachTo = step.options.attachTo;
 
     if (!attachTo) {
       return null;
     }
 
-    const type = typeof attachTo;
-    let element;
+    var type = _typeof(attachTo);
+
+    var element;
 
     if (type === 'string') {
       element = getElementFromString(attachTo);
@@ -7093,9 +6677,9 @@
 
 
   function getElementFromString(element) {
-    const _element$split = element.split(' '),
-          _element$split2 = _slicedToArray(_element$split, 1),
-          selector = _element$split2[0];
+    var _element$split = element.split(' '),
+        _element$split2 = _slicedToArray(_element$split, 1),
+        selector = _element$split2[0];
 
     return document.querySelector(selector);
   }
@@ -7108,7 +6692,7 @@
 
     window.addEventListener('resize', this._onScreenChange, false);
     window.addEventListener('scroll', this._onScreenChange, true);
-    const overlay = document.querySelector(`#${elementIds.modalOverlay}`); // Prevents window from moving on touch.
+    var overlay = document.querySelector("#".concat(elementIds.modalOverlay)); // Prevents window from moving on touch.
 
     window.addEventListener('touchmove', preventModalBodyTouch, {
       passive: false
@@ -7120,229 +6704,16 @@
   }
 
   /**
-   * Gets the timestamp of the number of milliseconds that have elapsed since
-   * the Unix epoch (1 January 1970 00:00:00 UTC).
-   *
-   * @static
-   * @memberOf _
-   * @since 2.4.0
-   * @category Date
-   * @returns {number} Returns the timestamp.
-   * @example
-   *
-   * _.defer(function(stamp) {
-   *   console.log(_.now() - stamp);
-   * }, _.now());
-   * // => Logs the number of milliseconds it took for the deferred invocation.
+   * lodash (Custom Build) <https://lodash.com/>
+   * Build: `lodash modularize exports="npm" -o ./`
+   * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+   * Released under MIT license <https://lodash.com/license>
+   * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+   * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
    */
-  var now = function() {
-    return root.Date.now();
-  };
 
-  /** Error message constants. */
+  /** Used as the `TypeError` message for "Functions" methods. */
   var FUNC_ERROR_TEXT = 'Expected a function';
-
-  /* Built-in method references for those with the same name as other `lodash` methods. */
-  var nativeMax = Math.max,
-      nativeMin = Math.min;
-
-  /**
-   * Creates a debounced function that delays invoking `func` until after `wait`
-   * milliseconds have elapsed since the last time the debounced function was
-   * invoked. The debounced function comes with a `cancel` method to cancel
-   * delayed `func` invocations and a `flush` method to immediately invoke them.
-   * Provide `options` to indicate whether `func` should be invoked on the
-   * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
-   * with the last arguments provided to the debounced function. Subsequent
-   * calls to the debounced function return the result of the last `func`
-   * invocation.
-   *
-   * **Note:** If `leading` and `trailing` options are `true`, `func` is
-   * invoked on the trailing edge of the timeout only if the debounced function
-   * is invoked more than once during the `wait` timeout.
-   *
-   * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
-   * until to the next tick, similar to `setTimeout` with a timeout of `0`.
-   *
-   * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
-   * for details over the differences between `_.debounce` and `_.throttle`.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.1.0
-   * @category Function
-   * @param {Function} func The function to debounce.
-   * @param {number} [wait=0] The number of milliseconds to delay.
-   * @param {Object} [options={}] The options object.
-   * @param {boolean} [options.leading=false]
-   *  Specify invoking on the leading edge of the timeout.
-   * @param {number} [options.maxWait]
-   *  The maximum time `func` is allowed to be delayed before it's invoked.
-   * @param {boolean} [options.trailing=true]
-   *  Specify invoking on the trailing edge of the timeout.
-   * @returns {Function} Returns the new debounced function.
-   * @example
-   *
-   * // Avoid costly calculations while the window size is in flux.
-   * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
-   *
-   * // Invoke `sendMail` when clicked, debouncing subsequent calls.
-   * jQuery(element).on('click', _.debounce(sendMail, 300, {
-   *   'leading': true,
-   *   'trailing': false
-   * }));
-   *
-   * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
-   * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
-   * var source = new EventSource('/stream');
-   * jQuery(source).on('message', debounced);
-   *
-   * // Cancel the trailing debounced invocation.
-   * jQuery(window).on('popstate', debounced.cancel);
-   */
-  function debounce$2(func, wait, options) {
-    var lastArgs,
-        lastThis,
-        maxWait,
-        result,
-        timerId,
-        lastCallTime,
-        lastInvokeTime = 0,
-        leading = false,
-        maxing = false,
-        trailing = true;
-
-    if (typeof func != 'function') {
-      throw new TypeError(FUNC_ERROR_TEXT);
-    }
-    wait = toNumber(wait) || 0;
-    if (isObject(options)) {
-      leading = !!options.leading;
-      maxing = 'maxWait' in options;
-      maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
-      trailing = 'trailing' in options ? !!options.trailing : trailing;
-    }
-
-    function invokeFunc(time) {
-      var args = lastArgs,
-          thisArg = lastThis;
-
-      lastArgs = lastThis = undefined;
-      lastInvokeTime = time;
-      result = func.apply(thisArg, args);
-      return result;
-    }
-
-    function leadingEdge(time) {
-      // Reset any `maxWait` timer.
-      lastInvokeTime = time;
-      // Start the timer for the trailing edge.
-      timerId = setTimeout(timerExpired, wait);
-      // Invoke the leading edge.
-      return leading ? invokeFunc(time) : result;
-    }
-
-    function remainingWait(time) {
-      var timeSinceLastCall = time - lastCallTime,
-          timeSinceLastInvoke = time - lastInvokeTime,
-          timeWaiting = wait - timeSinceLastCall;
-
-      return maxing
-        ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke)
-        : timeWaiting;
-    }
-
-    function shouldInvoke(time) {
-      var timeSinceLastCall = time - lastCallTime,
-          timeSinceLastInvoke = time - lastInvokeTime;
-
-      // Either this is the first call, activity has stopped and we're at the
-      // trailing edge, the system time has gone backwards and we're treating
-      // it as the trailing edge, or we've hit the `maxWait` limit.
-      return (lastCallTime === undefined || (timeSinceLastCall >= wait) ||
-        (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
-    }
-
-    function timerExpired() {
-      var time = now();
-      if (shouldInvoke(time)) {
-        return trailingEdge(time);
-      }
-      // Restart the timer.
-      timerId = setTimeout(timerExpired, remainingWait(time));
-    }
-
-    function trailingEdge(time) {
-      timerId = undefined;
-
-      // Only invoke if we have `lastArgs` which means `func` has been
-      // debounced at least once.
-      if (trailing && lastArgs) {
-        return invokeFunc(time);
-      }
-      lastArgs = lastThis = undefined;
-      return result;
-    }
-
-    function cancel() {
-      if (timerId !== undefined) {
-        clearTimeout(timerId);
-      }
-      lastInvokeTime = 0;
-      lastArgs = lastCallTime = lastThis = timerId = undefined;
-    }
-
-    function flush() {
-      return timerId === undefined ? result : trailingEdge(now());
-    }
-
-    function debounced() {
-      var time = now(),
-          isInvoking = shouldInvoke(time);
-
-      lastArgs = arguments;
-      lastThis = this;
-      lastCallTime = time;
-
-      if (isInvoking) {
-        if (timerId === undefined) {
-          return leadingEdge(lastCallTime);
-        }
-        if (maxing) {
-          // Handle invocations in a tight loop.
-          timerId = setTimeout(timerExpired, wait);
-          return invokeFunc(lastCallTime);
-        }
-      }
-      if (timerId === undefined) {
-        timerId = setTimeout(timerExpired, wait);
-      }
-      return result;
-    }
-    debounced.cancel = cancel;
-    debounced.flush = flush;
-    return debounced;
-  }
-
-  /** Error message constants. */
-  var FUNC_ERROR_TEXT$1 = 'Expected a function';
-
-  /**
-   * The base implementation of `_.delay` and `_.defer` which accepts `args`
-   * to provide to `func`.
-   *
-   * @private
-   * @param {Function} func The function to delay.
-   * @param {number} wait The number of milliseconds to delay invocation.
-   * @param {Array} args The arguments to provide to `func`.
-   * @returns {number|Object} Returns the timer id or timeout object.
-   */
-  function baseDelay(func, wait, args) {
-    if (typeof func != 'function') {
-      throw new TypeError(FUNC_ERROR_TEXT$1);
-    }
-    return setTimeout(function() { func.apply(undefined, args); }, wait);
-  }
 
   /**
    * A faster alternative to `Function#apply`, this function invokes `func`
@@ -7365,125 +6736,24 @@
   }
 
   /* Built-in method references for those with the same name as other `lodash` methods. */
-  var nativeMax$1 = Math.max;
+  var nativeMax = Math.max;
 
   /**
-   * A specialized version of `baseRest` which transforms the rest array.
+   * The base implementation of `_.delay` and `_.defer` which accepts `args`
+   * to provide to `func`.
    *
    * @private
-   * @param {Function} func The function to apply a rest parameter to.
-   * @param {number} [start=func.length-1] The start position of the rest parameter.
-   * @param {Function} transform The rest array transform.
-   * @returns {Function} Returns the new function.
+   * @param {Function} func The function to delay.
+   * @param {number} wait The number of milliseconds to delay invocation.
+   * @param {Array} args The arguments to provide to `func`.
+   * @returns {number} Returns the timer id.
    */
-  function overRest(func, start, transform) {
-    start = nativeMax$1(start === undefined ? (func.length - 1) : start, 0);
-    return function() {
-      var args = arguments,
-          index = -1,
-          length = nativeMax$1(args.length - start, 0),
-          array = Array(length);
-
-      while (++index < length) {
-        array[index] = args[start + index];
-      }
-      index = -1;
-      var otherArgs = Array(start + 1);
-      while (++index < start) {
-        otherArgs[index] = args[index];
-      }
-      otherArgs[start] = transform(array);
-      return apply(func, this, otherArgs);
-    };
+  function baseDelay(func, wait, args) {
+    if (typeof func != 'function') {
+      throw new TypeError(FUNC_ERROR_TEXT);
+    }
+    return setTimeout(function() { func.apply(undefined, args); }, wait);
   }
-
-  /**
-   * Creates a function that returns `value`.
-   *
-   * @static
-   * @memberOf _
-   * @since 2.4.0
-   * @category Util
-   * @param {*} value The value to return from the new function.
-   * @returns {Function} Returns the new constant function.
-   * @example
-   *
-   * var objects = _.times(2, _.constant({ 'a': 1 }));
-   *
-   * console.log(objects);
-   * // => [{ 'a': 1 }, { 'a': 1 }]
-   *
-   * console.log(objects[0] === objects[1]);
-   * // => true
-   */
-  function constant(value) {
-    return function() {
-      return value;
-    };
-  }
-
-  /**
-   * The base implementation of `setToString` without support for hot loop shorting.
-   *
-   * @private
-   * @param {Function} func The function to modify.
-   * @param {Function} string The `toString` result.
-   * @returns {Function} Returns `func`.
-   */
-  var baseSetToString = !defineProperty ? identity : function(func, string) {
-    return defineProperty(func, 'toString', {
-      'configurable': true,
-      'enumerable': false,
-      'value': constant(string),
-      'writable': true
-    });
-  };
-
-  /** Used to detect hot functions by number of calls within a span of milliseconds. */
-  var HOT_COUNT = 800,
-      HOT_SPAN = 16;
-
-  /* Built-in method references for those with the same name as other `lodash` methods. */
-  var nativeNow = Date.now;
-
-  /**
-   * Creates a function that'll short out and invoke `identity` instead
-   * of `func` when it's called `HOT_COUNT` or more times in `HOT_SPAN`
-   * milliseconds.
-   *
-   * @private
-   * @param {Function} func The function to restrict.
-   * @returns {Function} Returns the new shortable function.
-   */
-  function shortOut(func) {
-    var count = 0,
-        lastCalled = 0;
-
-    return function() {
-      var stamp = nativeNow(),
-          remaining = HOT_SPAN - (stamp - lastCalled);
-
-      lastCalled = stamp;
-      if (remaining > 0) {
-        if (++count >= HOT_COUNT) {
-          return arguments[0];
-        }
-      } else {
-        count = 0;
-      }
-      return func.apply(undefined, arguments);
-    };
-  }
-
-  /**
-   * Sets the `toString` method of `func` to return `string`.
-   *
-   * @private
-   * @param {Function} func The function to modify.
-   * @param {Function} string The `toString` result.
-   * @returns {Function} Returns `func`.
-   */
-  var setToString = shortOut(baseSetToString);
 
   /**
    * The base implementation of `_.rest` which doesn't validate or coerce arguments.
@@ -7494,7 +6764,24 @@
    * @returns {Function} Returns the new function.
    */
   function baseRest(func, start) {
-    return setToString(overRest(func, start, identity), func + '');
+    start = nativeMax(start === undefined ? (func.length - 1) : start, 0);
+    return function() {
+      var args = arguments,
+          index = -1,
+          length = nativeMax(args.length - start, 0),
+          array = Array(length);
+
+      while (++index < length) {
+        array[index] = args[start + index];
+      }
+      index = -1;
+      var otherArgs = Array(start + 1);
+      while (++index < start) {
+        otherArgs[index] = args[index];
+      }
+      otherArgs[start] = array;
+      return apply(func, this, otherArgs);
+    };
   }
 
   /**
@@ -7513,22 +6800,21 @@
    * _.defer(function(text) {
    *   console.log(text);
    * }, 'deferred');
-   * // => Logs 'deferred' after one millisecond.
+   * // => Logs 'deferred' after one or more milliseconds.
    */
   var defer = baseRest(function(func, args) {
     return baseDelay(func, 1, args);
   });
 
-  class Modal {
-    constructor(options) {
-      if (!this._modalOverlayElem) {
-        this._modalOverlayElem = createModalOverlay();
-        this._modalOverlayOpening = getModalMaskOpening(this._modalOverlayElem); // don't show yet -- each step will control that
+  var lodash_defer = defer;
 
-        this.hide();
-        document.body.appendChild(this._modalOverlayElem);
-      }
+  var Modal =
+  /*#__PURE__*/
+  function () {
+    function Modal(options) {
+      _classCallCheck(this, Modal);
 
+      this.createModalOverlay();
       this.options = options;
       return this;
     }
@@ -7537,84 +6823,106 @@
      */
 
 
-    cleanup() {
-      defer(() => {
-        const element = this._modalOverlayElem;
+    _createClass(Modal, [{
+      key: "cleanup",
+      value: function cleanup() {
+        var _this = this;
 
-        if (element && element instanceof SVGElement) {
-          element.parentNode.removeChild(element);
-        }
+        lodash_defer(function () {
+          var element = _this._modalOverlayElem;
 
-        this._modalOverlayElem = null;
-        document.body.classList.remove(classNames.isVisible);
-      });
-    }
-    /**
-     * Hide the modal overlay
-     */
+          if (element && element instanceof SVGElement) {
+            element.parentNode.removeChild(element);
+          }
 
-
-    hide() {
-      document.body.classList.remove(classNames.isVisible);
-
-      if (this._modalOverlayElem) {
-        this._modalOverlayElem.style.display = 'none';
-      }
-    }
-    /**
-     * If modal is enabled, setup the svg mask opening and modal overlay for the step
-     * @param step
-     */
-
-
-    setupForStep(step) {
-      if (this.options.useModalOverlay) {
-        this._styleForStep(step);
-
-        this.show();
-      } else {
-        this.hide();
-      }
-    }
-    /**
-     * Show the modal overlay
-     */
-
-
-    show() {
-      document.body.classList.add(classNames.isVisible);
-
-      if (this._modalOverlayElem) {
-        this._modalOverlayElem.style.display = 'block';
-      }
-    }
-    /**
-     * Style the modal for the step
-     * @param {Step} step The step to style the opening for
-     * @private
-     */
-
-
-    _styleForStep(step) {
-      const modalOverlayOpening = this._modalOverlayOpening;
-      const targetElement = getElementForStep(step);
-
-      if (targetElement) {
-        positionModalOpening(targetElement, modalOverlayOpening);
-        this._onScreenChange = debounce$2(positionModalOpening.bind(this, targetElement, modalOverlayOpening), 0, {
-          leading: false,
-          trailing: true // see https://lodash.com/docs/#debounce
-
+          _this._modalOverlayElem = null;
+          document.body.classList.remove(classNames.isVisible);
         });
-        addStepEventListeners.call(this);
-      } else {
-        closeModalOpening(this._modalOverlayOpening);
       }
-    }
+      /**
+       * Create the modal overlay, if it does not already exist
+       */
 
-  }
+    }, {
+      key: "createModalOverlay",
+      value: function createModalOverlay$1() {
+        if (!this._modalOverlayElem) {
+          this._modalOverlayElem = createModalOverlay();
+          this._modalOverlayOpening = getModalMaskOpening(this._modalOverlayElem); // don't show yet -- each step will control that
 
-  const defaults = {
+          this.hide();
+          document.body.appendChild(this._modalOverlayElem);
+        }
+      }
+      /**
+       * Hide the modal overlay
+       */
+
+    }, {
+      key: "hide",
+      value: function hide() {
+        document.body.classList.remove(classNames.isVisible);
+
+        if (this._modalOverlayElem) {
+          this._modalOverlayElem.style.display = 'none';
+        }
+      }
+      /**
+       * If modal is enabled, setup the svg mask opening and modal overlay for the step
+       * @param step
+       */
+
+    }, {
+      key: "setupForStep",
+      value: function setupForStep(step) {
+        if (this.options.useModalOverlay) {
+          this._styleForStep(step);
+
+          this.show();
+        } else {
+          this.hide();
+        }
+      }
+      /**
+       * Show the modal overlay
+       */
+
+    }, {
+      key: "show",
+      value: function show() {
+        document.body.classList.add(classNames.isVisible);
+
+        if (this._modalOverlayElem) {
+          this._modalOverlayElem.style.display = 'block';
+        }
+      }
+      /**
+       * Style the modal for the step
+       * @param {Step} step The step to style the opening for
+       * @private
+       */
+
+    }, {
+      key: "_styleForStep",
+      value: function _styleForStep(step) {
+        var modalOverlayOpening = this._modalOverlayOpening;
+        var targetElement = getElementForStep(step);
+        var modalOverlayOpeningPadding = step.options.modalOverlayOpeningPadding;
+
+        if (targetElement) {
+          positionModalOpening(targetElement, modalOverlayOpening, modalOverlayOpeningPadding);
+          this._onScreenChange = debounce$2(positionModalOpening.bind(this, targetElement, modalOverlayOpening, modalOverlayOpeningPadding), 0);
+          addStepEventListeners.call(this);
+        } else {
+          closeModalOpening(this._modalOverlayOpening);
+        }
+      }
+    }]);
+
+    return Modal;
+  }();
+
+  var defaults = {
     trigger: 'manual',
     arrow: true,
     animation: 'fade',
@@ -7637,10 +6945,10 @@
 
   function cleanupSteps(tour) {
     if (tour) {
-      const steps = tour.steps;
-      steps.forEach(step => {
+      var steps = tour.steps;
+      steps.forEach(function (step) {
         if (step.options && step.options.canClickTarget === false && step.options.attachTo) {
-          const stepElement = getElementForStep(step);
+          var stepElement = getElementForStep(step);
 
           if (stepElement instanceof HTMLElement) {
             stepElement.style.pointerEvents = 'auto';
@@ -7672,23 +6980,27 @@
    * @return {Number} The unique id for the tour
    */
 
-  const uniqueId$1 = function () {
-    let id = 0;
+  var uniqueId$1 = function () {
+    var id = 0;
     return function () {
       return ++id;
     };
   }();
 
-  const Shepherd = new Evented();
+  var Shepherd = new Evented();
   /**
    * Class representing the site tour
    * @extends {Evented}
    */
 
-  class Tour extends Evented {
+  var Tour =
+  /*#__PURE__*/
+  function (_Evented) {
+    _inherits(Tour, _Evented);
+
     /**
      * @param {Object} options The options for the tour
-     * @param {Object} options.defaultStepOptions Default options for Steps created through `addStep`
+     * @param {Object} options.defaultStepOptions Default options for Steps ({@link Step#constructor}), created through `addStep`
      * @param {Step[]} options.steps An array of Step instances to initialize the tour with
      * @param {string} options.tourName An optional "name" for the tour. This will be appended to the the tour's
      * dynamically generated `id` property -- which is also set on the `body` element as the `data-shepherd-active-tour` attribute
@@ -7698,30 +7010,35 @@
      * can remain interactive
      * @returns {Tour}
      */
-    constructor() {
-      let options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-      super(options);
-      bindMethods.call(this, ['back', 'cancel', 'complete', 'hide', 'next']);
-      this.options = options;
-      this.steps = this.options.steps || []; // Pass these events onto the global Shepherd object
+    function Tour() {
+      var _this;
 
-      const events = ['active', 'cancel', 'complete', 'inactive', 'show', 'start'];
-      events.map(event => {
-        (e => {
-          this.on(e, opts => {
+      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+      _classCallCheck(this, Tour);
+
+      _this = _possibleConstructorReturn(this, _getPrototypeOf(Tour).call(this, options));
+      bindMethods.call(_assertThisInitialized(_this), ['back', 'cancel', 'complete', 'hide', 'next']);
+      _this.options = options;
+      _this.steps = _this.options.steps || []; // Pass these events onto the global Shepherd object
+
+      var events = ['active', 'cancel', 'complete', 'inactive', 'show', 'start'];
+      events.map(function (event) {
+        (function (e) {
+          _this.on(e, function (opts) {
             opts = opts || {};
-            opts.tour = this;
+            opts.tour = _assertThisInitialized(_this);
             Shepherd.trigger(e, opts);
           });
         })(event);
       });
-      this.modal = new Modal(options);
+      _this.modal = new Modal(options);
 
-      this._setTooltipDefaults();
+      _this._setTooltipDefaults();
 
-      this._setTourID();
+      _this._setTourID();
 
-      return this;
+      return _possibleConstructorReturn(_this, _assertThisInitialized(_this));
     }
     /**
      * Adds a new step to the tour
@@ -7733,317 +7050,383 @@
      */
 
 
-    addStep(arg1, arg2) {
-      let name, step; // If we just have one argument, we can assume it is an object of step options, with an id
+    _createClass(Tour, [{
+      key: "addStep",
+      value: function addStep(arg1, arg2) {
+        var name, step; // If we just have one argument, we can assume it is an object of step options, with an id
 
-      if (isUndefined(arg2)) {
-        step = arg1;
-      } else {
-        name = arg1;
-        step = arg2;
+        if (isUndefined(arg2)) {
+          step = arg1;
+        } else {
+          name = arg1;
+          step = arg2;
+        }
+
+        if (!(step instanceof Step)) {
+          step = this.setupStep(step, name);
+        } else {
+          step.tour = this;
+        }
+
+        this.steps.push(step);
+        return step;
       }
+      /**
+       * Go to the previous step in the tour
+       */
 
-      if (!(step instanceof Step)) {
-        step = this.setupStep(step, name);
-      } else {
-        step.tour = this;
+    }, {
+      key: "back",
+      value: function back() {
+        var index = this.steps.indexOf(this.currentStep);
+        this.show(index - 1, false);
       }
+      /**
+       * Calls done() triggering the 'cancel' event
+       * If `confirmCancel` is true, will show a window.confirm before cancelling
+       */
 
-      this.steps.push(step);
-      return step;
-    }
-    /**
-     * Go to the previous step in the tour
-     */
+    }, {
+      key: "cancel",
+      value: function cancel() {
+        if (this.options.confirmCancel) {
+          var cancelMessage = this.options.confirmCancelMessage || 'Are you sure you want to stop the tour?';
+          var stopTour = window.confirm(cancelMessage);
 
-
-    back() {
-      const index = this.steps.indexOf(this.currentStep);
-      this.show(index - 1, false);
-    }
-    /**
-     * Calls done() triggering the 'cancel' event
-     * If `confirmCancel` is true, will show a window.confirm before cancelling
-     */
-
-
-    cancel() {
-      if (this.options.confirmCancel) {
-        const cancelMessage = this.options.confirmCancelMessage || 'Are you sure you want to stop the tour?';
-        const stopTour = window.confirm(cancelMessage);
-
-        if (stopTour) {
+          if (stopTour) {
+            this.done('cancel');
+          }
+        } else {
           this.done('cancel');
         }
-      } else {
-        this.done('cancel');
       }
-    }
-    /**
-     * Calls done() triggering the `complete` event
-     */
+      /**
+       * Calls done() triggering the `complete` event
+       */
 
-
-    complete() {
-      this.done('complete');
-    }
-    /**
-     * Called whenever the tour is cancelled or completed, basically anytime we exit the tour
-     * @param {String} event The event name to trigger
-     */
-
-
-    done(event) {
-      if (!isEmpty(this.steps)) {
-        this.steps.forEach(step => step.destroy());
+    }, {
+      key: "complete",
+      value: function complete() {
+        this.done('complete');
       }
+      /**
+       * Called whenever the tour is cancelled or completed, basically anytime we exit the tour
+       * @param {String} event The event name to trigger
+       */
 
-      cleanupStepEventListeners.call(this);
-      cleanupSteps(this.tourObject);
-      this.modal.cleanup();
-      this.trigger(event);
-      Shepherd.activeTour = null;
-
-      this._removeBodyAttrs();
-
-      this.trigger('inactive', {
-        tour: this
-      });
-    }
-    /**
-     * Gets the step from a given id
-     * @param {Number|String} id The id of the step to retrieve
-     * @return {Step} The step corresponding to the `id`
-     */
-
-
-    getById(id) {
-      return this.steps.find(step => {
-        return step.id === id;
-      });
-    }
-    /**
-     * Gets the current step
-     * @returns {Step|null}
-     */
-
-
-    getCurrentStep() {
-      return this.currentStep;
-    }
-    /**
-     * Hide the current step
-     */
-
-
-    hide() {
-      const currentStep = this.getCurrentStep();
-
-      if (currentStep) {
-        return currentStep.hide();
-      }
-    }
-
-    isActive() {
-      return Shepherd.activeTour === this;
-    }
-    /**
-     * Go to the next step in the tour
-     * If we are at the end, call `complete`
-     */
-
-
-    next() {
-      const index = this.steps.indexOf(this.currentStep);
-
-      if (index === this.steps.length - 1) {
-        this.complete();
-      } else {
-        this.show(index + 1, true);
-      }
-    }
-    /**
-     * Removes the step from the tour
-     * @param {String} name The id for the step to remove
-     */
-
-
-    removeStep(name) {
-      const current = this.getCurrentStep(); // Find the step, destroy it and remove it from this.steps
-
-      this.steps.some((step, i) => {
-        if (step.id === name) {
-          if (step.isOpen()) {
-            step.hide();
-          }
-
-          step.destroy();
-          this.steps.splice(i, 1);
-          return true;
-        }
-      });
-
-      if (current && current.id === name) {
-        this.currentStep = undefined; // If we have steps left, show the first one, otherwise just cancel the tour
-
-        this.steps.length ? this.show(0) : this.cancel();
-      }
-    }
-    /**
-     * Setup a new step object
-     * @param {Object} stepOptions The object describing the options for the step
-     * @param {String|Number} name The string or number to use as the `id` for the step
-     * @return {Step} The step instance
-     */
-
-
-    setupStep(stepOptions, name) {
-      if (isString(name) || isNumber(name)) {
-        stepOptions.id = name.toString();
-      }
-
-      stepOptions = Object.assign({}, this.options.defaultStepOptions, stepOptions);
-      return new Step(this, stepOptions);
-    }
-
-    beforeShowStep(step) {
-      this.modal.setupForStep(step);
-
-      this._styleTargetElementForStep(step);
-    }
-    /**
-     * Show a specific step in the tour
-     * @param {Number|String} key The key to look up the step by
-     * @param {Boolean} forward True if we are going forward, false if backward
-     */
-
-
-    show() {
-      let key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-      let forward = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-      const step = isString(key) ? this.getById(key) : this.steps[key];
-
-      if (step) {
-        this._updateStateBeforeShow();
-
-        const shouldSkipStep = isFunction(step.options.showOn) && !step.options.showOn(); // If `showOn` returns false, we want to skip the step, otherwise, show the step like normal
-
-        if (shouldSkipStep) {
-          this._skipStep(step, forward);
-        } else {
-          this.trigger('show', {
-            step,
-            previous: this.currentStep
+    }, {
+      key: "done",
+      value: function done(event) {
+        if (Array.isArray(this.steps)) {
+          this.steps.forEach(function (step) {
+            return step.destroy();
           });
-          this.currentStep = step;
-          step.show();
+        }
+
+        cleanupStepEventListeners.call(this);
+        cleanupSteps(this.tourObject);
+        this.modal.cleanup();
+        this.trigger(event);
+        Shepherd.activeTour = null;
+
+        this._removeBodyAttrs();
+
+        this.trigger('inactive', {
+          tour: this
+        });
+      }
+      /**
+       * Gets the step from a given id
+       * @param {Number|String} id The id of the step to retrieve
+       * @return {Step} The step corresponding to the `id`
+       */
+
+    }, {
+      key: "getById",
+      value: function getById(id) {
+        return this.steps.find(function (step) {
+          return step.id === id;
+        });
+      }
+      /**
+       * Gets the current step
+       * @returns {Step|null}
+       */
+
+    }, {
+      key: "getCurrentStep",
+      value: function getCurrentStep() {
+        return this.currentStep;
+      }
+      /**
+       * Hide the current step
+       */
+
+    }, {
+      key: "hide",
+      value: function hide() {
+        var currentStep = this.getCurrentStep();
+
+        if (currentStep) {
+          return currentStep.hide();
         }
       }
-    }
-    /**
-     * Start the tour
-     */
+      /**
+       * Check if the tour is active
+       * @return {boolean}
+       */
 
-
-    start() {
-      this.trigger('start');
-      this.currentStep = null;
-
-      this._setupActiveTour();
-
-      addStepEventListeners.call(this);
-      this.next();
-    }
-    /**
-     * Make this tour "active"
-     * @private
-     */
-
-
-    _setupActiveTour() {
-      this._addBodyAttrs();
-
-      this.trigger('active', {
-        tour: this
-      });
-      Shepherd.activeTour = this;
-    }
-    /**
-     * Modulates the styles of the passed step's target element, based on the step's options and
-     * the tour's `modal` option, to visually emphasize the element
-     *
-     * @param step The step object that attaches to the element
-     * @private
-     */
-
-
-    _styleTargetElementForStep(step) {
-      const targetElement = getElementForStep(step);
-
-      if (!targetElement) {
-        return;
+    }, {
+      key: "isActive",
+      value: function isActive() {
+        return Shepherd.activeTour === this;
       }
+      /**
+       * Go to the next step in the tour
+       * If we are at the end, call `complete`
+       */
 
-      toggleShepherdModalClass(targetElement);
+    }, {
+      key: "next",
+      value: function next() {
+        var index = this.steps.indexOf(this.currentStep);
 
-      if (step.options.highlightClass) {
-        targetElement.classList.add(step.options.highlightClass);
+        if (index === this.steps.length - 1) {
+          this.complete();
+        } else {
+          this.show(index + 1, true);
+        }
       }
+      /**
+       * Removes the step from the tour
+       * @param {String} name The id for the step to remove
+       */
 
-      if (step.options.canClickTarget === false) {
-        targetElement.style.pointerEvents = 'none';
+    }, {
+      key: "removeStep",
+      value: function removeStep(name) {
+        var _this2 = this;
+
+        var current = this.getCurrentStep(); // Find the step, destroy it and remove it from this.steps
+
+        this.steps.some(function (step, i) {
+          if (step.id === name) {
+            if (step.isOpen()) {
+              step.hide();
+            }
+
+            step.destroy();
+
+            _this2.steps.splice(i, 1);
+
+            return true;
+          }
+        });
+
+        if (current && current.id === name) {
+          this.currentStep = undefined; // If we have steps left, show the first one, otherwise just cancel the tour
+
+          this.steps.length ? this.show(0) : this.cancel();
+        }
       }
-    }
-    /**
-     * Called when `showOn` evaluates to false, to skip the step
-     * @param {Step} step The step to skip
-     * @param {Boolean} forward True if we are going forward, false if backward
-     * @private
-     */
+      /**
+       * Setup a new step object
+       * @param {Object} stepOptions The object describing the options for the step
+       * @param {String|Number} name The string or number to use as the `id` for the step
+       * @return {Step} The step instance
+       */
 
+    }, {
+      key: "setupStep",
+      value: function setupStep(stepOptions, name) {
+        if (isString(name) || isNumber(name)) {
+          stepOptions.id = name.toString();
+        }
 
-    _skipStep(step, forward) {
-      const index = this.steps.indexOf(step);
-      const nextIndex = forward ? index + 1 : index - 1;
-      this.show(nextIndex, forward);
-    }
-
-    _setTooltipDefaults() {
-      tippy.setDefaults(defaults);
-    }
-
-    _updateStateBeforeShow() {
-      if (this.currentStep) {
-        this.currentStep.hide();
+        stepOptions = _extends({}, this.options.defaultStepOptions, stepOptions);
+        return new Step(this, stepOptions);
       }
+    }, {
+      key: "beforeShowStep",
+      value: function beforeShowStep(step) {
+        this.modal.setupForStep(step);
 
-      if (!this.isActive()) {
+        this._styleTargetElementForStep(step);
+      }
+      /**
+       * Show a specific step in the tour
+       * @param {Number|String} key The key to look up the step by
+       * @param {Boolean} forward True if we are going forward, false if backward
+       */
+
+    }, {
+      key: "show",
+      value: function show() {
+        var key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+        var forward = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+        var step = isString(key) ? this.getById(key) : this.steps[key];
+
+        if (step) {
+          this._updateStateBeforeShow();
+
+          var shouldSkipStep = isFunction(step.options.showOn) && !step.options.showOn(); // If `showOn` returns false, we want to skip the step, otherwise, show the step like normal
+
+          if (shouldSkipStep) {
+            this._skipStep(step, forward);
+          } else {
+            this.trigger('show', {
+              step: step,
+              previous: this.currentStep
+            });
+            this.currentStep = step;
+            step.show();
+          }
+        }
+      }
+      /**
+       * Start the tour
+       */
+
+    }, {
+      key: "start",
+      value: function start() {
+        this.trigger('start');
+        this.currentStep = null;
+
         this._setupActiveTour();
+
+        this.next();
       }
-    }
+      /**
+       * Make this tour "active"
+       * @private
+       */
 
-    _setTourID() {
-      const tourName = this.options.tourName || 'tour';
-      const uuid = uniqueId$1();
-      this.id = `${tourName}--${uuid}`;
-    }
+    }, {
+      key: "_setupActiveTour",
+      value: function _setupActiveTour() {
+        this.modal.createModalOverlay();
 
-    _addBodyAttrs() {
-      document.body.setAttribute('data-shepherd-active-tour', this.id);
-      document.body.classList.add('shepherd-active');
-    }
+        this._addBodyAttrs();
 
-    _removeBodyAttrs() {
-      document.body.removeAttribute('data-shepherd-active-tour');
-      document.body.classList.remove('shepherd-active');
-    }
+        this.trigger('active', {
+          tour: this
+        });
+        Shepherd.activeTour = this;
+      }
+      /**
+       * Modulates the styles of the passed step's target element, based on the step's options and
+       * the tour's `modal` option, to visually emphasize the element
+       *
+       * @param step The step object that attaches to the element
+       * @private
+       */
 
-  }
+    }, {
+      key: "_styleTargetElementForStep",
+      value: function _styleTargetElementForStep(step) {
+        var targetElement = getElementForStep(step);
 
-  Object.assign(Shepherd, {
-    Tour,
-    Step,
-    Evented
+        if (!targetElement) {
+          return;
+        }
+
+        toggleShepherdModalClass(targetElement);
+
+        if (step.options.highlightClass) {
+          targetElement.classList.add(step.options.highlightClass);
+        }
+
+        if (step.options.canClickTarget === false) {
+          targetElement.style.pointerEvents = 'none';
+        }
+      }
+      /**
+       * Called when `showOn` evaluates to false, to skip the step
+       * @param {Step} step The step to skip
+       * @param {Boolean} forward True if we are going forward, false if backward
+       * @private
+       */
+
+    }, {
+      key: "_skipStep",
+      value: function _skipStep(step, forward) {
+        var index = this.steps.indexOf(step);
+        var nextIndex = forward ? index + 1 : index - 1;
+        this.show(nextIndex, forward);
+      }
+      /**
+       * Set the tippy defaults
+       * @private
+       */
+
+    }, {
+      key: "_setTooltipDefaults",
+      value: function _setTooltipDefaults() {
+        tippy.setDefaults(defaults);
+      }
+      /**
+       * Before showing, hide the current step and if the tour is not
+       * already active, call `this._setupActiveTour`.
+       * @private
+       */
+
+    }, {
+      key: "_updateStateBeforeShow",
+      value: function _updateStateBeforeShow() {
+        if (this.currentStep) {
+          this.currentStep.hide();
+        }
+
+        if (!this.isActive()) {
+          this._setupActiveTour();
+        }
+      }
+      /**
+       * Sets this.id to `${tourName}--${uuid}`
+       * @private
+       */
+
+    }, {
+      key: "_setTourID",
+      value: function _setTourID() {
+        var tourName = this.options.tourName || 'tour';
+        var uuid = uniqueId$1();
+        this.id = "".concat(tourName, "--").concat(uuid);
+      }
+      /**
+       * Adds the data-shepherd-active-tour attribute and the 'shepherd-active'
+       * class to the body.
+       * @private
+       */
+
+    }, {
+      key: "_addBodyAttrs",
+      value: function _addBodyAttrs() {
+        document.body.setAttribute('data-shepherd-active-tour', this.id);
+        document.body.classList.add('shepherd-active');
+      }
+      /**
+       * Removes the data-shepherd-active-tour attribute and the 'shepherd-active'
+       * class from the body.
+       * @private
+       */
+
+    }, {
+      key: "_removeBodyAttrs",
+      value: function _removeBodyAttrs() {
+        document.body.removeAttribute('data-shepherd-active-tour');
+        document.body.classList.remove('shepherd-active');
+      }
+    }]);
+
+    return Tour;
+  }(Evented);
+
+  _extends(Shepherd, {
+    Tour: Tour,
+    Step: Step,
+    Evented: Evented
   });
 
   return Shepherd;
