@@ -120,13 +120,14 @@
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/bootstrap.min.js" async></script>
 
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/personalizado.js" async></script>
-<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/jquery.smoove.min.js" async></script>
-<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/efectos_smoove.js" async></script>
+
 
 
 
   <?php 
   /*
+<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/jquery.smoove.min.js" async></script>
+<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/efectos_smoove.js" async></script>
 <!-- script - para el video despues que el modal se aya cerrado -->
 <script type="text/javascript">
 $("#modalVideoInstitucional").on('hidden.bs.modal', function (e) {
