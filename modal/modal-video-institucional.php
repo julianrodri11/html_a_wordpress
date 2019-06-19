@@ -12,6 +12,7 @@
         <!-- ---------- -->
         <div class="embed-responsive embed-responsive-16by9">
          <?php /* <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sQVbUfhm2ZQ?rel=0" allowfullscreen></iframe>*/ ?>
+         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sQVbUfhm2ZQ?rel=0" allowfullscreen></iframe>
         </div>
         <!-- ----------- -->
       </div>
