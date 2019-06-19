@@ -19,8 +19,11 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/sitioenconstruccion_aunar.webp"
-                alt="Inscribete en nuestro programas">
+              <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/sitioenconstruccion_aunar.webp" alt="Inscribete en nuestro programas">
+                <picture>
+                <source class="img-fluid" width="100%" alt="AUNAR ESTEREO" srcset="<?php bloginfo('template_url')?>/img/sitioenconstruccion_aunar.webp" type="image/webp">
+                <img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img/sitioenconstruccion_aunar.jpg" >
+                </picture>
               <!--div class="carousel-caption">
               <h3></h3>
               <p></p>
