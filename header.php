@@ -23,7 +23,7 @@
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/popper.min.js" async></script>
 <script>
 var loadDeferredStyles = function() {
-var addStylesNode = document.getElementByClassName("deferred-styles");
+var addStylesNode = document.getElementsByClassName("deferred-styles");
 var replacement = document.createElement("div");
 replacement.innerHTML = addStylesNode.textContent;
 document.body.appendChild(replacement)

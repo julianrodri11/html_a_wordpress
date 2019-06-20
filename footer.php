@@ -93,7 +93,7 @@
     <div class="row p-3 ">
       <div class="col-lg-6 col-sm-12 mt-3  text-light d-flex justify-content-center align-items-center justify-content-lg-end ">
         <div class="col-12 col-md-6 col-sm-6">
-          <img class="lazy img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/aunar-logo-antiguo.svg" alt="Logo AUNAR Autónoma de Nariño">
+          <img width="100%" data-src="<?php bloginfo('template_url')?>/img/aunar-logo-antiguo.svg" alt="Logo AUNAR Autónoma de Nariño" class="lazy img-fluid">
         </div>
       </div>
       <div class="col-lg-6 col-sm-12 mt-3 text-light text-lg-left text-center small fuente-institucional">
@@ -119,17 +119,9 @@
     <!-- -------------------FIN FOOTER CONTACTOS------------------ -->
   </footer>
  
-<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/jquery.lazy.min.js" async></script>
-<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/jquery.lazy.picture.min.js" async></script>
-<script  type="text/javascript" async>
- $(function() {
-        $('.lazy').Lazy();
-    });
-</script>
+<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/lazysizes.min.js" async></script>
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/bootstrap.min.js" async></script>
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/personalizado.js" async></script>
-
-
 
 
   <?php 
