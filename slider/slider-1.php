@@ -1,9 +1,7 @@
 <div id="carouselExampleIndicators" class="carousel slide animated zoomInDown" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>   
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -30,29 +28,7 @@
 
       </a>
     </div>
-    <div class="carousel-item">
 
-      <a href="#">
-        <picture>
-          <source class="img-fluid" width="100%" alt="" srcset="<?php bloginfo('template_url')?>/img/slider2.webp"
-            type="image/webp">
-          <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img/slider2.jpg"
-            alt="Inscribete en nuestro programas">
-        </picture>
-
-      </a>
-    </div>
-    <div class="carousel-item">
-
-      <a href="#">
-        <picture>
-          <source class="img-fluid" width="100%" alt="" srcset="<?php bloginfo('template_url')?>/img/slider3.webp"
-            type="image/webp">
-          <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img/slider3.jpg" alt="Estudia con nosotros">
-        </picture>
-
-      </a>
-    </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="fondo-azul-oscuro p-2" aria-hidden="true">
