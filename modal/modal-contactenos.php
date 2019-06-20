@@ -20,7 +20,7 @@
           <div class="row">            
             <div class="col-12 p-2 m-1 ">
               <div class="row">
-                <div class="col-12 p-2 text-center"><img class="lazy img-fluid rounded-circle"  data-src="<?php bloginfo('template_url')?>/img/aunar.jpg" src="<?php bloginfo('template_url')?>/img/transparente5x5px.png" width="30%" alt="logo AUNAR"></div>
+                <div class="col-12 p-2 text-center"><img class="img-fluid rounded-circle " src="<?php bloginfo('template_url')?>/img/aunar.jpg" width="30%" alt="logo AUNAR"></div>
                 <div class="col-12 p-2 text-justify pt-sans texto-azul">Si deseas hacer parte de nuestra Institución, escríbenos un comentario:</div>
               </div>
             </div>            

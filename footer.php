@@ -60,6 +60,11 @@
               Plan de Acción
             </a>
           </div>
+          <div class="mb-1 text-light fuente-institucional small">
+            <a class="text-white" data-toggle="tooltip" data-placement="auto" title="Ver" target="f14" href="politicas-de-proteccion-de-datos">
+               Protección de datos personales
+            </a>
+          </div>
         </div>
         <!-- COLUMNA 3 -->
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-2 text-center text-sm-left">
@@ -77,11 +82,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 py-2 text-center text-white fuente-institucional small">
-        <a class="texto-amarillo f-negrita" data-toggle="tooltip" data-placement="auto" title="Ver políticas" href="politicas-de-proteccion-de-datos">
-          PROTECCIÓN DE DATOS PERSONALES
-        </a>
-      </div>
+      
     </div>
   </div>
   <!-- -------------------FIN PIE DE PÁGINA--------------------- -->
@@ -111,13 +112,20 @@
         <div class="col-lg-12 mt-3 text-center text-light fuente-institucional small">
           <div class="div f-negrita">"INSTITUCIÓN DE EDUCACIÓN SUPERIOR SUJETA A INSPECCÍÓN Y VIGILANCIA POR EL MINISTERIO DE EDUCACIÓN NACIONAL"</div>
           <div class="div">Personería Jurídica No. 1054 del 1 de Febrero de 1983 - ©Copyright <script>var f = new Date();document.write(f.getFullYear());</script> - Derechos Reservados</div>
+          <div class="div">Diseño gráfico: Natalia Castillo, Desarrollo: <a class="text-light fuente-institucional" href="mailto:julianrodri11@gmail.com">Julian Rodriguez</a></div>
         </div>
       </div>
     </div>
     <!-- -------------------FIN FOOTER CONTACTOS------------------ -->
   </footer>
  
-<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/lazy.js" async></script>
+<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/jquery.lazy.min.js" async></script>
+<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/jquery.lazy.picture.min.js" async></script>
+<script  type="text/javascript" async>
+ $(function() {
+        $('.lazy').Lazy();
+    });
+</script>
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/bootstrap.min.js" async></script>
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/personalizado.js" async></script>
 
