@@ -2,15 +2,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="<?php bloginfo('template_url')?>/img/aunar.ico">
 <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/bootstrap.min.css" media="none" onload="if(media!='all')media='all'">
-<noscript><link href="<?php bloginfo('template_url')?>/css/bootstrap.min.css" rel="stylesheet" ></noscript>
+<noscript class="deferred-styles"><link href="<?php bloginfo('template_url')?>/css/bootstrap.min.css" rel="stylesheet" ></noscript>
 <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/personalizado.css" media="none" onload="if(media!='all')media='all'">
-<noscript><link href="<?php bloginfo('template_url')?>/css/personalizado.css" rel="stylesheet" ></noscript>
+<noscript class="deferred-styles"><link href="<?php bloginfo('template_url')?>/css/personalizado.css" rel="stylesheet" ></noscript>
 <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/hover.css" media="none" onload="if(media!='all')media='all'">
-<noscript><link href="<?php bloginfo('template_url')?>/css/hover.css" rel="stylesheet" ></noscript>
+<noscript class="deferred-styles"><link href="<?php bloginfo('template_url')?>/css/hover.css" rel="stylesheet" ></noscript>
 <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/animate.css" media="none" onload="if(media!='all')media='all'">
-<noscript><link href="<?php bloginfo('template_url')?>/css/animate.css" rel="stylesheet" ></noscript>
+<noscript class="deferred-styles"><link href="<?php bloginfo('template_url')?>/css/animate.css" rel="stylesheet" ></noscript>
 <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/shepherd-theme-default.css" media="none" onload="if(media!='all')media='all'">
-<noscript><link href="<?php bloginfo('template_url')?>/css/shepherd-theme-default.css" rel="stylesheet" ></noscript>
+<noscript class="deferred-styles"><link href="<?php bloginfo('template_url')?>/css/shepherd-theme-default.css" rel="stylesheet" ></noscript>
 <?php /*
 <noscript id="deferred-styles">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/css/bootstrap.min.css">
@@ -23,7 +23,7 @@
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/popper.min.js" async></script>
 <script>
 var loadDeferredStyles = function() {
-var addStylesNode = document.getElementById("deferred-styles");
+var addStylesNode = document.getElementByClassName("deferred-styles");
 var replacement = document.createElement("div");
 replacement.innerHTML = addStylesNode.textContent;
 document.body.appendChild(replacement)

@@ -3,7 +3,7 @@
 		<div class="p-sm-2 p-md-2 p-lg-0 pt-lg-2 efecto-borde1">
 			<a href="<?php echo home_url(); ?>">
 				<picture>
-				<source class="rounded-circle  img-fluid rounded mx-auto d-block position-relative " alt="Logo Autónoma de Nariño" srcset="<?php bloginfo('template_url')?>/img/logo-autonoma-de-narino.webp" type="image/webp" " width="100%">
+				<source class="rounded-circle  img-fluid rounded mx-auto d-block position-relative " alt="Logo Autónoma de Nariño" srcset="<?php bloginfo('template_url')?>/img/logo-autonoma-de-narino.webp" type="image/webp" width="100%">
 				<img class="rounded-circle  img-fluid rounded mx-auto d-block position-relative " alt="Logo Autónoma de Nariño" src="<?php bloginfo('template_url')?>/img/logo-autonoma-de-narino.png" width="100%">
 				</picture>
 			</a>
