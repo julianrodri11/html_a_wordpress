@@ -92,7 +92,7 @@
     <div class="row p-3 ">
       <div class="col-lg-6 col-sm-12 mt-3  text-light d-flex justify-content-center align-items-center justify-content-lg-end ">
         <div class="col-12 col-md-6 col-sm-6">
-          <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/aunar-logo-antiguo.svg" alt="Logo AUNAR Autónoma de Nariño">
+          <img class="lazy img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/aunar-logo-antiguo.svg" alt="Logo AUNAR Autónoma de Nariño">
         </div>
       </div>
       <div class="col-lg-6 col-sm-12 mt-3 text-light text-lg-left text-center small fuente-institucional">
@@ -117,8 +117,8 @@
     <!-- -------------------FIN FOOTER CONTACTOS------------------ -->
   </footer>
  
+<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/lazy.js" async></script>
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/bootstrap.min.js" async></script>
-
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/personalizado.js" async></script>
 
 

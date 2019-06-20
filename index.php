@@ -46,7 +46,7 @@
           <div class="row ">
             <div class="col-12 ">
               <a class="hvr-underline-from-center pb-2" href="<?php bloginfo('template_url')?>/docs/Derechos_2019.pdf"  data-toggle="tooltip" data-placement="bottom" title="Click aquí" target="_blank">
-              <img  class=" img-fluid" alt="Derechos pecuniarios autonoma de nariño" src="<?php bloginfo('template_url')?>/img/Derechos_2019.png"></a>
+              <img  class="lazy img-fluid" alt="Derechos pecuniarios autonoma de nariño" src="<?php bloginfo('template_url')?>/img/Derechos_2019.png"></a>
             </div>
             <div class="col-12 p-5 texto-azul fuente-institucional">
               Los anteriores son los montos correspondientes a los derechos pecuniarios por servicios académicos y administrativos para el año 2019, aprobados por el Consejo Directivo de la Corporación Universitaria Autónoma de Nariño.
