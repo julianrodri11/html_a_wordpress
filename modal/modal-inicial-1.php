@@ -15,29 +15,34 @@
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators_inicial" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators_inicial" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators_inicial" data-slide-to="2"></li>            
+            <li data-target="#carouselExampleIndicators_inicial" data-slide-to="2"></li>
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/sitioenconstruccion_aunar.webp" alt="Inscribete en nuestro programas">
-                <picture>
-                <source class="img-fluid" width="100%" alt="AUNAR ESTEREO" srcset="<?php bloginfo('template_url')?>/img/sitioenconstruccion_aunar.webp" type="image/webp">
-                <img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img/sitioenconstruccion_aunar.jpg" >
-                </picture>
+              <picture>
+                <source class="img-fluid" width="100%" alt="Noticias aunar"
+                  srcset="<?php bloginfo('template_url')?>/img/Pendones-inscripciones-2018-2.webp" type="image/webp">
+                <img class="img-fluid" width="100%" alt="Noticias aunar"
+                  src="<?php bloginfo('template_url')?>/img/Pendones-inscripciones-2018-2.jpg">
+              </picture>
               <!--div class="carousel-caption">
               <h3></h3>
               <p></p>
             </div-->
             </div>
             <div class="carousel-item">
-              <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/Pendones-inscripciones-2018-2.jpg"
-                alt="Noticias aunar">
+              <picture>
+                <source class="img-fluid" width="100%" alt="Noticias aunar"
+                  srcset="<?php bloginfo('template_url')?>/img/Pendones-inscripciones-2018-2.webp" type="image/webp">
+                <img class="img-fluid" width="100%" alt="Noticias aunar"
+                  src="<?php bloginfo('template_url')?>/img/Pendones-inscripciones-2018-2.jpg">
+              </picture>
               <!--div class="carousel-caption">
                 <h3>Lorem Fuga, nesciunt </h3>
                 <p>voluptatibus consectetur, consequuntur nemo necessitatibus.</p>
               </div-->
             </div>
-           
+
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators_inicial" role="button" data-slide="prev">
             <span class="fondo-azul-oscuro p-2" aria-hidden="true">
