@@ -18,8 +18,7 @@
             <li data-target="#carouselExampleIndicators_inicial" data-slide-to="2"></li>            
           </ol>
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/sitioenconstruccion_aunar.webp" alt="Inscribete en nuestro programas">
+            <div class="carousel-item active">              
                 <picture>
                 <source class="img-fluid" width="100%" alt="AUNAR ESTEREO" srcset="<?php bloginfo('template_url')?>/img/sitioenconstruccion_aunar.webp" type="image/webp">
                 <img class="img-fluid" width="100%" alt="AUNAR ESTEREO" src="<?php bloginfo('template_url')?>/img/sitioenconstruccion_aunar.jpg" >
