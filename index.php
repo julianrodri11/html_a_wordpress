@@ -127,8 +127,8 @@
           <div class="col-md-6 p-2 hvr-grow-shadow izquierda_derecha d-flex align-items-center" >
             <div class="col p-2 text-center "><a href="http://www.aunarstereo.com/">            
             <picture>
-              <source class="img-fluid" width="100%" alt="AUNAR ESTEREO" srcset="<?php bloginfo('template_url')?>/img/aunar-stereo.webp" type="image/webp">
-              <img class="lazy img-fluid" width="100%" alt="AUNAR ESTEREO" data-src="<?php bloginfo('template_url')?>/img/aunar-stereo.png" >
+              <source width="100%" alt="AUNAR ESTEREO" data-srcset="<?php bloginfo('template_url')?>/img/aunar-stereo.webp" type="image/webp" class=" lazyload img-fluid">
+              <img width="100%" alt="AUNAR ESTEREO" data-src="<?php bloginfo('template_url')?>/img/aunar-stereo.png" class="lazyload img-fluid">
             </picture>
             </a>
             </div>          
