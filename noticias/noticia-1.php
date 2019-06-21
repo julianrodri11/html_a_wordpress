@@ -46,7 +46,7 @@
           <a class="p-0" href="<?php the_permalink() ?>">
             <?php // check if the post or page has a Featured Image assigned to it.
             if ( has_post_thumbnail() ) {
-              the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid', 'width' => '100%']);
+              the_post_thumbnail('post-thumbnail', ['class' => 'lazyload img-fluid', 'width' => '100%']);
             } ?>
           </a>
         </div>
@@ -68,7 +68,7 @@
           <a class="p-0 m-0" href="<?php the_permalink() ?>">
             <?php // check if the post or page has a Featured Image assigned to it.
             if ( has_post_thumbnail() ) {
-              the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid', 'width' => '100%']);
+              the_post_thumbnail('post-thumbnail', ['class' => 'lazyload img-fluid', 'width' => '100%']);
             } ?>
           </a>
         </div>
