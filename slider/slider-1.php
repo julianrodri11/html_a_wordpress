@@ -8,10 +8,8 @@
 
       <a href="#">
         <picture>
-          <source class="img-fluid" width="100%" alt="" srcset="<?php bloginfo('template_url')?>/img/slider1.webp"
-            type="image/webp">
-          <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img/slider1.jpg"
-            alt="Oferta académica 20018 II">
+          <source class="img-fluid" width="100%" alt="" srcset="<?php bloginfo('template_url')?>/img/slider1.webp" type="image/webp">
+          <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img/slider1.jpg" alt="Oferta académica 20018 II">
         </picture>
 
       </a>
@@ -20,10 +18,8 @@
 
       <a href="#">
         <picture>
-          <source class="img-fluid" width="100%" alt="" srcset="<?php bloginfo('template_url')?>/img/congreso-autonoma-de-narino-2018.webp"
-            type="image/webp">
-          <img class="d-block w-100" src="<?php bloginfo('template_url')?>/img/congreso-autonoma-de-narino-2018.jpg"
-            alt="Congreso Autonoma de Nariño">
+          <source width="100%" alt="Información principal" data-srcset="<?php bloginfo('template_url')?>/img/congreso-autonoma-de-narino-2018.webp" type="image/webp" class="lazyload img-fluid">
+          <img data-src="<?php bloginfo('template_url')?>/img/congreso-autonoma-de-narino-2018.jpg" alt="Información principal" class="lazyload d-block w-100">
         </picture>
 
       </a>
