@@ -10,9 +10,19 @@ RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
  
 RewriteRule ^(.*)$ $1.php
+
+
+# Check if browser support WebP images
+  RewriteCond %{HTTP_ACCEPT} image/webp
+
+# Check if WebP replacement image exists
+RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
+
+# Serve WebP image instead
+RewriteRule (.+)\.(jpe?g|png)$ $1.webp [T=image/webp,E=accept:1]
 </IfModule>
 
-<FilesMatch "\.(css|js|ico|pdf|flv|jpg|jpeg|png|gif|swf|mp3|mp4|svg|doc|docx|xls|xlsx)$">
+<FilesMatch "\.(css|js|ico|pdf|flv|jpg|jpeg|png|gif|swf|mp3|mp4|svg|doc|docx|xls|xlsx|webp)$">
 Header set Cache-Control "max-age=31557600, public"
 </FilesMatch>
 
@@ -33,6 +43,7 @@ Header set Cache-Control "max-age=31557600, public"
     AddOutputFilterByType DEFLATE text/javascript
     AddOutputFilterByType DEFLATE text/xml
     AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE image/webp
     AddOutputFilterByType DEFLATE image/x-icon
     AddOutputFilterByType DEFLATE image/svg+xml svg svgz
     AddOutputFilterByType DEFLATE application/rss+xml
@@ -69,6 +80,12 @@ Header set Cache-Control "max-age=31557600, public"
 #  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /portal.aunar.edu.co/(.*)\ HTTP/
 #   RewriteRule .* %1.html [L]
 #</IfModule>
+
+<IfModule mod_headers.c>
+
+    Header append Vary Accept env=REDIRECT_accept
+
+</IfModule>
 
 <Files .htaccess>
 Order allow,deny
