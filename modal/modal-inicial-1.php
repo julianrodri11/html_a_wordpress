@@ -35,7 +35,7 @@
                 <source width="100%" alt="Noticias aunar"
                   data-srcset="<?php bloginfo('template_url')?>/img/Pendones-inscripciones-2018-2.webp" type="image/webp" class="lazyload img-fluid">
                 <img width="100%" alt="Noticias aunar"
-                  data-src="<?php bloginfo('template_url')?>/img/Pendones-inscripciones-2018-2.jpg" class="img-fluid">
+                  data-src="<?php bloginfo('template_url')?>/img/Pendones-inscripciones-2018-2.jpg" class="lazyload img-fluid">
               </picture>
               <!--div class="carousel-caption">
                 <h3>Lorem Fuga, nesciunt </h3>
