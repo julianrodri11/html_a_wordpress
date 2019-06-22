@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 p-0">
-                    <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/inscripciones/sistema-inscripciones-en-linea.jpg"/>
+                    <img width="100%" data-src="<?php bloginfo('template_url')?>/img/inscripciones/sistema-inscripciones-en-linea.jpg" class="lazyload img-fluid" alt="Inscripciones AUNAR"/>
                 </div>
             </div>
         </div>
