@@ -105,8 +105,8 @@
             <div>&nbsp;&nbsp;&nbsp;NIT: 891224762-9</div>
             <div>&nbsp;&nbsp;&nbsp;Código SNIES: 3817</div>
             <div>&nbsp;&nbsp;&nbsp;Carrera 28 No. 19-24 </div>
-            <div>&nbsp;&nbsp;&nbsp;Tel. 729 05 08 - 723 24 52 - 722 60 20</div>
-            <div>&nbsp;&nbsp;&nbsp;Pasto(Nariño) Colombia</div>
+            <div>&nbsp;&nbsp;&nbsp;Numero PBX: 7244419</div>
+            <div>&nbsp;&nbsp;&nbsp;Pasto (Nariño) Colombia</div>
           </div>
         </div>
         <div class="col-lg-12 mt-3 text-center text-light fuente-institucional small">
