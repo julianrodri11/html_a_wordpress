@@ -10,7 +10,9 @@
     
   </head>
   <body>
-    
+    <!-- --------------------MODAL INICIAL----------------------- -->
+    <?php include_once('modal/modal-inicial-1.php'); ?>
+    <!-- -------------------FIN MODAL INICIAL-------------------- -->
     <!-- ------------------MODAL TRADUCTOR----------------------- -->
     <?php include_once('secciones/modal-traductor.php');?>
     <!-- ----------------FIN MODAL TRADUCTOR--------------------- -->
@@ -160,13 +162,9 @@
           </div>
           </div>
           <!-- ----------------FIN SECCIÓN MÁS EVENTOS--------------------- -->
-
   <!-- -----------------IMAGENES ENLACES DE EXTERNOS----------------------------- -->
   <?php include_once('secciones/enlaces-externos-aunar.php') ?>
   <!-- -----------------FIN ENLACES DE EXTERNOS------------------------- -->
-  <!-- --------------------MODAL INICIAL----------------------- -->
-   <?php include_once('modal/modal-inicial-1.php'); ?>
-  <!-- -------------------FIN MODAL INICIAL-------------------- -->
   <!-- ----------------PIE DE PÁGINA---------------------------- -->
   <?php  get_footer();  ?>
   <!-- -------------------FIN PIE DE PÁGINA--------------------- -->
