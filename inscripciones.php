@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 p-0">
-                    <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/inscripciones/sistema-inscripciones-en-linea.jpg"/>
+                    <img class="img-fluid" width="100%" src="<?php bloginfo('template_url')?>/img/inscripciones/sistema-inscripciones-en-linea.jpg" alt="Inscripciones AUNAR"/>
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
         </div>
         <!-- PREINSCRIPCIÓN -->
         <div class=" contenedor_preinscripcion">
-            <img src="<?php bloginfo('template_url')?>/img/inscripciones/admisiones-autonoma-de-narino.jpg" alt="Norway" style="width:100%;">
+            <img data-src="<?php bloginfo('template_url')?>/img/inscripciones/admisiones-autonoma-de-narino.jpg" alt="Inscripciones Abiertas AUNAR" style="width:100%;" class="lazyload">
             <div class="text-block">
                 <div class=" text-center">
                     <div class="col-12 text-center"><h1 class=" f-negrita fuente-institucional texto-azul">Inscripción</h1> </div>
