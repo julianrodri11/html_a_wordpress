@@ -51,7 +51,7 @@
 						<?php endif; ?>						
 						</a>
 					</div>								
-					<div class="col-12 col-lg-2 d-flex align-items-center">		
+					<div class="col-12 col-lg-2 d-flex align-items-center p-2">		
 							<a href="single-eventos" class="ml-0 p-1 border borde-azul badge badge-pill bg-white hover-amarillo texto-azul sin-texto-subrayado hover-sin-borde">Ver más</a>		
 					</div>
 				</div>

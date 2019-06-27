@@ -31,7 +31,7 @@
 				</div>
 				<!-- ultimas noticias -->
 					
-				<div class="col-12 col-md-6 py-5 py-sm-0">
+				<div class="col-12 col-md-6 py-5 py-md-0 px-5 px-md-3">
 					<div class="row">
 						<?php						
 						//***************************************** */
