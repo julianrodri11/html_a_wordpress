@@ -132,22 +132,29 @@
                 <div class="col-6 m-0 p-0">
                     <div class="div m-0 p-0 d-flex justify-content-end justify-content-sm-center asis-iconosaccesibilidad">
                         <div class="f-size-14 mr-1 badge badge-pill badge-primary fondo-azul pointer hover-texto-blanco hover-amarillo "
-                        data-toggle="modal" data-target="#btn_traductor" onclick="llamar_traductor()">Idioma <img src="<?php bloginfo('template_url')?>/img/google_translate.png" style="border-radius:50%; " width="14px" alt=""></div>
+                        data-toggle="modal" data-target="#btn_traductor" onclick="llamar_traductor()">Idioma <img src="<?php bloginfo('template_url')?>/img/google_translate.png" style="border-radius:50%; " width="18px" alt=""></div>
                         <!-- iconos de ampliar y reducir -->
                         <div class="f-size-14  badge badge-pill badge-primary fondo-azul pointer hover-texto-blanco hover-amarillo ">
                             <a class="px-0 pointer" id="contraste" data-toggle="tooltip" data-placement="auto" title="contraste">
-                                <img src="<?php bloginfo('template_url')?>/img/contraste.png" style="border-radius:50%; " width="14px" alt="">
+                                <img src="<?php bloginfo('template_url')?>/img/contraste.png" style="border-radius:50%; " width="20px" alt="Contraste">
                             </a>
-                            <a class="px-0 zoom-mas" id="aumentar" data-toggle="tooltip" data-placement="auto" title="Ampliar">A+</a>
-                            <a class="px-0 zoom-menos" id="disminuir" data-toggle="tooltip" data-placement="auto" title="Reducir">A-</a>
-                            <a class="px-0 pointer" id="restablecer" data-toggle="tooltip" data-placement="auto" title="Restablecer">R</a>
+                            <a class="px-0 zoom-mas" id="aumentar" data-toggle="tooltip" data-placement="auto" title="Ampliar">
+                                <img src="<?php bloginfo('template_url')?>/img/ampliar.png" style="border-radius:50%; " width="20px" alt=Ampliar">
+                            </a>
+                            <a class="px-0 zoom-menos" id="disminuir" data-toggle="tooltip" data-placement="auto" title="Reducir">
+                                <img src="<?php bloginfo('template_url')?>/img/reducir.png" style="border-radius:50%; " width="20px" alt="Disminuir">
+                            </a>
+                            <a class="px-0 pointer" id="restablecer" data-toggle="tooltip" data-placement="auto" title="Restablecer">
+                                <img src="<?php bloginfo('template_url')?>/img/restablecer.png" style="border-radius:50%; " width="20px" alt="Restablecer">
+                            </a>
                             <?php
                             if ( is_front_page() ) :
-                            ?><a class="px-0 pointer" id="" data-toggle="tooltip" data-placement="auto" title="Hacer un recorrido guiado" onclick="asistente()">&#x21AF</a>
+                            ?><a class="px-0 pointer" id="" data-toggle="tooltip" data-placement="auto" title="Hacer un recorrido guiado" onclick="asistente()">
+                                <img src="<?php bloginfo('template_url')?>/img/recorrido.png" style="border-radius:50%; " width="20px" alt="Recorrido">
+                            </a>
                             <?php
                             endif;
-                            ?>
-                            
+                            ?>                            
                         </div></div>
                     </div>
                 </div>
