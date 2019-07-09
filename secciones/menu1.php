@@ -131,7 +131,7 @@
                 <!-- boton traducir -->
                 <div class="col-6 m-0 p-0">
                     <div class="div m-0 p-0 d-flex justify-content-end justify-content-sm-center asis-iconosaccesibilidad">
-                        <div class="f-size-14 mr-1 badge badge-pill badge-primary fondo-azul pointer hover-texto-blanco hover-amarillo "
+                        <div class="f-size-14 mr-1 mt-1 badge badge-pill badge-primary fondo-azul pointer hover-texto-blanco hover-amarillo "
                         data-toggle="modal" data-target="#btn_traductor" onclick="llamar_traductor()">Idioma <img src="<?php bloginfo('template_url')?>/img/google_translate.png" style="border-radius:50%; " width="18px" alt=""></div>
                         <!-- iconos de ampliar y reducir -->
                         <div class="f-size-14  badge badge-pill badge-primary fondo-azul pointer hover-texto-blanco hover-amarillo ">
