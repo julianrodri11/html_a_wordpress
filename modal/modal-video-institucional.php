@@ -22,7 +22,3 @@
   </div>
 </div>
 <!-- -------------------FIN MODAL INICIAL-------------------- -->
-<!-- script - para que se detenga el video cuando se cierre el modal -->
-<script>
-$(document).ready(function(){$(".modal").each(function(){var i=$(this).find("iframe").attr("src");$(this).on("click",function(){$(this).find("iframe").attr("src",""),$(this).find("iframe").attr("src",i)})})});
-</script>
