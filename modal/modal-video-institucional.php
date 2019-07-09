@@ -11,7 +11,7 @@
         <button type="button" class="close bg-warning text-white f-negrita" data-dismiss="modal" data-toggle="tooltip" data-placement="left" title="Cerrar">X</button>
         <!-- ---------- -->
         <div class="embed-responsive embed-responsive-16by9">
-         <?php /* <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sQVbUfhm2ZQ?rel=0" allowfullscreen></iframe>*/ ?>
+         <iframe data-src="https://www.youtube.com/embed/sQVbUfhm2ZQ?rel=0" allowfullscreen  class="embed-responsive-item lazyload"></iframe>
          
         </div>
         <!-- ----------- -->
@@ -26,13 +26,8 @@
   </div>
 </div>
 <!-- -------------------FIN MODAL INICIAL-------------------- -->
-<!-- script - para el video despues que el modal se aya cerrado -->
-<?php
-/*
+<!-- script - para que se detenga el video cuando se cierre el modal -->
 <script>
-$("#modalVideoInstitucional").on('hidden.bs.modal', function (e) {
-$("#modalVideoInstitucional iframe").attr("src", $("#modalVideoInstitucional iframe").attr("src"));
-});
+$(document).ready(function(){$(".modal").each(function(){var i=$(this).find("iframe").attr("src");$(this).on("click",function(){$(this).find("iframe").attr("src",""),$(this).find("iframe").attr("src",i)})})});
 </script>
-*/
-?>
+
