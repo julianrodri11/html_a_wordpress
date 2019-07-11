@@ -124,7 +124,7 @@
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/bootstrap.min.js" async></script>
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/personalizado.js" async></script>
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/accesibilidad.js" async></script>
-<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/shepherd.js" async></script>
+<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/shepherd.min.js" async></script>
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/recorrido.js" async></script>
 
   <?php 
