@@ -111,7 +111,8 @@
         </div>
         <div class="col-lg-12 mt-3 text-center text-light fuente-institucional small">
           <div class="div f-negrita">"INSTITUCIÓN DE EDUCACIÓN SUPERIOR SUJETA A INSPECCÍÓN Y VIGILANCIA POR EL MINISTERIO DE EDUCACIÓN NACIONAL"</div>
-          <div class="div">Personería Jurídica No. 1054 del 1 de Febrero de 1983 - ©Copyright <script>var f = new Date();document.write(f.getFullYear());</script> - Derechos Reservados</div>
+          <div class="div">Personería Jurídica No. 1054 del 1 de Febrero de 1983 - ©Copyright <label id="fechajerv"></label> - Derechos Reservados</div>
+          <script>var f = new Date();document.getElementById("fechajerv").innerHTML = f.getFullYear();</script>         
           <div class="div">Diseño gráfico: Natalia Castillo, Desarrollo: <a class="text-light fuente-institucional" href="mailto:julianrodri11@gmail.com">Julian Rodriguez</a></div>
         </div>
       </div>
@@ -123,7 +124,8 @@
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/bootstrap.min.js" async></script>
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/personalizado.js" async></script>
 <script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/accesibilidad.js" async></script>
-
+<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/shepherd.js" async></script>
+<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/recorrido.js" async></script>
 
   <?php 
   /*
@@ -136,8 +138,6 @@ $("#modalVideoInstitucional iframe").attr("src", $("#modalVideoInstitucional ifr
 </script>
 
 
-<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/shepherd.js" async></script>
-<script  type="text/javascript" src="<?php bloginfo('template_url')?>/js/recorrido.js" async></script>
 <script type="text/javascript">
 function googleTranslateElementInit() {
 new google.translate.TranslateElement({pageLanguage: 'es'}, 'google_translate_element');
